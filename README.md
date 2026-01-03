@@ -4,62 +4,65 @@ A personality-matching webapp that allows users to take a custom personality tes
 
 ## Quick Start
 
-### Prerequisites
-- Node.js 18+ and npm
-- Python 3.9+
-- PostgreSQL 14+
+### ✨ Everything is Already Set Up!
 
-### Setup
+All dependencies are installed, database is configured and seeded with sample data.
 
-1. **Clone and install dependencies**
+### Running the App
+
+Simply run:
+
 ```bash
-# Frontend setup
-cd frontend
-npm install
-
-# Backend setup
-cd ../backend
-python -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
-pip install -r requirements.txt
+./start.sh
 ```
 
-2. **Database setup**
-```bash
-# Create PostgreSQL database
-createdb personaapp
+This will:
+1. Start PostgreSQL (if not running)
+2. Start the backend API server (port 8000)
+3. Start the frontend React app (port 3000)
+4. Automatically open your browser to http://localhost:3000
 
-# Run migrations
+### Stopping the App
+
+```bash
+./stop.sh
+```
+
+This gracefully stops both the backend and frontend servers.
+
+## Access Points
+
+- **Web App**: [http://localhost:3000](http://localhost:3000)
+- **API Documentation**: [http://localhost:8000/docs](http://localhost:8000/docs)
+- **API Health Check**: [http://localhost:8000/health](http://localhost:8000/health)
+
+## What's Already Configured
+
+✅ Node.js 25.2.1 and npm 11.6.2
+✅ Python 3.9.6 with virtual environment
+✅ PostgreSQL 14 database (`personaapp`)
+✅ All backend dependencies installed
+✅ All frontend dependencies installed
+✅ Database schema migrated
+✅ Sample data seeded (10 traits, 50 questions, 20 idols)
+✅ Environment files configured
+
+## Manual Start (Alternative)
+
+If you prefer to run servers manually:
+
+**Terminal 1 - Backend**
+```bash
 cd backend
-alembic upgrade head
-
-# Seed initial data
-python -m app.db.seed
-```
-
-3. **Environment variables**
-```bash
-# Backend (.env in backend/)
-DATABASE_URL=postgresql://localhost/personaapp
-SECRET_KEY=your-secret-key-here
-CORS_ORIGINS=http://localhost:3000
-
-# Frontend (.env in frontend/)
-REACT_APP_API_URL=http://localhost:8000
-```
-
-4. **Run development servers**
-```bash
-# Terminal 1 - Backend
-cd backend
+source venv/bin/activate
 uvicorn app.main:app --reload
+```
 
-# Terminal 2 - Frontend
+**Terminal 2 - Frontend**
+```bash
 cd frontend
 npm start
 ```
-
-Visit http://localhost:3000 to see the app!
 
 ## Project Structure
 

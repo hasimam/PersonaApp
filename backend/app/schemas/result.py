@@ -1,5 +1,5 @@
 from pydantic import BaseModel
-from typing import List, Dict
+from typing import List, Dict, Optional
 
 
 class TraitScore(BaseModel):
@@ -13,8 +13,8 @@ class IdolMatch(BaseModel):
     """Idol match with similarity score."""
     idol_id: int
     name: str
-    description: str | None
-    image_url: str | None
+    description: Optional[str]
+    image_url: Optional[str]
     similarity: float
     similarity_percentage: float
 
