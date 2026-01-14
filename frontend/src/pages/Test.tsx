@@ -89,13 +89,24 @@ const Test: React.FC = () => {
       <div className="min-h-screen flex items-center justify-center">
         <div className="card max-w-md text-center">
           <p className="text-red-600 mb-4">{error}</p>
-          <button onClick={() => window.location.reload()} className="btn-primary">
-            {t.test.tryAgain}
-          </button>
+          <div className="flex gap-3 justify-center">
+            <button onClick={() => window.location.reload()} className="btn-primary">
+              {t.test.tryAgain}
+            </button>
+            <button onClick={() => navigate('/')} className="btn-secondary">
+              {t.test.backToHome}
+            </button>
+          </div>
         </div>
       </div>
     );
   }
+
+  const handleExit = () => {
+    if (window.confirm(t.test.exitConfirm)) {
+      navigate('/');
+    }
+  };
 
   const currentQuestion = questions[currentIndex];
   const currentAnswer = answers.get(currentQuestion.id) || null;
@@ -110,6 +121,16 @@ const Test: React.FC = () => {
       </div>
 
       <div className="max-w-4xl mx-auto">
+        {/* Exit button */}
+        <div className="flex justify-between items-center mb-4">
+          <button
+            onClick={handleExit}
+            className="text-gray-500 hover:text-gray-700 text-sm flex items-center gap-1"
+          >
+            <span>&larr;</span> {t.test.exitTest}
+          </button>
+        </div>
+
         <div className="mb-8">
           <ProgressBar current={currentIndex + 1} total={questions.length} />
         </div>

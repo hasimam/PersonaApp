@@ -26,3 +26,5 @@ logs/
 
 # Runtime files
 .personaapp.pid
+.vercel
+.env*.local
