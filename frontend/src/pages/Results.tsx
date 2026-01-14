@@ -11,10 +11,13 @@ import {
   ResponsiveContainer,
   Legend,
 } from 'recharts';
+import { useLanguage } from '../i18n/LanguageContext';
+import LanguageSwitcher from '../components/LanguageSwitcher';
 
 const Results: React.FC = () => {
   const { resultId } = useParams<{ resultId: string }>();
   const navigate = useNavigate();
+  const { t, language } = useLanguage();
   const [loading, setLoading] = useState(true);
   const [result, setResult] = useState<ResultResponse | null>(null);
   const [error, setError] = useState<string>('');
@@ -24,24 +27,24 @@ const Results: React.FC = () => {
       if (!resultId) return;
 
       try {
-        const data = await resultsApi.getResult(parseInt(resultId));
+        const data = await resultsApi.getResult(parseInt(resultId), language);
         setResult(data);
         setLoading(false);
       } catch (err) {
-        setError('Failed to load results. Please try again.');
+        setError(t.results.loadError);
         setLoading(false);
       }
     };
 
     fetchResults();
-  }, [resultId]);
+  }, [resultId, language, t.results.loadError]);
 
   if (loading) {
     return (
       <div className="min-h-screen flex items-center justify-center">
         <div className="text-center">
           <div className="animate-spin rounded-full h-16 w-16 border-b-2 border-primary-600 mx-auto mb-4"></div>
-          <p className="text-gray-600">Analyzing your personality...</p>
+          <p className="text-gray-600">{t.results.analyzing}</p>
         </div>
       </div>
     );
@@ -51,9 +54,9 @@ const Results: React.FC = () => {
     return (
       <div className="min-h-screen flex items-center justify-center">
         <div className="card max-w-md text-center">
-          <p className="text-red-600 mb-4">{error || 'Results not found'}</p>
+          <p className="text-red-600 mb-4">{error || t.results.notFound}</p>
           <button onClick={() => navigate('/')} className="btn-primary">
-            Back to Home
+            {t.results.backHome}
           </button>
         </div>
       </div>
@@ -67,22 +70,27 @@ const Results: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-gray-50 py-12 px-4">
+      {/* Language Switcher */}
+      <div className="absolute top-4 end-4">
+        <LanguageSwitcher />
+      </div>
+
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-12">
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">Your Personality Results</h1>
-          <p className="text-gray-600">Here are the celebrities most similar to your personality</p>
+          <h1 className="text-4xl font-bold text-gray-900 mb-4">{t.results.title}</h1>
+          <p className="text-gray-600">{t.results.subtitle}</p>
         </div>
 
         {/* Top Matches */}
         <div className="mb-12">
           <h2 className="text-2xl font-semibold text-gray-800 mb-6 text-center">
-            Your Top 3 Matches
+            {t.results.topMatches}
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {result.top_matches.map((match, index) => (
               <div key={match.idol_id} className="card text-center hover:shadow-xl transition-shadow">
                 <div className="relative mb-4">
-                  <div className="absolute -top-4 -right-4 bg-primary-600 text-white w-12 h-12 rounded-full flex items-center justify-center font-bold text-lg">
+                  <div className="absolute -top-4 -end-4 bg-primary-600 text-white w-12 h-12 rounded-full flex items-center justify-center font-bold text-lg">
                     #{index + 1}
                   </div>
                   <img
@@ -100,7 +108,7 @@ const Results: React.FC = () => {
                   <p className="text-3xl font-bold text-primary-600">
                     {match.similarity_percentage}%
                   </p>
-                  <p className="text-sm text-gray-600">Personality Match</p>
+                  <p className="text-sm text-gray-600">{t.results.personalityMatch}</p>
                 </div>
               </div>
             ))}
@@ -110,7 +118,7 @@ const Results: React.FC = () => {
         {/* Personality Profile Chart */}
         <div className="card mb-12">
           <h2 className="text-2xl font-semibold text-gray-800 mb-6 text-center">
-            Your Personality Profile
+            {t.results.personalityProfile}
           </h2>
           <ResponsiveContainer width="100%" height={400}>
             <RadarChart data={chartData}>
@@ -118,7 +126,7 @@ const Results: React.FC = () => {
               <PolarAngleAxis dataKey="trait" />
               <PolarRadiusAxis angle={90} domain={[0, 100]} />
               <Radar
-                name="Your Score"
+                name={t.results.yourScore}
                 dataKey="score"
                 stroke="#0284c7"
                 fill="#0284c7"
@@ -131,7 +139,7 @@ const Results: React.FC = () => {
 
         {/* Trait Scores */}
         <div className="card mb-12">
-          <h2 className="text-2xl font-semibold text-gray-800 mb-6">Your Trait Scores</h2>
+          <h2 className="text-2xl font-semibold text-gray-800 mb-6">{t.results.traitScores}</h2>
           <div className="space-y-4">
             {result.user_trait_scores.map((trait) => (
               <div key={trait.trait_id}>
@@ -153,24 +161,21 @@ const Results: React.FC = () => {
         {/* Actions */}
         <div className="flex justify-center gap-4">
           <button onClick={() => navigate('/')} className="btn-primary">
-            Retake Test
+            {t.results.retakeTest}
           </button>
           <button
             onClick={() => {
-              // Share functionality would go here
-              alert('Share feature coming soon!');
+              alert(t.results.shareComingSoon);
             }}
             className="btn-secondary"
           >
-            Share Results
+            {t.results.shareResults}
           </button>
         </div>
 
         {/* Disclaimer */}
         <p className="text-sm text-gray-500 text-center mt-8 max-w-2xl mx-auto">
-          These results are for entertainment and self-reflection purposes. Idol personalities are
-          estimated from publicly available information and may not reflect their complete or private
-          personalities.
+          {t.results.disclaimerText}
         </p>
       </div>
     </div>

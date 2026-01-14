@@ -10,6 +10,9 @@ class Settings(BaseSettings):
     CORS_ORIGINS: str = "http://localhost:3000"
     ENVIRONMENT: str = "development"
 
+    # Admin Settings
+    ADMIN_API_KEY: str = "changeme-in-production"
+
     # API Settings
     API_V1_PREFIX: str = "/api/v1"
     PROJECT_NAME: str = "PersonaApp API"

@@ -4,9 +4,12 @@ import { testApi } from '../services/api';
 import { Question, Answer } from '../types';
 import QuestionCard from '../components/test/QuestionCard';
 import ProgressBar from '../components/common/ProgressBar';
+import { useLanguage } from '../i18n/LanguageContext';
+import LanguageSwitcher from '../components/LanguageSwitcher';
 
 const Test: React.FC = () => {
   const navigate = useNavigate();
+  const { t, language } = useLanguage();
   const [loading, setLoading] = useState(true);
   const [submitting, setSubmitting] = useState(false);
   const [sessionId, setSessionId] = useState<string>('');
@@ -18,18 +21,18 @@ const Test: React.FC = () => {
   useEffect(() => {
     const initTest = async () => {
       try {
-        const data = await testApi.startTest();
+        const data = await testApi.startTest(language);
         setSessionId(data.session_id);
         setQuestions(data.questions);
         setLoading(false);
       } catch (err) {
-        setError('Failed to load test. Please try again.');
+        setError(t.test.error);
         setLoading(false);
       }
     };
 
     initTest();
-  }, []);
+  }, [language, t.test.error]);
 
   const handleAnswer = (answer: number) => {
     const newAnswers = new Map(answers);
@@ -51,7 +54,7 @@ const Test: React.FC = () => {
 
   const handleSubmit = async () => {
     if (answers.size < questions.length) {
-      setError('Please answer all questions before submitting.');
+      setError(t.test.answerAllQuestions);
       return;
     }
 
@@ -65,7 +68,7 @@ const Test: React.FC = () => {
       const result = await testApi.submitTest(sessionId, responses);
       navigate(`/results/${result.result_id}`);
     } catch (err) {
-      setError('Failed to submit test. Please try again.');
+      setError(t.test.submitError);
       setSubmitting(false);
     }
   };
@@ -75,7 +78,7 @@ const Test: React.FC = () => {
       <div className="min-h-screen flex items-center justify-center">
         <div className="text-center">
           <div className="animate-spin rounded-full h-16 w-16 border-b-2 border-primary-600 mx-auto mb-4"></div>
-          <p className="text-gray-600">Loading your personality test...</p>
+          <p className="text-gray-600">{t.test.loading}</p>
         </div>
       </div>
     );
@@ -87,7 +90,7 @@ const Test: React.FC = () => {
         <div className="card max-w-md text-center">
           <p className="text-red-600 mb-4">{error}</p>
           <button onClick={() => window.location.reload()} className="btn-primary">
-            Try Again
+            {t.test.tryAgain}
           </button>
         </div>
       </div>
@@ -101,6 +104,11 @@ const Test: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-gray-50 py-8 px-4">
+      {/* Language Switcher */}
+      <div className="absolute top-4 end-4">
+        <LanguageSwitcher />
+      </div>
+
       <div className="max-w-4xl mx-auto">
         <div className="mb-8">
           <ProgressBar current={currentIndex + 1} total={questions.length} />
@@ -124,7 +132,7 @@ const Test: React.FC = () => {
             disabled={currentIndex === 0}
             className="btn-secondary disabled:opacity-50 disabled:cursor-not-allowed"
           >
-            Previous
+            {t.test.previous}
           </button>
 
           {isLastQuestion ? (
@@ -133,7 +141,7 @@ const Test: React.FC = () => {
               disabled={!canProceed || submitting}
               className="btn-primary disabled:opacity-50 disabled:cursor-not-allowed"
             >
-              {submitting ? 'Submitting...' : 'Submit & See Results'}
+              {submitting ? t.test.submitting : t.test.submitResults}
             </button>
           ) : (
             <button
@@ -141,13 +149,13 @@ const Test: React.FC = () => {
               disabled={!canProceed}
               className="btn-primary disabled:opacity-50 disabled:cursor-not-allowed"
             >
-              Next
+              {t.test.next}
             </button>
           )}
         </div>
 
         <div className="text-center mt-6 text-sm text-gray-600">
-          {answers.size} of {questions.length} questions answered
+          {answers.size} {t.test.of} {questions.length} {t.test.questionsAnswered}
         </div>
       </div>
     </div>

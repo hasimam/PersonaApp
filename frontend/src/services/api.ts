@@ -1,5 +1,6 @@
 import axios from 'axios';
 import { TestStartResponse, Answer, ResultResponse } from '../types';
+import { Language } from '../i18n/translations';
 
 const API_URL = process.env.REACT_APP_API_URL || 'http://localhost:8000';
 const API_BASE = `${API_URL}/api/v1`;
@@ -12,8 +13,8 @@ const api = axios.create({
 });
 
 export const testApi = {
-  startTest: async (): Promise<TestStartResponse> => {
-    const response = await api.get('/test/start');
+  startTest: async (lang: Language = 'en'): Promise<TestStartResponse> => {
+    const response = await api.get(`/test/start?lang=${lang}`);
     return response.data;
   },
 
@@ -27,8 +28,8 @@ export const testApi = {
 };
 
 export const resultsApi = {
-  getResult: async (resultId: number): Promise<ResultResponse> => {
-    const response = await api.get(`/results/${resultId}`);
+  getResult: async (resultId: number, lang: Language = 'en'): Promise<ResultResponse> => {
+    const response = await api.get(`/results/${resultId}?lang=${lang}`);
     return response.data;
   },
 };

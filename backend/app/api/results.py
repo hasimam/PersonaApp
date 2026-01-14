@@ -2,8 +2,9 @@
 API endpoints for retrieving test results.
 """
 
-from fastapi import APIRouter, Depends, HTTPException
+from fastapi import APIRouter, Depends, HTTPException, Query
 from sqlalchemy.orm import Session
+from typing import Literal
 
 from app.db.session import get_db
 from app.models import Result, Trait, Idol
@@ -14,10 +15,14 @@ router = APIRouter()
 
 
 @router.get("/{result_id}", response_model=ResultResponse)
-def get_result(result_id: int, db: Session = Depends(get_db)):
+def get_result(
+    result_id: int,
+    lang: Literal["en", "ar"] = Query(default="en", description="Language for results"),
+    db: Session = Depends(get_db)
+):
     """
     Retrieve test results by result ID.
-    Returns user trait scores and top 3 idol matches.
+    Returns user trait scores and top 3 idol matches in the requested language.
     """
     # Get result from database
     result = db.query(Result).filter(Result.id == result_id).first()
@@ -26,7 +31,7 @@ def get_result(result_id: int, db: Session = Depends(get_db)):
 
     # Get trait information
     traits = db.query(Trait).all()
-    trait_map = {t.id: t.name for t in traits}
+    trait_map = {t.id: (t.name_ar if lang == "ar" and t.name_ar else t.name_en) for t in traits}
 
     # Parse trait scores (stored as string keys in JSONB)
     user_trait_scores = [
@@ -43,11 +48,14 @@ def get_result(result_id: int, db: Session = Depends(get_db)):
     for match_data in result.top_matches:
         idol = db.query(Idol).filter(Idol.id == match_data["idol_id"]).first()
         if idol:
+            # Use Arabic if available and requested, otherwise English
+            name = idol.name_ar if lang == "ar" and idol.name_ar else idol.name_en
+            description = idol.description_ar if lang == "ar" and idol.description_ar else idol.description_en
             top_matches.append(
                 IdolMatch(
                     idol_id=idol.id,
-                    name=idol.name,
-                    description=idol.description,
+                    name=name,
+                    description=description,
                     image_url=idol.image_url,
                     similarity=match_data["similarity"],
                     similarity_percentage=round(match_data["similarity"] * 100, 1)
@@ -66,6 +74,7 @@ def get_result(result_id: int, db: Session = Depends(get_db)):
 def compare_with_idol(
     result_id: int,
     idol_id: int,
+    lang: Literal["en", "ar"] = Query(default="en", description="Language for results"),
     db: Session = Depends(get_db)
 ):
     """
@@ -95,14 +104,18 @@ def compare_with_idol(
     if not idol_match:
         raise HTTPException(status_code=404, detail="Match not found")
 
-    # Get trait comparisons
-    trait_comparisons = calculate_trait_differences(user_scores, idol_scores, db)
+    # Get trait comparisons with language support
+    trait_comparisons = calculate_trait_differences(user_scores, idol_scores, db, lang=lang)
+
+    # Use Arabic if available and requested, otherwise English
+    name = idol.name_ar if lang == "ar" and idol.name_ar else idol.name_en
+    description = idol.description_ar if lang == "ar" and idol.description_ar else idol.description_en
 
     return DetailedMatchResponse(
         idol=IdolMatch(
             idol_id=idol.id,
-            name=idol.name,
-            description=idol.description,
+            name=name,
+            description=description,
             image_url=idol.image_url,
             similarity=idol_match["similarity"],
             similarity_percentage=idol_match["similarity_percentage"]

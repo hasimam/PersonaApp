@@ -82,8 +82,10 @@ def find_top_matches(
 
         similarities.append({
             "idol_id": idol.id,
-            "name": idol.name,
-            "description": idol.description,
+            "name_en": idol.name_en,
+            "name_ar": idol.name_ar,
+            "description_en": idol.description_en,
+            "description_ar": idol.description_ar,
             "image_url": idol.image_url,
             "similarity": float(similarity),
             "similarity_percentage": round(float(similarity) * 100, 1),
@@ -98,7 +100,8 @@ def find_top_matches(
 def calculate_trait_differences(
     user_scores: Dict[int, float],
     idol_scores: Dict[int, float],
-    db: Session
+    db: Session,
+    lang: str = "en"
 ) -> List[Dict]:
     """
     Calculate trait-by-trait differences between user and idol.
@@ -107,12 +110,17 @@ def calculate_trait_differences(
         user_scores: User's trait scores
         idol_scores: Idol's trait scores
         db: Database session
+        lang: Language code ("en" or "ar")
 
     Returns:
         List of trait comparisons with names and scores
     """
     traits = db.query(Trait).all()
-    trait_map = {t.id: t.name for t in traits}
+    # Use Arabic name if requested and available, otherwise English
+    trait_map = {
+        t.id: (t.name_ar if lang == "ar" and t.name_ar else t.name_en)
+        for t in traits
+    }
 
     comparisons = []
     for trait_id in user_scores.keys():

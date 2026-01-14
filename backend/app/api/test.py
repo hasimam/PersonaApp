@@ -2,8 +2,9 @@
 API endpoints for personality test functionality.
 """
 
-from fastapi import APIRouter, Depends, HTTPException
+from fastapi import APIRouter, Depends, HTTPException, Query
 from sqlalchemy.orm import Session
+from typing import Literal
 import uuid
 
 from app.db.session import get_db
@@ -17,10 +18,13 @@ router = APIRouter()
 
 
 @router.get("/start", response_model=TestStartResponse)
-def start_test(db: Session = Depends(get_db)):
+def start_test(
+    lang: Literal["en", "ar"] = Query(default="en", description="Language for questions"),
+    db: Session = Depends(get_db)
+):
     """
     Start a new personality test.
-    Returns a session ID and all test questions.
+    Returns a session ID and all test questions in the requested language.
     """
     # Generate unique session ID
     session_id = str(uuid.uuid4())
@@ -33,17 +37,22 @@ def start_test(db: Session = Depends(get_db)):
     # Get all questions, ordered
     questions = db.query(Question).order_by(Question.order_index).all()
 
+    # Filter questions based on language availability
+    if lang == "ar":
+        # For Arabic, only include questions that have Arabic text
+        questions = [q for q in questions if q.text_ar]
+
     if len(questions) < settings.MIN_QUESTIONS:
         raise HTTPException(
             status_code=500,
-            detail=f"Insufficient questions in database. Need at least {settings.MIN_QUESTIONS}"
+            detail=f"Insufficient questions in database for language '{lang}'. Need at least {settings.MIN_QUESTIONS}"
         )
 
-    # Convert to response schema
+    # Convert to response schema with appropriate language
     question_responses = [
         QuestionResponse(
             id=q.id,
-            text=q.text,
+            text=q.text_ar if lang == "ar" else q.text_en,
             trait_id=q.trait_id,
             order_index=q.order_index
         )

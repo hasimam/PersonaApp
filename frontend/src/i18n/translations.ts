@@ -1,0 +1,122 @@
+export type Language = 'en' | 'ar';
+
+export const translations = {
+  en: {
+    // Landing page
+    landing: {
+      title: 'Find Your Idol Twin',
+      subtitle: 'Discover which celebrities and public figures share your unique personality traits. Take our science-inspired personality test and find your top 3 matches.',
+      whatToExpect: 'What to Expect',
+      quickQuestions: '50 Quick Questions',
+      quickQuestionsDesc: 'Takes about 8-10 minutes to complete',
+      personalityProfile: 'Your Personality Profile',
+      personalityProfileDesc: 'Get scores across 10 key personality traits',
+      topMatches: 'Top 3 Idol Matches',
+      topMatchesDesc: 'See which celebrities are most similar to you',
+      startTest: 'Start Personality Test',
+      disclaimer: 'Disclaimer:',
+      disclaimerText: 'This test is designed for entertainment and self-reflection. Idol personalities are estimated from public information and may not reflect their private selves. This is not a clinical psychological assessment.',
+    },
+    // Test page
+    test: {
+      loading: 'Loading your personality test...',
+      error: 'Failed to load test. Please try again.',
+      tryAgain: 'Try Again',
+      previous: 'Previous',
+      next: 'Next',
+      submitting: 'Submitting...',
+      submitResults: 'Submit & See Results',
+      questionsAnswered: 'questions answered',
+      of: 'of',
+      answerAllQuestions: 'Please answer all questions before submitting.',
+      submitError: 'Failed to submit test. Please try again.',
+      selectOption: 'Select the option that best describes you. There are no right or wrong answers.',
+    },
+    // Likert scale options
+    likert: {
+      stronglyDisagree: 'Strongly Disagree',
+      disagree: 'Disagree',
+      neutral: 'Neutral',
+      agree: 'Agree',
+      stronglyAgree: 'Strongly Agree',
+    },
+    // Results page
+    results: {
+      title: 'Your Personality Results',
+      subtitle: 'Here are the celebrities most similar to your personality',
+      analyzing: 'Analyzing your personality...',
+      loadError: 'Failed to load results. Please try again.',
+      notFound: 'Results not found',
+      backHome: 'Back to Home',
+      topMatches: 'Your Top 3 Matches',
+      personalityMatch: 'Personality Match',
+      personalityProfile: 'Your Personality Profile',
+      yourScore: 'Your Score',
+      traitScores: 'Your Trait Scores',
+      retakeTest: 'Retake Test',
+      shareResults: 'Share Results',
+      shareComingSoon: 'Share feature coming soon!',
+      disclaimerText: 'These results are for entertainment and self-reflection purposes. Idol personalities are estimated from publicly available information and may not reflect their complete or private personalities.',
+    },
+  },
+  ar: {
+    // Landing page
+    landing: {
+      title: 'اكتشف توأم شخصيتك',
+      subtitle: 'اكتشف أي المشاهير والشخصيات العامة يشاركونك سمات شخصيتك الفريدة. خذ اختبار الشخصية المستوحى علمياً واعثر على أفضل 3 تطابقات.',
+      whatToExpect: 'ماذا تتوقع',
+      quickQuestions: '50 سؤال سريع',
+      quickQuestionsDesc: 'يستغرق حوالي 8-10 دقائق لإكماله',
+      personalityProfile: 'ملف شخصيتك',
+      personalityProfileDesc: 'احصل على درجات في 10 سمات شخصية رئيسية',
+      topMatches: 'أفضل 3 تطابقات',
+      topMatchesDesc: 'شاهد أي المشاهير الأكثر تشابهاً معك',
+      startTest: 'ابدأ اختبار الشخصية',
+      disclaimer: 'تنبيه:',
+      disclaimerText: 'هذا الاختبار مصمم للترفيه والتأمل الذاتي. شخصيات المشاهير مقدرة من المعلومات العامة وقد لا تعكس شخصياتهم الخاصة. هذا ليس تقييماً نفسياً سريرياً.',
+    },
+    // Test page
+    test: {
+      loading: 'جاري تحميل اختبار الشخصية...',
+      error: 'فشل في تحميل الاختبار. يرجى المحاولة مرة أخرى.',
+      tryAgain: 'حاول مرة أخرى',
+      previous: 'السابق',
+      next: 'التالي',
+      submitting: 'جاري الإرسال...',
+      submitResults: 'إرسال ومشاهدة النتائج',
+      questionsAnswered: 'أسئلة تمت الإجابة عليها',
+      of: 'من',
+      answerAllQuestions: 'يرجى الإجابة على جميع الأسئلة قبل الإرسال.',
+      submitError: 'فشل في إرسال الاختبار. يرجى المحاولة مرة أخرى.',
+      selectOption: 'اختر الخيار الذي يصفك بشكل أفضل. لا توجد إجابات صحيحة أو خاطئة.',
+    },
+    // Likert scale options
+    likert: {
+      stronglyDisagree: 'لا أوافق بشدة',
+      disagree: 'لا أوافق',
+      neutral: 'محايد',
+      agree: 'أوافق',
+      stronglyAgree: 'أوافق بشدة',
+    },
+    // Results page
+    results: {
+      title: 'نتائج شخصيتك',
+      subtitle: 'إليك المشاهير الأكثر تشابهاً مع شخصيتك',
+      analyzing: 'جاري تحليل شخصيتك...',
+      loadError: 'فشل في تحميل النتائج. يرجى المحاولة مرة أخرى.',
+      notFound: 'النتائج غير موجودة',
+      backHome: 'العودة للرئيسية',
+      topMatches: 'أفضل 3 تطابقات لك',
+      personalityMatch: 'تطابق الشخصية',
+      personalityProfile: 'ملف شخصيتك',
+      yourScore: 'درجتك',
+      traitScores: 'درجات سماتك',
+      retakeTest: 'إعادة الاختبار',
+      shareResults: 'مشاركة النتائج',
+      shareComingSoon: 'ميزة المشاركة قريباً!',
+      disclaimerText: 'هذه النتائج لأغراض الترفيه والتأمل الذاتي. شخصيات المشاهير مقدرة من المعلومات المتاحة للعامة وقد لا تعكس شخصياتهم الكاملة أو الخاصة.',
+    },
+  },
+};
+
+export type TranslationKey = keyof typeof translations.en;

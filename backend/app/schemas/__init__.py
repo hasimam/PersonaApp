@@ -12,6 +12,18 @@ from app.schemas.result import (
     ResultResponse,
     DetailedMatchResponse
 )
+from app.schemas.admin import (
+    QuestionCreate,
+    QuestionUpdate,
+    QuestionResponse as AdminQuestionResponse,
+    IdolCreate,
+    IdolUpdate,
+    IdolResponse as AdminIdolResponse,
+    TraitCreate,
+    TraitUpdate,
+    TraitResponse as AdminTraitResponse,
+    AdminStats
+)
 
 __all__ = [
     "QuestionResponse",
@@ -23,5 +35,15 @@ __all__ = [
     "IdolMatch",
     "TraitComparison",
     "ResultResponse",
-    "DetailedMatchResponse"
+    "DetailedMatchResponse",
+    "QuestionCreate",
+    "QuestionUpdate",
+    "AdminQuestionResponse",
+    "IdolCreate",
+    "IdolUpdate",
+    "AdminIdolResponse",
+    "TraitCreate",
+    "TraitUpdate",
+    "AdminTraitResponse",
+    "AdminStats"
 ]
