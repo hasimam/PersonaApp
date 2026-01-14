@@ -8,9 +8,9 @@ const Landing: React.FC = () => {
   const { t } = useLanguage();
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-primary-50 to-primary-100 flex items-center justify-center p-4">
-      {/* Language Switcher - Fixed position */}
-      <div className="absolute top-4 end-4">
+    <div className="min-h-screen bg-gradient-to-br from-primary-50 to-primary-100 flex items-center justify-center p-4 relative">
+      {/* Language Switcher - Top right corner */}
+      <div className="absolute top-4 right-4 z-10">
         <LanguageSwitcher />
       </div>
 

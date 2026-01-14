@@ -69,9 +69,9 @@ const Results: React.FC = () => {
   }));
 
   return (
-    <div className="min-h-screen bg-gray-50 py-12 px-4">
-      {/* Language Switcher */}
-      <div className="absolute top-4 end-4">
+    <div className="min-h-screen bg-gray-50 py-12 px-4 relative">
+      {/* Language Switcher - Top right corner */}
+      <div className="absolute top-4 right-4 z-10">
         <LanguageSwitcher />
       </div>
 
