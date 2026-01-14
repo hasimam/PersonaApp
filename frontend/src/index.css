@@ -14,11 +14,28 @@ body {
 
 /* RTL Support for Arabic */
 html[dir="rtl"] body {
-  font-family: 'Segoe UI', Tahoma, 'Noto Sans Arabic', 'Arial', sans-serif;
+  font-family: 'Tajawal', 'Segoe UI', Tahoma, sans-serif;
 }
 
 html[dir="rtl"] {
   text-align: right;
+}
+
+/* Arabic titles use Cairo font */
+html[dir="rtl"] h1,
+html[dir="rtl"] h2,
+html[dir="rtl"] h3,
+html[dir="rtl"] h4,
+html[dir="rtl"] h5,
+html[dir="rtl"] h6 {
+  font-family: 'Cairo', 'Segoe UI', Tahoma, sans-serif;
+}
+
+/* Arabic buttons use Cairo font */
+html[dir="rtl"] button,
+html[dir="rtl"] .btn-primary,
+html[dir="rtl"] .btn-secondary {
+  font-family: 'Cairo', 'Segoe UI', Tahoma, sans-serif;
 }
 
 /* RTL space utilities */
