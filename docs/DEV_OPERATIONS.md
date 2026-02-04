@@ -115,3 +115,40 @@ python -m app.db.hybrid_seed_importer
 - Keep session-based public test flow.
 - Keep relational DB with JSONB only where flexible payloads are needed (`trait_scores`, cached result payloads).
 - Prefer explicit, simple APIs over abstraction-heavy redesign.
+
+## 8) Pilot metrics SQL (hybrid journey)
+
+Use these queries against runtime tables after pilot traffic starts.
+
+### Judged-score distribution
+```sql
+SELECT judged_score, COUNT(*) AS count
+FROM feedback
+GROUP BY judged_score
+ORDER BY judged_score;
+```
+
+### Completion rate
+```sql
+SELECT
+  COUNT(*) AS total_started,
+  COUNT(*) FILTER (WHERE submitted_at IS NOT NULL) AS total_completed,
+  ROUND(
+    (COUNT(*) FILTER (WHERE submitted_at IS NOT NULL)::numeric / NULLIF(COUNT(*), 0)) * 100,
+    2
+  ) AS completion_rate_pct
+FROM test_runs;
+```
+
+### Activation pick rate
+```sql
+SELECT
+  COUNT(*) FILTER (WHERE submitted_at IS NOT NULL) AS completed_runs,
+  COUNT(*) FILTER (WHERE selected_activation_id IS NOT NULL) AS runs_with_activation_pick,
+  ROUND(
+    (COUNT(*) FILTER (WHERE selected_activation_id IS NOT NULL)::numeric
+      / NULLIF(COUNT(*) FILTER (WHERE submitted_at IS NOT NULL), 0)) * 100,
+    2
+  ) AS activation_pick_rate_pct
+FROM test_runs;
+```

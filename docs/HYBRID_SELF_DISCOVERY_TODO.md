@@ -13,7 +13,7 @@ Source: `docs/HYBRID_SELF_DISCOVERY_PLAN.md`
 - [x] Phase 3 - Scoring and matching services
 - [x] Phase 4 - API contract (`/journey/*`)
 - [x] Phase 5 - Frontend journey implementation
-- [ ] Phase 6 - QA + pilot readiness
+- [x] Phase 6 - QA + pilot readiness
 
 ## Workflow rule
 - Implement one phase at a time.
