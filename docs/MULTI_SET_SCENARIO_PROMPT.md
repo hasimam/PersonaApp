@@ -28,6 +28,10 @@ Important constraints:
 - Keep scenario purpose equivalent to the default set by order index (same psychological construct), but wording/context must be fresh.
 - Keep tone practical and values-aware; do not produce religious rulings.
 - Options must be behaviorally distinct and plausible.
+- Write for broad inclusivity: suitable for teens/adults and mixed education levels.
+- Use simple Arabic by default: short sentences, common words, minimal abstraction/jargon.
+- Balance contexts across daily life (family, friends, study, work, neighborhood) to avoid office-only bias.
+- Avoid assumptions about income, profession, or high formal education.
 - Do not change schema/columns.
 
 Output format (STRICT):
@@ -58,6 +62,9 @@ Quality checklist before final output:
 - All CSV rows consistent with schema.
 - Arabic text has no broken punctuation/encoding.
 - No duplicate scenario_code.
+- Scenario wording is understandable for mixed age/education backgrounds.
+- Context mix is diverse (not mostly corporate/workplace).
+- Each option remains behaviorally distinct while still simple to read.
 ```
 
 ## Current Default Set (Sample Reference)
