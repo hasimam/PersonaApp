@@ -4,5 +4,40 @@ from app.models.idol import Idol
 from app.models.user import User
 from app.models.test_response import TestResponse
 from app.models.result import Result
+from app.models.hybrid import (
+    AppVersion,
+    Gene,
+    Scenario,
+    ScenarioOption,
+    OptionWeight,
+    SahabaModel,
+    AdviceItem,
+    AdviceTrigger,
+    TestRun,
+    Answer,
+    ComputedGeneScore,
+    ComputedModelMatch,
+    Feedback,
+)
 
-__all__ = ["Trait", "Question", "Idol", "User", "TestResponse", "Result"]
+__all__ = [
+    "Trait",
+    "Question",
+    "Idol",
+    "User",
+    "TestResponse",
+    "Result",
+    "AppVersion",
+    "Gene",
+    "Scenario",
+    "ScenarioOption",
+    "OptionWeight",
+    "SahabaModel",
+    "AdviceItem",
+    "AdviceTrigger",
+    "TestRun",
+    "Answer",
+    "ComputedGeneScore",
+    "ComputedModelMatch",
+    "Feedback",
+]
