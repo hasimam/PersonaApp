@@ -8,6 +8,7 @@ from app.core.hybrid_engine import JourneyAnswer, compute_hybrid_outcome
 from app.db.session import get_db
 from app.models import (
     Answer,
+    AdviceItem,
     AppVersion,
     ComputedGeneScore,
     ComputedModelMatch,
@@ -296,6 +297,25 @@ def submit_journey_feedback(
     if not test_run:
         raise HTTPException(status_code=404, detail="test_run_id not found")
 
+    selected_activation_id = (
+        payload.selected_activation_id.strip() if payload.selected_activation_id else None
+    )
+    if selected_activation_id:
+        activation_item = (
+            db.query(AdviceItem.advice_id)
+            .filter(
+                AdviceItem.version_id == test_run.version_id,
+                AdviceItem.advice_id == selected_activation_id,
+            )
+            .first()
+        )
+        if not activation_item:
+            raise HTTPException(
+                status_code=400,
+                detail=f"selected_activation_id '{selected_activation_id}' not found",
+            )
+        test_run.selected_activation_id = selected_activation_id
+
     feedback = db.query(Feedback).filter(Feedback.test_run_id == payload.test_run_id).first()
     if feedback:
         feedback.judged_score = payload.judged_score
@@ -311,5 +331,6 @@ def submit_journey_feedback(
     return JourneyFeedbackResponse(
         test_run_id=payload.test_run_id,
         judged_score=payload.judged_score,
+        selected_activation_id=test_run.selected_activation_id,
         status="recorded",
     )

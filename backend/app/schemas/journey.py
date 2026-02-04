@@ -83,9 +83,11 @@ class JourneySubmitAnswersResponse(BaseModel):
 class JourneyFeedbackRequest(BaseModel):
     test_run_id: int = Field(..., ge=1)
     judged_score: int = Field(..., ge=1, le=5)
+    selected_activation_id: Optional[str] = Field(default=None, min_length=1, max_length=64)
 
 
 class JourneyFeedbackResponse(BaseModel):
     test_run_id: int
     judged_score: int
+    selected_activation_id: Optional[str]
     status: str

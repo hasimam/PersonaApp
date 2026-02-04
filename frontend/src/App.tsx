@@ -1,9 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { LanguageProvider } from './i18n/LanguageContext';
-import Landing from './pages/Landing';
-import Test from './pages/Test';
-import Results from './pages/Results';
+import Journey from './pages/Journey';
 import AdminLogin from './pages/admin/AdminLogin';
 import AdminLayout from './pages/admin/AdminLayout';
 import AdminDashboard from './pages/admin/AdminDashboard';
@@ -17,9 +15,9 @@ function App() {
       <Router>
         <Routes>
           {/* Public routes */}
-          <Route path="/" element={<Landing />} />
-          <Route path="/test" element={<Test />} />
-          <Route path="/results/:resultId" element={<Results />} />
+          <Route path="/" element={<Journey />} />
+          <Route path="/test" element={<Journey />} />
+          <Route path="/results/:resultId" element={<Journey />} />
 
           {/* Admin routes */}
           <Route path="/admin" element={<AdminLogin />} />

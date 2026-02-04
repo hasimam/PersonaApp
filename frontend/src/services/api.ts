@@ -1,5 +1,14 @@
 import axios from 'axios';
-import { TestStartResponse, Answer, ResultResponse } from '../types';
+import {
+  TestStartResponse,
+  Answer,
+  ResultResponse,
+  JourneyStartResponse,
+  JourneySubmitAnswersRequest,
+  JourneySubmitAnswersResponse,
+  JourneyFeedbackRequest,
+  JourneyFeedbackResponse,
+} from '../types';
 import { Language } from '../i18n/translations';
 
 const API_URL = process.env.REACT_APP_API_URL || 'http://localhost:8000';
@@ -30,6 +39,23 @@ export const testApi = {
 export const resultsApi = {
   getResult: async (resultId: number, lang: Language = 'en'): Promise<ResultResponse> => {
     const response = await api.get(`/results/${resultId}?lang=${lang}`);
+    return response.data;
+  },
+};
+
+export const journeyApi = {
+  startJourney: async (versionId?: string): Promise<JourneyStartResponse> => {
+    const response = await api.post('/journey/start', versionId ? { version_id: versionId } : undefined);
+    return response.data;
+  },
+
+  submitAnswers: async (payload: JourneySubmitAnswersRequest): Promise<JourneySubmitAnswersResponse> => {
+    const response = await api.post('/journey/submit-answers', payload);
+    return response.data;
+  },
+
+  submitFeedback: async (payload: JourneyFeedbackRequest): Promise<JourneyFeedbackResponse> => {
+    const response = await api.post('/journey/feedback', payload);
     return response.data;
   },
 };

@@ -12,7 +12,7 @@ Source: `docs/HYBRID_SELF_DISCOVERY_PLAN.md`
 - [x] Phase 2 - Seed pack import pipeline (`seed/` CSVs)
 - [x] Phase 3 - Scoring and matching services
 - [x] Phase 4 - API contract (`/journey/*`)
-- [ ] Phase 5 - Frontend journey implementation
+- [x] Phase 5 - Frontend journey implementation
 - [ ] Phase 6 - QA + pilot readiness
 
 ## Workflow rule
