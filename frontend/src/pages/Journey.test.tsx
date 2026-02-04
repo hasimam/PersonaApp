@@ -14,9 +14,20 @@ jest.mock('../services/api', () => ({
 }));
 
 const mockedJourneyApi = journeyApi as jest.Mocked<typeof journeyApi>;
+const realConsoleError = console.error;
+
+let consoleErrorSpy: jest.SpyInstance;
 
 describe('Journey smoke test', () => {
   beforeEach(() => {
+    consoleErrorSpy = jest.spyOn(console, 'error').mockImplementation((...args: any[]) => {
+      const message = args.map((arg) => String(arg)).join(' ');
+      if (message.includes('ReactDOMTestUtils.act')) {
+        return;
+      }
+      realConsoleError(...args);
+    });
+
     jest.useFakeTimers();
     mockedJourneyApi.startJourney.mockResolvedValue({
       test_run_id: 99,
@@ -116,6 +127,7 @@ describe('Journey smoke test', () => {
 
   afterEach(() => {
     jest.clearAllMocks();
+    consoleErrorSpy.mockRestore();
     jest.runOnlyPendingTimers();
     jest.useRealTimers();
   });

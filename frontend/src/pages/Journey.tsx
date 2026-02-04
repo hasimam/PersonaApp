@@ -163,11 +163,11 @@ const Journey: React.FC = () => {
         judged_score: judgedScore,
         selected_activation_id: selectedActivationId,
       });
+      setStep('closing');
     } catch (e) {
-      // Non-blocking, activation choice still reflected in UI completion.
+      setError(t.journey.activationSaveError);
     } finally {
       setBusy(false);
-      setStep('closing');
     }
   };
 

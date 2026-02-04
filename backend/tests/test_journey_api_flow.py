@@ -1,6 +1,7 @@
 import os
 import unittest
 
+from fastapi import HTTPException
 from sqlalchemy import create_engine
 from sqlalchemy.dialects.postgresql import JSONB
 from sqlalchemy.ext.compiler import compiles
@@ -129,6 +130,7 @@ class JourneyApiFlowTests(unittest.TestCase):
                 Scenario(
                     version_id="v_test",
                     scenario_code="S01",
+                    scenario_set_code="base",
                     order_index=1,
                     scenario_text_en="Scenario 1",
                     scenario_text_ar="الموقف 1",
@@ -136,9 +138,26 @@ class JourneyApiFlowTests(unittest.TestCase):
                 Scenario(
                     version_id="v_test",
                     scenario_code="S02",
+                    scenario_set_code="base",
                     order_index=2,
                     scenario_text_en="Scenario 2",
                     scenario_text_ar="الموقف 2",
+                ),
+                Scenario(
+                    version_id="v_test",
+                    scenario_code="B01",
+                    scenario_set_code="set_b",
+                    order_index=1,
+                    scenario_text_en="Scenario B1",
+                    scenario_text_ar="الموقف ب1",
+                ),
+                Scenario(
+                    version_id="v_test",
+                    scenario_code="B02",
+                    scenario_set_code="set_b",
+                    order_index=2,
+                    scenario_text_en="Scenario B2",
+                    scenario_text_ar="الموقف ب2",
                 ),
             ]
         )
@@ -173,6 +192,34 @@ class JourneyApiFlowTests(unittest.TestCase):
                     option_text_en="S02 B",
                     option_text_ar="الخيار ب",
                 ),
+                ScenarioOption(
+                    version_id="v_test",
+                    scenario_code="B01",
+                    option_code="A",
+                    option_text_en="B01 A",
+                    option_text_ar="الخيار أ",
+                ),
+                ScenarioOption(
+                    version_id="v_test",
+                    scenario_code="B01",
+                    option_code="B",
+                    option_text_en="B01 B",
+                    option_text_ar="الخيار ب",
+                ),
+                ScenarioOption(
+                    version_id="v_test",
+                    scenario_code="B02",
+                    option_code="A",
+                    option_text_en="B02 A",
+                    option_text_ar="الخيار أ",
+                ),
+                ScenarioOption(
+                    version_id="v_test",
+                    scenario_code="B02",
+                    option_code="B",
+                    option_text_en="B02 B",
+                    option_text_ar="الخيار ب",
+                ),
             ]
         )
 
@@ -202,6 +249,34 @@ class JourneyApiFlowTests(unittest.TestCase):
                 OptionWeight(
                     version_id="v_test",
                     scenario_code="S02",
+                    option_code="B",
+                    gene_code="EMP",
+                    weight=4.0,
+                ),
+                OptionWeight(
+                    version_id="v_test",
+                    scenario_code="B01",
+                    option_code="A",
+                    gene_code="EMP",
+                    weight=5.0,
+                ),
+                OptionWeight(
+                    version_id="v_test",
+                    scenario_code="B01",
+                    option_code="B",
+                    gene_code="CRG",
+                    weight=5.0,
+                ),
+                OptionWeight(
+                    version_id="v_test",
+                    scenario_code="B02",
+                    option_code="A",
+                    gene_code="WIS",
+                    weight=3.0,
+                ),
+                OptionWeight(
+                    version_id="v_test",
+                    scenario_code="B02",
                     option_code="B",
                     gene_code="EMP",
                     weight=4.0,
@@ -255,6 +330,17 @@ class JourneyApiFlowTests(unittest.TestCase):
                     body_ar="قم بفعل اجتماعي",
                     priority=100,
                 ),
+                AdviceItem(
+                    version_id="v_test",
+                    advice_id="ACT_OTHER",
+                    channel="behavior",
+                    advice_type="activation",
+                    title_en="Other behavior action",
+                    title_ar="سلوك آخر",
+                    body_en="This action is not part of the triggered three",
+                    body_ar="هذا الإجراء ليس ضمن الخيارات الثلاثة",
+                    priority=100,
+                ),
             ]
         )
 
@@ -302,6 +388,7 @@ class JourneyApiFlowTests(unittest.TestCase):
         started = start_journey(payload=JourneyStartRequest(version_id="v_test"), db=self.db)
         self.assertEqual(started.version_id, "v_test")
         self.assertEqual(len(started.scenarios), 2)
+        self.assertEqual([item.scenario_code for item in started.scenarios], ["S01", "S02"])
 
         submitted = submit_journey_answers(
             payload=JourneySubmitAnswersRequest(
@@ -353,6 +440,40 @@ class JourneyApiFlowTests(unittest.TestCase):
         self.assertEqual(feedback_row.judged_score, 5)
         test_run = self.db.query(TestRun).filter(TestRun.id == started.test_run_id).first()
         self.assertEqual(test_run.selected_activation_id, selected_activation_id)
+
+    def test_start_rotates_between_scenario_sets_per_run(self):
+        first_run = start_journey(payload=JourneyStartRequest(version_id="v_test"), db=self.db)
+        second_run = start_journey(payload=JourneyStartRequest(version_id="v_test"), db=self.db)
+
+        self.assertEqual([item.scenario_code for item in first_run.scenarios], ["S01", "S02"])
+        self.assertEqual([item.scenario_code for item in second_run.scenarios], ["B01", "B02"])
+
+    def test_feedback_rejects_activation_not_offered_for_test_run(self):
+        started = start_journey(payload=JourneyStartRequest(version_id="v_test"), db=self.db)
+        submit_journey_answers(
+            payload=JourneySubmitAnswersRequest(
+                version_id="v_test",
+                test_run_id=started.test_run_id,
+                answers=[
+                    JourneyAnswerSubmission(scenario_code="S01", option_code="A"),
+                    JourneyAnswerSubmission(scenario_code="S02", option_code="A"),
+                ],
+            ),
+            db=self.db,
+        )
+
+        with self.assertRaises(HTTPException) as ctx:
+            submit_journey_feedback(
+                payload=JourneyFeedbackRequest(
+                    test_run_id=started.test_run_id,
+                    judged_score=4,
+                    selected_activation_id="ACT_OTHER",
+                ),
+                db=self.db,
+            )
+
+        self.assertEqual(ctx.exception.status_code, 400)
+        self.assertIn("was not offered for this test_run", str(ctx.exception.detail))
 
 
 if __name__ == "__main__":

@@ -4,11 +4,17 @@ from typing import Dict, List, Optional, Sequence, Set
 from fastapi import APIRouter, Depends, HTTPException
 from sqlalchemy.orm import Session
 
-from app.core.hybrid_engine import JourneyAnswer, compute_hybrid_outcome
+from app.core.hybrid_engine import (
+    GeneScoreResult,
+    JourneyAnswer,
+    ModelMatchResult,
+    compute_hybrid_outcome,
+    rank_gene_scores,
+    select_activation_items,
+)
 from app.db.session import get_db
 from app.models import (
     Answer,
-    AdviceItem,
     AppVersion,
     ComputedGeneScore,
     ComputedModelMatch,
@@ -63,6 +69,24 @@ def _load_option_codes_by_scenario(db: Session, version_id: str) -> Dict[str, Se
     return option_codes_by_scenario
 
 
+def _load_scenario_set_codes(db: Session, version_id: str) -> List[str]:
+    rows = (
+        db.query(Scenario.scenario_set_code)
+        .filter(Scenario.version_id == version_id)
+        .distinct()
+        .order_by(Scenario.scenario_set_code.asc())
+        .all()
+    )
+    return [set_code for (set_code,) in rows if set_code]
+
+
+def _select_scenario_set_code(set_codes: Sequence[str], test_run_id: int) -> str:
+    if not set_codes:
+        raise ValueError("No scenario sets available")
+    ordered = sorted(set_codes)
+    return ordered[(test_run_id - 1) % len(ordered)]
+
+
 def _validate_answer_payload(
     answers: Sequence[JourneyAnswerSubmission],
     valid_scenario_codes: Set[str],
@@ -100,6 +124,52 @@ def _validate_answer_payload(
     return normalized_answers
 
 
+def _load_allowed_activation_ids(db: Session, test_run: TestRun) -> Set[str]:
+    gene_score_rows = (
+        db.query(ComputedGeneScore)
+        .filter(ComputedGeneScore.test_run_id == test_run.id)
+        .all()
+    )
+    if not gene_score_rows:
+        raise HTTPException(
+            status_code=400,
+            detail="selected_activation_id requires completed submit-answers for this test_run",
+        )
+
+    raw_scores = {row.gene_code: float(row.raw_score) for row in gene_score_rows}
+    ranked_scores = rank_gene_scores(raw_scores)
+    normalized_by_gene = {row.gene_code: float(row.normalized_score) for row in gene_score_rows}
+    gene_scores: List[GeneScoreResult] = [
+        GeneScoreResult(
+            gene_code=score.gene_code,
+            raw_score=score.raw_score,
+            normalized_score=normalized_by_gene.get(score.gene_code, score.normalized_score),
+            rank=score.rank,
+            role=score.role,
+        )
+        for score in ranked_scores
+    ]
+
+    model_rows = (
+        db.query(ComputedModelMatch)
+        .filter(ComputedModelMatch.test_run_id == test_run.id)
+        .order_by(ComputedModelMatch.rank.asc(), ComputedModelMatch.model_code.asc())
+        .all()
+    )
+    model_matches: List[ModelMatchResult] = [
+        ModelMatchResult(model_code=row.model_code, similarity=float(row.similarity), rank=row.rank)
+        for row in model_rows
+    ]
+
+    activation_items = select_activation_items(
+        db=db,
+        version_id=test_run.version_id,
+        gene_scores=gene_scores,
+        model_matches=model_matches,
+    )
+    return {item.advice_id for item in activation_items}
+
+
 @router.post("/start", response_model=JourneyStartResponse)
 def start_journey(
     payload: Optional[JourneyStartRequest] = None,
@@ -108,29 +178,50 @@ def start_journey(
     requested_version_id = payload.version_id if payload else None
     version_id = _resolve_version_id(db=db, requested_version_id=requested_version_id)
 
+    scenario_set_codes = _load_scenario_set_codes(db=db, version_id=version_id)
+    if not scenario_set_codes:
+        raise HTTPException(status_code=400, detail=f"No scenarios found for version '{version_id}'")
+
+    test_run = TestRun(version_id=version_id, session_id=None)
+    db.add(test_run)
+    db.commit()
+    db.refresh(test_run)
+
+    selected_set_code = _select_scenario_set_code(
+        set_codes=scenario_set_codes,
+        test_run_id=test_run.id,
+    )
+    test_run.scenario_set_code = selected_set_code
+    db.commit()
+
     scenarios = (
         db.query(Scenario)
-        .filter(Scenario.version_id == version_id)
-        .order_by(Scenario.order_index.asc())
+        .filter(
+            Scenario.version_id == version_id,
+            Scenario.scenario_set_code == selected_set_code,
+        )
+        .order_by(Scenario.order_index.asc(), Scenario.scenario_code.asc())
         .all()
     )
     if not scenarios:
-        raise HTTPException(status_code=400, detail=f"No scenarios found for version '{version_id}'")
+        raise HTTPException(
+            status_code=400,
+            detail=f"No scenarios found for version '{version_id}' and set '{selected_set_code}'",
+        )
 
+    scenario_codes = [scenario.scenario_code for scenario in scenarios]
     options = (
         db.query(ScenarioOption)
-        .filter(ScenarioOption.version_id == version_id)
+        .filter(
+            ScenarioOption.version_id == version_id,
+            ScenarioOption.scenario_code.in_(scenario_codes),
+        )
         .order_by(ScenarioOption.scenario_code.asc(), ScenarioOption.option_code.asc())
         .all()
     )
     options_by_scenario: Dict[str, List[ScenarioOption]] = {}
     for option in options:
         options_by_scenario.setdefault(option.scenario_code, []).append(option)
-
-    test_run = TestRun(version_id=version_id, session_id=None)
-    db.add(test_run)
-    db.commit()
-    db.refresh(test_run)
 
     response_scenarios: List[JourneyScenario] = []
     for scenario in scenarios:
@@ -169,7 +260,10 @@ def submit_journey_answers(
     if test_run.version_id != payload.version_id:
         raise HTTPException(status_code=400, detail="version_id does not match test_run_id")
 
-    scenario_rows = db.query(Scenario).filter(Scenario.version_id == payload.version_id).all()
+    scenario_query = db.query(Scenario).filter(Scenario.version_id == payload.version_id)
+    if test_run.scenario_set_code:
+        scenario_query = scenario_query.filter(Scenario.scenario_set_code == test_run.scenario_set_code)
+    scenario_rows = scenario_query.all()
     valid_scenario_codes = {row.scenario_code for row in scenario_rows}
     if not valid_scenario_codes:
         raise HTTPException(status_code=400, detail=f"No scenarios found for version '{payload.version_id}'")
@@ -301,18 +395,11 @@ def submit_journey_feedback(
         payload.selected_activation_id.strip() if payload.selected_activation_id else None
     )
     if selected_activation_id:
-        activation_item = (
-            db.query(AdviceItem.advice_id)
-            .filter(
-                AdviceItem.version_id == test_run.version_id,
-                AdviceItem.advice_id == selected_activation_id,
-            )
-            .first()
-        )
-        if not activation_item:
+        allowed_activation_ids = _load_allowed_activation_ids(db=db, test_run=test_run)
+        if selected_activation_id not in allowed_activation_ids:
             raise HTTPException(
                 status_code=400,
-                detail=f"selected_activation_id '{selected_activation_id}' not found",
+                detail=f"selected_activation_id '{selected_activation_id}' was not offered for this test_run",
             )
         test_run.selected_activation_id = selected_activation_id
 

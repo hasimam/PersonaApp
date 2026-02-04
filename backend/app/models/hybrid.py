@@ -50,11 +50,17 @@ class Gene(Base):
 class Scenario(Base):
     __tablename__ = "scenarios"
     __table_args__ = (
-        UniqueConstraint("version_id", "order_index", name="uq_scenarios_version_order"),
+        UniqueConstraint(
+            "version_id",
+            "scenario_set_code",
+            "order_index",
+            name="uq_scenarios_version_set_order",
+        ),
     )
 
     version_id = Column(String(50), ForeignKey("app_versions.version_id"), primary_key=True)
     scenario_code = Column(String(32), primary_key=True)
+    scenario_set_code = Column(String(64), nullable=False, default="default")
     order_index = Column(Integer, nullable=False)
     scenario_text_en = Column(Text, nullable=False)
     scenario_text_ar = Column(Text, nullable=True)
@@ -181,6 +187,7 @@ class TestRun(Base):
     id = Column(Integer, primary_key=True, index=True)
     version_id = Column(String(50), ForeignKey("app_versions.version_id"), nullable=False, index=True)
     session_id = Column(String(255), nullable=True, index=True)
+    scenario_set_code = Column(String(64), nullable=True, index=True)
     selected_activation_id = Column(String(64), nullable=True)
     created_at = Column(DateTime(timezone=True), server_default=func.now())
     submitted_at = Column(DateTime(timezone=True), nullable=True)

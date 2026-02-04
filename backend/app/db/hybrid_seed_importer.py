@@ -328,7 +328,7 @@ def _import_hybrid_seed_pack(db: Optional[Session], seed_path: Path) -> Dict[str
     scenario_rows, _ = _read_csv_rows(
         seed_path / "scenarios.csv",
         required_columns=["version_id", "scenario_code", "order_index", "scenario_text_en"],
-        optional_columns=["scenario_text_ar"],
+        optional_columns=["scenario_set_code", "scenario_text_ar"],
     )
     scenario_err = _RowErrorBuilder("scenarios.csv")
     scenario_keys = _load_existing_pair_key(db, Scenario, "version_id", "scenario_code")
@@ -346,6 +346,7 @@ def _import_hybrid_seed_pack(db: Optional[Session], seed_path: Path) -> Dict[str
             {
                 "version_id": version_id,
                 "scenario_code": scenario_code,
+                "scenario_set_code": _normalize_optional(row.values.get("scenario_set_code", "")) or "default",
                 "order_index": _parse_int(
                     row.values["order_index"], "order_index", scenario_err, row.line_number
                 ),
@@ -365,7 +366,7 @@ def _import_hybrid_seed_pack(db: Optional[Session], seed_path: Path) -> Dict[str
         Scenario,
         scenario_payload,
         key_columns=["version_id", "scenario_code"],
-        update_columns=["order_index", "scenario_text_en", "scenario_text_ar"],
+        update_columns=["scenario_set_code", "order_index", "scenario_text_en", "scenario_text_ar"],
     )
     summary["scenarios"] = len(scenario_payload)
 

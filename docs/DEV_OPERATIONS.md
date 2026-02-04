@@ -109,6 +109,7 @@ python -m app.db.hybrid_seed_importer
 1. Trait weighting or alternative matching modes.
 2. Shareable result card/link.
 3. Analytics events for completion and drop-off.
+4. Optional follow-up loop for activation choices (consented email or magic-link return flow; keep anonymous mode available).
 
 ## 7) Decisions and defaults
 - Keep monolith architecture.
