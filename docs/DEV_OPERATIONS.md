@@ -72,6 +72,14 @@ alembic revision --autogenerate -m "describe change"
 alembic upgrade head
 ```
 
+### Hybrid seed pack import
+```bash
+cd backend
+source venv/bin/activate
+python -m app.db.hybrid_seed_importer --dry-run
+python -m app.db.hybrid_seed_importer
+```
+
 ## 4) Admin operations
 - Login URL: `/admin`
 - Authentication: API key entered in UI and sent as `X-Admin-Key`

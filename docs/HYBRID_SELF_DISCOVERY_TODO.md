@@ -9,7 +9,7 @@ Source: `docs/HYBRID_SELF_DISCOVERY_PLAN.md`
   - [x] Wire model exports
   - [x] Validate migration + model imports
   - [x] Commit phase separately
-- [ ] Phase 2 - Seed pack import pipeline (`seed/` CSVs)
+- [x] Phase 2 - Seed pack import pipeline (`seed/` CSVs)
 - [ ] Phase 3 - Scoring and matching services
 - [ ] Phase 4 - API contract (`/journey/*`)
 - [ ] Phase 5 - Frontend journey implementation
