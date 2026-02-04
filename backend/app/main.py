@@ -6,7 +6,7 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
 from app.core.config import settings
-from app.api import test, results, admin
+from app.api import admin, journey, results, test
 
 # Create FastAPI app
 app = FastAPI(
@@ -41,6 +41,11 @@ app.include_router(
     admin.router,
     prefix=f"{settings.API_V1_PREFIX}/admin",
     tags=["admin"]
+)
+app.include_router(
+    journey.router,
+    prefix=f"{settings.API_V1_PREFIX}/journey",
+    tags=["journey"]
 )
 
 

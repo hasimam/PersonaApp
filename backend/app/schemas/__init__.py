@@ -24,6 +24,20 @@ from app.schemas.admin import (
     TraitResponse as AdminTraitResponse,
     AdminStats
 )
+from app.schemas.journey import (
+    JourneyStartRequest,
+    JourneyScenarioOption,
+    JourneyScenario,
+    JourneyStartResponse,
+    JourneyAnswerSubmission,
+    JourneySubmitAnswersRequest,
+    JourneyTopGene,
+    JourneyArchetypeMatch,
+    JourneyActivationItem,
+    JourneySubmitAnswersResponse,
+    JourneyFeedbackRequest,
+    JourneyFeedbackResponse,
+)
 
 __all__ = [
     "QuestionResponse",
@@ -45,5 +59,17 @@ __all__ = [
     "TraitCreate",
     "TraitUpdate",
     "AdminTraitResponse",
-    "AdminStats"
+    "AdminStats",
+    "JourneyStartRequest",
+    "JourneyScenarioOption",
+    "JourneyScenario",
+    "JourneyStartResponse",
+    "JourneyAnswerSubmission",
+    "JourneySubmitAnswersRequest",
+    "JourneyTopGene",
+    "JourneyArchetypeMatch",
+    "JourneyActivationItem",
+    "JourneySubmitAnswersResponse",
+    "JourneyFeedbackRequest",
+    "JourneyFeedbackResponse",
 ]
