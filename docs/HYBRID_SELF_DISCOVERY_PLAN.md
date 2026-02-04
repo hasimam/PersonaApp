@@ -12,6 +12,7 @@ Last updated: 2026-02-04
 
 ## 2) MVP outcomes (what this build must deliver)
 - 12-scenario journey with 4 options per scenario.
+- Question-bank foundation via scenario sets (`scenario_set_code`) so different equivalent 12-question sets can be served across runs.
 - Result engine: Top 2 genes + 1 support gene.
 - Optional Sahaba-inspired archetype matches (top 1-3).
 - Activation screen with exactly 3 items: behavior, reflection, social.
@@ -44,6 +45,7 @@ Build an importer that loads CSVs into content tables in strict order:
 Importer requirements:
 - Validate required columns and data types.
 - Validate references (`scenario_code`, `option_code`, `gene_code`, `advice_id`, `model_code`).
+- Support optional `scenario_set_code` in `scenarios.csv` (defaults to `default`).
 - Fail fast with clear row-level errors.
 - Upsert by `version_id + code` keys to allow iteration.
 
@@ -63,12 +65,14 @@ Implement services with no hard-coded scenario logic:
 Add/replace endpoints:
 - `POST /api/v1/journey/start`
   - input: optional `version_id` (else active version)
-  - output: `test_run_id`, `version_id`, scenarios + options
+  - output: `test_run_id`, `version_id`, scenarios + options (from selected scenario set for the run)
 - `POST /api/v1/journey/submit-answers`
   - input: `version_id`, `test_run_id`, `answers[]`
   - output: top genes, narratives, archetype matches, 3 activation items
+  - validation scope: only scenarios from the run’s selected scenario set
 - `POST /api/v1/journey/feedback`
   - input: `test_run_id`, `judged_score (1-5)`
+  - optional: `selected_activation_id` (must be one of the 3 offered activation items for that run)
 
 ### Phase 5 - Frontend journey implementation
 Replace current public UX with:
@@ -100,7 +104,7 @@ Checks before pilot:
 ## 4) Data model snapshot (minimal fields)
 - `app_versions(version_id PK, name, is_active, published_at, notes)`
 - `genes(version_id, gene_code, name_en, name_ar, desc_en, desc_ar, PK(version_id, gene_code))`
-- `scenarios(version_id, scenario_code, order_index, scenario_text_en, scenario_text_ar, PK(version_id, scenario_code))`
+- `scenarios(version_id, scenario_code, scenario_set_code, order_index, scenario_text_en, scenario_text_ar, PK(version_id, scenario_code))`
 - `scenario_options(version_id, scenario_code, option_code, option_text_en, option_text_ar, PK(version_id, scenario_code, option_code))`
 - `option_weights(version_id, scenario_code, option_code, gene_code, weight, PK(...))`
 - `sahaba_models(version_id, model_code, name_en, name_ar, summary_ar, gene_vector_jsonb, PK(version_id, model_code))`
@@ -108,7 +112,7 @@ Checks before pilot:
 - `advice_triggers(version_id, trigger_id, trigger_type, gene_code, model_code, channel, advice_id, min_score, max_score, PK(version_id, trigger_id))`
 
 Runtime:
-- `test_runs(id PK, version_id, session_id, selected_activation_id, created_at, submitted_at)`
+- `test_runs(id PK, version_id, session_id, scenario_set_code, selected_activation_id, created_at, submitted_at)`
 - `answers(id PK, test_run_id, scenario_code, option_code, created_at)`
 - `computed_gene_scores(id PK, test_run_id, gene_code, raw_score, normalized_score)`
 - `computed_model_matches(id PK, test_run_id, model_code, similarity, rank)`
@@ -121,4 +125,3 @@ Runtime:
 4. Journey APIs.
 5. Frontend journey screens + wiring.
 6. QA + pilot launch.
-
