@@ -10,7 +10,7 @@ Source: `docs/HYBRID_SELF_DISCOVERY_PLAN.md`
   - [x] Validate migration + model imports
   - [x] Commit phase separately
 - [x] Phase 2 - Seed pack import pipeline (`seed/` CSVs)
-- [ ] Phase 3 - Scoring and matching services
+- [x] Phase 3 - Scoring and matching services
 - [ ] Phase 4 - API contract (`/journey/*`)
 - [ ] Phase 5 - Frontend journey implementation
 - [ ] Phase 6 - QA + pilot readiness
