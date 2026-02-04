@@ -1,0 +1,60 @@
+version_id,scenario_code,option_code,option_text_en,option_text_ar
+v1,S01,A,"Wait and observe until the picture becomes clearer.","أراقب بصمت حتى تتضح الصورة."
+v1,S01,B,"Share my view calmly without pushing hard.","أعبّر بهدوء عن رأيي دون إصرار."
+v1,S01,C,"Go along to keep harmony and avoid tension.","أساير حفاظاً على الانسجام وتجنب التوتر."
+v1,S01,D,"Oppose clearly even if it creates discomfort.","أعارض بوضوح حتى لو سبب توتراً."
+
+v1,S02,A,"Reflect first: what pattern is happening here?","أتأمل أولاً: ما النمط المتكرر هنا؟"
+v1,S02,B,"Address it directly and set a boundary.","أواجه مباشرة وأضع حدّاً واضحاً."
+v1,S02,C,"Choose a gentle conversation to protect the bond.","أختار حديثاً لطيفاً لحماية العلاقة."
+v1,S02,D,"Create a clear agreement and steps to prevent repeats.","أضع اتفاقاً وخطوات واضحة لمنع التكرار."
+
+v1,S03,A,"Ask for examples and clarity before reacting.","أطلب أمثلة وتوضيحاً قبل أن أتصرف."
+v1,S03,B,"Propose a bold initiative to show impact quickly.","أقترح مبادرة جريئة لأُظهر الأثر سريعاً."
+v1,S03,C,"Check how my feedback affects relationships and tone.","أنتبه لتأثير الملاحظة على العلاقات والنبرة."
+v1,S03,D,"Turn the feedback into measurable tasks and routine.","أحوّل الملاحظة لمهام قابلة للقياس وروتين."
+
+v1,S04,A,"Pause and read carefully before replying.","أتوقف وأقرأ بهدوء قبل الرد."
+v1,S04,B,"Step in and name the issue directly.","أتدخل وأسمي المشكلة مباشرة."
+v1,S04,C,"Try to calm everyone and reduce tension.","أهدئ الأجواء وأقلل التوتر."
+v1,S04,D,"Set rules: one point at a time, respectful tone.","أضع قواعد: نقطة بنقطة وباحترام."
+
+v1,S05,A,"Step back and re-check priorities before rushing.","أتراجع خطوة وأعيد ترتيب الأولويات."
+v1,S05,B,"Make a decisive call and move forward.","أحسم قراراً وأتقدم."
+v1,S05,C,"Align with people first so everyone stays okay.","أراعي الناس أولاً حتى يبقى الجو جيداً."
+v1,S05,D,"Create a new plan and track changes tightly.","أضع خطة جديدة وأتابع التغييرات بدقة."
+
+v1,S06,A,"Stay quiet, reflect, and respond later.","أصمت وأتأمل ثم أرد لاحقاً."
+v1,S06,B,"Respond confidently in the moment.","أرد بثقة في نفس اللحظة."
+v1,S06,C,"Respond gently to avoid escalation.","أرد بلطف لتفادي التصعيد."
+v1,S06,D,"Ask to take it privately and set boundaries.","أطلب نقل الحديث للخاص وأضع حدوداً."
+
+v1,S07,A,"Study the long-term impact before deciding.","أدرس أثرها بعيد المدى قبل القرار."
+v1,S07,B,"Take it—growth needs bold steps.","أقبلها—النمو يحتاج جرأة."
+v1,S07,C,"Ask how it affects relationships and stability.","أسأل كيف تؤثر على العلاقات والاستقرار."
+v1,S07,D,"List risks, make a checklist, then decide.","أكتب المخاطر وقائمة تحقق ثم أقرر."
+
+v1,S08,A,"Observe the root cause before intervening.","أفهم السبب الجذري قبل التدخل."
+v1,S08,B,"Push them directly to step up.","أدفعه مباشرة ليتحسن."
+v1,S08,C,"Support them emotionally and encourage them.","أدعمه نفسياً وأشجعه."
+v1,S08,D,"Define roles, expectations, and deadlines clearly.","أحدد أدواراً وتوقعات ومواعيد بوضوح."
+
+v1,S09,A,"Pause and examine what is truly fair here.","أتوقف وأفحص ما هو العادل فعلاً."
+v1,S09,B,"Speak up even if it costs me.","أتكلم حتى لو كان على حسابي."
+v1,S09,C,"Address it gently without shaming anyone.","أعالج الأمر بلطف دون إحراج."
+v1,S09,D,"Document it and follow a proper process.","أوثّق الأمر وأتبع إجراءً صحيحاً."
+
+v1,S10,A,"Listen carefully and seek the bigger picture.","أستمع للجميع وأبحث عن الصورة الأكبر."
+v1,S10,B,"Choose the side I believe is right and say it.","أختار الطرف الذي أراه على حق وأصرّح."
+v1,S10,C,"Try to reconcile and protect both relationships.","أسعى للصلح وحماية العلاقتين."
+v1,S10,D,"Set a clear boundary: I won't be pulled into sides.","أضع حدّاً: لن أنجرّ لتخندق."
+
+v1,S11,A,"Delay slightly to collect essential info.","أؤجل قليلاً لجمع معلومات أساسية."
+v1,S11,B,"Decide fast and adjust later.","أقرر سريعاً ثم أعدل لاحقاً."
+v1,S11,C,"Ask others’ feelings and concerns first.","أسأل عن مخاوف ومشاعر الآخرين أولاً."
+v1,S11,D,"Create a simple decision rule and follow it.","أضع قاعدة قرار بسيطة وألتزم بها."
+
+v1,S12,A,"Re-prioritize: do the highest-value part only.","أعيد الترتيب: أنجز الأهم فقط."
+v1,S12,B,"Push through and deliver fully.","أضغط على نفسي وأسلّم بالكامل."
+v1,S12,C,"Be kind to myself and communicate gently.","أرفق بنفسي وأتواصل بلطف."
+v1,S12,D,"Use structure: break it into steps and finish.","أقسمها لخطوات وأُنجزها بنظام."
