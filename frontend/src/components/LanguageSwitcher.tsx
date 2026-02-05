@@ -8,8 +8,8 @@ interface LanguageSwitcherProps {
 const LanguageSwitcher: React.FC<LanguageSwitcherProps> = ({ className = '' }) => {
   const { language, setLanguage } = useLanguage();
 
-  return (
-    <div className={`flex items-center space-x-1 rtl:space-x-reverse ${className}`}>
+    return (
+    <div dir="ltr" className={`flex items-center space-x-1 ${className}`}>
       <button
         onClick={() => setLanguage('en')}
         className={`px-3 py-1 rounded-lg text-sm font-medium transition-colors ${
