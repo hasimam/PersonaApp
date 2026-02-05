@@ -227,7 +227,9 @@ const Journey: React.FC = () => {
             {step === 'prep' && (
               <>
                 <h2 className="text-3xl font-semibold text-gray-900">{t.journey.prepTitle}</h2>
-                <ul className="text-left text-gray-700 space-y-2 max-w-xl mx-auto">
+                <ul
+                  className={`${language === 'ar' ? 'text-right' : 'text-left'} text-gray-700 space-y-2 max-w-xl mx-auto`}
+                >
                   <li>- {t.journey.prepPointOne}</li>
                   <li>- {t.journey.prepPointTwo}</li>
                   <li>- {t.journey.prepPointThree}</li>
