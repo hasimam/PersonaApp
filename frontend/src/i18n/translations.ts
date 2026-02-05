@@ -98,6 +98,11 @@ export const translations = {
       closingTitle: 'Journey Complete',
       closingBody: 'Your responses and activation choice are saved. You can retake the journey anytime.',
       restart: 'Restart Journey',
+      geneRoles: {
+        dominant: 'Dominant',
+        secondary: 'Secondary',
+        support: 'Support',
+      },
       channels: {
         behavior: 'Behavior',
         reflection: 'Reflection',
@@ -202,6 +207,11 @@ export const translations = {
       closingTitle: 'اكتملت الرحلة',
       closingBody: 'تم حفظ إجاباتك وخيار التفعيل. يمكنك إعادة الرحلة في أي وقت.',
       restart: 'إعادة الرحلة',
+      geneRoles: {
+        dominant: 'سمة أساسية',
+        secondary: 'سمة ثانوية',
+        support: 'سمة داعمة',
+      },
       channels: {
         behavior: 'سلوك',
         reflection: 'تأمل',

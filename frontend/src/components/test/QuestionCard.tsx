@@ -1,5 +1,6 @@
 import React from 'react';
 import { Question } from '../../types';
+import { useLanguage } from '../../i18n/LanguageContext';
 
 interface QuestionCardProps {
   question: Question;
@@ -7,19 +8,20 @@ interface QuestionCardProps {
   onSelectAnswer: (answer: number) => void;
 }
 
-const LIKERT_OPTIONS = [
-  { value: 1, label: 'Strongly Disagree' },
-  { value: 2, label: 'Disagree' },
-  { value: 3, label: 'Neutral' },
-  { value: 4, label: 'Agree' },
-  { value: 5, label: 'Strongly Agree' },
-];
-
 const QuestionCard: React.FC<QuestionCardProps> = ({
   question,
   selectedAnswer,
   onSelectAnswer,
 }) => {
+  const { t, language } = useLanguage();
+  const likertOptions = [
+    { value: 1, label: t.likert.stronglyDisagree },
+    { value: 2, label: t.likert.disagree },
+    { value: 3, label: t.likert.neutral },
+    { value: 4, label: t.likert.agree },
+    { value: 5, label: t.likert.stronglyAgree },
+  ];
+
   return (
     <div className="card max-w-3xl mx-auto">
       <h2 className="text-2xl font-semibold text-gray-800 mb-8 text-center">
@@ -27,11 +29,13 @@ const QuestionCard: React.FC<QuestionCardProps> = ({
       </h2>
 
       <div className="space-y-3">
-        {LIKERT_OPTIONS.map((option) => (
+        {likertOptions.map((option) => (
           <button
             key={option.value}
             onClick={() => onSelectAnswer(option.value)}
-            className={`w-full p-4 rounded-lg border-2 transition-all text-left ${
+            className={`w-full p-4 rounded-lg border-2 transition-all ${
+              language === 'ar' ? 'text-right' : 'text-left'
+            } ${
               selectedAnswer === option.value
                 ? 'border-primary-600 bg-primary-50 shadow-md'
                 : 'border-gray-200 hover:border-primary-300 hover:bg-gray-50'
@@ -56,7 +60,7 @@ const QuestionCard: React.FC<QuestionCardProps> = ({
       </div>
 
       <p className="text-sm text-gray-500 mt-6 text-center">
-        Select the option that best describes you. There are no right or wrong answers.
+        {t.test.selectOption}
       </p>
     </div>
   );

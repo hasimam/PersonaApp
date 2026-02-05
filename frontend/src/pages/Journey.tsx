@@ -285,7 +285,7 @@ const Journey: React.FC = () => {
                     key={option.option_code}
                     onClick={() => handleScenarioAnswer(option.option_code)}
                     disabled={isAdvancing}
-                    className={`w-full text-left rounded-lg border-2 p-4 transition-colors ${
+                    className={`w-full ${language === 'ar' ? 'text-right' : 'text-left'} rounded-lg border-2 p-4 transition-colors ${
                       isSelected
                         ? 'border-primary-600 bg-primary-50'
                         : 'border-gray-200 hover:border-primary-400'
@@ -353,7 +353,7 @@ const Journey: React.FC = () => {
                 {submitResult.top_genes.slice(0, 3).map((gene) => (
                   <div key={gene.gene_code} className="rounded-lg border border-gray-200 p-4">
                     <p className="text-xs uppercase tracking-wide text-primary-700 mb-1">
-                      {gene.role}
+                      {t.journey.geneRoles[gene.role as 'dominant' | 'secondary' | 'support'] ?? gene.role}
                     </p>
                     <h3 className="text-lg font-semibold text-gray-900">
                       {localizeText(gene.name_en, gene.name_ar)}
@@ -417,7 +417,7 @@ const Journey: React.FC = () => {
                       setSelectedActivationId(item.advice_id);
                       setError('');
                     }}
-                    className={`w-full text-left rounded-lg border-2 p-4 transition-colors ${
+                    className={`w-full ${language === 'ar' ? 'text-right' : 'text-left'} rounded-lg border-2 p-4 transition-colors ${
                       isSelected
                         ? 'border-primary-600 bg-primary-50'
                         : 'border-gray-200 hover:border-primary-400'
