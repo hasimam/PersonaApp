@@ -202,7 +202,7 @@ describe('Journey smoke test', () => {
     await waitFor(() => {
       expect(mockedJourneyApi.cancelJourney).toHaveBeenCalledWith({ test_run_id: 99 });
     });
-    expect(await screen.findByText('Hybrid Self-Discovery Journey')).toBeInTheDocument();
+    expect(await screen.findByText('Self-Discovery Journey')).toBeInTheDocument();
 
     confirmSpy.mockRestore();
   });

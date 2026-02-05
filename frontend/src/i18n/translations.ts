@@ -62,7 +62,7 @@ export const translations = {
       disclaimerText: 'These results are for entertainment and self-reflection purposes. Idol personalities are estimated from publicly available information and may not reflect their complete or private personalities.',
     },
     journey: {
-      introTitle: 'Hybrid Self-Discovery Journey',
+      introTitle: 'Self-Discovery Journey',
       introSubtitle: 'A short guided experience to surface your top strengths and one practical next action.',
       introCta: 'Start Journey',
       prepTitle: 'Before You Begin',
@@ -171,7 +171,7 @@ export const translations = {
       disclaimerText: 'هذه النتائج لأغراض الترفيه والتأمل الذاتي. شخصيات المشاهير مقدرة من المعلومات المتاحة للعامة وقد لا تعكس شخصياتهم الكاملة أو الخاصة.',
     },
     journey: {
-      introTitle: 'رحلة اكتشاف الذات الهجينة',
+      introTitle: 'رحلة اكتشاف الذات',
       introSubtitle: 'تجربة قصيرة موجهة لاستخراج أبرز نقاط القوة وخطوة عملية واحدة.',
       introCta: 'ابدأ الرحلة',
       prepTitle: 'قبل أن تبدأ',
