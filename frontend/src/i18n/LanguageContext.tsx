@@ -15,7 +15,10 @@ const LANGUAGE_KEY = 'personaapp_language';
 export const LanguageProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
   const [language, setLanguageState] = useState<Language>(() => {
     const saved = localStorage.getItem(LANGUAGE_KEY);
-    return (saved as Language) || 'en';
+    if (saved === 'en' || saved === 'ar') {
+      return saved;
+    }
+    return 'ar';
   });
 
   const setLanguage = (lang: Language) => {

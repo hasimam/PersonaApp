@@ -18,7 +18,7 @@ const LanguageSwitcher: React.FC<LanguageSwitcherProps> = ({ className = '' }) =
             : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
         }`}
       >
-        EN
+        English
       </button>
       <button
         onClick={() => setLanguage('ar')}
@@ -28,7 +28,7 @@ const LanguageSwitcher: React.FC<LanguageSwitcherProps> = ({ className = '' }) =
             : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
         }`}
       >
-        AR
+        العربية
       </button>
     </div>
   );

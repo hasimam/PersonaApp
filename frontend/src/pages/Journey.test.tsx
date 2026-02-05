@@ -30,6 +30,7 @@ const renderJourney = (initialEntry = '/') =>
 
 describe('Journey smoke test', () => {
   beforeEach(() => {
+    localStorage.setItem('personaapp_language', 'en');
     consoleErrorSpy = jest.spyOn(console, 'error').mockImplementation((...args: any[]) => {
       const message = args.map((arg) => String(arg)).join(' ');
       if (message.includes('ReactDOMTestUtils.act')) {
@@ -140,6 +141,7 @@ describe('Journey smoke test', () => {
   });
 
   afterEach(() => {
+    localStorage.removeItem('personaapp_language');
     jest.clearAllMocks();
     consoleErrorSpy.mockRestore();
     jest.runOnlyPendingTimers();
