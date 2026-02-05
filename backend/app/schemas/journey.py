@@ -1,4 +1,4 @@
-from typing import List, Optional
+from typing import List, Literal, Optional
 
 from pydantic import BaseModel, ConfigDict, Field
 
@@ -91,3 +91,12 @@ class JourneyFeedbackResponse(BaseModel):
     judged_score: int
     selected_activation_id: Optional[str]
     status: str
+
+
+class JourneyCancelRequest(BaseModel):
+    test_run_id: int = Field(..., ge=1)
+
+
+class JourneyCancelResponse(BaseModel):
+    test_run_id: int
+    status: Literal["started", "completed", "cancelled"]

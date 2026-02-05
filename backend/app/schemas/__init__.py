@@ -35,6 +35,8 @@ from app.schemas.journey import (
     JourneyArchetypeMatch,
     JourneyActivationItem,
     JourneySubmitAnswersResponse,
+    JourneyCancelRequest,
+    JourneyCancelResponse,
     JourneyFeedbackRequest,
     JourneyFeedbackResponse,
 )
@@ -70,6 +72,8 @@ __all__ = [
     "JourneyArchetypeMatch",
     "JourneyActivationItem",
     "JourneySubmitAnswersResponse",
+    "JourneyCancelRequest",
+    "JourneyCancelResponse",
     "JourneyFeedbackRequest",
     "JourneyFeedbackResponse",
 ]

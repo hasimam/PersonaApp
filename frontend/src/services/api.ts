@@ -8,6 +8,8 @@ import {
   JourneySubmitAnswersResponse,
   JourneyFeedbackRequest,
   JourneyFeedbackResponse,
+  JourneyCancelRequest,
+  JourneyCancelResponse,
 } from '../types';
 import { Language } from '../i18n/translations';
 
@@ -56,6 +58,11 @@ export const journeyApi = {
 
   submitFeedback: async (payload: JourneyFeedbackRequest): Promise<JourneyFeedbackResponse> => {
     const response = await api.post('/journey/feedback', payload);
+    return response.data;
+  },
+
+  cancelJourney: async (payload: JourneyCancelRequest): Promise<JourneyCancelResponse> => {
+    const response = await api.post('/journey/cancel', payload);
     return response.data;
   },
 };

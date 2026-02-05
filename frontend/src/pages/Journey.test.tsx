@@ -1,6 +1,7 @@
 import '@testing-library/jest-dom';
 import React from 'react';
 import { act, fireEvent, render, screen, waitFor } from '@testing-library/react';
+import { MemoryRouter } from 'react-router-dom';
 import Journey from './Journey';
 import { LanguageProvider } from '../i18n/LanguageContext';
 import { journeyApi } from '../services/api';
@@ -10,6 +11,7 @@ jest.mock('../services/api', () => ({
     startJourney: jest.fn(),
     submitAnswers: jest.fn(),
     submitFeedback: jest.fn(),
+    cancelJourney: jest.fn(),
   },
 }));
 
@@ -17,6 +19,14 @@ const mockedJourneyApi = journeyApi as jest.Mocked<typeof journeyApi>;
 const realConsoleError = console.error;
 
 let consoleErrorSpy: jest.SpyInstance;
+const renderJourney = (initialEntry = '/') =>
+  render(
+    <MemoryRouter initialEntries={[initialEntry]}>
+      <LanguageProvider>
+        <Journey />
+      </LanguageProvider>
+    </MemoryRouter>
+  );
 
 describe('Journey smoke test', () => {
   beforeEach(() => {
@@ -123,6 +133,10 @@ describe('Journey smoke test', () => {
       selected_activation_id: null,
       status: 'recorded',
     });
+    mockedJourneyApi.cancelJourney.mockResolvedValue({
+      test_run_id: 99,
+      status: 'cancelled',
+    });
   });
 
   afterEach(() => {
@@ -133,11 +147,7 @@ describe('Journey smoke test', () => {
   });
 
   test('completes the happy path from intro to closing', async () => {
-    render(
-      <LanguageProvider>
-        <Journey />
-      </LanguageProvider>
-    );
+    renderJourney();
 
     fireEvent.click(screen.getByRole('button', { name: 'Start Journey' }));
     fireEvent.click(screen.getByRole('button', { name: 'Begin Scenarios' }));
@@ -172,5 +182,28 @@ describe('Journey smoke test', () => {
       selected_activation_id: 'ACT_BEH',
     });
     expect(await screen.findByText('Journey Complete')).toBeInTheDocument();
+  });
+
+  test('allows exiting mid-journey and returns to intro', async () => {
+    const confirmSpy = jest.spyOn(window, 'confirm').mockReturnValue(true);
+    renderJourney('/test');
+
+    fireEvent.click(screen.getByRole('button', { name: 'Start Journey' }));
+    fireEvent.click(screen.getByRole('button', { name: 'Begin Scenarios' }));
+
+    await waitFor(() => expect(mockedJourneyApi.startJourney).toHaveBeenCalledTimes(1));
+    expect(await screen.findByText('Scenario 1')).toBeInTheDocument();
+
+    fireEvent.click(screen.getByRole('button', { name: /End Journey/i }));
+
+    expect(confirmSpy).toHaveBeenCalledWith(
+      'Are you sure you want to end the journey? Your progress will be lost.'
+    );
+    await waitFor(() => {
+      expect(mockedJourneyApi.cancelJourney).toHaveBeenCalledWith({ test_run_id: 99 });
+    });
+    expect(await screen.findByText('Hybrid Self-Discovery Journey')).toBeInTheDocument();
+
+    confirmSpy.mockRestore();
   });
 });

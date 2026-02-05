@@ -27,6 +27,8 @@ from app.models import (
 )
 from app.schemas.journey import (
     JourneyAnswerSubmission,
+    JourneyCancelRequest,
+    JourneyCancelResponse,
     JourneyArchetypeMatch,
     JourneyFeedbackRequest,
     JourneyFeedbackResponse,
@@ -41,6 +43,9 @@ from app.schemas.journey import (
 )
 
 router = APIRouter()
+RUN_STATUS_STARTED = "started"
+RUN_STATUS_COMPLETED = "completed"
+RUN_STATUS_CANCELLED = "cancelled"
 
 
 def _resolve_version_id(db: Session, requested_version_id: Optional[str]) -> str:
@@ -182,7 +187,7 @@ def start_journey(
     if not scenario_set_codes:
         raise HTTPException(status_code=400, detail=f"No scenarios found for version '{version_id}'")
 
-    test_run = TestRun(version_id=version_id, session_id=None)
+    test_run = TestRun(version_id=version_id, session_id=None, status=RUN_STATUS_STARTED)
     db.add(test_run)
     db.commit()
     db.refresh(test_run)
@@ -322,6 +327,7 @@ def submit_journey_answers(
         )
 
     test_run.submitted_at = datetime.now(timezone.utc)
+    test_run.status = RUN_STATUS_COMPLETED
     db.commit()
 
     genes = db.query(Gene).filter(Gene.version_id == payload.version_id).all()
@@ -379,6 +385,25 @@ def submit_journey_answers(
         top_genes=top_genes,
         archetype_matches=archetype_matches,
         activation_items=activation_items,
+    )
+
+
+@router.post("/cancel", response_model=JourneyCancelResponse)
+def cancel_journey(
+    payload: JourneyCancelRequest,
+    db: Session = Depends(get_db),
+):
+    test_run = db.query(TestRun).filter(TestRun.id == payload.test_run_id).first()
+    if not test_run:
+        raise HTTPException(status_code=404, detail="test_run_id not found")
+
+    if test_run.status != RUN_STATUS_COMPLETED:
+        test_run.status = RUN_STATUS_CANCELLED
+        db.commit()
+
+    return JourneyCancelResponse(
+        test_run_id=test_run.id,
+        status=test_run.status,
     )
 
 

@@ -10,7 +10,7 @@ from sqlalchemy.orm import sessionmaker
 os.environ.setdefault("DATABASE_URL", "postgresql://postgres:postgres@localhost/personaapp")
 os.environ.setdefault("SECRET_KEY", "test-secret")
 
-from app.api.journey import start_journey, submit_journey_answers, submit_journey_feedback
+from app.api.journey import cancel_journey, start_journey, submit_journey_answers, submit_journey_feedback
 from app.db.session import Base
 from app.models import (
     AdviceItem,
@@ -29,6 +29,7 @@ from app.models import (
 )
 from app.schemas.journey import (
     JourneyAnswerSubmission,
+    JourneyCancelRequest,
     JourneyFeedbackRequest,
     JourneyStartRequest,
     JourneySubmitAnswersRequest,
@@ -389,6 +390,7 @@ class JourneyApiFlowTests(unittest.TestCase):
         self.assertEqual(started.version_id, "v_test")
         self.assertEqual(len(started.scenarios), 2)
         self.assertEqual([item.scenario_code for item in started.scenarios], ["S01", "S02"])
+        self.assertEqual(self.db.query(TestRun).filter(TestRun.id == started.test_run_id).first().status, "started")
 
         submitted = submit_journey_answers(
             payload=JourneySubmitAnswersRequest(
@@ -415,7 +417,9 @@ class JourneyApiFlowTests(unittest.TestCase):
             self.db.query(ComputedModelMatch).filter(ComputedModelMatch.test_run_id == started.test_run_id).count(),
             1,
         )
-        self.assertIsNotNone(self.db.query(TestRun).filter(TestRun.id == started.test_run_id).first().submitted_at)
+        completed_run = self.db.query(TestRun).filter(TestRun.id == started.test_run_id).first()
+        self.assertIsNotNone(completed_run.submitted_at)
+        self.assertEqual(completed_run.status, "completed")
 
         feedback_response = submit_journey_feedback(
             payload=JourneyFeedbackRequest(test_run_id=started.test_run_id, judged_score=4),
@@ -474,6 +478,36 @@ class JourneyApiFlowTests(unittest.TestCase):
 
         self.assertEqual(ctx.exception.status_code, 400)
         self.assertIn("was not offered for this test_run", str(ctx.exception.detail))
+
+    def test_cancel_marks_started_run_cancelled(self):
+        started = start_journey(payload=JourneyStartRequest(version_id="v_test"), db=self.db)
+        cancelled = cancel_journey(
+            payload=JourneyCancelRequest(test_run_id=started.test_run_id),
+            db=self.db,
+        )
+        self.assertEqual(cancelled.status, "cancelled")
+        self.assertEqual(self.db.query(TestRun).filter(TestRun.id == started.test_run_id).first().status, "cancelled")
+
+    def test_cancel_does_not_override_completed_status(self):
+        started = start_journey(payload=JourneyStartRequest(version_id="v_test"), db=self.db)
+        submit_journey_answers(
+            payload=JourneySubmitAnswersRequest(
+                version_id="v_test",
+                test_run_id=started.test_run_id,
+                answers=[
+                    JourneyAnswerSubmission(scenario_code="S01", option_code="A"),
+                    JourneyAnswerSubmission(scenario_code="S02", option_code="A"),
+                ],
+            ),
+            db=self.db,
+        )
+
+        cancelled = cancel_journey(
+            payload=JourneyCancelRequest(test_run_id=started.test_run_id),
+            db=self.db,
+        )
+        self.assertEqual(cancelled.status, "completed")
+        self.assertEqual(self.db.query(TestRun).filter(TestRun.id == started.test_run_id).first().status, "completed")
 
 
 if __name__ == "__main__":

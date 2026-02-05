@@ -129,3 +129,12 @@ export interface JourneyFeedbackResponse {
   selected_activation_id: string | null;
   status: string;
 }
+
+export interface JourneyCancelRequest {
+  test_run_id: number;
+}
+
+export interface JourneyCancelResponse {
+  test_run_id: number;
+  status: 'started' | 'completed' | 'cancelled';
+}

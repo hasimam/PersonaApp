@@ -183,11 +183,15 @@ class AdviceTrigger(Base):
 
 class TestRun(Base):
     __tablename__ = "test_runs"
+    __table_args__ = (
+        CheckConstraint("status IN ('started', 'completed', 'cancelled')", name="ck_test_runs_status"),
+    )
 
     id = Column(Integer, primary_key=True, index=True)
     version_id = Column(String(50), ForeignKey("app_versions.version_id"), nullable=False, index=True)
     session_id = Column(String(255), nullable=True, index=True)
     scenario_set_code = Column(String(64), nullable=True, index=True)
+    status = Column(String(32), nullable=False, index=True, default="started", server_default="started")
     selected_activation_id = Column(String(64), nullable=True)
     created_at = Column(DateTime(timezone=True), server_default=func.now())
     submitted_at = Column(DateTime(timezone=True), nullable=True)

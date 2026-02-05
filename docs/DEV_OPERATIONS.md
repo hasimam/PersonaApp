@@ -80,6 +80,14 @@ python -m app.db.hybrid_seed_importer --dry-run
 python -m app.db.hybrid_seed_importer
 ```
 
+### Cleanup stale interrupted journey runs
+```bash
+cd backend
+source venv/bin/activate
+python scripts/cleanup_test_runs.py --dry-run --days 30
+python scripts/cleanup_test_runs.py --days 30
+```
+
 ## 4) Admin operations
 - Login URL: `/admin`
 - Authentication: API key entered in UI and sent as `X-Admin-Key`
@@ -133,9 +141,9 @@ ORDER BY judged_score;
 ```sql
 SELECT
   COUNT(*) AS total_started,
-  COUNT(*) FILTER (WHERE submitted_at IS NOT NULL) AS total_completed,
+  COUNT(*) FILTER (WHERE status = 'completed') AS total_completed,
   ROUND(
-    (COUNT(*) FILTER (WHERE submitted_at IS NOT NULL)::numeric / NULLIF(COUNT(*), 0)) * 100,
+    (COUNT(*) FILTER (WHERE status = 'completed')::numeric / NULLIF(COUNT(*), 0)) * 100,
     2
   ) AS completion_rate_pct
 FROM test_runs;
@@ -144,11 +152,11 @@ FROM test_runs;
 ### Activation pick rate
 ```sql
 SELECT
-  COUNT(*) FILTER (WHERE submitted_at IS NOT NULL) AS completed_runs,
+  COUNT(*) FILTER (WHERE status = 'completed') AS completed_runs,
   COUNT(*) FILTER (WHERE selected_activation_id IS NOT NULL) AS runs_with_activation_pick,
   ROUND(
     (COUNT(*) FILTER (WHERE selected_activation_id IS NOT NULL)::numeric
-      / NULLIF(COUNT(*) FILTER (WHERE submitted_at IS NOT NULL), 0)) * 100,
+      / NULLIF(COUNT(*) FILTER (WHERE status = 'completed'), 0)) * 100,
     2
   ) AS activation_pick_rate_pct
 FROM test_runs;

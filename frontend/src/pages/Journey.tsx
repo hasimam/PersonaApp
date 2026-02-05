@@ -1,4 +1,5 @@
 import React, { useMemo, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import LanguageSwitcher from '../components/LanguageSwitcher';
 import { useLanguage } from '../i18n/LanguageContext';
 import { journeyApi } from '../services/api';
@@ -18,6 +19,7 @@ const SAFETY_SCORES = [1, 2, 3, 4, 5];
 const AUTO_NEXT_DELAY_MS = 180;
 
 const Journey: React.FC = () => {
+  const navigate = useNavigate();
   const { t, language } = useLanguage();
   const [step, setStep] = useState<JourneyStep>('intro');
   const [journey, setJourney] = useState<JourneyStartResponse | null>(null);
@@ -171,8 +173,40 @@ const Journey: React.FC = () => {
     }
   };
 
+  const handleExit = async () => {
+    if (!window.confirm(t.journey.exitConfirm)) {
+      return;
+    }
+
+    if (journey?.test_run_id) {
+      try {
+        await journeyApi.cancelJourney({ test_run_id: journey.test_run_id });
+      } catch (e) {
+        // Non-blocking: user should still be able to leave the flow.
+      }
+    }
+
+    resetFlow();
+    navigate('/');
+  };
+
+  const canExitJourney = step !== 'intro' && step !== 'closing';
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-primary-50 via-white to-primary-100 px-4 py-8 relative">
+      {canExitJourney && (
+        <div className="absolute top-4 left-4 z-10">
+          <button
+            onClick={() => {
+              void handleExit();
+            }}
+            className="text-gray-500 hover:text-gray-700 text-sm flex items-center gap-1"
+          >
+            <span>&larr;</span> {t.journey.exitJourney}
+          </button>
+        </div>
+      )}
+
       <div className="absolute top-4 right-4 z-10">
         <LanguageSwitcher />
       </div>
