@@ -35,7 +35,7 @@ v1,S07,C,"Ask how it affects relationships and stability.","أسأل كيف تؤ
 v1,S07,D,"List risks, make a checklist, then decide.","أكتب المخاطر وقائمة تحقق ثم أقرر."
 
 v1,S08,A,"Observe the root cause before intervening.","أفهم السبب الجذري قبل التدخل."
-v1,S08,B,"Push them directly to step up.","أدفعه مباشرة ليتحسن."
+v1,S08,B,"Push them directly to step up.","أدفعه مباشرة لتحسين أدائه."
 v1,S08,C,"Support them emotionally and encourage them.","أدعمه نفسياً وأشجعه."
 v1,S08,D,"Define roles, expectations, and deadlines clearly.","أحدد أدواراً وتوقعات ومواعيد بوضوح."
 
@@ -47,7 +47,7 @@ v1,S09,D,"Document it and follow a proper process.","أوثّق الأمر وأ�
 v1,S10,A,"Listen carefully and seek the bigger picture.","أستمع للجميع وأبحث عن الصورة الأكبر."
 v1,S10,B,"Choose the side I believe is right and say it.","أختار الطرف الذي أراه على حق وأصرّح."
 v1,S10,C,"Try to reconcile and protect both relationships.","أسعى للصلح وحماية العلاقتين."
-v1,S10,D,"Set a clear boundary: I won't be pulled into sides.","أضع حدّاً: لن أنجرّ لتخندق."
+v1,S10,D,"Set a clear boundary: I won't be pulled into sides.","أضع حدّاً: لن أنحاز لأي طرف."
 
 v1,S11,A,"Delay slightly to collect essential info.","أؤجل قليلاً لجمع معلومات أساسية."
 v1,S11,B,"Decide fast and adjust later.","أقرر سريعاً ثم أعدل لاحقاً."

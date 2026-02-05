@@ -2,7 +2,7 @@ version_id,scenario_code,scenario_set_code,order_index,scenario_text_en,scenario
 v1,S01,default,1,"In a tense meeting, the group is leaning toward a decision you disagree with.","في اجتماع متوتر، المجموعة تميل لقرار لا تقتنع به."
 v1,S02,default,2,"A friend disappoints you with a repeated mistake.","صديق يكرر خطأ يزعجك رغم أنك نبهته سابقاً."
 v1,S03,default,3,"You receive unclear feedback from a manager: 'Improve your impact.'","يصلك تعليق غير واضح من مديرك: «طوّر أثرَك»."
-v1,S04,default,4,"A conflict starts in a group chat. People are misunderstanding each other.","يبدأ خلاف في مجموعة محادثة والناس يساء فهمهم لبعض."
+v1,S04,default,4,"A conflict starts in a group chat. People are misunderstanding each other.","يبدأ خلاف في مجموعة محادثة ويُسيء بعضهم فهم بعض."
 v1,S05,default,5,"A deadline is near, but the requirements keep changing.","الوقت يضيق والمتطلبات تتغير باستمرار."
 v1,S06,default,6,"Someone criticizes you publicly in front of others.","أحدهم ينتقدك أمام الآخرين."
 v1,S07,default,7,"You are offered a new opportunity, but the risks are real.","تُعرض عليك فرصة جديدة لكنها تحمل مخاطر واضحة."
