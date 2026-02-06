@@ -1,0 +1,61 @@
+version_id,advice_id,channel,advice_type,title_ar,title_en,body_ar,body_en,priority
+v2,A_LOVE_B1,behavior,activation,مبادرة تقدير,Small Act of Care,قم اليوم بلفتة بسيطة تعبّر فيها عن اهتمامك بشخص قريب.,Do one small act today to show care to someone close.,95
+v2,A_LOVE_R1,reflection,activation,سؤال عن القلب,Heart Check-In,اكتب: كيف أُظهر حبي للآخرين بطريقة واضحة؟,Write: How do I clearly show love to others?,90
+v2,A_LOVE_S1,social,activation,مكالمة دافئة,Warm Call,اتصل بشخص تحبه وخصص خمس دقائق للاستماع فقط.,Call someone you love and spend five minutes just listening.,92
+v2,A_ACHV_B1,behavior,activation,هدف اليوم,Today’s Target,حدد هدفًا صغيرًا لليوم وأنهِه قبل المساء.,Set one small goal today and finish it before evening.,96
+v2,A_ACHV_R1,reflection,activation,قياس التقدم,Measure Progress,اكتب: ما الإنجاز الذي سيجعلني فخورًا هذا الأسبوع؟,Write: What achievement would make me proud this week?,88
+v2,A_ACHV_S1,social,activation,شريك إنجاز,Accountability Partner,أخبر شخصًا بهدفك واطلب منه متابعتك.,Tell someone your goal and ask them to check in on you.,90
+v2,A_JOY_B1,behavior,activation,لحظة امتاع,Joy Moment,خصص 15 دقيقة لنشاط يسعدك دون شعور بالذنب.,Spend 15 minutes on something that brings you joy.,94
+v2,A_JOY_R1,reflection,activation,مصدر السعادة,Source of Joy,اكتب: ما أكثر ثلاثة أشياء ترفع مزاجي؟,Write: What three things lift my mood?,85
+v2,A_JOY_S1,social,activation,مشاركة ابتسامة,Share a Smile,شارك شخصًا قريبًا بلحظة مرحة أو قصة إيجابية.,Share a light or positive story with someone.,87
+v2,A_FREE_B1,behavior,activation,قرار مستقل,Independent Choice,اتخذ اليوم قرارًا صغيرًا يعكس رأيك الشخصي.,Make one small decision today based on your own view.,93
+v2,A_FREE_R1,reflection,activation,حدودي الشخصية,My Boundaries,اكتب: أين أحتاج أن أكون أوضح في حدودي؟,Write: Where do I need clearer boundaries?,86
+v2,A_FREE_S1,social,activation,تعبير صريح,Clear Expression,عبّر عن رأيك بهدوء في نقاش دون تردد.,Express your opinion calmly in a discussion.,89
+v2,A_SAFE_B1,behavior,activation,تنظيم بسيط,Simple Order,رتب مساحة صغيرة حولك لزيادة شعورك بالأمان.,Organize a small space to feel more secure.,91
+v2,A_SAFE_R1,reflection,activation,مصادر الأمان,Security Sources,اكتب: ما الذي يمنحني شعورًا بالاستقرار؟,Write: What makes me feel secure?,84
+v2,A_SAFE_S1,social,activation,حديث اطمئنان,Reassurance Talk,تحدث مع شخص تثق به عن خطة مستقبلية واضحة.,Discuss a clear future plan with someone you trust.,88
+v2,A_HLTH_B1,behavior,activation,حركة يومية,Daily Movement,امشِ لمدة 20 دقيقة أو مارس تمرينًا خفيفًا.,Walk for 20 minutes or do light exercise.,97
+v2,A_HLTH_R1,reflection,activation,رسالة للجسد,Note to Body,اكتب: ما العادة الصحية التي أحتاج تثبيتها؟,Write: Which health habit should I strengthen?,85
+v2,A_HLTH_S1,social,activation,رفيق صحة,Health Buddy,اتفق مع شخص على نشاط صحي مشترك هذا الأسبوع.,Agree with someone on a shared healthy activity.,90
+v2,A_DIGN_B1,behavior,activation,وقفة احترام,Stand with Respect,اختر موقفًا صغيرًا تحافظ فيه على كرامتك بهدوء.,Choose a small moment to protect your dignity calmly.,92
+v2,A_DIGN_R1,reflection,activation,قيمتي الذاتية,Self-Worth Note,اكتب: ما الصفات التي أعتز بها في نفسي؟,Write: What qualities do I value in myself?,86
+v2,A_DIGN_S1,social,activation,تقدير متبادل,Mutual Respect,أظهر احترامك لشخص مختلف عنك في الرأي.,Show respect to someone with a different view.,88
+v2,A_JUST_B1,behavior,activation,تصرف عادل,Fair Action,اتخذ قرارًا عادلًا حتى لو لم يكن الأسهل.,Make a fair choice even if it is harder.,94
+v2,A_JUST_R1,reflection,activation,ميزان القرار,Balance Check,اكتب: هل أتعامل بإنصاف في مواقفي الأخيرة؟,Write: Have I been fair in recent situations?,87
+v2,A_JUST_S1,social,activation,دعم منصف,Support Fairly,ادعم شخصًا تعرض لعدم إنصاف بطريقة محترمة.,Support someone treated unfairly in a respectful way.,90
+v2,A_FRND_B1,behavior,activation,رسالة صديق,Friend Message,أرسل رسالة تقدير لصديق قديم.,Send an appreciation message to an old friend.,93
+v2,A_FRND_R1,reflection,activation,قيمة الصداقة,Value of Friendship,اكتب: ماذا أقدم لأصدقائي؟,Write: What do I offer my friends?,85
+v2,A_FRND_S1,social,activation,لقاء بسيط,Simple Meet-Up,رتب لقاء قصيرًا مع صديق هذا الأسبوع.,Arrange a short meet-up with a friend this week.,90
+v2,A_LEARN_B1,behavior,activation,تعلم جديد,Learn Something New,اقرأ 10 صفحات أو شاهد درسًا قصيرًا اليوم.,Read 10 pages or watch a short lesson today.,96
+v2,A_LEARN_R1,reflection,activation,فضول داخلي,Curiosity Prompt,اكتب: ما الموضوع الذي أريد فهمه بعمق؟,Write: What topic do I want to understand deeply?,88
+v2,A_LEARN_S1,social,activation,نقاش معرفي,Knowledge Talk,ناقش فكرة جديدة مع شخص مهتم.,Discuss a new idea with someone interested.,89
+v2,A_SPIR_B1,behavior,activation,هدوء وتأمل,Quiet Reflection,خصص 10 دقائق للتأمل الهادئ بعيدًا عن الهاتف.,Spend 10 quiet minutes away from your phone.,95
+v2,A_SPIR_R1,reflection,activation,سؤال المعنى,Meaning Question,اكتب: ما الذي يمنح حياتي معنى الآن؟,Write: What gives my life meaning right now?,90
+v2,A_SPIR_S1,social,activation,حديث عميق,Deep Conversation,ابدأ حديثًا عميقًا مع شخص تثق به.,Start a meaningful conversation with someone you trust.,88
+v2,A_FINC_B1,behavior,activation,مراجعة مصاريف,Expense Review,راجع مصاريف هذا الأسبوع وحدد بندًا يمكن تقليله.,Review weekly expenses and reduce one item.,97
+v2,A_FINC_R1,reflection,activation,هدف مالي,Money Goal,اكتب: ما هدفي المالي للثلاثة أشهر القادمة؟,Write: What is my financial goal for the next 3 months?,89
+v2,A_FINC_S1,social,activation,نقاش مالي,Money Discussion,ناقش خطة ادخار مع شخص تثق به.,Discuss a saving plan with someone you trust.,87
+v2,A_RECO_B1,behavior,activation,إنجاز ظاهر,Show Your Work,شارك إنجازًا حققته مؤخرًا دون مبالغة.,Share a recent achievement confidently.,92
+v2,A_RECO_R1,reflection,activation,تقدير الذات,Self-Appreciation,اكتب: ما إنجاز أستحق أن أقدّر نفسي عليه؟,Write: What achievement should I appreciate myself for?,85
+v2,A_RECO_S1,social,activation,مدح صادق,Give Credit,امدح شخصًا على جهده بشكل واضح.,Give clear praise to someone for their effort.,90
+v2,A_ADVN_B1,behavior,activation,تجربة جديدة,Try Something New,جرّب نشاطًا لم تجربه من قبل هذا الشهر.,Try something new this month.,94
+v2,A_ADVN_R1,reflection,activation,مخاطرة محسوبة,Calculated Risk,اكتب: ما التجربة التي أخاف منها وأرغب بها؟,Write: What experience do I fear but want?,86
+v2,A_ADVN_S1,social,activation,مغامرة مشتركة,Shared Adventure,ادعُ صديقًا لخوض تجربة جديدة معك.,Invite a friend to try something new together.,90
+v2,A_ARTS_B1,behavior,activation,تعبير إبداعي,Creative Expression,خصص وقتًا للرسم أو الكتابة أو أي نشاط فني.,Spend time on drawing, writing, or any creative act.,95
+v2,A_ARTS_R1,reflection,activation,إلهام شخصي,Personal Inspiration,اكتب: ما الذي يلهمني جماليًا؟,Write: What inspires me aesthetically?,84
+v2,A_ARTS_S1,social,activation,مشاركة فنية,Share Creativity,شارك عملًا فنيًا مع شخص قريب.,Share a creative piece with someone.,88
+v2,A_FUN_B1,behavior,activation,نشاط مرح,Fun Activity,اختر نشاطًا بسيطًا يبعث الضحك اليوم.,Choose a simple activity that brings laughter.,93
+v2,A_FUN_R1,reflection,activation,ذكريات سعيدة,Happy Memory,اكتب: متى كانت آخر مرة ضحكت فيها بصدق؟,Write: When did I last laugh sincerely?,82
+v2,A_FUN_S1,social,activation,جلسة خفيفة,Light Gathering,اقضِ وقتًا مرحًا مع شخص تحبه.,Spend lighthearted time with someone you like.,90
+v2,A_COMM_B1,behavior,activation,مبادرة مجتمعية,Community Step,شارك في نشاط يخدم محيطك القريب.,Join a small activity serving your community.,95
+v2,A_COMM_R1,reflection,activation,دوري في المجتمع,My Role,اكتب: كيف أستطيع أن أكون أكثر فاعلية في مجتمعي؟,Write: How can I be more active in my community?,88
+v2,A_COMM_S1,social,activation,تعاون جماعي,Collaborate,ابدأ مشروعًا صغيرًا بالتعاون مع الآخرين.,Start a small collaborative project.,90
+v2,A_AMBT_B1,behavior,activation,خطة واضحة,Clear Plan,اكتب خطة بسيطة لخطوتك القادمة نحو هدفك.,Write a simple plan for your next goal step.,97
+v2,A_AMBT_R1,reflection,activation,رؤية مستقبلية,Future Vision,اكتب: أين أريد أن أكون بعد سنة؟,Write: Where do I want to be in one year?,89
+v2,A_AMBT_S1,social,activation,شبكة داعمة,Support Network,تواصل مع شخص يمكن أن يدعم مسارك المهني.,Reach out to someone who can support your path.,91
+v2,A_GRAT_B1,behavior,activation,ثلاث نِعم,Three Blessings,اكتب ثلاثة أشياء ممتن لها اليوم.,Write three things you are grateful for today.,96
+v2,A_GRAT_R1,reflection,activation,تأمل الشكر,Gratitude Reflection,اسأل نفسك: كيف أظهر شكري عمليًا؟,Ask: How do I show gratitude in action?,85
+v2,A_GRAT_S1,social,activation,شكر مباشر,Direct Thanks,اشكر شخصًا أثر في حياتك بكلمة صادقة.,Thank someone who impacted you.,90
+v2,A_BALN_B1,behavior,activation,ساعة لنفسي,Hour for Me,خصص ساعة اليوم لنشاط شخصي هادئ.,Reserve one hour for yourself today.,95
+v2,A_BALN_R1,reflection,activation,تقييم التوازن,Balance Check,اكتب: هل أفرّط في جانب على حساب آخر؟,Write: Am I neglecting one area of my life?,88
+v2,A_BALN_S1,social,activation,تنسيق الوقت,Align Schedules,ناقش مع أسرتك توزيع الوقت بشكل أفضل.,Discuss time balance with your family.,90
