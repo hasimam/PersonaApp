@@ -4,6 +4,7 @@ import {
   Answer,
   ResultResponse,
   JourneyStartResponse,
+  JourneyStartRequest,
   JourneySubmitAnswersRequest,
   JourneySubmitAnswersResponse,
   JourneyFeedbackRequest,
@@ -46,8 +47,8 @@ export const resultsApi = {
 };
 
 export const journeyApi = {
-  startJourney: async (versionId?: string): Promise<JourneyStartResponse> => {
-    const response = await api.post('/journey/start', versionId ? { version_id: versionId } : undefined);
+  startJourney: async (payload?: JourneyStartRequest): Promise<JourneyStartResponse> => {
+    const response = await api.post('/journey/start', payload);
     return response.data;
   },
 

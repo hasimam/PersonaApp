@@ -22,6 +22,10 @@ from app.models import (
     Feedback,
     Gene,
     OptionWeight,
+    ProphetTrait,
+    ProphetTraitGeneWeight,
+    QuranValue,
+    QuranValueGeneWeight,
     SahabaModel,
     Scenario,
     ScenarioOption,
@@ -55,6 +59,10 @@ class JourneyApiFlowTests(unittest.TestCase):
                 SahabaModel.__table__,
                 AdviceItem.__table__,
                 AdviceTrigger.__table__,
+                QuranValue.__table__,
+                ProphetTrait.__table__,
+                QuranValueGeneWeight.__table__,
+                ProphetTraitGeneWeight.__table__,
                 TestRun.__table__,
                 Answer.__table__,
                 ComputedGeneScore.__table__,
@@ -71,6 +79,10 @@ class JourneyApiFlowTests(unittest.TestCase):
         Base.metadata.drop_all(
             bind=self.engine,
             tables=[
+                ProphetTraitGeneWeight.__table__,
+                QuranValueGeneWeight.__table__,
+                ProphetTrait.__table__,
+                QuranValue.__table__,
                 Feedback.__table__,
                 ComputedModelMatch.__table__,
                 ComputedGeneScore.__table__,
@@ -405,7 +417,9 @@ class JourneyApiFlowTests(unittest.TestCase):
         )
 
         self.assertEqual(submitted.test_run_id, started.test_run_id)
-        self.assertEqual(len(submitted.top_genes), 3)
+        self.assertEqual(len(submitted.top_genes), 5)
+        self.assertEqual(submitted.quran_values, [])
+        self.assertEqual(submitted.prophet_traits, [])
         self.assertEqual([item.channel for item in submitted.activation_items], ["behavior", "reflection", "social"])
 
         self.assertEqual(self.db.query(Answer).filter(Answer.test_run_id == started.test_run_id).count(), 2)
@@ -449,8 +463,10 @@ class JourneyApiFlowTests(unittest.TestCase):
         first_run = start_journey(payload=JourneyStartRequest(version_id="v_test"), db=self.db)
         second_run = start_journey(payload=JourneyStartRequest(version_id="v_test"), db=self.db)
 
-        self.assertEqual([item.scenario_code for item in first_run.scenarios], ["S01", "S02"])
-        self.assertEqual([item.scenario_code for item in second_run.scenarios], ["B01", "B02"])
+        first_codes = [item.scenario_code for item in first_run.scenarios]
+        second_codes = [item.scenario_code for item in second_run.scenarios]
+        self.assertIn(first_codes, [["S01", "S02"], ["B01", "B02"]])
+        self.assertIn(second_codes, [["S01", "S02"], ["B01", "B02"]])
 
     def test_feedback_rejects_activation_not_offered_for_test_run(self):
         started = start_journey(payload=JourneyStartRequest(version_id="v_test"), db=self.db)

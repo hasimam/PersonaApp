@@ -8,7 +8,15 @@ from typing import Dict, List, Mapping, Optional, Sequence, Tuple
 
 from sqlalchemy.orm import Session
 
-from app.models import AdviceItem, AdviceTrigger, Gene, OptionWeight, SahabaModel
+from app.models import (
+    AdviceItem,
+    AdviceTrigger,
+    Gene,
+    OptionWeight,
+    ProphetTraitGeneWeight,
+    QuranValueGeneWeight,
+    SahabaModel,
+)
 
 
 ACTIVATION_CHANNELS: Tuple[str, str, str] = ("behavior", "reflection", "social")
@@ -52,10 +60,26 @@ class ActivationItemResult:
 
 
 @dataclass(frozen=True)
+class QuranValueScoreResult:
+    quran_value_code: str
+    score: float
+    rank: int
+
+
+@dataclass(frozen=True)
+class ProphetTraitScoreResult:
+    trait_code: str
+    score: float
+    rank: int
+
+
+@dataclass(frozen=True)
 class HybridComputationResult:
     gene_scores: List[GeneScoreResult]
     model_matches: List[ModelMatchResult]
     activation_items: List[ActivationItemResult]
+    quran_values: List[QuranValueScoreResult]
+    prophet_traits: List[ProphetTraitScoreResult]
 
 
 def rank_gene_scores(raw_scores: Mapping[str, float]) -> List[GeneScoreResult]:
@@ -183,6 +207,76 @@ def compute_model_matches(
     return [
         ModelMatchResult(model_code=model_code, similarity=similarity, rank=index + 1)
         for index, (model_code, similarity) in enumerate(top_models)
+    ]
+
+
+def _weighted_scores(
+    score_by_gene: Mapping[str, float],
+    weights: Mapping[str, float],
+) -> float:
+    total = 0.0
+    for gene_code, weight in weights.items():
+        total += score_by_gene.get(gene_code, 0.0) * float(weight)
+    return total
+
+
+def compute_quran_values(
+    db: Session,
+    version_id: str,
+    gene_scores: Sequence[GeneScoreResult],
+    top_n: int = 5,
+) -> List[QuranValueScoreResult]:
+    if top_n <= 0:
+        return []
+
+    normalized_by_gene = {score.gene_code: float(score.normalized_score) for score in gene_scores}
+    weight_rows = (
+        db.query(QuranValueGeneWeight)
+        .filter(QuranValueGeneWeight.version_id == version_id)
+        .order_by(QuranValueGeneWeight.quran_value_code.asc())
+        .all()
+    )
+    scored: List[Tuple[str, float]] = []
+    for row in weight_rows:
+        weights = row.gene_weights_jsonb or {}
+        score = _weighted_scores(normalized_by_gene, weights)
+        scored.append((row.quran_value_code, round(float(score), 4)))
+
+    scored.sort(key=lambda pair: (-pair[1], pair[0]))
+    top_rows = scored[:top_n]
+    return [
+        QuranValueScoreResult(quran_value_code=code, score=score, rank=index + 1)
+        for index, (code, score) in enumerate(top_rows)
+    ]
+
+
+def compute_prophet_traits(
+    db: Session,
+    version_id: str,
+    gene_scores: Sequence[GeneScoreResult],
+    top_n: int = 5,
+) -> List[ProphetTraitScoreResult]:
+    if top_n <= 0:
+        return []
+
+    normalized_by_gene = {score.gene_code: float(score.normalized_score) for score in gene_scores}
+    weight_rows = (
+        db.query(ProphetTraitGeneWeight)
+        .filter(ProphetTraitGeneWeight.version_id == version_id)
+        .order_by(ProphetTraitGeneWeight.trait_code.asc())
+        .all()
+    )
+    scored: List[Tuple[str, float]] = []
+    for row in weight_rows:
+        weights = row.gene_weights_jsonb or {}
+        score = _weighted_scores(normalized_by_gene, weights)
+        scored.append((row.trait_code, round(float(score), 4)))
+
+    scored.sort(key=lambda pair: (-pair[1], pair[0]))
+    top_rows = scored[:top_n]
+    return [
+        ProphetTraitScoreResult(trait_code=code, score=score, rank=index + 1)
+        for index, (code, score) in enumerate(top_rows)
     ]
 
 
@@ -348,9 +442,13 @@ def compute_hybrid_outcome(
         gene_scores=gene_scores,
         model_matches=model_matches,
     )
+    quran_values = compute_quran_values(db=db, version_id=version_id, gene_scores=gene_scores, top_n=5)
+    prophet_traits = compute_prophet_traits(db=db, version_id=version_id, gene_scores=gene_scores, top_n=5)
 
     return HybridComputationResult(
         gene_scores=gene_scores,
         model_matches=model_matches,
         activation_items=activation_items,
+        quran_values=quran_values,
+        prophet_traits=prophet_traits,
     )

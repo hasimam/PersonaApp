@@ -28,6 +28,7 @@ const Journey: React.FC = () => {
   const [scenarioAnswers, setScenarioAnswers] = useState<Record<string, string>>({});
   const [judgedScore, setJudgedScore] = useState<number | null>(null);
   const [selectedActivationId, setSelectedActivationId] = useState<string | null>(null);
+  const [journeyType, setJourneyType] = useState<'quick' | 'deep'>('quick');
   const [busy, setBusy] = useState(false);
   const [isAdvancing, setIsAdvancing] = useState(false);
   const [error, setError] = useState('');
@@ -54,6 +55,7 @@ const Journey: React.FC = () => {
     setScenarioAnswers({});
     setJudgedScore(null);
     setSelectedActivationId(null);
+    setJourneyType('quick');
     setBusy(false);
     setIsAdvancing(false);
     setError('');
@@ -64,7 +66,7 @@ const Journey: React.FC = () => {
     setBusy(true);
     setError('');
     try {
-      const data = await journeyApi.startJourney();
+      const data = await journeyApi.startJourney({ journey_type: journeyType });
       setJourney(data);
       setCurrentScenarioIndex(0);
       setScenarioAnswers({});
@@ -218,6 +220,30 @@ const Journey: React.FC = () => {
               <>
                 <h1 className="text-4xl font-bold text-gray-900">{t.journey.introTitle}</h1>
                 <p className="text-lg text-gray-700">{t.journey.introSubtitle}</p>
+                <div className="space-y-3">
+                  <p className="text-sm font-semibold text-gray-600">{t.journey.typeLabel}</p>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                    {(['quick', 'deep'] as const).map((type) => {
+                      const isSelected = journeyType === type;
+                      return (
+                        <button
+                          key={type}
+                          onClick={() => setJourneyType(type)}
+                          className={`rounded-lg border-2 p-4 text-left transition-colors ${
+                            isSelected
+                              ? 'border-primary-600 bg-primary-50'
+                              : 'border-gray-200 hover:border-primary-400'
+                          }`}
+                        >
+                          <p className="text-sm uppercase tracking-wide text-primary-700 mb-1">
+                            {t.journey.typeLabels[type]}
+                          </p>
+                          <p className="text-sm text-gray-700">{t.journey.typeDescriptions[type]}</p>
+                        </button>
+                      );
+                    })}
+                  </div>
+                </div>
                 <button className="btn-primary" onClick={() => setStep('prep')}>
                   {t.journey.introCta}
                 </button>
@@ -351,11 +377,13 @@ const Journey: React.FC = () => {
             <div className="card">
               <h2 className="text-3xl font-semibold text-gray-900 mb-4">{t.journey.resultsTitle}</h2>
               <p className="text-gray-700 mb-6">{t.journey.resultsSubtitle}</p>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                {submitResult.top_genes.slice(0, 3).map((gene) => (
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                {submitResult.top_genes.map((gene) => (
                   <div key={gene.gene_code} className="rounded-lg border border-gray-200 p-4">
                     <p className="text-xs uppercase tracking-wide text-primary-700 mb-1">
-                      {t.journey.geneRoles[gene.role as 'dominant' | 'secondary' | 'support'] ?? gene.role}
+                      {gene.role
+                        ? t.journey.geneRoles[gene.role as 'dominant' | 'secondary' | 'support'] ?? gene.role
+                        : `${t.journey.geneRankLabel} ${gene.rank}`}
                     </p>
                     <h3 className="text-lg font-semibold text-gray-900">
                       {localizeText(gene.name_en, gene.name_ar)}
@@ -388,6 +416,52 @@ const Journey: React.FC = () => {
                       {match.summary_ar && language === 'ar' && (
                         <p className="text-sm text-gray-700 mt-2">{match.summary_ar}</p>
                       )}
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
+
+            {submitResult.quran_values.length > 0 && (
+              <div className="card">
+                <h3 className="text-2xl font-semibold text-gray-900 mb-4">{t.journey.quranValuesTitle}</h3>
+                <div className="space-y-3">
+                  {submitResult.quran_values.map((value) => (
+                    <div key={value.quran_value_code} className="rounded-lg border border-gray-200 p-4">
+                      <div className="flex justify-between gap-3">
+                        <h4 className="font-semibold text-gray-900">
+                          {localizeText(value.name_en, value.name_ar)}
+                        </h4>
+                        <span className="text-sm text-primary-700 font-semibold">
+                          {value.score.toFixed(1)}
+                        </span>
+                      </div>
+                      <p className="text-sm text-gray-700 mt-2">
+                        {localizeText(value.desc_en, value.desc_ar)}
+                      </p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
+
+            {submitResult.prophet_traits.length > 0 && (
+              <div className="card">
+                <h3 className="text-2xl font-semibold text-gray-900 mb-4">{t.journey.prophetTraitsTitle}</h3>
+                <div className="space-y-3">
+                  {submitResult.prophet_traits.map((trait) => (
+                    <div key={trait.trait_code} className="rounded-lg border border-gray-200 p-4">
+                      <div className="flex justify-between gap-3">
+                        <h4 className="font-semibold text-gray-900">
+                          {localizeText(trait.name_en, trait.name_ar)}
+                        </h4>
+                        <span className="text-sm text-primary-700 font-semibold">
+                          {trait.score.toFixed(1)}
+                        </span>
+                      </div>
+                      <p className="text-sm text-gray-700 mt-2">
+                        {localizeText(trait.desc_en, trait.desc_ar)}
+                      </p>
                     </div>
                   ))}
                 </div>

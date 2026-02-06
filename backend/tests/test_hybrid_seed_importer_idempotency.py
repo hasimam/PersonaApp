@@ -19,6 +19,10 @@ from app.models import (
     AppVersion,
     Gene,
     OptionWeight,
+    ProphetTrait,
+    ProphetTraitGeneWeight,
+    QuranValue,
+    QuranValueGeneWeight,
     SahabaModel,
     Scenario,
     ScenarioOption,
@@ -44,6 +48,10 @@ class HybridSeedImporterIdempotencyTests(unittest.TestCase):
                 SahabaModel.__table__,
                 AdviceItem.__table__,
                 AdviceTrigger.__table__,
+                QuranValue.__table__,
+                ProphetTrait.__table__,
+                QuranValueGeneWeight.__table__,
+                ProphetTraitGeneWeight.__table__,
             ],
         )
         self.SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=self.engine)
@@ -54,6 +62,10 @@ class HybridSeedImporterIdempotencyTests(unittest.TestCase):
         Base.metadata.drop_all(
             bind=self.engine,
             tables=[
+                ProphetTraitGeneWeight.__table__,
+                QuranValueGeneWeight.__table__,
+                ProphetTrait.__table__,
+                QuranValue.__table__,
                 AdviceTrigger.__table__,
                 AdviceItem.__table__,
                 SahabaModel.__table__,
@@ -76,6 +88,10 @@ class HybridSeedImporterIdempotencyTests(unittest.TestCase):
             "sahaba_models": self.db.query(SahabaModel).count(),
             "advice_items": self.db.query(AdviceItem).count(),
             "advice_triggers": self.db.query(AdviceTrigger).count(),
+            "quran_values": self.db.query(QuranValue).count(),
+            "prophet_traits": self.db.query(ProphetTrait).count(),
+            "quran_value_gene_weights": self.db.query(QuranValueGeneWeight).count(),
+            "prophet_trait_gene_weights": self.db.query(ProphetTraitGeneWeight).count(),
         }
 
     def test_import_upsert_is_idempotent_in_database_state(self):

@@ -1,13 +1,61 @@
 version_id,scenario_code,scenario_set_code,order_index,scenario_text_en,scenario_text_ar
-v1,S01,default,1,"In a tense meeting, the group is leaning toward a decision you disagree with.","في اجتماع متوتر، المجموعة تميل لقرار لا تقتنع به."
-v1,S02,default,2,"A friend disappoints you with a repeated mistake.","صديق يكرر خطأ يزعجك رغم أنك نبهته سابقاً."
-v1,S03,default,3,"You receive unclear feedback from a manager: 'Improve your impact.'","يصلك تعليق غير واضح من مديرك: «طوّر أثرَك»."
-v1,S04,default,4,"A conflict starts in a group chat. People are misunderstanding each other.","يبدأ خلاف في مجموعة محادثة ويُسيء بعضهم فهم بعض."
-v1,S05,default,5,"A deadline is near, but the requirements keep changing.","الوقت يضيق والمتطلبات تتغير باستمرار."
-v1,S06,default,6,"Someone criticizes you publicly in front of others.","أحدهم ينتقدك أمام الآخرين."
-v1,S07,default,7,"You are offered a new opportunity, but the risks are real.","تُعرض عليك فرصة جديدة لكنها تحمل مخاطر واضحة."
-v1,S08,default,8,"A teammate is struggling and slowing the whole group.","زميل متعثر ويؤخر الفريق كله."
-v1,S09,default,9,"You notice a small unfairness that benefits you if you stay silent.","تلاحظ ظلماً صغيراً لصالحك إن بقيت صامتاً."
-v1,S10,default,10,"Two people you care about are in disagreement, and both want you on their side.","شخصان مهمان لك على خلاف، وكلٌ يريدك في صفّه."
-v1,S11,default,11,"You have to make a decision with limited information.","عليك اتخاذ قرار بمعلومات ناقصة."
-v1,S12,default,12,"You feel drained, but you promised to deliver something today.","تشعر بالإرهاق لكنك وعدت بتسليم شيء اليوم."
+v1,S01,default,1,"In a tense meeting, the group is leaning toward a decision you disagree with.",في اجتماع متوتر، المجموعة تميل لقرار لا تقتنع به.
+v1,S02,default,2,A friend disappoints you with a repeated mistake.,صديق يكرر خطأ يزعجك رغم أنك نبهته سابقاً.
+v1,S03,default,3,You receive unclear feedback from a manager: 'Improve your impact.',يصلك تعليق غير واضح من مديرك: «طوّر أثرَك».
+v1,S04,default,4,A conflict starts in a group chat. People are misunderstanding each other.,يبدأ خلاف في مجموعة محادثة ويُسيء بعضهم فهم بعض.
+v1,S05,default,5,"A deadline is near, but the requirements keep changing.",الوقت يضيق والمتطلبات تتغير باستمرار.
+v1,S06,default,6,Someone criticizes you publicly in front of others.,أحدهم ينتقدك أمام الآخرين.
+v1,S07,default,7,"You are offered a new opportunity, but the risks are real.",تُعرض عليك فرصة جديدة لكنها تحمل مخاطر واضحة.
+v1,S08,default,8,A teammate is struggling and slowing the whole group.,زميل متعثر ويؤخر الفريق كله.
+v1,S09,default,9,You notice a small unfairness that benefits you if you stay silent.,تلاحظ ظلماً صغيراً لصالحك إن بقيت صامتاً.
+v1,S10,default,10,"Two people you care about are in disagreement, and both want you on their side.",شخصان مهمان لك على خلاف، وكلٌ يريدك في صفّه.
+v1,S11,default,11,You have to make a decision with limited information.,عليك اتخاذ قرار بمعلومات ناقصة.
+v1,S12,default,12,"You feel drained, but you promised to deliver something today.",تشعر بالإرهاق لكنك وعدت بتسليم شيء اليوم.
+v2,D01,deep,1,Your family plans a weekend gathering but you feel exhausted.,عائلتك تخطط لتجمع في عطلة نهاية الأسبوع لكنك تشعر بالإرهاق.
+v2,D02,deep,2,You receive an unexpected bonus at work.,حصلت على مكافأة غير متوقعة في العمل.
+v2,D03,deep,3,A close friend is going through a difficult time.,صديق مقرب يمر بوقت صعب.
+v2,D04,deep,4,You are offered a promotion that requires longer hours.,عُرضت عليك ترقية تتطلب ساعات عمل أطول.
+v2,D05,deep,5,Your neighborhood starts a community initiative.,بدأ الحي مبادرة مجتمعية جديدة.
+v2,D06,deep,6,You have free time on a weekday evening.,لديك وقت فراغ في مساء يوم عادي.
+v2,D07,deep,7,A disagreement happens between two colleagues.,حدث خلاف بين زميلين في العمل.
+v2,D08,deep,8,You feel stuck in your current routine.,تشعر بأنك عالق في روتينك الحالي.
+v2,D09,deep,9,A family member asks for financial help.,أحد أفراد العائلة يطلب مساعدة مالية.
+v2,D10,deep,10,You are invited to join a new social group.,تمت دعوتك للانضمام إلى مجموعة اجتماعية جديدة.
+v2,D11,deep,11,You face criticism about your performance.,تلقيت انتقادًا حول أدائك.
+v2,D12,deep,12,You have saved some money and are deciding what to do with it.,ادخرت مبلغًا من المال وتفكر كيف تستخدمه.
+v2,D13,deep,13,A friend invites you on a spontaneous trip.,صديق يدعوك لرحلة مفاجئة.
+v2,D14,deep,14,You notice unfair treatment at work.,لاحظت معاملة غير عادلة في العمل.
+v2,D15,deep,15,You feel emotionally distant from people around you.,تشعر ببعد عاطفي عن من حولك.
+v2,D16,deep,16,You have multiple goals but limited time.,لديك أهداف متعددة ووقت محدود.
+v2,D17,deep,17,A new course becomes available in your field.,أصبح هناك دورة جديدة متاحة في مجالك.
+v2,D18,deep,18,You are feeling overwhelmed by responsibilities.,تشعر بالضغط من كثرة المسؤوليات.
+v2,D19,deep,19,A friend achieves something important.,صديق حقق إنجازًا مهمًا.
+v2,D20,deep,20,You move to a new neighborhood.,انتقلت إلى حي جديد.
+v2,D21,deep,21,You feel your health habits slipping.,تشعر بأن عاداتك الصحية بدأت تتراجع.
+v2,D22,deep,22,Someone spreads a rumor about you.,أحدهم ينشر إشاعة عنك.
+v2,D23,deep,23,You receive public recognition for your work.,حصلت على تقدير علني لعملك.
+v2,D24,deep,24,You feel bored with your routine.,تشعر بالملل من روتينك.
+v2,D25,deep,25,A relative asks for emotional support.,أحد الأقارب يطلب دعمًا عاطفيًا.
+v2,D26,deep,26,You are choosing between job stability and a risky opportunity.,تختار بين وظيفة مستقرة وفرصة محفوفة بالمخاطر.
+v2,D27,deep,27,A team project depends on your contribution.,مشروع جماعي يعتمد على مساهمتك.
+v2,D28,deep,28,You feel disconnected from your personal beliefs.,تشعر بابتعاد عن قناعاتك الداخلية.
+v2,D29,deep,29,Your expenses increase unexpectedly.,زادت مصاريفك بشكل مفاجئ.
+v2,D30,deep,30,A friend forgets an important promise.,صديق نسي وعدًا مهمًا.
+v2,D31,deep,31,You have an opportunity to learn a new skill.,لديك فرصة لتعلم مهارة جديدة.
+v2,D32,deep,32,You feel tension between work and family time.,تشعر بتوتر بين العمل ووقت العائلة.
+v2,D33,deep,33,Your team fails to meet a deadline.,فريقك لم ينجح في تسليم العمل في الوقت.
+v2,D34,deep,34,You want to improve your daily mood.,ترغب في تحسين مزاجك اليومي.
+v2,D35,deep,35,A public issue affects your community.,قضية عامة تؤثر على مجتمعك.
+v2,D36,deep,36,You are considering a creative hobby.,تفكر في بدء هواية إبداعية.
+v2,D37,deep,37,A disagreement arises in your family.,نشأ خلاف داخل العائلة.
+v2,D38,deep,38,You feel ambitious but unsure where to start.,تشعر بالطموح لكنك غير متأكد من البداية.
+v2,D39,deep,39,You receive constructive advice.,تلقيت نصيحة بناءة.
+v2,D40,deep,40,You have an unexpected free weekend.,لديك عطلة نهاية أسبوع غير متوقعة.
+v2,D41,deep,41,You notice someone being excluded socially.,لاحظت أن شخصًا يتم استبعاده اجتماعيًا.
+v2,D42,deep,42,You are asked to take on extra tasks.,طُلب منك تحمل مهام إضافية.
+v2,D43,deep,43,You feel grateful for recent support.,تشعر بالامتنان لدعم تلقيته مؤخرًا.
+v2,D44,deep,44,A friend suggests trying something adventurous.,صديق يقترح تجربة شيء مغامر.
+v2,D45,deep,45,You want to strengthen friendships.,ترغب في تقوية صداقاتك.
+v2,D46,deep,46,You face a moral dilemma at work.,تواجه موقفًا أخلاقيًا في العمل.
+v2,D47,deep,47,You want more independence in decisions.,ترغب في مزيد من الاستقلالية في قراراتك.
+v2,D48,deep,48,You feel your life lacks balance.,تشعر بأن حياتك تفتقر إلى التوازن.

@@ -1,60 +1,241 @@
 version_id,scenario_code,option_code,option_text_en,option_text_ar
-v1,S01,A,"Wait and observe until the picture becomes clearer.","أراقب بصمت حتى تتضح الصورة."
-v1,S01,B,"Share my view calmly without pushing hard.","أعبّر بهدوء عن رأيي دون إصرار."
-v1,S01,C,"Go along to keep harmony and avoid tension.","أساير حفاظاً على الانسجام وتجنب التوتر."
-v1,S01,D,"Oppose clearly even if it creates discomfort.","أعارض بوضوح حتى لو سبب توتراً."
-
-v1,S02,A,"Reflect first: what pattern is happening here?","أتأمل أولاً: ما النمط المتكرر هنا؟"
-v1,S02,B,"Address it directly and set a boundary.","أواجه مباشرة وأضع حدّاً واضحاً."
-v1,S02,C,"Choose a gentle conversation to protect the bond.","أختار حديثاً لطيفاً لحماية العلاقة."
-v1,S02,D,"Create a clear agreement and steps to prevent repeats.","أضع اتفاقاً وخطوات واضحة لمنع التكرار."
-
-v1,S03,A,"Ask for examples and clarity before reacting.","أطلب أمثلة وتوضيحاً قبل أن أتصرف."
-v1,S03,B,"Propose a bold initiative to show impact quickly.","أقترح مبادرة جريئة لأُظهر الأثر سريعاً."
-v1,S03,C,"Check how my feedback affects relationships and tone.","أنتبه لتأثير الملاحظة على العلاقات والنبرة."
-v1,S03,D,"Turn the feedback into measurable tasks and routine.","أحوّل الملاحظة لمهام قابلة للقياس وروتين."
-
-v1,S04,A,"Pause and read carefully before replying.","أتوقف وأقرأ بهدوء قبل الرد."
-v1,S04,B,"Step in and name the issue directly.","أتدخل وأسمي المشكلة مباشرة."
-v1,S04,C,"Try to calm everyone and reduce tension.","أهدئ الأجواء وأقلل التوتر."
-v1,S04,D,"Set rules: one point at a time, respectful tone.","أضع قواعد: نقطة بنقطة وباحترام."
-
-v1,S05,A,"Step back and re-check priorities before rushing.","أتراجع خطوة وأعيد ترتيب الأولويات."
-v1,S05,B,"Make a decisive call and move forward.","أحسم قراراً وأتقدم."
-v1,S05,C,"Align with people first so everyone stays okay.","أراعي الناس أولاً حتى يبقى الجو جيداً."
-v1,S05,D,"Create a new plan and track changes tightly.","أضع خطة جديدة وأتابع التغييرات بدقة."
-
-v1,S06,A,"Stay quiet, reflect, and respond later.","أصمت وأتأمل ثم أرد لاحقاً."
-v1,S06,B,"Respond confidently in the moment.","أرد بثقة في نفس اللحظة."
-v1,S06,C,"Respond gently to avoid escalation.","أرد بلطف لتفادي التصعيد."
-v1,S06,D,"Ask to take it privately and set boundaries.","أطلب نقل الحديث للخاص وأضع حدوداً."
-
-v1,S07,A,"Study the long-term impact before deciding.","أدرس أثرها بعيد المدى قبل القرار."
-v1,S07,B,"Take it—growth needs bold steps.","أقبلها—النمو يحتاج جرأة."
-v1,S07,C,"Ask how it affects relationships and stability.","أسأل كيف تؤثر على العلاقات والاستقرار."
-v1,S07,D,"List risks, make a checklist, then decide.","أكتب المخاطر وقائمة تحقق ثم أقرر."
-
-v1,S08,A,"Observe the root cause before intervening.","أفهم السبب الجذري قبل التدخل."
-v1,S08,B,"Push them directly to step up.","أدفعه مباشرة لتحسين أدائه."
-v1,S08,C,"Support them emotionally and encourage them.","أدعمه نفسياً وأشجعه."
-v1,S08,D,"Define roles, expectations, and deadlines clearly.","أحدد أدواراً وتوقعات ومواعيد بوضوح."
-
-v1,S09,A,"Pause and examine what is truly fair here.","أتوقف وأفحص ما هو العادل فعلاً."
-v1,S09,B,"Speak up even if it costs me.","أتكلم حتى لو كان على حسابي."
-v1,S09,C,"Address it gently without shaming anyone.","أعالج الأمر بلطف دون إحراج."
-v1,S09,D,"Document it and follow a proper process.","أوثّق الأمر وأتبع إجراءً صحيحاً."
-
-v1,S10,A,"Listen carefully and seek the bigger picture.","أستمع للجميع وأبحث عن الصورة الأكبر."
-v1,S10,B,"Choose the side I believe is right and say it.","أختار الطرف الذي أراه على حق وأصرّح."
-v1,S10,C,"Try to reconcile and protect both relationships.","أسعى للصلح وحماية العلاقتين."
-v1,S10,D,"Set a clear boundary: I won't be pulled into sides.","أضع حدّاً: لن أنحاز لأي طرف."
-
-v1,S11,A,"Delay slightly to collect essential info.","أؤجل قليلاً لجمع معلومات أساسية."
-v1,S11,B,"Decide fast and adjust later.","أقرر سريعاً ثم أعدل لاحقاً."
-v1,S11,C,"Ask others’ feelings and concerns first.","أسأل عن مخاوف ومشاعر الآخرين أولاً."
-v1,S11,D,"Create a simple decision rule and follow it.","أضع قاعدة قرار بسيطة وألتزم بها."
-
-v1,S12,A,"Re-prioritize: do the highest-value part only.","أعيد الترتيب: أنجز الأهم فقط."
-v1,S12,B,"Push through and deliver fully.","أضغط على نفسي وأسلّم بالكامل."
-v1,S12,C,"Be kind to myself and communicate gently.","أرفق بنفسي وأتواصل بلطف."
-v1,S12,D,"Use structure: break it into steps and finish.","أقسمها لخطوات وأُنجزها بنظام."
+v1,S01,A,Wait and observe until the picture becomes clearer.,أراقب بصمت حتى تتضح الصورة.
+v1,S01,B,Share my view calmly without pushing hard.,أعبّر بهدوء عن رأيي دون إصرار.
+v1,S01,C,Go along to keep harmony and avoid tension.,أساير حفاظاً على الانسجام وتجنب التوتر.
+v1,S01,D,Oppose clearly even if it creates discomfort.,أعارض بوضوح حتى لو سبب توتراً.
+v1,S02,A,Reflect first: what pattern is happening here?,أتأمل أولاً: ما النمط المتكرر هنا؟
+v1,S02,B,Address it directly and set a boundary.,أواجه مباشرة وأضع حدّاً واضحاً.
+v1,S02,C,Choose a gentle conversation to protect the bond.,أختار حديثاً لطيفاً لحماية العلاقة.
+v1,S02,D,Create a clear agreement and steps to prevent repeats.,أضع اتفاقاً وخطوات واضحة لمنع التكرار.
+v1,S03,A,Ask for examples and clarity before reacting.,أطلب أمثلة وتوضيحاً قبل أن أتصرف.
+v1,S03,B,Propose a bold initiative to show impact quickly.,أقترح مبادرة جريئة لأُظهر الأثر سريعاً.
+v1,S03,C,Check how my feedback affects relationships and tone.,أنتبه لتأثير الملاحظة على العلاقات والنبرة.
+v1,S03,D,Turn the feedback into measurable tasks and routine.,أحوّل الملاحظة لمهام قابلة للقياس وروتين.
+v1,S04,A,Pause and read carefully before replying.,أتوقف وأقرأ بهدوء قبل الرد.
+v1,S04,B,Step in and name the issue directly.,أتدخل وأسمي المشكلة مباشرة.
+v1,S04,C,Try to calm everyone and reduce tension.,أهدئ الأجواء وأقلل التوتر.
+v1,S04,D,"Set rules: one point at a time, respectful tone.",أضع قواعد: نقطة بنقطة وباحترام.
+v1,S05,A,Step back and re-check priorities before rushing.,أتراجع خطوة وأعيد ترتيب الأولويات.
+v1,S05,B,Make a decisive call and move forward.,أحسم قراراً وأتقدم.
+v1,S05,C,Align with people first so everyone stays okay.,أراعي الناس أولاً حتى يبقى الجو جيداً.
+v1,S05,D,Create a new plan and track changes tightly.,أضع خطة جديدة وأتابع التغييرات بدقة.
+v1,S06,A,"Stay quiet, reflect, and respond later.",أصمت وأتأمل ثم أرد لاحقاً.
+v1,S06,B,Respond confidently in the moment.,أرد بثقة في نفس اللحظة.
+v1,S06,C,Respond gently to avoid escalation.,أرد بلطف لتفادي التصعيد.
+v1,S06,D,Ask to take it privately and set boundaries.,أطلب نقل الحديث للخاص وأضع حدوداً.
+v1,S07,A,Study the long-term impact before deciding.,أدرس أثرها بعيد المدى قبل القرار.
+v1,S07,B,Take it—growth needs bold steps.,أقبلها—النمو يحتاج جرأة.
+v1,S07,C,Ask how it affects relationships and stability.,أسأل كيف تؤثر على العلاقات والاستقرار.
+v1,S07,D,"List risks, make a checklist, then decide.",أكتب المخاطر وقائمة تحقق ثم أقرر.
+v1,S08,A,Observe the root cause before intervening.,أفهم السبب الجذري قبل التدخل.
+v1,S08,B,Push them directly to step up.,أدفعه مباشرة لتحسين أدائه.
+v1,S08,C,Support them emotionally and encourage them.,أدعمه نفسياً وأشجعه.
+v1,S08,D,"Define roles, expectations, and deadlines clearly.",أحدد أدواراً وتوقعات ومواعيد بوضوح.
+v1,S09,A,Pause and examine what is truly fair here.,أتوقف وأفحص ما هو العادل فعلاً.
+v1,S09,B,Speak up even if it costs me.,أتكلم حتى لو كان على حسابي.
+v1,S09,C,Address it gently without shaming anyone.,أعالج الأمر بلطف دون إحراج.
+v1,S09,D,Document it and follow a proper process.,أوثّق الأمر وأتبع إجراءً صحيحاً.
+v1,S10,A,Listen carefully and seek the bigger picture.,أستمع للجميع وأبحث عن الصورة الأكبر.
+v1,S10,B,Choose the side I believe is right and say it.,أختار الطرف الذي أراه على حق وأصرّح.
+v1,S10,C,Try to reconcile and protect both relationships.,أسعى للصلح وحماية العلاقتين.
+v1,S10,D,Set a clear boundary: I won't be pulled into sides.,أضع حدّاً: لن أنحاز لأي طرف.
+v1,S11,A,Delay slightly to collect essential info.,أؤجل قليلاً لجمع معلومات أساسية.
+v1,S11,B,Decide fast and adjust later.,أقرر سريعاً ثم أعدل لاحقاً.
+v1,S11,C,Ask others’ feelings and concerns first.,أسأل عن مخاوف ومشاعر الآخرين أولاً.
+v1,S11,D,Create a simple decision rule and follow it.,أضع قاعدة قرار بسيطة وألتزم بها.
+v1,S12,A,Re-prioritize: do the highest-value part only.,أعيد الترتيب: أنجز الأهم فقط.
+v1,S12,B,Push through and deliver fully.,أضغط على نفسي وأسلّم بالكامل.
+v1,S12,C,Be kind to myself and communicate gently.,أرفق بنفسي وأتواصل بلطف.
+v1,S12,D,Use structure: break it into steps and finish.,أقسمها لخطوات وأُنجزها بنظام.
+v2,D01,A,Attend fully and support everyone warmly.,أحضر بالكامل وأدعم الجميع بحب.
+v2,D01,B,Go briefly then rest early.,أحضر لفترة قصيرة ثم أعود للراحة.
+v2,D01,C,Stay home to recharge physically.,أبقى في المنزل لأستعيد طاقتي.
+v2,D01,D,Decline politely to protect personal time.,أعتذر بلطف للحفاظ على وقتي الخاص.
+v2,D02,A,Save most of it for security.,أدخر معظم المبلغ للاستقرار.
+v2,D02,B,Invest in a learning opportunity.,أستثمره في تعلم جديد.
+v2,D02,C,Share part with family.,أشارك جزءًا منه مع العائلة.
+v2,D02,D,Use it for something fun.,أستخدمه في نشاط ممتع.
+v2,D03,A,Spend time listening and comforting.,أقضي وقتًا في الاستماع والمواساة.
+v2,D03,B,Offer practical solutions.,أقدم حلولًا عملية.
+v2,D03,C,Encourage gratitude and perspective.,أشجعه على الامتنان والنظر الإيجابي.
+v2,D03,D,Respect their space and check later.,أحترم مساحته وأتواصل لاحقًا.
+v2,D04,A,Accept for career growth.,أقبل من أجل التطور المهني.
+v2,D04,B,Decline to protect balance.,أرفض للحفاظ على التوازن.
+v2,D04,C,Negotiate flexible hours.,أتفاوض على ساعات مرنة.
+v2,D04,D,Seek advice before deciding.,أطلب نصيحة قبل القرار.
+v2,D05,A,Volunteer actively.,أتطوع بفعالية.
+v2,D05,B,Join to meet neighbors.,أنضم للتعارف وبناء علاقات.
+v2,D05,C,Support financially.,أدعم ماديًا.
+v2,D05,D,Observe first before committing.,أراقب أولًا قبل الالتزام.
+v2,D06,A,Exercise or care for health.,أمارس الرياضة أو أهتم بصحتي.
+v2,D06,B,Study or read.,أقرأ أو أتعلم.
+v2,D06,C,Call a friend.,أتواصل مع صديق.
+v2,D06,D,Relax with entertainment.,أسترخي بنشاط ترفيهي.
+v2,D07,A,Mediate fairly.,أتوسط بعدل.
+v2,D07,B,Stay neutral.,أبقى محايدًا.
+v2,D07,C,Support the weaker side.,أدعم الطرف الأضعف.
+v2,D07,D,Avoid involvement.,أتجنب التدخل.
+v2,D08,A,Set a new goal.,أضع هدفًا جديدًا.
+v2,D08,B,Learn a new skill.,أتعلم مهارة جديدة.
+v2,D08,C,Plan a short trip.,أخطط لرحلة قصيرة.
+v2,D08,D,Reflect on priorities.,أراجع أولوياتي بهدوء.
+v2,D09,A,Help within budget.,أساعد ضمن حدود ميزانيتي.
+v2,D09,B,Offer non financial support.,أقدم دعمًا غير مالي.
+v2,D09,C,Discuss a repayment plan.,أناِقش خطة سداد.
+v2,D09,D,Decline respectfully.,أعتذر باحترام.
+v2,D10,A,Join actively.,أنضم بفاعلية.
+v2,D10,B,Attend occasionally.,أشارك أحيانًا.
+v2,D10,C,Focus on close friends instead.,أركز على أصدقائي المقربين.
+v2,D10,D,Decline to keep independence.,أرفض للحفاظ على استقلالي.
+v2,D11,A,Reflect and improve.,أراجع نفسي وأطور أدائي.
+v2,D11,B,Defend your dignity calmly.,أدافع عن كرامتي بهدوء.
+v2,D11,C,Ignore and move on.,أتجاهل وأمضي.
+v2,D11,D,Ask for detailed feedback.,أطلب ملاحظات تفصيلية.
+v2,D12,A,Save for future stability.,أدخر للمستقبل.
+v2,D12,B,Invest in a project.,أستثمر في مشروع.
+v2,D12,C,Donate part of it.,أتبرع بجزء منه.
+v2,D12,D,Spend on personal joy.,أصرفه على متعة شخصية.
+v2,D13,A,Accept for adventure.,أوافق من أجل المغامرة.
+v2,D13,B,Check responsibilities first.,أراجع مسؤولياتي أولًا.
+v2,D13,C,Invite others to join.,أدعو آخرين للمشاركة.
+v2,D13,D,Decline to rest.,أعتذر لأجل الراحة.
+v2,D14,A,Speak up respectfully.,أتحدث باحترام.
+v2,D14,B,Report formally.,أبلغ رسميًا.
+v2,D14,C,Support affected colleague.,أدعم الزميل المتأثر.
+v2,D14,D,Stay silent.,أبقى صامتًا.
+v2,D15,A,Reach out emotionally.,أتواصل عاطفيًا.
+v2,D15,B,Join community activity.,أنضم لنشاط مجتمعي.
+v2,D15,C,Reflect spiritually.,أتأمل وأراجع نفسي.
+v2,D15,D,Focus on personal goals.,أركز على أهدافي.
+v2,D16,A,Prioritize key goal.,أحدد الهدف الأهم.
+v2,D16,B,Create balance schedule.,أنظم وقتي بتوازن.
+v2,D16,C,Seek mentor advice.,أطلب نصيحة مرشد.
+v2,D16,D,Push hard on all goals.,أبذل جهدًا مكثفًا للجميع.
+v2,D17,A,Enroll immediately.,أسجل فورًا.
+v2,D17,B,Research before enrolling.,أبحث قبل التسجيل.
+v2,D17,C,Discuss with peers.,أناقش مع زملائي.
+v2,D17,D,Skip due to workload.,أتجاوز بسبب ضغط العمل.
+v2,D18,A,Take short rest.,آخذ استراحة قصيرة.
+v2,D18,B,Exercise to release stress.,أمارس الرياضة لتخفيف الضغط.
+v2,D18,C,Ask family for support.,أطلب دعم العائلة.
+v2,D18,D,Reorganize priorities.,أعيد ترتيب أولوياتي.
+v2,D19,A,Celebrate them openly.,أحتفل به علنًا.
+v2,D19,B,Send private appreciation.,أرسل تقديرًا خاصًا.
+v2,D19,C,Feel motivated to improve.,أشعر بالدافع للتحسن.
+v2,D19,D,Stay neutral.,أبقى محايدًا.
+v2,D20,A,Introduce yourself to neighbors.,أعرف بنفسي للجيران.
+v2,D20,B,Secure home first.,أهتم بأمن المنزل أولًا.
+v2,D20,C,Explore area for fun.,أستكشف المنطقة للمتعة.
+v2,D20,D,Focus on work priorities.,أركز على العمل.
+v2,D21,A,Restart healthy routine.,أعيد الالتزام بروتين صحي.
+v2,D21,B,Track habits strictly.,أتابع عاداتي بصرامة.
+v2,D21,C,Join fitness group.,أنضم لمجموعة رياضية.
+v2,D21,D,Ignore temporarily.,أتجاهل مؤقتًا.
+v2,D22,A,Clarify truth calmly.,أوضح الحقيقة بهدوء.
+v2,D22,B,Protect dignity privately.,أحمي كرامتي دون تصعيد.
+v2,D22,C,Ignore rumor.,أتجاهل الإشاعة.
+v2,D22,D,Seek mediation.,أطلب وساطة.
+v2,D23,A,Thank publicly.,أشكر علنًا.
+v2,D23,B,Use momentum to grow.,أستثمر التقدير للنمو.
+v2,D23,C,Share credit with team.,أشارك الفضل مع الفريق.
+v2,D23,D,Downplay attention.,أقلل من الاهتمام.
+v2,D24,A,Plan creative activity.,أخطط لنشاط إبداعي.
+v2,D24,B,Set new challenge.,أضع تحديًا جديدًا.
+v2,D24,C,Meet friends.,ألتقي بأصدقاء.
+v2,D24,D,Practice gratitude.,أمارس الامتنان.
+v2,D25,A,Listen deeply.,أستمع بعمق.
+v2,D25,B,Offer practical help.,أقدم مساعدة عملية.
+v2,D25,C,Encourage positive outlook.,أشجع نظرة إيجابية.
+v2,D25,D,Limit involvement.,أحدد حدودي.
+v2,D26,A,Choose stability.,أختار الاستقرار.
+v2,D26,B,Choose opportunity.,أختار الفرصة.
+v2,D26,C,Negotiate safer terms.,أتفاوض على شروط آمنة.
+v2,D26,D,Delay decision.,أؤجل القرار.
+v2,D27,A,Lead proactively.,أقود المبادرة.
+v2,D27,B,Ensure fairness in tasks.,أضمن عدالة توزيع المهام.
+v2,D27,C,Support team morale.,أدعم روح الفريق.
+v2,D27,D,Do minimum required.,أقوم بالحد الأدنى.
+v2,D28,A,Reflect daily.,أتأمل يوميًا.
+v2,D28,B,Read meaningful content.,أقرأ محتوى عميق.
+v2,D28,C,Discuss beliefs with friend.,أناقش قناعاتي مع صديق.
+v2,D28,D,Ignore feeling.,أتجاهل الشعور.
+v2,D29,A,Create strict budget.,أضع ميزانية صارمة.
+v2,D29,B,Seek extra income.,أبحث عن دخل إضافي.
+v2,D29,C,Ask family advice.,أطلب نصيحة العائلة.
+v2,D29,D,Reduce social spending.,أقلل المصاريف الاجتماعية.
+v2,D30,A,Talk honestly.,أتحدث بصراحة.
+v2,D30,B,Forgive and move on.,أسامح وأتجاوز.
+v2,D30,C,Set clearer expectations.,أحدد توقعات أوضح.
+v2,D30,D,Distance slightly.,أبتعد قليلًا.
+v2,D31,A,Start immediately.,أبدأ فورًا.
+v2,D31,B,Plan structured learning.,أخطط لتعلم منظم.
+v2,D31,C,Invite friend to join.,أدعو صديقًا للمشاركة.
+v2,D31,D,Postpone.,أؤجل.
+v2,D32,A,Set boundaries.,أضع حدودًا واضحة.
+v2,D32,B,Prioritize family time.,أقدم وقت العائلة.
+v2,D32,C,Increase productivity.,أرفع إنتاجيتي.
+v2,D32,D,Ask for support.,أطلب دعمًا.
+v2,D33,A,Take responsibility.,أتحمل المسؤولية.
+v2,D33,B,Encourage team.,أشجع الفريق.
+v2,D33,C,Analyze for improvement.,أحلل للتحسين.
+v2,D33,D,Detach emotionally.,أفصل مشاعري.
+v2,D34,A,Practice gratitude daily.,أمارس الامتنان يوميًا.
+v2,D34,B,Exercise regularly.,أمارس الرياضة بانتظام.
+v2,D34,C,Connect with loved ones.,أتواصل مع من أحب.
+v2,D34,D,Seek new hobby.,أبحث عن هواية جديدة.
+v2,D35,A,Speak publicly.,أتحدث علنًا.
+v2,D35,B,Volunteer support.,أتطوع للدعم.
+v2,D35,C,Discuss with community.,أناقش مع المجتمع.
+v2,D35,D,Stay uninvolved.,أبقى غير متدخل.
+v2,D36,A,Start art practice.,أبدأ ممارسة فنية.
+v2,D36,B,Take structured class.,آخذ دورة منظمة.
+v2,D36,C,Share art with friends.,أشارك فني مع الأصدقاء.
+v2,D36,D,Keep it private.,أحتفظ به لنفسي.
+v2,D37,A,Mediate fairly.,أتوسط بعدل.
+v2,D37,B,Support emotional healing.,أدعم التهدئة العاطفية.
+v2,D37,C,Stay neutral.,أبقى محايدًا.
+v2,D37,D,Protect personal boundaries.,أحمي حدودي.
+v2,D38,A,Set long term plan.,أضع خطة طويلة المدى.
+v2,D38,B,Start small steps.,أبدأ بخطوات صغيرة.
+v2,D38,C,Seek mentor guidance.,أطلب إرشادًا.
+v2,D38,D,Wait for clarity.,أنتظر الوضوح.
+v2,D39,A,Apply advice immediately.,أطبق النصيحة فورًا.
+v2,D39,B,Reflect before acting.,أتأمل قبل التطبيق.
+v2,D39,C,Thank the advisor.,أشكر صاحب النصيحة.
+v2,D39,D,Ignore it.,أتجاهلها.
+v2,D40,A,Plan fun trip.,أخطط لرحلة ممتعة.
+v2,D40,B,Rest and recover.,أرتاح وأستعيد طاقتي.
+v2,D40,C,Spend with family.,أقضي الوقت مع العائلة.
+v2,D40,D,Work on goals.,أعمل على أهدافي.
+v2,D41,A,Include them.,أشركه مع المجموعة.
+v2,D41,B,Speak about fairness.,أتحدث عن العدالة.
+v2,D41,C,Stay silent.,أبقى صامتًا.
+v2,D41,D,Support privately.,أدعمه بشكل خاص.
+v2,D42,A,Accept for growth.,أقبل من أجل التطور.
+v2,D42,B,Decline to protect balance.,أرفض للحفاظ على التوازن.
+v2,D42,C,Negotiate workload.,أتفاوض على حجم العمل.
+v2,D42,D,Ask team support.,أطلب دعم الفريق.
+v2,D43,A,Express thanks openly.,أعبر عن شكري علنًا.
+v2,D43,B,Return the favor.,أرد الجميل.
+v2,D43,C,Reflect quietly.,أتأمل بهدوء.
+v2,D43,D,Move on quickly.,أمضي سريعًا.
+v2,D44,A,Agree enthusiastically.,أوافق بحماس.
+v2,D44,B,Assess risks first.,أقيّم المخاطر أولًا.
+v2,D44,C,Invite others.,أدعو آخرين.
+v2,D44,D,Decline safely.,أعتذر بأمان.
+v2,D45,A,Plan regular meetups.,أخطط للقاءات منتظمة.
+v2,D45,B,Share appreciation messages.,أرسل رسائل تقدير.
+v2,D45,C,Focus on quality time.,أركز على وقت نوعي.
+v2,D45,D,Keep distance.,أحافظ على مسافة.
+v2,D46,A,Speak up ethically.,أتحدث بأخلاق.
+v2,D46,B,Protect job security.,أحمي أماني الوظيفي.
+v2,D46,C,Seek advice.,أطلب نصيحة.
+v2,D46,D,Ignore issue.,أتجاهل الموضوع.
+v2,D47,A,Make decision alone.,أقرر بنفسي.
+v2,D47,B,Consult trusted people.,أستشير من أثق بهم.
+v2,D47,C,Follow structure.,ألتزم بالنظام.
+v2,D47,D,Delay choice.,أؤجل الاختيار.
+v2,D48,A,Set clear priorities.,أحدد أولويات واضحة.
+v2,D48,B,Spend more time with loved ones.,أقضي وقتًا أطول مع من أحب.
+v2,D48,C,Reduce workload.,أقلل عبء العمل.
+v2,D48,D,Organize schedule carefully.,أنظم جدولي بعناية.

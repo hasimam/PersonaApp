@@ -66,6 +66,13 @@ export interface JourneyStartResponse {
   scenarios: JourneyScenario[];
 }
 
+export type JourneyType = 'quick' | 'deep';
+
+export interface JourneyStartRequest {
+  version_id?: string;
+  journey_type?: JourneyType;
+}
+
 export interface JourneyAnswerSubmission {
   scenario_code: string;
   option_code: string;
@@ -103,6 +110,26 @@ export interface JourneyActivationItem {
   priority: number;
 }
 
+export interface JourneyQuranValue {
+  quran_value_code: string;
+  name_en: string;
+  name_ar: string | null;
+  desc_en: string;
+  desc_ar: string | null;
+  score: number;
+  rank: number;
+}
+
+export interface JourneyProphetTrait {
+  trait_code: string;
+  name_en: string;
+  name_ar: string | null;
+  desc_en: string;
+  desc_ar: string | null;
+  score: number;
+  rank: number;
+}
+
 export interface JourneySubmitAnswersRequest {
   version_id: string;
   test_run_id: number;
@@ -114,6 +141,8 @@ export interface JourneySubmitAnswersResponse {
   test_run_id: number;
   top_genes: JourneyTopGene[];
   archetype_matches: JourneyArchetypeMatch[];
+  quran_values: JourneyQuranValue[];
+  prophet_traits: JourneyProphetTrait[];
   activation_items: JourneyActivationItem[];
 }
 

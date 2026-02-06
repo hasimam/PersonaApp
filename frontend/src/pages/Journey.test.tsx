@@ -95,6 +95,8 @@ describe('Journey smoke test', () => {
         },
       ],
       archetype_matches: [],
+      quran_values: [],
+      prophet_traits: [],
       activation_items: [
         {
           channel: 'behavior',

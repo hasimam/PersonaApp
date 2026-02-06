@@ -181,6 +181,72 @@ class AdviceTrigger(Base):
     advice_item = relationship("AdviceItem", back_populates="triggers")
 
 
+class QuranValue(Base):
+    __tablename__ = "quran_values"
+
+    quran_value_code = Column(String(32), primary_key=True)
+    name_en = Column(String(255), nullable=False)
+    name_ar = Column(String(255), nullable=True)
+    desc_en = Column(Text, nullable=False)
+    desc_ar = Column(Text, nullable=True)
+    refs = Column(Text, nullable=True)
+
+
+class ProphetTrait(Base):
+    __tablename__ = "prophet_traits"
+
+    trait_code = Column(String(32), primary_key=True)
+    name_en = Column(String(255), nullable=False)
+    name_ar = Column(String(255), nullable=True)
+    desc_en = Column(Text, nullable=False)
+    desc_ar = Column(Text, nullable=True)
+    refs = Column(Text, nullable=True)
+
+
+class QuranValueGeneWeight(Base):
+    __tablename__ = "quran_value_gene_weights"
+    __table_args__ = (
+        ForeignKeyConstraint(
+            ["version_id"],
+            ["app_versions.version_id"],
+            ondelete="CASCADE",
+        ),
+        ForeignKeyConstraint(
+            ["quran_value_code"],
+            ["quran_values.quran_value_code"],
+            ondelete="CASCADE",
+        ),
+        UniqueConstraint("version_id", "quran_value_code", name="uq_quran_value_gene_weights_version_value"),
+    )
+
+    id = Column(Integer, primary_key=True, index=True)
+    version_id = Column(String(50), nullable=False, index=True)
+    quran_value_code = Column(String(32), nullable=False, index=True)
+    gene_weights_jsonb = Column(JSONB, nullable=False)
+
+
+class ProphetTraitGeneWeight(Base):
+    __tablename__ = "prophet_trait_gene_weights"
+    __table_args__ = (
+        ForeignKeyConstraint(
+            ["version_id"],
+            ["app_versions.version_id"],
+            ondelete="CASCADE",
+        ),
+        ForeignKeyConstraint(
+            ["trait_code"],
+            ["prophet_traits.trait_code"],
+            ondelete="CASCADE",
+        ),
+        UniqueConstraint("version_id", "trait_code", name="uq_prophet_trait_gene_weights_version_trait"),
+    )
+
+    id = Column(Integer, primary_key=True, index=True)
+    version_id = Column(String(50), nullable=False, index=True)
+    trait_code = Column(String(32), nullable=False, index=True)
+    gene_weights_jsonb = Column(JSONB, nullable=False)
+
+
 class TestRun(Base):
     __tablename__ = "test_runs"
     __table_args__ = (

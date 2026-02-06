@@ -41,7 +41,7 @@ v2,A_RECO_S1,social,activation,مدح صادق,Give Credit,امدح شخصًا �
 v2,A_ADVN_B1,behavior,activation,تجربة جديدة,Try Something New,جرّب نشاطًا لم تجربه من قبل هذا الشهر.,Try something new this month.,94
 v2,A_ADVN_R1,reflection,activation,مخاطرة محسوبة,Calculated Risk,اكتب: ما التجربة التي أخاف منها وأرغب بها؟,Write: What experience do I fear but want?,86
 v2,A_ADVN_S1,social,activation,مغامرة مشتركة,Shared Adventure,ادعُ صديقًا لخوض تجربة جديدة معك.,Invite a friend to try something new together.,90
-v2,A_ARTS_B1,behavior,activation,تعبير إبداعي,Creative Expression,خصص وقتًا للرسم أو الكتابة أو أي نشاط فني.,Spend time on drawing, writing, or any creative act.,95
+v2,A_ARTS_B1,behavior,activation,تعبير إبداعي,Creative Expression,خصص وقتًا للرسم أو الكتابة أو أي نشاط فني.,Spend time on drawing or writing or any creative act.,95
 v2,A_ARTS_R1,reflection,activation,إلهام شخصي,Personal Inspiration,اكتب: ما الذي يلهمني جماليًا؟,Write: What inspires me aesthetically?,84
 v2,A_ARTS_S1,social,activation,مشاركة فنية,Share Creativity,شارك عملًا فنيًا مع شخص قريب.,Share a creative piece with someone.,88
 v2,A_FUN_B1,behavior,activation,نشاط مرح,Fun Activity,اختر نشاطًا بسيطًا يبعث الضحك اليوم.,Choose a simple activity that brings laughter.,93

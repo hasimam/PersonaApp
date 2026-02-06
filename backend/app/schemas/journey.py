@@ -5,6 +5,7 @@ from pydantic import BaseModel, ConfigDict, Field
 
 class JourneyStartRequest(BaseModel):
     version_id: Optional[str] = None
+    journey_type: Optional[Literal["quick", "deep"]] = None
 
 
 class JourneyScenarioOption(BaseModel):
@@ -72,11 +73,33 @@ class JourneyActivationItem(BaseModel):
     priority: int
 
 
+class JourneyQuranValue(BaseModel):
+    quran_value_code: str
+    name_en: str
+    name_ar: Optional[str]
+    desc_en: str
+    desc_ar: Optional[str]
+    score: float
+    rank: int
+
+
+class JourneyProphetTrait(BaseModel):
+    trait_code: str
+    name_en: str
+    name_ar: Optional[str]
+    desc_en: str
+    desc_ar: Optional[str]
+    score: float
+    rank: int
+
+
 class JourneySubmitAnswersResponse(BaseModel):
     version_id: str
     test_run_id: int
     top_genes: List[JourneyTopGene]
     archetype_matches: List[JourneyArchetypeMatch]
+    quran_values: List[JourneyQuranValue]
+    prophet_traits: List[JourneyProphetTrait]
     activation_items: List[JourneyActivationItem]
 
 

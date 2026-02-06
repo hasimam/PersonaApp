@@ -19,6 +19,10 @@ from app.models import (
     AppVersion,
     Gene,
     OptionWeight,
+    ProphetTrait,
+    ProphetTraitGeneWeight,
+    QuranValue,
+    QuranValueGeneWeight,
     SahabaModel,
     Scenario,
     ScenarioOption,
@@ -28,12 +32,16 @@ from app.models import (
 IMPORT_ORDER = [
     "app_versions.csv",
     "genes.csv",
+    "quran_values.csv",
+    "prophet_traits.csv",
     "scenarios.csv",
     "scenario_options.csv",
     "option_weights.csv",
     "sahaba_models.csv",
     "advice_items.csv",
     "advice_triggers.csv",
+    "quran_value_gene_weights.csv",
+    "prophet_trait_gene_weights.csv",
 ]
 
 
@@ -324,7 +332,78 @@ def _import_hybrid_seed_pack(db: Optional[Session], seed_path: Path) -> Dict[str
     )
     summary["genes"] = len(gene_payload)
 
-    # 3) scenarios.csv
+    # 3) quran_values.csv
+    quran_rows, _ = _read_csv_rows(
+        seed_path / "quran_values.csv",
+        required_columns=["quran_value_code", "name_en", "desc_en"],
+        optional_columns=["name_ar", "desc_ar", "refs"],
+    )
+    quran_err = _RowErrorBuilder("quran_values.csv")
+    quran_payload: List[Dict[str, object]] = []
+    quran_codes = _load_existing_single_key(db, QuranValue, "quran_value_code")
+
+    for row in quran_rows:
+        value_code = _parse_required_str(
+            row.values["quran_value_code"],
+            "quran_value_code",
+            quran_err,
+            row.line_number,
+        )
+        quran_payload.append(
+            {
+                "quran_value_code": value_code,
+                "name_en": _parse_required_str(row.values["name_en"], "name_en", quran_err, row.line_number),
+                "name_ar": _normalize_optional(row.values.get("name_ar", "")),
+                "desc_en": _parse_required_str(row.values["desc_en"], "desc_en", quran_err, row.line_number),
+                "desc_ar": _normalize_optional(row.values.get("desc_ar", "")),
+                "refs": _normalize_optional(row.values.get("refs", "")),
+            }
+        )
+        quran_codes.add(value_code)
+
+    _upsert_rows(
+        db,
+        QuranValue,
+        quran_payload,
+        key_columns=["quran_value_code"],
+        update_columns=["name_en", "name_ar", "desc_en", "desc_ar", "refs"],
+    )
+    summary["quran_values"] = len(quran_payload)
+
+    # 4) prophet_traits.csv
+    trait_rows, _ = _read_csv_rows(
+        seed_path / "prophet_traits.csv",
+        required_columns=["trait_code", "name_en", "desc_en"],
+        optional_columns=["name_ar", "desc_ar", "refs"],
+    )
+    trait_err = _RowErrorBuilder("prophet_traits.csv")
+    trait_payload: List[Dict[str, object]] = []
+    trait_codes = _load_existing_single_key(db, ProphetTrait, "trait_code")
+
+    for row in trait_rows:
+        trait_code = _parse_required_str(row.values["trait_code"], "trait_code", trait_err, row.line_number)
+        trait_payload.append(
+            {
+                "trait_code": trait_code,
+                "name_en": _parse_required_str(row.values["name_en"], "name_en", trait_err, row.line_number),
+                "name_ar": _normalize_optional(row.values.get("name_ar", "")),
+                "desc_en": _parse_required_str(row.values["desc_en"], "desc_en", trait_err, row.line_number),
+                "desc_ar": _normalize_optional(row.values.get("desc_ar", "")),
+                "refs": _normalize_optional(row.values.get("refs", "")),
+            }
+        )
+        trait_codes.add(trait_code)
+
+    _upsert_rows(
+        db,
+        ProphetTrait,
+        trait_payload,
+        key_columns=["trait_code"],
+        update_columns=["name_en", "name_ar", "desc_en", "desc_ar", "refs"],
+    )
+    summary["prophet_traits"] = len(trait_payload)
+
+    # 5) scenarios.csv
     scenario_rows, _ = _read_csv_rows(
         seed_path / "scenarios.csv",
         required_columns=["version_id", "scenario_code", "order_index", "scenario_text_en"],
@@ -370,7 +449,7 @@ def _import_hybrid_seed_pack(db: Optional[Session], seed_path: Path) -> Dict[str
     )
     summary["scenarios"] = len(scenario_payload)
 
-    # 4) scenario_options.csv
+    # 6) scenario_options.csv
     option_rows, _ = _read_csv_rows(
         seed_path / "scenario_options.csv",
         required_columns=["version_id", "scenario_code", "option_code", "option_text_en"],
@@ -420,7 +499,7 @@ def _import_hybrid_seed_pack(db: Optional[Session], seed_path: Path) -> Dict[str
     )
     summary["scenario_options"] = len(option_payload)
 
-    # 5) option_weights.csv
+    # 7) option_weights.csv
     weight_rows, _ = _read_csv_rows(
         seed_path / "option_weights.csv",
         required_columns=["version_id", "scenario_code", "option_code", "gene_code", "weight"],
@@ -463,7 +542,7 @@ def _import_hybrid_seed_pack(db: Optional[Session], seed_path: Path) -> Dict[str
     )
     summary["option_weights"] = len(weight_payload)
 
-    # 6) sahaba_models.csv
+    # 8) sahaba_models.csv
     model_rows, model_header = _read_csv_rows(
         seed_path / "sahaba_models.csv",
         required_columns=["version_id", "model_code", "name_en"],
@@ -473,6 +552,7 @@ def _import_hybrid_seed_pack(db: Optional[Session], seed_path: Path) -> Dict[str
     model_err = _RowErrorBuilder("sahaba_models.csv")
     model_base_columns = {"version_id", "model_code", "name_en", "name_ar", "summary_ar"}
     model_gene_columns = [column for column in model_header if column not in model_base_columns]
+    all_gene_codes = {gene for _, gene in gene_keys}
 
     if not model_gene_columns:
         raise SeedImportError("sahaba_models.csv:1: expected at least one gene vector column")
@@ -497,9 +577,7 @@ def _import_hybrid_seed_pack(db: Optional[Session], seed_path: Path) -> Dict[str
             )
 
         unknown_gene_columns = sorted(
-            column
-            for column in model_gene_columns
-            if (version_id, column) not in gene_keys
+            column for column in model_gene_columns if column not in all_gene_codes
         )
         if unknown_gene_columns:
             model_err.raise_error(
@@ -534,7 +612,7 @@ def _import_hybrid_seed_pack(db: Optional[Session], seed_path: Path) -> Dict[str
     )
     summary["sahaba_models"] = len(model_payload)
 
-    # 7) advice_items.csv
+    # 9) advice_items.csv
     advice_rows, _ = _read_csv_rows(
         seed_path / "advice_items.csv",
         required_columns=[
@@ -586,7 +664,7 @@ def _import_hybrid_seed_pack(db: Optional[Session], seed_path: Path) -> Dict[str
     )
     summary["advice_items"] = len(advice_payload)
 
-    # 8) advice_triggers.csv
+    # 10) advice_triggers.csv
     trigger_rows, _ = _read_csv_rows(
         seed_path / "advice_triggers.csv",
         required_columns=[
@@ -659,6 +737,140 @@ def _import_hybrid_seed_pack(db: Optional[Session], seed_path: Path) -> Dict[str
         ],
     )
     summary["advice_triggers"] = len(trigger_payload)
+
+    # 11) quran_value_gene_weights.csv
+    qv_rows, qv_header = _read_csv_rows(
+        seed_path / "quran_value_gene_weights.csv",
+        required_columns=["version_id", "quran_value_code"],
+        allow_additional_columns=True,
+    )
+    qv_err = _RowErrorBuilder("quran_value_gene_weights.csv")
+    qv_base_columns = {"version_id", "quran_value_code"}
+    qv_gene_columns = [column for column in qv_header if column not in qv_base_columns]
+    if not qv_gene_columns:
+        raise SeedImportError("quran_value_gene_weights.csv:1: expected at least one gene column")
+
+    all_gene_codes = {gene for _, gene in gene_keys}
+    qv_payload: List[Dict[str, object]] = []
+
+    for row in qv_rows:
+        version_id = _parse_required_str(row.values["version_id"], "version_id", qv_err, row.line_number)
+        if version_id not in version_ids:
+            qv_err.raise_error(row.line_number, f"unknown version_id '{version_id}'")
+
+        version_gene_codes = {gene for row_version, gene in gene_keys if row_version == version_id}
+        if not version_gene_codes:
+            qv_err.raise_error(row.line_number, f"no genes loaded for version '{version_id}'")
+
+        missing_gene_columns = sorted(version_gene_codes - set(qv_gene_columns))
+        if missing_gene_columns:
+            qv_err.raise_error(
+                row.line_number,
+                f"missing gene columns for version '{version_id}': {', '.join(missing_gene_columns)}",
+            )
+
+        unknown_gene_columns = sorted(
+            column for column in qv_gene_columns if column not in all_gene_codes
+        )
+        if unknown_gene_columns:
+            qv_err.raise_error(
+                row.line_number,
+                f"unknown gene columns: {', '.join(unknown_gene_columns)}",
+            )
+
+        quran_value_code = _parse_required_str(
+            row.values["quran_value_code"],
+            "quran_value_code",
+            qv_err,
+            row.line_number,
+        )
+        if quran_value_code not in quran_codes:
+            qv_err.raise_error(row.line_number, f"unknown quran_value_code '{quran_value_code}'")
+
+        gene_weights = {
+            gene_code: _parse_float(row.values[gene_code], gene_code, qv_err, row.line_number)
+            for gene_code in sorted(version_gene_codes)
+        }
+        qv_payload.append(
+            {
+                "version_id": version_id,
+                "quran_value_code": quran_value_code,
+                "gene_weights_jsonb": gene_weights,
+            }
+        )
+
+    _upsert_rows(
+        db,
+        QuranValueGeneWeight,
+        qv_payload,
+        key_columns=["version_id", "quran_value_code"],
+        update_columns=["gene_weights_jsonb"],
+    )
+    summary["quran_value_gene_weights"] = len(qv_payload)
+
+    # 12) prophet_trait_gene_weights.csv
+    pt_rows, pt_header = _read_csv_rows(
+        seed_path / "prophet_trait_gene_weights.csv",
+        required_columns=["version_id", "trait_code"],
+        allow_additional_columns=True,
+    )
+    pt_err = _RowErrorBuilder("prophet_trait_gene_weights.csv")
+    pt_base_columns = {"version_id", "trait_code"}
+    pt_gene_columns = [column for column in pt_header if column not in pt_base_columns]
+    if not pt_gene_columns:
+        raise SeedImportError("prophet_trait_gene_weights.csv:1: expected at least one gene column")
+
+    pt_payload: List[Dict[str, object]] = []
+
+    for row in pt_rows:
+        version_id = _parse_required_str(row.values["version_id"], "version_id", pt_err, row.line_number)
+        if version_id not in version_ids:
+            pt_err.raise_error(row.line_number, f"unknown version_id '{version_id}'")
+
+        version_gene_codes = {gene for row_version, gene in gene_keys if row_version == version_id}
+        if not version_gene_codes:
+            pt_err.raise_error(row.line_number, f"no genes loaded for version '{version_id}'")
+
+        missing_gene_columns = sorted(version_gene_codes - set(pt_gene_columns))
+        if missing_gene_columns:
+            pt_err.raise_error(
+                row.line_number,
+                f"missing gene columns for version '{version_id}': {', '.join(missing_gene_columns)}",
+            )
+
+        unknown_gene_columns = sorted(
+            column for column in pt_gene_columns if column not in all_gene_codes
+        )
+        if unknown_gene_columns:
+            pt_err.raise_error(
+                row.line_number,
+                f"unknown gene columns: {', '.join(unknown_gene_columns)}",
+            )
+
+        trait_code = _parse_required_str(row.values["trait_code"], "trait_code", pt_err, row.line_number)
+        if trait_code not in trait_codes:
+            pt_err.raise_error(row.line_number, f"unknown trait_code '{trait_code}'")
+
+        gene_weights = {
+            gene_code: _parse_float(row.values[gene_code], gene_code, pt_err, row.line_number)
+            for gene_code in sorted(version_gene_codes)
+        }
+        pt_payload.append(
+            {
+                "version_id": version_id,
+                "trait_code": trait_code,
+                "gene_weights_jsonb": gene_weights,
+            }
+        )
+
+    _upsert_rows(
+        db,
+        ProphetTraitGeneWeight,
+        pt_payload,
+        key_columns=["version_id", "trait_code"],
+        update_columns=["gene_weights_jsonb"],
+    )
+    summary["prophet_trait_gene_weights"] = len(pt_payload)
 
     return summary
 

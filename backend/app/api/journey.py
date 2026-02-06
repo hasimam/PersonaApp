@@ -1,4 +1,5 @@
 from datetime import datetime, timezone
+import random
 from typing import Dict, List, Optional, Sequence, Set
 
 from fastapi import APIRouter, Depends, HTTPException
@@ -20,6 +21,8 @@ from app.models import (
     ComputedModelMatch,
     Feedback,
     Gene,
+    ProphetTrait,
+    QuranValue,
     SahabaModel,
     Scenario,
     ScenarioOption,
@@ -40,6 +43,8 @@ from app.schemas.journey import (
     JourneySubmitAnswersResponse,
     JourneyTopGene,
     JourneyActivationItem,
+    JourneyQuranValue,
+    JourneyProphetTrait,
 )
 
 router = APIRouter()
@@ -48,11 +53,26 @@ RUN_STATUS_COMPLETED = "completed"
 RUN_STATUS_CANCELLED = "cancelled"
 
 
-def _resolve_version_id(db: Session, requested_version_id: Optional[str]) -> str:
+def _resolve_version_id(
+    db: Session,
+    requested_version_id: Optional[str],
+    journey_type: Optional[str],
+) -> str:
     if requested_version_id:
         version = db.query(AppVersion).filter(AppVersion.version_id == requested_version_id).first()
         if not version:
             raise HTTPException(status_code=404, detail=f"Version '{requested_version_id}' not found")
+        return version.version_id
+
+    if journey_type:
+        normalized_type = journey_type.lower()
+        journey_map = {"quick": "v1", "deep": "v2"}
+        mapped_version = journey_map.get(normalized_type)
+        if not mapped_version:
+            raise HTTPException(status_code=400, detail="Invalid journey_type")
+        version = db.query(AppVersion).filter(AppVersion.version_id == mapped_version).first()
+        if not version:
+            raise HTTPException(status_code=404, detail=f"Version '{mapped_version}' not found")
         return version.version_id
 
     active_versions = (
@@ -88,8 +108,7 @@ def _load_scenario_set_codes(db: Session, version_id: str) -> List[str]:
 def _select_scenario_set_code(set_codes: Sequence[str], test_run_id: int) -> str:
     if not set_codes:
         raise ValueError("No scenario sets available")
-    ordered = sorted(set_codes)
-    return ordered[(test_run_id - 1) % len(ordered)]
+    return random.choice(list(set_codes))
 
 
 def _validate_answer_payload(
@@ -181,7 +200,12 @@ def start_journey(
     db: Session = Depends(get_db),
 ):
     requested_version_id = payload.version_id if payload else None
-    version_id = _resolve_version_id(db=db, requested_version_id=requested_version_id)
+    journey_type = payload.journey_type if payload else None
+    version_id = _resolve_version_id(
+        db=db,
+        requested_version_id=requested_version_id,
+        journey_type=journey_type,
+    )
 
     scenario_set_codes = _load_scenario_set_codes(db=db, version_id=version_id)
     if not scenario_set_codes:
@@ -336,7 +360,7 @@ def submit_journey_answers(
     models = db.query(SahabaModel).filter(SahabaModel.version_id == payload.version_id).all()
     models_by_code = {model.model_code: model for model in models}
 
-    top_gene_rows = [row for row in outcome.gene_scores if row.role in {"dominant", "secondary", "support"}][:3]
+    top_gene_rows = outcome.gene_scores[:5]
     top_genes = [
         JourneyTopGene(
             gene_code=row.gene_code,
@@ -365,6 +389,38 @@ def submit_journey_answers(
         if match.model_code in models_by_code
     ]
 
+    quran_values = db.query(QuranValue).all()
+    quran_by_code = {value.quran_value_code: value for value in quran_values}
+    quran_results = [
+        JourneyQuranValue(
+            quran_value_code=row.quran_value_code,
+            name_en=quran_by_code[row.quran_value_code].name_en,
+            name_ar=quran_by_code[row.quran_value_code].name_ar,
+            desc_en=quran_by_code[row.quran_value_code].desc_en,
+            desc_ar=quran_by_code[row.quran_value_code].desc_ar,
+            score=row.score,
+            rank=row.rank,
+        )
+        for row in outcome.quran_values
+        if row.quran_value_code in quran_by_code
+    ]
+
+    prophet_traits = db.query(ProphetTrait).all()
+    prophet_by_code = {trait.trait_code: trait for trait in prophet_traits}
+    prophet_results = [
+        JourneyProphetTrait(
+            trait_code=row.trait_code,
+            name_en=prophet_by_code[row.trait_code].name_en,
+            name_ar=prophet_by_code[row.trait_code].name_ar,
+            desc_en=prophet_by_code[row.trait_code].desc_en,
+            desc_ar=prophet_by_code[row.trait_code].desc_ar,
+            score=row.score,
+            rank=row.rank,
+        )
+        for row in outcome.prophet_traits
+        if row.trait_code in prophet_by_code
+    ]
+
     activation_items = [
         JourneyActivationItem(
             channel=item.channel,
@@ -384,6 +440,8 @@ def submit_journey_answers(
         test_run_id=test_run.id,
         top_genes=top_genes,
         archetype_matches=archetype_matches,
+        quran_values=quran_results,
+        prophet_traits=prophet_results,
         activation_items=activation_items,
     )
 
