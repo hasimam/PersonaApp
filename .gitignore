@@ -23,6 +23,7 @@ logs/
 # Temporary files
 *.tmp
 *.temp
+temp/
 
 # Runtime files
 .personaapp.pid
