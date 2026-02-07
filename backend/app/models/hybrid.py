@@ -260,6 +260,7 @@ class TestRun(Base):
     status = Column(String(32), nullable=False, index=True, default="started", server_default="started")
     selected_activation_id = Column(String(64), nullable=True)
     created_at = Column(DateTime(timezone=True), server_default=func.now())
+    last_activity_at = Column(DateTime(timezone=True), nullable=False, server_default=func.now(), index=True)
     submitted_at = Column(DateTime(timezone=True), nullable=True)
 
     app_version = relationship("AppVersion", back_populates="test_runs")

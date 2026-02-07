@@ -1,4 +1,4 @@
-from datetime import datetime, timezone
+from datetime import datetime, timedelta, timezone
 import random
 from typing import Dict, List, Optional, Sequence, Set
 
@@ -35,6 +35,7 @@ from app.schemas.journey import (
     JourneyArchetypeMatch,
     JourneyFeedbackRequest,
     JourneyFeedbackResponse,
+    JourneyResumeRequest,
     JourneyScenario,
     JourneyScenarioOption,
     JourneyStartRequest,
@@ -51,6 +52,7 @@ router = APIRouter()
 RUN_STATUS_STARTED = "started"
 RUN_STATUS_COMPLETED = "completed"
 RUN_STATUS_CANCELLED = "cancelled"
+RUN_INACTIVITY_TTL = timedelta(hours=24)
 
 
 def _resolve_version_id(
@@ -109,6 +111,84 @@ def _select_scenario_set_code(set_codes: Sequence[str], test_run_id: int) -> str
     if not set_codes:
         raise ValueError("No scenario sets available")
     return random.choice(list(set_codes))
+
+
+def _touch_test_run(test_run: TestRun) -> None:
+    test_run.last_activity_at = datetime.now(timezone.utc)
+
+
+def _is_run_expired(test_run: TestRun) -> bool:
+    last_activity = test_run.last_activity_at or test_run.created_at
+    if not last_activity:
+        return False
+    if last_activity.tzinfo is None:
+        last_activity = last_activity.replace(tzinfo=timezone.utc)
+    return datetime.now(timezone.utc) - last_activity > RUN_INACTIVITY_TTL
+
+
+def _build_journey_response(
+    db: Session,
+    *,
+    version_id: str,
+    test_run_id: int,
+    scenario_set_code: str,
+) -> JourneyStartResponse:
+    scenarios = (
+        db.query(Scenario)
+        .filter(
+            Scenario.version_id == version_id,
+            Scenario.scenario_set_code == scenario_set_code,
+        )
+        .order_by(Scenario.order_index.asc(), Scenario.scenario_code.asc())
+        .all()
+    )
+    if not scenarios:
+        raise HTTPException(
+            status_code=400,
+            detail=f"No scenarios found for version '{version_id}' and set '{scenario_set_code}'",
+        )
+
+    scenario_codes = [scenario.scenario_code for scenario in scenarios]
+    options = (
+        db.query(ScenarioOption)
+        .filter(
+            ScenarioOption.version_id == version_id,
+            ScenarioOption.scenario_code.in_(scenario_codes),
+        )
+        .order_by(ScenarioOption.scenario_code.asc(), ScenarioOption.option_code.asc())
+        .all()
+    )
+    options_by_scenario: Dict[str, List[ScenarioOption]] = {}
+    for option in options:
+        options_by_scenario.setdefault(option.scenario_code, []).append(option)
+
+    response_scenarios: List[JourneyScenario] = []
+    for scenario in scenarios:
+        scenario_options = list(options_by_scenario.get(scenario.scenario_code, []))
+        scenario_seed = f"{test_run_id}:{scenario.scenario_code}"
+        random.Random(scenario_seed).shuffle(scenario_options)
+        response_scenarios.append(
+            JourneyScenario(
+                scenario_code=scenario.scenario_code,
+                order_index=scenario.order_index,
+                scenario_text_en=scenario.scenario_text_en,
+                scenario_text_ar=scenario.scenario_text_ar,
+                options=[
+                    JourneyScenarioOption(
+                        option_code=option.option_code,
+                        option_text_en=option.option_text_en,
+                        option_text_ar=option.option_text_ar,
+                    )
+                    for option in scenario_options
+                ],
+            )
+        )
+
+    return JourneyStartResponse(
+        test_run_id=test_run_id,
+        version_id=version_id,
+        scenarios=response_scenarios,
+    )
 
 
 def _validate_answer_payload(
@@ -211,7 +291,12 @@ def start_journey(
     if not scenario_set_codes:
         raise HTTPException(status_code=400, detail=f"No scenarios found for version '{version_id}'")
 
-    test_run = TestRun(version_id=version_id, session_id=None, status=RUN_STATUS_STARTED)
+    test_run = TestRun(
+        version_id=version_id,
+        session_id=None,
+        status=RUN_STATUS_STARTED,
+        last_activity_at=datetime.now(timezone.utc),
+    )
     db.add(test_run)
     db.commit()
     db.refresh(test_run)
@@ -221,60 +306,42 @@ def start_journey(
         test_run_id=test_run.id,
     )
     test_run.scenario_set_code = selected_set_code
+    _touch_test_run(test_run)
     db.commit()
 
-    scenarios = (
-        db.query(Scenario)
-        .filter(
-            Scenario.version_id == version_id,
-            Scenario.scenario_set_code == selected_set_code,
-        )
-        .order_by(Scenario.order_index.asc(), Scenario.scenario_code.asc())
-        .all()
-    )
-    if not scenarios:
-        raise HTTPException(
-            status_code=400,
-            detail=f"No scenarios found for version '{version_id}' and set '{selected_set_code}'",
-        )
-
-    scenario_codes = [scenario.scenario_code for scenario in scenarios]
-    options = (
-        db.query(ScenarioOption)
-        .filter(
-            ScenarioOption.version_id == version_id,
-            ScenarioOption.scenario_code.in_(scenario_codes),
-        )
-        .order_by(ScenarioOption.scenario_code.asc(), ScenarioOption.option_code.asc())
-        .all()
-    )
-    options_by_scenario: Dict[str, List[ScenarioOption]] = {}
-    for option in options:
-        options_by_scenario.setdefault(option.scenario_code, []).append(option)
-
-    response_scenarios: List[JourneyScenario] = []
-    for scenario in scenarios:
-        response_scenarios.append(
-            JourneyScenario(
-                scenario_code=scenario.scenario_code,
-                order_index=scenario.order_index,
-                scenario_text_en=scenario.scenario_text_en,
-                scenario_text_ar=scenario.scenario_text_ar,
-                options=[
-                    JourneyScenarioOption(
-                        option_code=option.option_code,
-                        option_text_en=option.option_text_en,
-                        option_text_ar=option.option_text_ar,
-                    )
-                    for option in options_by_scenario.get(scenario.scenario_code, [])
-                ],
-            )
-        )
-
-    return JourneyStartResponse(
-        test_run_id=test_run.id,
+    return _build_journey_response(
+        db=db,
         version_id=version_id,
-        scenarios=response_scenarios,
+        test_run_id=test_run.id,
+        scenario_set_code=selected_set_code,
+    )
+
+
+@router.post("/resume", response_model=JourneyStartResponse)
+def resume_journey(
+    payload: JourneyResumeRequest,
+    db: Session = Depends(get_db),
+):
+    test_run = db.query(TestRun).filter(TestRun.id == payload.test_run_id).first()
+    if not test_run:
+        raise HTTPException(status_code=404, detail="test_run_id not found")
+    if test_run.status != RUN_STATUS_STARTED:
+        raise HTTPException(status_code=400, detail="test_run is not active")
+    if _is_run_expired(test_run):
+        test_run.status = RUN_STATUS_CANCELLED
+        db.commit()
+        raise HTTPException(status_code=410, detail="test_run expired")
+    if not test_run.scenario_set_code:
+        raise HTTPException(status_code=400, detail="test_run has no scenario set")
+
+    _touch_test_run(test_run)
+    db.commit()
+
+    return _build_journey_response(
+        db=db,
+        version_id=test_run.version_id,
+        test_run_id=test_run.id,
+        scenario_set_code=test_run.scenario_set_code,
     )
 
 
@@ -351,6 +418,7 @@ def submit_journey_answers(
         )
 
     test_run.submitted_at = datetime.now(timezone.utc)
+    _touch_test_run(test_run)
     test_run.status = RUN_STATUS_COMPLETED
     db.commit()
 
@@ -457,6 +525,7 @@ def cancel_journey(
 
     if test_run.status != RUN_STATUS_COMPLETED:
         test_run.status = RUN_STATUS_CANCELLED
+        _touch_test_run(test_run)
         db.commit()
 
     return JourneyCancelResponse(
@@ -497,6 +566,7 @@ def submit_journey_feedback(
             )
         )
 
+    _touch_test_run(test_run)
     db.commit()
     return JourneyFeedbackResponse(
         test_run_id=payload.test_run_id,

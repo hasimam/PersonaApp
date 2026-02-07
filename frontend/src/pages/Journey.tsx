@@ -1,9 +1,9 @@
-import React, { useMemo, useState } from 'react';
+import React, { useEffect, useMemo, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import LanguageSwitcher from '../components/LanguageSwitcher';
 import { useLanguage } from '../i18n/LanguageContext';
 import { journeyApi } from '../services/api';
-import { JourneyStartResponse, JourneySubmitAnswersResponse } from '../types';
+import { JourneyStartResponse, JourneySubmitAnswersResponse, JourneyType } from '../types';
 
 type JourneyStep =
   | 'intro'
@@ -17,6 +17,40 @@ type JourneyStep =
 
 const SAFETY_SCORES = [1, 2, 3, 4, 5];
 const AUTO_NEXT_DELAY_MS = 180;
+const RESUME_STORAGE_KEY = 'journey_resume_v1';
+const RESUME_TTL_MS = 24 * 60 * 60 * 1000;
+
+type StoredJourneyState = {
+  test_run_id: number;
+  version_id: string;
+  journey_type: JourneyType;
+  step: JourneyStep;
+  currentScenarioIndex: number;
+  scenarioAnswers: Record<string, string>;
+  judgedScore: number | null;
+  selectedActivationId: string | null;
+  saved_at: number;
+};
+
+const loadStoredJourney = (): StoredJourneyState | null => {
+  try {
+    const raw = window.localStorage.getItem(RESUME_STORAGE_KEY);
+    if (!raw) {
+      return null;
+    }
+    return JSON.parse(raw) as StoredJourneyState;
+  } catch {
+    return null;
+  }
+};
+
+const saveStoredJourney = (state: StoredJourneyState) => {
+  window.localStorage.setItem(RESUME_STORAGE_KEY, JSON.stringify(state));
+};
+
+const clearStoredJourney = () => {
+  window.localStorage.removeItem(RESUME_STORAGE_KEY);
+};
 
 const Journey: React.FC = () => {
   const navigate = useNavigate();
@@ -28,7 +62,7 @@ const Journey: React.FC = () => {
   const [scenarioAnswers, setScenarioAnswers] = useState<Record<string, string>>({});
   const [judgedScore, setJudgedScore] = useState<number | null>(null);
   const [selectedActivationId, setSelectedActivationId] = useState<string | null>(null);
-  const [journeyType, setJourneyType] = useState<'quick' | 'deep'>('quick');
+  const [journeyType, setJourneyType] = useState<JourneyType>('quick');
   const [busy, setBusy] = useState(false);
   const [isAdvancing, setIsAdvancing] = useState(false);
   const [error, setError] = useState('');
@@ -60,7 +94,82 @@ const Journey: React.FC = () => {
     setIsAdvancing(false);
     setError('');
     setStep('intro');
+    clearStoredJourney();
   };
+
+  useEffect(() => {
+    const stored = loadStoredJourney();
+    if (!stored) {
+      return;
+    }
+    const now = Date.now();
+    if (now - stored.saved_at > RESUME_TTL_MS) {
+      clearStoredJourney();
+      return;
+    }
+    if (!['scenarios', 'safety'].includes(stored.step)) {
+      clearStoredJourney();
+      return;
+    }
+    setBusy(true);
+    setError('');
+    journeyApi
+      .resumeJourney({ test_run_id: stored.test_run_id })
+      .then((data) => {
+        setJourneyType(stored.journey_type ?? 'quick');
+        setJourney(data);
+        setScenarioAnswers(stored.scenarioAnswers ?? {});
+        setCurrentScenarioIndex(
+          Math.min(stored.currentScenarioIndex ?? 0, Math.max(data.scenarios.length - 1, 0))
+        );
+        setJudgedScore(stored.judgedScore ?? null);
+        setSelectedActivationId(stored.selectedActivationId ?? null);
+        setSubmitResult(null);
+        setIsAdvancing(false);
+        setStep(stored.step);
+      })
+      .catch(() => {
+        clearStoredJourney();
+      })
+      .finally(() => {
+        setBusy(false);
+      });
+  }, []);
+
+  useEffect(() => {
+    if (!journey) {
+      return;
+    }
+    if (
+      step === 'intro' ||
+      step === 'prep' ||
+      step === 'loading' ||
+      step === 'results' ||
+      step === 'activation' ||
+      step === 'closing'
+    ) {
+      return;
+    }
+    saveStoredJourney({
+      test_run_id: journey.test_run_id,
+      version_id: journey.version_id,
+      journey_type: journeyType,
+      step,
+      currentScenarioIndex,
+      scenarioAnswers,
+      judgedScore,
+      selectedActivationId,
+      saved_at: Date.now(),
+    });
+  }, [
+    journey,
+    journeyType,
+    step,
+    currentScenarioIndex,
+    scenarioAnswers,
+    judgedScore,
+    selectedActivationId,
+  ]);
 
   const startJourney = async () => {
     setBusy(true);
@@ -131,6 +240,7 @@ const Journey: React.FC = () => {
       });
 
       setSubmitResult(response);
+      clearStoredJourney();
 
       try {
         await journeyApi.submitFeedback({
@@ -167,6 +277,7 @@ const Journey: React.FC = () => {
         judged_score: judgedScore,
         selected_activation_id: selectedActivationId,
       });
+      clearStoredJourney();
       setStep('closing');
     } catch (e) {
       setError(t.journey.activationSaveError);

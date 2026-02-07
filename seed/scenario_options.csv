@@ -239,3 +239,483 @@ v2,D48,A,Set clear priorities.,أحدد أولويات واضحة.
 v2,D48,B,Spend more time with loved ones.,أقضي وقتًا أطول مع من أحب.
 v2,D48,C,Reduce workload.,أقلل عبء العمل.
 v2,D48,D,Organize schedule carefully.,أنظم جدولي بعناية.
+v1,Q01_01,A,Offer help and check their needs.,تعرض المساعدة وتسأل عن احتياجه.
+v1,Q01_01,B,Listen carefully before replying.,تستمع جيدًا قبل الرد.
+v1,Q01_01,C,Set a calm boundary about timing.,تضع حدًا هادئًا بشأن الوقت.
+v1,Q01_01,D,Encourage a bold step to fix it now.,تشجعه على خطوة جريئة للحل الآن.
+v1,Q01_02,A,Make a simple plan for the day.,تضع خطة بسيطة لليوم.
+v1,Q01_02,B,Stick to one clear routine.,تلتزم بروتين واضح.
+v1,Q01_02,C,Ask someone for support.,تطلب دعمًا من شخص.
+v1,Q01_02,D,Take one bold shortcut to finish.,تتخذ خطوة جريئة للإنهاء.
+v1,Q01_03,A,Address it directly with them.,تواجه الأمر معهم مباشرة.
+v1,Q01_03,B,Calmly set process rules.,تضع قواعد عمل بهدوء.
+v1,Q01_03,C,Try to understand their situation.,تحاول فهم ظروفهم.
+v1,Q01_03,D,Help them fix it quickly.,تساعدهم لإصلاحه سريعًا.
+v1,Q01_04,A,Pause and think through outcomes.,تتوقف وتفكر في النتائج.
+v1,Q01_04,B,Ask others for perspective.,تطلب رأي الآخرين.
+v1,Q01_04,C,Choose what feels kind and fair.,تختار ما يبدو رحيمًا ومنصفًا.
+v1,Q01_04,D,Commit and act without delay.,تحسم وتتصرف دون تأخير.
+v1,Q01_05,A,Join if it feels meaningful to people.,تنضم إذا كان له أثر على الناس.
+v1,Q01_05,B,Decline to protect your schedule.,تعتذر لحماية جدولك.
+v1,Q01_05,C,Suggest a safer alternative.,تقترح بديلًا أكثر أمانًا.
+v1,Q01_05,D,Accept and go for the adventure.,توافق وتذهب بروح مغامرة.
+v1,Q01_06,A,Invite them in warmly.,تدعوه للانضمام بلطف.
+v1,Q01_06,B,Speak up to the group politely.,تتحدث للمجموعة بأدب.
+v1,Q01_06,C,Ask the person how they feel.,تسأل الشخص عن شعوره.
+v1,Q01_06,D,Create a simple rule for inclusion.,تضع قاعدة بسيطة للاحتواء.
+v1,Q01_07,A,Start with the hardest part now.,تبدأ بأصعب جزء الآن.
+v1,Q01_07,B,Create a strict 20-minute block.,تحدد 20 دقيقة بصرامة.
+v1,Q01_07,C,Ask a friend to check on you.,تطلب من صديق أن يتابعك.
+v1,Q01_07,D,Do a quick kind favor first.,تقوم بلفتة لطيفة قصيرة أولًا.
+v1,Q01_08,A,Lower your voice and soften tone.,تخفض صوتك وتلطف نبرتك.
+v1,Q01_08,B,Set a clear boundary and pause.,تضع حدًا واضحًا وتتوقف.
+v1,Q01_08,C,Listen to each side patiently.,تستمع لكل طرف بصبر.
+v1,Q01_08,D,Say what is right even if hard.,تقول الحق حتى لو كان صعبًا.
+v1,Q01_09,A,Respond calmly with facts.,ترد بهدوء وبالحقائق.
+v1,Q01_09,B,Defend yourself firmly.,تدافع عن نفسك بحزم.
+v1,Q01_09,C,Ask what they meant exactly.,تسأل عما يقصدونه بدقة.
+v1,Q01_09,D,Hold your dignity and step away.,تحافظ على كرامتك وتبتعد.
+v1,Q01_10,A,Rest and protect your limits.,تستريح وتحمي حدودك.
+v1,Q01_10,B,Talk with someone who understands.,تتحدث مع شخص يفهمك.
+v1,Q01_10,C,Do a small act of kindness.,تقوم بعمل رحيم صغير.
+v1,Q01_10,D,Try something new to refresh.,تجرب شيئًا جديدًا للتجديد.
+v1,Q01_11,A,Think and propose a smarter way.,تفكر وتقترح طريقة أذكى.
+v1,Q01_11,B,Take initiative and lead it.,تبادر وتقود التنفيذ.
+v1,Q01_11,C,Organize steps and responsibilities.,تنظم الخطوات والمسؤوليات.
+v1,Q01_11,D,Ask the team what they need.,تسأل الفريق عما يحتاجه.
+v1,Q01_12,A,Celebrate them warmly.,تحتفل به بحرارة.
+v1,Q01_12,B,Encourage them to aim higher.,تشجعه على هدف أعلى.
+v1,Q01_12,C,Listen and let them share details.,تستمع وتتركه يشارك التفاصيل.
+v1,Q01_12,D,Suggest a simple next step plan.,تقترح خطة خطوة تالية بسيطة.
+v1,Q02_01,A,Start immediately for 10 minutes.,تبدأ فورًا لعشر دقائق.
+v1,Q02_01,B,Write a simple checklist.,تكتب قائمة بسيطة.
+v1,Q02_01,C,Ask someone to keep you accountable.,تطلب من شخص أن يتابعك.
+v1,Q02_01,D,Do a small kind act to reset.,تقوم بلفتة رحيمة لإعادة التوازن.
+v1,Q02_02,A,Send a warm message of care.,ترسل رسالة اهتمام دافئة.
+v1,Q02_02,B,Ask gently what’s going on.,تسأل بلطف عما يحدث.
+v1,Q02_02,C,Give space but stay available.,تعطي مساحة مع بقاءك قريبًا.
+v1,Q02_02,D,Encourage them to speak up.,تشجعه على التعبير بشجاعة.
+v1,Q02_03,A,Accept to show initiative.,تقبل لتُظهر المبادرة.
+v1,Q02_03,B,Negotiate scope and timing.,تتفاوض على الحجم والوقت.
+v1,Q02_03,C,Decline politely and clearly.,تعتذر بأدب ووضوح.
+v1,Q02_03,D,Ask what support the team needs.,تسأل عما يحتاجه الفريق من دعم.
+v1,Q02_04,A,Clarify facts calmly.,توضح الحقائق بهدوء.
+v1,Q02_04,B,Apologize for your part quickly.,تعتذر سريعًا عن دورك.
+v1,Q02_04,C,Ask how the other felt.,تسأل كيف شعر الطرف الآخر.
+v1,Q02_04,D,Set a clearer communication rule.,تضع قاعدة أوضح للتواصل.
+v1,Q02_05,A,Read something to learn.,تقرأ لتتعلم.
+v1,Q02_05,B,Organize a small area.,ترتب مساحة صغيرة.
+v1,Q02_05,C,Call someone to connect.,تتصل بشخص للتواصل.
+v1,Q02_05,D,Try a bold new activity.,تجرب نشاطًا جديدًا بجرأة.
+v1,Q02_06,A,Help directly and quietly.,تساعد مباشرة وبهدوء.
+v1,Q02_06,B,Ask what they need first.,تسأل أولًا عما يحتاجه.
+v1,Q02_06,C,Invite others to assist too.,تدعو آخرين للمساعدة أيضًا.
+v1,Q02_06,D,Create a simple system to prevent it.,تضع نظامًا بسيطًا لتجنب تكراره.
+v1,Q02_07,A,Make a plan and prioritize.,تضع خطة وترتب الأولويات.
+v1,Q02_07,B,Say no to one commitment.,تقول لا لالتزام واحد.
+v1,Q02_07,C,Share feelings with someone trusted.,تشارك مشاعرك مع شخص موثوق.
+v1,Q02_07,D,Take one brave step to simplify.,تتخذ خطوة جريئة للتبسيط.
+v1,Q02_08,A,Stay calm and respond thoughtfully.,تبقى هادئًا وترد بتفكير.
+v1,Q02_08,B,Defend your point firmly.,تدافع عن رأيك بحزم.
+v1,Q02_08,C,Ask questions to understand them.,تسأل لفهم وجهتهم.
+v1,Q02_08,D,Propose clear rules for discussion.,تقترح قواعد واضحة للنقاش.
+v1,Q02_09,A,Pick one habit and track it.,تختار عادة واحدة وتتابعها.
+v1,Q02_09,B,Set a strict daily time block.,تحدد وقتًا يوميًا صارمًا.
+v1,Q02_09,C,Ask a friend to join you.,تطلب من صديق أن يشاركك.
+v1,Q02_09,D,Start with a small helpful act.,تبدأ بعمل مفيد صغير للآخرين.
+v1,Q02_10,A,Address it directly once.,تواجه الأمر مباشرة مرة واحدة.
+v1,Q02_10,B,Set a clear standard and follow up.,تضع معيارًا واضحًا وتتابع.
+v1,Q02_10,C,Ask what’s behind the delay.,تسأل عن سبب التأخير.
+v1,Q02_10,D,Offer help to remove obstacles.,تعرض المساعدة لإزالة العوائق.
+v1,Q02_11,A,Think through options and risks.,تفكر في الخيارات والمخاطر.
+v1,Q02_11,B,Ask someone experienced.,تسأل شخصًا ذا خبرة.
+v1,Q02_11,C,Choose the kind option first.,تختار الخيار الأرحم أولًا.
+v1,Q02_11,D,Take a decisive action today.,تتخذ قرارًا حاسمًا اليوم.
+v1,Q02_12,A,Congratulate them warmly.,تهنئه بحرارة.
+v1,Q02_12,B,Encourage them to keep going.,تشجعه على الاستمرار.
+v1,Q02_12,C,Ask how they achieved it.,تسأل كيف حقق ذلك.
+v1,Q02_12,D,Make a small plan inspired by it.,تضع خطة صغيرة مستوحاة منه.
+v1,Q03_01,A,Visit or check on family.,تزور العائلة أو تطمئن عليهم.
+v1,Q03_01,B,Plan tomorrow and tidy up.,تخطط للغد وترتب.
+v1,Q03_01,C,Try something new outside.,تجرب شيئًا جديدًا خارجًا.
+v1,Q03_01,D,Think quietly and journal.,تتأمل وتكتب بهدوء.
+v1,Q03_02,A,Calm the tone with kind words.,تهدئ الأجواء بكلمات لطيفة.
+v1,Q03_02,B,Ask what each person meant.,تسأل عما يقصده كل شخص.
+v1,Q03_02,C,Set a rule to keep it respectful.,تضع قاعدة لاحترام الحوار.
+v1,Q03_02,D,Say a bold line to stop it.,تقول كلمة حاسمة لإيقافه.
+v1,Q03_03,A,Own it and speak up immediately.,تعترف وتتكلم فورًا.
+v1,Q03_03,B,Create a recovery plan.,تضع خطة تعويض.
+v1,Q03_03,C,Ask how others are impacted.,تسأل كيف تأثر الآخرون.
+v1,Q03_03,D,Offer help to reduce the damage.,تعرض المساعدة لتقليل الضرر.
+v1,Q03_04,A,Help briefly then return to tasks.,تساعد قليلًا ثم تعود لمهامك.
+v1,Q03_04,B,Explain your limits clearly.,توضح حدودك بوضوح.
+v1,Q03_04,C,Ask them to share details first.,تطلب منهم شرح التفاصيل أولًا.
+v1,Q03_04,D,Say yes and handle it fully.,توافق وتتكفل بالأمر بالكامل.
+v1,Q03_05,A,Learn a new skill.,تتعلم مهارة جديدة.
+v1,Q03_05,B,Commit to a strict routine.,تلتزم بروتين صارم.
+v1,Q03_05,C,Do more supportive acts.,تزيد أعمال الدعم للآخرين.
+v1,Q03_05,D,Take a bold challenge.,تخوض تحديًا جريئًا.
+v1,Q03_06,A,Stand up publicly for them.,تدافع عنه علنًا.
+v1,Q03_06,B,Support them with care.,تدعمه بلطف.
+v1,Q03_06,C,Ask what they want from you.,تسأل ماذا يريد منك.
+v1,Q03_06,D,Document and follow process.,توثق وتتبع الإجراء.
+v1,Q03_07,A,Make a simple organizing plan.,تضع خطة ترتيب بسيطة.
+v1,Q03_07,B,Do a strict 15-minute clean.,تنظف 15 دقيقة بصرامة.
+v1,Q03_07,C,Ask someone to help you.,تطلب من شخص مساعدتك.
+v1,Q03_07,D,Start with one kind gift pile.,تبدأ بترتيب أشياء للتبرع.
+v1,Q03_08,A,Talk to someone who listens.,تتحدث مع شخص يستمع.
+v1,Q03_08,B,Do a calming kindness for yourself.,تقوم بلطف لنفسك.
+v1,Q03_08,C,Set boundaries and reduce noise.,تضع حدودًا وتقلل الضجيج.
+v1,Q03_08,D,Take a brave step you avoid.,تتخذ خطوة جريئة تتجنبها.
+v1,Q03_09,A,Think through pros and cons.,تفكر في الإيجابيات والسلبيات.
+v1,Q03_09,B,Ask someone you trust.,تسأل شخصًا تثق به.
+v1,Q03_09,C,Choose the kind option.,تختار الخيار الأرحم.
+v1,Q03_09,D,Decide and act fast.,تحسم وتتصرف بسرعة.
+v1,Q03_10,A,Start a caring message.,تبدأ برسالة اهتمام.
+v1,Q03_10,B,Listen without interrupting.,تستمع دون مقاطعة.
+v1,Q03_10,C,Set a clear expectation.,تضع توقعًا واضحًا.
+v1,Q03_10,D,Offer a bold honest talk.,تطرح حديثًا صريحًا جريئًا.
+v1,Q03_11,A,Study it carefully first.,تدرسها جيدًا أولًا.
+v1,Q03_11,B,Set rules to reduce risk.,تضع قواعد لتقليل المخاطرة.
+v1,Q03_11,C,Ask people how it affects them.,تسأل كيف يؤثر عليهم.
+v1,Q03_11,D,Take the leap confidently.,تقدم بثقة.
+v1,Q03_12,A,Extract the useful lesson.,تستخرج الدرس المفيد.
+v1,Q03_12,B,Hold your ground firmly.,تثبت موقفك بحزم.
+v1,Q03_12,C,Ask for examples and clarity.,تطلب أمثلة وتوضيحًا.
+v1,Q03_12,D,Respond with kindness.,ترد بلطف.
+v1,Q04_01,A,Share it kindly with someone.,تشاركه بلطف مع شخص.
+v1,Q04_01,B,Reflect on what worked.,تفكر فيما نجح.
+v1,Q04_01,C,Set a stricter next target.,تضع هدفًا صارمًا تاليًا.
+v1,Q04_01,D,Take a bold next step.,تتخذ خطوة جريئة تالية.
+v1,Q04_02,A,Ask what’s happening with empathy.,تسأل بتعاطف ما الذي يحدث.
+v1,Q04_02,B,Set a clear expectation.,تضع توقعًا واضحًا.
+v1,Q04_02,C,Speak directly about it.,تتحدث عنه مباشرة.
+v1,Q04_02,D,Respond with patient kindness.,ترد بلطف وصبر.
+v1,Q04_03,A,Make a clear priority list.,تضع قائمة أولويات واضحة.
+v1,Q04_03,B,Set boundaries and reduce tasks.,تضع حدودًا وتقلل المهام.
+v1,Q04_03,C,Talk to someone who listens.,تتحدث مع شخص يستمع.
+v1,Q04_03,D,Take one brave action now.,تتخذ فعلًا جريئًا الآن.
+v1,Q04_04,A,Fix it quietly and learn.,تصححه بهدوء وتتعلم.
+v1,Q04_04,B,Own it and inform others.,تعترف وتبلغ الآخرين.
+v1,Q04_04,C,Ask how it impacted them.,تسأل كيف أثر عليهم.
+v1,Q04_04,D,Create a checklist to prevent it.,تضع قائمة لمنع تكراره.
+v1,Q04_05,A,Go and connect warmly.,تذهب وتتواصل بلطف.
+v1,Q04_05,B,Observe and listen first.,تراقب وتستمع أولًا.
+v1,Q04_05,C,Go only if it fits your structure.,تذهب إذا كان يناسب تنظيمك.
+v1,Q04_05,D,Go boldly and introduce yourself.,تذهب بجرأة وتعرف بنفسك.
+v1,Q04_06,A,Calm the tone with kindness.,تهدئ الجو بلطف.
+v1,Q04_06,B,Ask questions to understand.,تسأل لفهم الطرفين.
+v1,Q04_06,C,Set rules for the discussion.,تضع قواعد للنقاش.
+v1,Q04_06,D,Stand up for the right point.,تدافع عن النقطة الصحيحة.
+v1,Q04_07,A,Learn one useful thing.,تتعلم شيئًا مفيدًا.
+v1,Q04_07,B,Commit to a strict routine.,تلتزم بروتين صارم.
+v1,Q04_07,C,Do a supportive act for someone.,تقوم بعمل داعم لشخص.
+v1,Q04_07,D,Take a bold new challenge.,تخوض تحديًا جديدًا جريئًا.
+v1,Q04_08,A,Help if you can with care.,تساعد إن استطعت بلطف.
+v1,Q04_08,B,Ask questions before deciding.,تسأل قبل القرار.
+v1,Q04_08,C,Set a clear limit.,تضع حدًا واضحًا.
+v1,Q04_08,D,Say no firmly if needed.,ترفض بحزم عند الحاجة.
+v1,Q04_09,A,Think and reorganize priorities.,تفكر وتعيد ترتيب الأولويات.
+v1,Q04_09,B,Put a strict plan for tomorrow.,تضع خطة صارمة للغد.
+v1,Q04_09,C,Share feelings with someone.,تشارك مشاعرك مع شخص.
+v1,Q04_09,D,Do something kind for yourself.,تقوم بلطف تجاه نفسك.
+v1,Q04_10,A,Respond calmly and wisely.,ترد بهدوء وحكمة.
+v1,Q04_10,B,Defend your boundary firmly.,تدافع عن حدك بحزم.
+v1,Q04_10,C,Ask what they mean exactly.,تسأل ماذا يقصد بدقة.
+v1,Q04_10,D,Choose a gentle reply.,تختار ردًا لطيفًا.
+v1,Q04_11,A,Speak up with courage.,تتكلم بشجاعة.
+v1,Q04_11,B,Choose words carefully.,تختار كلماتك بعناية.
+v1,Q04_11,C,Check how others feel.,تسأل عن شعور الآخرين.
+v1,Q04_11,D,Set a clear rule for next time.,تضع قاعدة واضحة للمرة القادمة.
+v1,Q04_12,A,Send a supportive message.,ترسل رسالة دعم.
+v1,Q04_12,B,Listen without advising.,تستمع دون نصائح.
+v1,Q04_12,C,Help with a practical task.,تساعد في أمر عملي.
+v1,Q04_12,D,Create a simple support plan.,تضع خطة دعم بسيطة.
+v1,Q05_01,A,Help someone with a small need.,تساعد شخصًا في حاجة بسيطة.
+v1,Q05_01,B,Plan the day and priorities.,تخطط لليوم والأولويات.
+v1,Q05_01,C,Start a bold personal task.,تبدأ مهمة شخصية بجرأة.
+v1,Q05_01,D,Listen to yourself and reflect.,تستمع لنفسك وتتأمل.
+v1,Q05_02,A,Set a clear rule and stick to it.,تضع قاعدة واضحة وتلتزم بها.
+v1,Q05_02,B,Ask everyone’s view calmly.,تسأل رأي الجميع بهدوء.
+v1,Q05_02,C,Take a firm action to stop it.,تتخذ إجراءً حازمًا لإيقافها.
+v1,Q05_02,D,Respond with gentle care.,تتعامل بلطف ورحمة.
+v1,Q05_03,A,Apologize and make it right.,تعتذر وتحاول الإصلاح.
+v1,Q05_03,B,Ask how they felt and listen.,تسأل عن شعوره وتستمع.
+v1,Q05_03,C,Set a rule for yourself next time.,تضع قاعدة لنفسك للمرة القادمة.
+v1,Q05_03,D,Speak openly about intent.,تتحدث بصراحة عن نيتك.
+v1,Q05_04,A,Think through consequences.,تفكر في العواقب.
+v1,Q05_04,B,Ask someone you trust.,تسأل شخصًا تثق به.
+v1,Q05_04,C,Choose the kind option.,تختار الخيار الأرحم.
+v1,Q05_04,D,Decide boldly and move.,تحسم بجرأة وتتحرك.
+v1,Q05_05,A,Join to support the team.,تنضم لدعم الفريق.
+v1,Q05_05,B,Ask details before committing.,تسأل التفاصيل قبل الالتزام.
+v1,Q05_05,C,Decline to protect structure.,تعتذر لحماية تنظيمك.
+v1,Q05_05,D,Accept and lead a part.,تقبل وتقود جزءًا.
+v1,Q05_06,A,Welcome them warmly.,ترحب به بلطف.
+v1,Q05_06,B,Ask questions to know them.,تسأل لتتعرف عليه.
+v1,Q05_06,C,Explain group norms clearly.,تشرح قواعد المجموعة بوضوح.
+v1,Q05_06,D,Encourage them to speak.,تشجعه على المشاركة.
+v1,Q05_07,A,Learn the best method first.,تتعلم أفضل طريقة أولًا.
+v1,Q05_07,B,Use a strict daily schedule.,تستخدم جدولًا يوميًا صارمًا.
+v1,Q05_07,C,Do it with a friend’s support.,تفعله بدعم صديق.
+v1,Q05_07,D,Start with helping someone else too.,تبدأ مع دعم شخص آخر أيضًا.
+v1,Q05_08,A,Lower the tension with kindness.,تخفض التوتر بلطف.
+v1,Q05_08,B,Listen without interrupting.,تستمع دون مقاطعة.
+v1,Q05_08,C,Set a boundary and pause.,تضع حدًا وتتوقف.
+v1,Q05_08,D,Speak firmly to stop harm.,تتكلم بحزم لإيقاف الأذى.
+v1,Q05_09,A,Respond with a wise calm reply.,ترد برد هادئ وحكيم.
+v1,Q05_09,B,Stand up for yourself.,تدافع عن نفسك.
+v1,Q05_09,C,Ask for clarification and context.,تطلب توضيحًا وسياقًا.
+v1,Q05_09,D,Hold to your rules and document.,تلتزم بقواعدك وتوثق.
+v1,Q05_10,A,Do one kind act and continue.,تقوم بعمل رحيم وتكمل.
+v1,Q05_10,B,Talk to someone supportive.,تتحدث مع شخص داعم.
+v1,Q05_10,C,Set a strict small target.,تضع هدفًا صغيرًا صارمًا.
+v1,Q05_10,D,Take a bold fresh start.,تأخذ بداية جديدة بجرأة.
+v1,Q05_11,A,Analyze and propose a better way.,تحلل وتقترح طريقة أفضل.
+v1,Q05_11,B,Take initiative to change it.,تبادر لتغييره.
+v1,Q05_11,C,Write steps and assign roles.,تكتب الخطوات وتحدد الأدوار.
+v1,Q05_11,D,Ask people what they need.,تسأل الناس عما يحتاجونه.
+v1,Q05_12,A,Congratulate them warmly.,تهنئه بحرارة.
+v1,Q05_12,B,Ask what they learned.,تسأل ماذا تعلم.
+v1,Q05_12,C,Feel inspired and plan yours.,تستفيد وتضع خطتك.
+v1,Q05_12,D,Encourage them to keep going.,تشجعه على الاستمرار.
+v1,Q06_01,A,Go and support people.,تذهب لدعم الناس.
+v1,Q06_01,B,Ask details before deciding.,تسأل التفاصيل قبل القرار.
+v1,Q06_01,C,Decline to keep your routine.,تعتذر للحفاظ على روتينك.
+v1,Q06_01,D,Go boldly and meet new faces.,تذهب بجرأة للتعرف على أشخاص جدد.
+v1,Q06_02,A,Respond calmly with clarity.,ترد بهدوء ووضوح.
+v1,Q06_02,B,Ask what they meant.,تسأل ماذا يقصد.
+v1,Q06_02,C,Set a firm boundary.,تضع حدًا حازمًا.
+v1,Q06_02,D,Reply with gentle kindness.,ترد بلطف.
+v1,Q06_03,A,Make a smart plan.,تضع خطة ذكية.
+v1,Q06_03,B,Do a strict prep checklist.,تنفذ قائمة تجهيز صارمة.
+v1,Q06_03,C,Ask someone for support.,تطلب دعمًا من شخص.
+v1,Q06_03,D,Take a brave early start.,تبدأ مبكرًا بجرأة.
+v1,Q06_04,A,Help with care if possible.,تساعد بلطف إن أمكن.
+v1,Q06_04,B,Ask what they really need.,تسأل ما الذي يحتاجه فعلًا.
+v1,Q06_04,C,Set a clear limit.,تضع حدًا واضحًا.
+v1,Q06_04,D,Say no firmly this time.,ترفض بحزم هذه المرة.
+v1,Q06_05,A,Learn about it first.,تتعلم عنه أولًا.
+v1,Q06_05,B,Try it and take the risk.,تجرب وتقبل المخاطرة.
+v1,Q06_05,C,Invite someone to join you.,تدعو شخصًا ليشاركك.
+v1,Q06_05,D,Set rules to keep it consistent.,تضع قواعد للاستمرار.
+v1,Q06_06,A,Offer practical help.,تعرض مساعدة عملية.
+v1,Q06_06,B,Listen with empathy.,تستمع بتعاطف.
+v1,Q06_06,C,Encourage a bold step.,تشجعه على خطوة جريئة.
+v1,Q06_06,D,Suggest a simple structure.,تقترح تنظيمًا بسيطًا.
+v1,Q06_07,A,Use a simple system.,تستخدم نظامًا بسيطًا.
+v1,Q06_07,B,Follow a strict routine.,تتبع روتينًا صارمًا.
+v1,Q06_07,C,Ask someone to remind you.,تطلب من شخص تذكيرك.
+v1,Q06_07,D,Think why it happens.,تفكر لماذا يحدث ذلك.
+v1,Q06_08,A,Calm everyone with kindness.,تهدئ الجميع بلطف.
+v1,Q06_08,B,Ask each side to explain.,تطلب من كل طرف الشرح.
+v1,Q06_08,C,Set a rule to pause.,تضع قاعدة للتوقف.
+v1,Q06_08,D,Speak up to stop harm.,تتدخل بشجاعة لإيقاف الأذى.
+v1,Q06_09,A,Respond with facts calmly.,ترد بالحقائق بهدوء.
+v1,Q06_09,B,Stand up for yourself.,تدافع عن نفسك.
+v1,Q06_09,C,Ask for specifics.,تطلب تفاصيل.
+v1,Q06_09,D,Stick to standards and document.,تلتزم بالمعايير وتوثق.
+v1,Q06_10,A,Take time alone to reset.,تأخذ وقتًا لنفسك.
+v1,Q06_10,B,Talk to one trusted person.,تتحدث مع شخص موثوق.
+v1,Q06_10,C,Do a kind act quietly.,تقوم بلطف بهدوء.
+v1,Q06_10,D,Make a clear boundary plan.,تضع خطة حدود واضحة.
+v1,Q06_11,A,Propose the smarter method.,تقترح الطريقة الأذكى.
+v1,Q06_11,B,Take initiative to apply it.,تبادر لتطبيقها.
+v1,Q06_11,C,Write steps and roles.,تكتب الخطوات والأدوار.
+v1,Q06_11,D,Ask the team what they need.,تسأل الفريق عما يحتاجه.
+v1,Q06_12,A,Offer help and care.,تعرض المساعدة والاهتمام.
+v1,Q06_12,B,Listen and validate feelings.,تستمع وتؤكد المشاعر.
+v1,Q06_12,C,Encourage them to act bravely.,تشجعه على التحرك بشجاعة.
+v1,Q06_12,D,Help make a simple plan.,تساعد في وضع خطة بسيطة.
+v1,Q07_01,A,Help someone nearby.,تساعد شخصًا قريبًا.
+v1,Q07_01,B,Organize tasks for tomorrow.,تنظم مهام الغد.
+v1,Q07_01,C,Take a brave new step.,تتخذ خطوة جديدة جريئة.
+v1,Q07_01,D,Learn something useful.,تتعلم شيئًا مفيدًا.
+v1,Q07_02,A,Use gentle words to soften.,تستخدم كلمات لطيفة للتهدئة.
+v1,Q07_02,B,Ask questions to understand.,تسأل لفهم.
+v1,Q07_02,C,Set a clear boundary.,تضع حدًا واضحًا.
+v1,Q07_02,D,Speak boldly to reset respect.,تتكلم بجرأة لإعادة الاحترام.
+v1,Q07_03,A,Admit it and correct fast.,تعترف وتصحح بسرعة.
+v1,Q07_03,B,Think what you learned.,تفكر بما تعلمته.
+v1,Q07_03,C,Ask how it affected them.,تسأل كيف أثر عليهم.
+v1,Q07_03,D,Create a rule to avoid it.,تضع قاعدة لتجنب تكراره.
+v1,Q07_04,A,Help with care when you can.,تساعد بلطف عندما تستطيع.
+v1,Q07_04,B,Ask what is most urgent.,تسأل ما الأكثر إلحاحًا.
+v1,Q07_04,C,Set time limits clearly.,تحدد وقتًا بوضوح.
+v1,Q07_04,D,Refuse firmly if needed.,ترفض بحزم عند الحاجة.
+v1,Q07_05,A,Study the best approach.,تدرس أفضل أسلوب.
+v1,Q07_05,B,Start now with courage.,تبدأ الآن بشجاعة.
+v1,Q07_05,C,Build a strict routine.,تبني روتينًا صارمًا.
+v1,Q07_05,D,Ask someone to support you.,تطلب دعمًا من شخص.
+v1,Q07_06,A,Calm it down with kindness.,تهدئه بلطف.
+v1,Q07_06,B,Call for help if needed.,تطلب مساعدة عند الحاجة.
+v1,Q07_06,C,Observe and understand first.,تراقب وتفهم أولًا.
+v1,Q07_06,D,Step in bravely to stop harm.,تتدخل بشجاعة لإيقاف الأذى.
+v1,Q07_07,A,Write a simple plan.,تكتب خطة بسيطة.
+v1,Q07_07,B,Use a strict reminder system.,تستخدم نظام تذكير صارم.
+v1,Q07_07,C,Ask a friend to check on you.,تطلب من صديق المتابعة.
+v1,Q07_07,D,Do a kind act to restart.,تقوم بعمل رحيم كبداية جديدة.
+v1,Q07_08,A,Apologize and comfort them.,تعتذر وتواسيه.
+v1,Q07_08,B,Listen without arguing.,تستمع دون جدال.
+v1,Q07_08,C,Set a rule for future talks.,تضع قاعدة للحديث مستقبلًا.
+v1,Q07_08,D,Speak up to protect respect.,تتدخل لحماية الاحترام.
+v1,Q07_09,A,Take the lesson calmly.,تأخذ الدرس بهدوء.
+v1,Q07_09,B,Stand up for your choice.,تدافع عن اختيارك.
+v1,Q07_09,C,Ask what exactly to change.,تسأل ما المطلوب تغييره.
+v1,Q07_09,D,Hold to your standards.,تلتزم بمعاييرك.
+v1,Q07_10,A,Quiet reflection alone.,تأمل هادئ وحدك.
+v1,Q07_10,B,Talk with a close person.,حديث مع شخص قريب.
+v1,Q07_10,C,Strict “no-work” hour.,ساعة ممنوعة للعمل بصرامة.
+v1,Q07_10,D,Do one brave new thing.,تفعل شيئًا جديدًا بجرأة.
+v1,Q07_11,A,Propose a smarter process.,تقترح عملية أذكى.
+v1,Q07_11,B,Take initiative to lead.,تبادر للقيادة.
+v1,Q07_11,C,Set clear roles and rules.,تحدد الأدوار والقواعد.
+v1,Q07_11,D,Ask the team’s feelings.,تسأل عن مشاعر الفريق.
+v1,Q07_12,A,Offer kind reassurance.,تقدم طمأنة لطيفة.
+v1,Q07_12,B,Listen and reflect back.,تستمع وتعيد المعنى.
+v1,Q07_12,C,Help them make a plan.,تساعدهم لوضع خطة.
+v1,Q07_12,D,Encourage a brave step.,تشجع خطوة جريئة.
+v1,Q08_01,A,Do a kind visit or check-in.,تقوم بزيارة أو تواصل رحيم.
+v1,Q08_01,B,Plan next steps calmly.,تخطط للخطوات القادمة بهدوء.
+v1,Q08_01,C,Set a strict routine for tomorrow.,تضع روتينًا صارمًا للغد.
+v1,Q08_01,D,Take a bold new step.,تتخذ خطوة جديدة جريئة.
+v1,Q08_02,A,Apologize and care.,تعتذر وتراعي مشاعره.
+v1,Q08_02,B,Ask how they felt.,تسأل كيف شعر.
+v1,Q08_02,C,Set a rule for your tone.,تضع قاعدة لنبرتك.
+v1,Q08_02,D,Speak directly to clear it.,تتحدث مباشرة لتوضيح الأمر.
+v1,Q08_03,A,Analyze the root cause.,تحلل السبب الجذري.
+v1,Q08_03,B,Create a strict checklist.,تضع قائمة صارمة.
+v1,Q08_03,C,Ask people affected.,تسأل المتأثرين.
+v1,Q08_03,D,Take a bold action to change.,تتخذ إجراءً جريئًا للتغيير.
+v1,Q08_04,A,Pause and think clearly.,تتوقف وتفكر بوضوح.
+v1,Q08_04,B,Ask a question to understand.,تسأل سؤالًا للفهم.
+v1,Q08_04,C,Set structure for the topic.,تضع تنظيمًا للموضوع.
+v1,Q08_04,D,Speak up confidently.,تتحدث بثقة.
+v1,Q08_05,A,Learn about it first.,تتعلم عنه أولًا.
+v1,Q08_05,B,Go and take the risk.,تذهب وتقبل المخاطرة.
+v1,Q08_05,C,Bring someone with you.,تأخذ شخصًا معك.
+v1,Q08_05,D,Decline to keep stability.,تعتذر للحفاظ على الاستقرار.
+v1,Q08_06,A,Invite them kindly.,تدعوه بلطف.
+v1,Q08_06,B,Ask how they prefer to join.,تسأل كيف يفضل الانضمام.
+v1,Q08_06,C,Set a clear inclusion rule.,تضع قاعدة احتواء واضحة.
+v1,Q08_06,D,Speak up to the group.,تتحدث للمجموعة بجرأة.
+v1,Q08_07,A,Use a smart simple system.,تستخدم نظامًا ذكيًا بسيطًا.
+v1,Q08_07,B,Commit to strict timing.,تلتزم بوقت صارم.
+v1,Q08_07,C,Ask a friend to check in.,تطلب من صديق المتابعة.
+v1,Q08_07,D,Start by helping someone too.,تبدأ بمساعدة شخص أيضًا.
+v1,Q08_08,A,Lower tone with kindness.,تخفض النبرة بلطف.
+v1,Q08_08,B,Listen to each side.,تستمع لكل طرف.
+v1,Q08_08,C,Set a rule to pause.,تضع قاعدة للتوقف.
+v1,Q08_08,D,Step in to stop disrespect.,تتدخل بشجاعة لإيقاف الإساءة.
+v1,Q08_09,A,Respond with a wise calm reply.,ترد بحكمة وهدوء.
+v1,Q08_09,B,Stand up for yourself.,تدافع عن نفسك.
+v1,Q08_09,C,Ask for clarity and context.,تطلب توضيحًا وسياقًا.
+v1,Q08_09,D,Stick to your standards.,تلتزم بمعاييرك.
+v1,Q08_10,A,Reflect alone quietly.,تتأمل وحدك بهدوء.
+v1,Q08_10,B,Talk with someone close.,تتحدث مع شخص قريب.
+v1,Q08_10,C,Set a strict no-work break.,تضع استراحة ممنوعة للعمل بصرامة.
+v1,Q08_10,D,Do one brave new thing.,تفعل شيئًا جديدًا بجرأة.
+v1,Q08_11,A,Propose a smarter approach.,تقترح أسلوبًا أذكى.
+v1,Q08_11,B,Lead the change.,تقود التغيير.
+v1,Q08_11,C,Write steps and roles.,تكتب الخطوات والأدوار.
+v1,Q08_11,D,Ask the team’s feelings.,تسأل عن مشاعر الفريق.
+v1,Q08_12,A,Congratulate warmly.,تهنئ بحرارة.
+v1,Q08_12,B,Ask what they learned.,تسأل ماذا تعلموا.
+v1,Q08_12,C,Share their joy with others.,تشارك فرحتهم مع الآخرين.
+v1,Q08_12,D,Encourage them to keep going.,تشجعهم على الاستمرار.
+v1,Q09_01,A,Plan your day wisely.,تخطط ليومك بحكمة.
+v1,Q09_01,B,Do a strict quick tidy.,ترتب بسرعة وبصرامة.
+v1,Q09_01,C,Check on someone kindly.,تطمئن على شخص بلطف.
+v1,Q09_01,D,Do one brave new step.,تفعل خطوة جديدة بشجاعة.
+v1,Q09_02,A,Share a thoughtful view.,تشارك رأيًا متزنًا.
+v1,Q09_02,B,Ask how they feel first.,تسأل عن شعوره أولًا.
+v1,Q09_02,C,Set a clear boundary in advice.,تضع حدًا واضحًا في النصيحة.
+v1,Q09_02,D,Encourage them to act boldly.,تشجعه على التحرك بجرأة.
+v1,Q09_03,A,Fix it and learn the lesson.,تصلح الأمر وتتعلم الدرس.
+v1,Q09_03,B,Own it and speak up.,تعترف وتتكلم.
+v1,Q09_03,C,Ask who was affected.,تسأل من تأثر.
+v1,Q09_03,D,Create a strict reminder system.,تضع نظام تذكير صارمًا.
+v1,Q09_04,A,Help with care briefly.,تساعد بلطف بشكل مختصر.
+v1,Q09_04,B,Ask what they need exactly.,تسأل ماذا يحتاج بالضبط.
+v1,Q09_04,C,Set a time limit for help.,تحدد وقتًا للمساعدة.
+v1,Q09_04,D,Say no firmly this time.,تقول لا بحزم هذه المرة.
+v1,Q09_05,A,Learn from a good source.,تتعلم من مصدر جيد.
+v1,Q09_05,B,Practice with strict schedule.,تتدرب بجدول صارم.
+v1,Q09_05,C,Ask for feedback kindly.,تطلب ملاحظات بلطف.
+v1,Q09_05,D,Take a bold public try.,تجرب علنًا بجرأة.
+v1,Q09_06,A,Speak up courageously.,تتحدث بشجاعة.
+v1,Q09_06,B,Calm the situation kindly.,تهدئ الوضع بلطف.
+v1,Q09_06,C,Ask questions to understand.,تسأل لفهم.
+v1,Q09_06,D,Follow a clear process.,تتبع إجراءً واضحًا.
+v1,Q09_07,A,Make a smart weekly plan.,تضع خطة أسبوعية ذكية.
+v1,Q09_07,B,Use a strict daily routine.,تستخدم روتينًا يوميًا صارمًا.
+v1,Q09_07,C,Ask someone to check on you.,تطلب من شخص المتابعة.
+v1,Q09_07,D,Do a kind reset for yourself.,تقوم بلطف لنفسك كبداية.
+v1,Q09_08,A,Offer practical support.,تقدم دعمًا عمليًا.
+v1,Q09_08,B,Listen with empathy.,تستمع بتعاطف.
+v1,Q09_08,C,Set a calm boundary.,تضع حدًا هادئًا.
+v1,Q09_08,D,Encourage a brave step.,تشجعه على خطوة جريئة.
+v1,Q09_09,A,Respond calmly with facts.,ترد بهدوء وبالحقائق.
+v1,Q09_09,B,Stand firm and confident.,تثبت بحزم وثقة.
+v1,Q09_09,C,Ask for clarity.,تطلب توضيحًا.
+v1,Q09_09,D,Document and follow standards.,توثق وتلتزم بالمعايير.
+v1,Q09_10,A,Reflect quietly and think.,تتأمل بهدوء وتفكر.
+v1,Q09_10,B,Talk to someone who listens.,تتحدث مع شخص يستمع.
+v1,Q09_10,C,Do a kind act.,تقوم بعمل رحيم.
+v1,Q09_10,D,Set a strict break time.,تحدد وقت استراحة صارمًا.
+v1,Q09_11,A,Propose it thoughtfully.,تقترحها بتوازن.
+v1,Q09_11,B,Take the lead to try it.,تقود التجربة.
+v1,Q09_11,C,Write clear steps.,تكتب خطوات واضحة.
+v1,Q09_11,D,Ask others’ needs first.,تسأل احتياجات الآخرين أولًا.
+v1,Q09_12,A,Celebrate with them warmly.,تحتفل معه بحرارة.
+v1,Q09_12,B,Ask about their feelings.,تسأل عن مشاعره.
+v1,Q09_12,C,Encourage them to continue.,تشجعه على الاستمرار.
+v1,Q09_12,D,Reflect what you can learn.,تفكر ماذا يمكن أن تتعلم.
+v1,Q10_01,A,Check on someone and support.,تطمئن على شخص وتدعمه.
+v1,Q10_01,B,Plan a smart next step.,تخطط لخطوة تالية ذكية.
+v1,Q10_01,C,Set strict limits for rest.,تضع حدود راحة صارمة.
+v1,Q10_01,D,Do something bold and new.,تفعل شيئًا جديدًا بجرأة.
+v1,Q10_02,A,Apologize with care.,تعتذر باهتمام.
+v1,Q10_02,B,Listen and reflect their feelings.,تستمع وتعيد مشاعرهم.
+v1,Q10_02,C,Set a clear boundary.,تضع حدًا واضحًا.
+v1,Q10_02,D,Speak directly to resolve.,تتحدث مباشرة للحل.
+v1,Q10_03,A,Think through priorities.,تفكر في الأولويات.
+v1,Q10_03,B,Follow a strict checklist.,تتبع قائمة صارمة.
+v1,Q10_03,C,Ask someone for support.,تطلب دعمًا من شخص.
+v1,Q10_03,D,Start early with courage.,تبدأ مبكرًا بشجاعة.
+v1,Q10_04,A,Help if you can kindly.,تساعد إن استطعت بلطف.
+v1,Q10_04,B,Ask what they need exactly.,تسأل ما الذي يحتاجه بالضبط.
+v1,Q10_04,C,Set a firm limit.,تضع حدًا حازمًا.
+v1,Q10_04,D,Say no clearly.,تقول لا بوضوح.
+v1,Q10_05,A,Find a good source and study.,تجد مصدرًا جيدًا وتدرس.
+v1,Q10_05,B,Practice with strict timing.,تتدرب بوقت صارم.
+v1,Q10_05,C,Ask for feedback kindly.,تطلب ملاحظات بلطف.
+v1,Q10_05,D,Try publicly with confidence.,تجرب علنًا بثقة.
+v1,Q10_06,A,Speak up with courage.,تتحدث بشجاعة.
+v1,Q10_06,B,Support the person warmly.,تدعم الشخص بلطف.
+v1,Q10_06,C,Ask questions to understand.,تسأل لفهم.
+v1,Q10_06,D,Follow clear rules and process.,تتبع قواعد وإجراءات واضحة.
+v1,Q10_07,A,Make a smart simple plan.,تضع خطة ذكية بسيطة.
+v1,Q10_07,B,Use a strict reminder system.,تستخدم نظام تذكير صارمًا.
+v1,Q10_07,C,Ask a friend to check in.,تطلب من صديق المتابعة.
+v1,Q10_07,D,Start with a kind reset.,تبدأ بلطف كبداية جديدة.
+v1,Q10_08,A,Lower the tone kindly.,تخفض النبرة بلطف.
+v1,Q10_08,B,Listen to each side.,تستمع لكل طرف.
+v1,Q10_08,C,Set a rule to pause.,تضع قاعدة للتوقف.
+v1,Q10_08,D,Step in to stop harm.,تتدخل لإيقاف الأذى.
+v1,Q10_09,A,Respond calmly with facts.,ترد بهدوء وبالحقائق.
+v1,Q10_09,B,Stand firm and confident.,تثبت بحزم وثقة.
+v1,Q10_09,C,Ask for clarity and examples.,تطلب توضيحًا وأمثلة.
+v1,Q10_09,D,Document and follow standards.,توثق وتلتزم بالمعايير.
+v1,Q10_10,A,Reflect alone quietly.,تتأمل وحدك بهدوء.
+v1,Q10_10,B,Talk with someone close.,تتحدث مع شخص قريب.
+v1,Q10_10,C,Do a kind act.,تقوم بعمل رحيم.
+v1,Q10_10,D,Set a strict break boundary.,تضع حدًا صارمًا للاستراحة.
+v1,Q10_11,A,Propose it thoughtfully.,تقترحها بتوازن.
+v1,Q10_11,B,Lead the change boldly.,تقود التغيير بجرأة.
+v1,Q10_11,C,Write clear steps.,تكتب خطوات واضحة.
+v1,Q10_11,D,Ask people’s needs first.,تسأل احتياجات الناس أولًا.
+v1,Q10_12,A,Congratulate warmly.,تهنئ بحرارة.
+v1,Q10_12,B,Ask what they learned.,تسأل ماذا تعلم.
+v1,Q10_12,C,Encourage them to continue.,تشجعه على الاستمرار.
+v1,Q10_12,D,Reflect what you can learn.,تفكر ماذا يمكنك أن تتعلم.

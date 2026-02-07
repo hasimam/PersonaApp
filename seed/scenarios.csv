@@ -59,3 +59,123 @@ v2,D45,deep,45,You want to strengthen friendships.,ترغب في تقوية صد
 v2,D46,deep,46,You face a moral dilemma at work.,تواجه موقفًا أخلاقيًا في العمل.
 v2,D47,deep,47,You want more independence in decisions.,ترغب في مزيد من الاستقلالية في قراراتك.
 v2,D48,deep,48,You feel your life lacks balance.,تشعر بأن حياتك تفتقر إلى التوازن.
+v1,Q01_01,quick_01,1,You get a message from someone upset. What do you do first?,وصلكت رسالة من شخص منزعج. ماذا تفعل أولًا؟
+v1,Q01_02,quick_01,2,You have a busy day and little time. What helps most?,يومك مزدحم ووقتك قليل. ما الذي يساعدك أكثر؟
+v1,Q01_03,quick_01,3,A teammate makes a mistake that affects you. What do you do?,زميل أخطأ وأثر ذلك عليك. ماذا تفعل؟
+v1,Q01_04,quick_01,4,You feel uncertain about a decision. What guides you?,تشعر بالحيرة بشأن قرار. ما الذي يوجهك؟
+v1,Q01_05,quick_01,5,A friend asks you to join a plan last minute. What do you do?,صديق يطلب انضمامك لخطة في آخر لحظة. ماذا تفعل؟
+v1,Q01_06,quick_01,6,You notice someone being excluded in a group. What do you do?,لاحظت شخصًا يتم استبعاده في مجموعة. ماذا تفعل؟
+v1,Q01_07,quick_01,7,You keep postponing an important task. What is your move?,تؤجل مهمة مهمة باستمرار. ما خطوتك؟
+v1,Q01_08,quick_01,8,A family discussion becomes tense. How do you respond?,نقاش عائلي أصبح متوترًا. كيف ترد؟
+v1,Q01_09,quick_01,9,You receive criticism in front of others. What do you do?,تلقيت نقدًا أمام الآخرين. ماذا تفعل؟
+v1,Q01_10,quick_01,10,You feel drained this week. What helps you recharge?,تشعر بالإرهاق هذا الأسبوع. ما الذي يعيد شحنك؟
+v1,Q01_11,quick_01,11,You see a chance to improve something at work. What do you do?,ترى فرصة لتحسين شيء في العمل. ماذا تفعل؟
+v1,Q01_12,quick_01,12,A friend shares good news. How do you respond?,صديق يشاركك خبرًا سعيدًا. كيف ترد؟
+v1,Q02_01,quick_02,1,You notice you’re procrastinating. What do you do?,لاحظت أنك تؤجل. ماذا تفعل؟
+v1,Q02_02,quick_02,2,A friend is quiet and withdrawn. What do you do?,صديقك صامت ومنسحب. ماذا تفعل؟
+v1,Q02_03,quick_02,3,You’re offered an extra task. What’s your response?,عُرضت عليك مهمة إضافية. ما ردك؟
+v1,Q02_04,quick_02,4,A misunderstanding happens in a chat. What do you do?,حدث سوء فهم في محادثة. ماذا تفعل؟
+v1,Q02_05,quick_02,5,You have a free hour. What do you choose?,لديك ساعة فراغ. ماذا تختار؟
+v1,Q02_06,quick_02,6,You see someone struggling with a simple need. What do you do?,ترى شخصًا يواجه حاجة بسيطة. ماذا تفعل؟
+v1,Q02_07,quick_02,7,You feel stressed by many commitments. What helps?,تشعر بالضغط من كثرة الالتزامات. ما الذي يساعد؟
+v1,Q02_08,quick_02,8,Someone challenges you in a meeting. How do you respond?,شخص يعارضك في اجتماع. كيف ترد؟
+v1,Q02_09,quick_02,9,You want to improve your routine. Where do you start?,تريد تحسين روتينك. من أين تبدأ؟
+v1,Q02_10,quick_02,10,A teammate is late again. What do you do?,زميل يتأخر مرة أخرى. ماذا تفعل؟
+v1,Q02_11,quick_02,11,You feel unsure about your next step. What do you do?,غير متأكد من خطوتك القادمة. ماذا تفعل؟
+v1,Q02_12,quick_02,12,You hear good news about someone you know. What do you do?,سمعت خبرًا سعيدًا عن شخص تعرفه. ماذا تفعل؟
+v1,Q03_01,quick_03,1,You have a free evening. What do you do?,لديك مساء فارغ. ماذا تفعل؟
+v1,Q03_02,quick_03,2,A small conflict starts in your group chat. What do you do?,بدأ خلاف صغير في مجموعة الدردشة. ماذا تفعل؟
+v1,Q03_03,quick_03,3,You missed a deadline. What is your next step?,فاتك موعد تسليم. ما خطوتك التالية؟
+v1,Q03_04,quick_03,4,Someone asks for your help while you’re busy. What do you do?,شخص يطلب مساعدتك وأنت مشغول. ماذا تفعل؟
+v1,Q03_05,quick_03,5,You want to grow this month. What do you choose?,تريد أن تتطور هذا الشهر. ماذا تختار؟
+v1,Q03_06,quick_03,6,You see a friend being treated unfairly. What do you do?,ترى صديقًا يتعرض لظلم. ماذا تفعل؟
+v1,Q03_07,quick_03,7,Your room is messy. What do you do first?,غرفتك فوضوية. ماذا تفعل أولًا؟
+v1,Q03_08,quick_03,8,You feel emotionally heavy today. What helps?,تشعر بثقل عاطفي اليوم. ما الذي يساعد؟
+v1,Q03_09,quick_03,9,You need to decide quickly. What do you rely on?,تحتاج قرارًا سريعًا. على ماذا تعتمد؟
+v1,Q03_10,quick_03,10,You want to improve a relationship. What do you do?,تريد تحسين علاقة. ماذا تفعل؟
+v1,Q03_11,quick_03,11,You notice an opportunity but it’s risky. What do you do?,لاحظت فرصة لكنها مخاطرة. ماذا تفعل؟
+v1,Q03_12,quick_03,12,You receive feedback that feels harsh. What do you do?,تلقيت ملاحظات قاسية. ماذا تفعل؟
+v1,Q04_01,quick_04,1,You have a small win today. What do you do?,لديك نجاح صغير اليوم. ماذا تفعل؟
+v1,Q04_02,quick_04,2,A friend is late again. What do you do?,صديقك يتأخر مرة أخرى. ماذا تفعل؟
+v1,Q04_03,quick_04,3,You feel overwhelmed. What helps first?,تشعر بالإرهاق. ما الذي يساعد أولًا؟
+v1,Q04_04,quick_04,4,You notice a mistake in your work. What do you do?,لاحظت خطأ في عملك. ماذا تفعل؟
+v1,Q04_05,quick_04,5,You’re invited to a new gathering. What do you do?,دُعيت لتجمع جديد. ماذا تفعل؟
+v1,Q04_06,quick_04,6,Two people disagree strongly. What is your role?,شخصان يختلفان بقوة. ما دورك؟
+v1,Q04_07,quick_04,7,You want to improve your week. What do you pick?,تريد تحسين أسبوعك. ماذا تختار؟
+v1,Q04_08,quick_04,8,Someone asks you for money or resources. What do you do?,شخص يطلب منك مالًا أو موارد. ماذا تفعل؟
+v1,Q04_09,quick_04,9,You feel you need a reset. What do you do?,تشعر أنك تحتاج إعادة ضبط. ماذا تفعل؟
+v1,Q04_10,quick_04,10,A colleague speaks harshly. What do you do?,زميل يتحدث بحدة. ماذا تفعل؟
+v1,Q04_11,quick_04,11,You see a chance to speak up. What do you do?,ترى فرصة للتعبير. ماذا تفعل؟
+v1,Q04_12,quick_04,12,You want to support someone quietly. What do you do?,تريد دعم شخص بهدوء. ماذا تفعل؟
+v1,Q05_01,quick_05,1,You have a spare morning. What do you do?,لديك صباح فارغ. ماذا تفعل؟
+v1,Q05_02,quick_05,2,A small issue repeats at home. What do you do?,مشكلة صغيرة تتكرر في البيت. ماذا تفعل؟
+v1,Q05_03,quick_05,3,You notice you hurt someone’s feelings. What do you do?,لاحظت أنك جرحت مشاعر شخص. ماذا تفعل؟
+v1,Q05_04,quick_05,4,You need to choose between two options. What helps?,تحتاج الاختيار بين خيارين. ما الذي يساعد؟
+v1,Q05_05,quick_05,5,Someone asks you to join a new project. What do you do?,شخص يدعوك لمشروع جديد. ماذا تفعل؟
+v1,Q05_06,quick_05,6,You see someone new in the group. What do you do?,ترى شخصًا جديدًا في المجموعة. ماذا تفعل؟
+v1,Q05_07,quick_05,7,You want to build a better habit. What do you do?,تريد بناء عادة أفضل. ماذا تفعل؟
+v1,Q05_08,quick_05,8,A family member raises their voice. What do you do?,أحد أفراد العائلة يرفع صوته. ماذا تفعل؟
+v1,Q05_09,quick_05,9,You are blamed unfairly. What do you do?,تم لومك ظلمًا. ماذا تفعل؟
+v1,Q05_10,quick_05,10,You feel low on motivation. What helps?,تشعر بانخفاض الدافعية. ما الذي يساعد؟
+v1,Q05_11,quick_05,11,You want to improve a process. What do you do?,تريد تحسين طريقة عمل. ماذا تفعل؟
+v1,Q05_12,quick_05,12,Someone shares a success story. What do you do?,شخص يشارك قصة نجاح. ماذا تفعل؟
+v1,Q06_01,quick_06,1,You get an unexpected invite tonight. What do you do?,وصلكت دعوة مفاجئة الليلة. ماذا تفعل؟
+v1,Q06_02,quick_06,2,A message feels rude. What do you do?,رسالة بدت جارحة. ماذا تفعل؟
+v1,Q06_03,quick_06,3,You have a big task tomorrow. What do you do today?,لديك مهمة كبيرة غدًا. ماذا تفعل اليوم؟
+v1,Q06_04,quick_06,4,Someone asks for a favor repeatedly. What do you do?,شخص يطلب خدمة مرارًا. ماذا تفعل؟
+v1,Q06_05,quick_06,5,You want to try something new. What do you pick?,تريد تجربة شيء جديد. ماذا تختار؟
+v1,Q06_06,quick_06,6,You notice someone looks stressed. What do you do?,لاحظت شخصًا متوترًا. ماذا تفعل؟
+v1,Q06_07,quick_06,7,You keep forgetting small tasks. What helps?,تنسى مهام صغيرة. ما الذي يساعد؟
+v1,Q06_08,quick_06,8,A disagreement starts in your family. What do you do?,بدأ خلاف في العائلة. ماذا تفعل؟
+v1,Q06_09,quick_06,9,Someone questions your effort. What do you do?,شخص يشكك في جهدك. ماذا تفعل؟
+v1,Q06_10,quick_06,10,You feel tired socially. What do you do?,تشعر بتعب اجتماعي. ماذا تفعل؟
+v1,Q06_11,quick_06,11,You see a better way to do a task. What do you do?,ترى طريقة أفضل لإنجاز مهمة. ماذا تفعل؟
+v1,Q06_12,quick_06,12,A friend shares a personal struggle. What do you do?,صديق يشارك معاناة شخصية. ماذا تفعل؟
+v1,Q07_01,quick_07,1,You have an empty afternoon. What do you do?,لديك بعد ظهر فارغ. ماذا تفعل؟
+v1,Q07_02,quick_07,2,A conversation feels tense. What do you do?,حديث يبدو متوترًا. ماذا تفعل؟
+v1,Q07_03,quick_07,3,You made a wrong assumption. What do you do?,افترضت شيئًا بشكل خاطئ. ماذا تفعل؟
+v1,Q07_04,quick_07,4,Someone asks for your time repeatedly. What do you do?,شخص يطلب وقتك مرارًا. ماذا تفعل؟
+v1,Q07_05,quick_07,5,You want to improve quickly. What do you do?,تريد التحسن بسرعة. ماذا تفعل؟
+v1,Q07_06,quick_07,6,You see a conflict in public. What do you do?,ترى خلافًا في مكان عام. ماذا تفعل؟
+v1,Q07_07,quick_07,7,Your habits are slipping. What do you do?,عاداتك تتراجع. ماذا تفعل؟
+v1,Q07_08,quick_07,8,A family member feels hurt. What do you do?,أحد أفراد العائلة يشعر بالأذى. ماذا تفعل؟
+v1,Q07_09,quick_07,9,You’re criticized for your style. What do you do?,تم انتقاد أسلوبك. ماذا تفعل؟
+v1,Q07_10,quick_07,10,You need a break. What kind?,تحتاج استراحة. أي نوع؟
+v1,Q07_11,quick_07,11,You want to improve teamwork. What do you do?,تريد تحسين العمل الجماعي. ماذا تفعل؟
+v1,Q07_12,quick_07,12,Someone shares a worry. What do you do?,شخص يشارك قلقًا. ماذا تفعل؟
+v1,Q08_01,quick_08,1,You have extra time after work. What do you do?,لديك وقت إضافي بعد العمل. ماذا تفعل؟
+v1,Q08_02,quick_08,2,A friend seems hurt by your words. What do you do?,يبدو أن صديقًا تأذى من كلامك. ماذا تفعل؟
+v1,Q08_03,quick_08,3,You want to fix a recurring issue. What do you do?,تريد حل مشكلة متكررة. ماذا تفعل؟
+v1,Q08_04,quick_08,4,You feel unsure in a meeting. What do you do?,تشعر بعدم ثقة في اجتماع. ماذا تفعل؟
+v1,Q08_05,quick_08,5,You’re invited to something unfamiliar. What do you do?,دُعيت لشيء غير مألوف. ماذا تفعل؟
+v1,Q08_06,quick_08,6,You see someone left out. What do you do?,ترى شخصًا مستبعدًا. ماذا تفعل؟
+v1,Q08_07,quick_08,7,You want to be more consistent. What helps?,تريد أن تكون أكثر التزامًا. ما الذي يساعد؟
+v1,Q08_08,quick_08,8,A discussion gets loud. What do you do?,نقاش أصبح عالي الصوت. ماذا تفعل؟
+v1,Q08_09,quick_08,9,Someone questions your intentions. What do you do?,شخص يشكك في نيتك. ماذا تفعل؟
+v1,Q08_10,quick_08,10,You need to recharge. What do you choose?,تحتاج لإعادة الشحن. ماذا تختار؟
+v1,Q08_11,quick_08,11,You want to improve a workflow. What do you do?,تريد تحسين سير العمل. ماذا تفعل؟
+v1,Q08_12,quick_08,12,Someone shares a happy update. What do you do?,شخص يشارك تحديثًا سعيدًا. ماذا تفعل؟
+v1,Q09_01,quick_09,1,You have a quiet morning. What do you do?,لديك صباح هادئ. ماذا تفعل؟
+v1,Q09_02,quick_09,2,A friend asks for your opinion. What do you do?,صديق يطلب رأيك. ماذا تفعل؟
+v1,Q09_03,quick_09,3,You forgot something important. What do you do?,نسيت أمرًا مهمًا. ماذا تفعل؟
+v1,Q09_04,quick_09,4,Someone wants your help during your break. What do you do?,شخص يريد مساعدتك أثناء استراحتك. ماذا تفعل؟
+v1,Q09_05,quick_09,5,You want to improve a skill. What do you do?,تريد تطوير مهارة. ماذا تفعل؟
+v1,Q09_06,quick_09,6,You see unfair behavior. What do you do?,ترى سلوكًا غير منصف. ماذا تفعل؟
+v1,Q09_07,quick_09,7,Your schedule is messy. What do you do?,جدولك فوضوي. ماذا تفعل؟
+v1,Q09_08,quick_09,8,A family member is stressed. What do you do?,أحد أفراد العائلة متوتر. ماذا تفعل؟
+v1,Q09_09,quick_09,9,You feel your work is questioned. What do you do?,تشعر أن عملك موضع تشكيك. ماذا تفعل؟
+v1,Q09_10,quick_09,10,You need to reset emotionally. What do you do?,تحتاج لإعادة ضبط عاطفيًا. ماذا تفعل؟
+v1,Q09_11,quick_09,11,You have an idea to improve something. What do you do?,لديك فكرة لتحسين شيء. ماذا تفعل؟
+v1,Q09_12,quick_09,12,A friend shares a happy moment. What do you do?,صديق يشارك لحظة سعيدة. ماذا تفعل؟
+v1,Q10_01,quick_10,1,You get a free night. What do you do?,لديك ليلة فارغة. ماذا تفعل؟
+v1,Q10_02,quick_10,2,A friend seems upset with you. What do you do?,صديق يبدو منزعجًا منك. ماذا تفعل؟
+v1,Q10_03,quick_10,3,You need to prepare for tomorrow. What do you do?,تحتاج للاستعداد للغد. ماذا تفعل؟
+v1,Q10_04,quick_10,4,Someone keeps asking favors. What do you do?,شخص يكرر طلب الخدمات. ماذا تفعل؟
+v1,Q10_05,quick_10,5,You want to learn faster. What do you do?,تريد التعلم بسرعة. ماذا تفعل؟
+v1,Q10_06,quick_10,6,You see someone treated unfairly. What do you do?,ترى شخصًا يتعرض لظلم. ماذا تفعل؟
+v1,Q10_07,quick_10,7,Your routine feels weak. What do you do?,روتينك ضعيف. ماذا تفعل؟
+v1,Q10_08,quick_10,8,A discussion gets heated. What do you do?,نقاش احتد. ماذا تفعل؟
+v1,Q10_09,quick_10,9,You receive unfair criticism. What do you do?,تلقيت نقدًا غير منصف. ماذا تفعل؟
+v1,Q10_10,quick_10,10,You need to recharge socially. What do you do?,تحتاج لإعادة شحن اجتماعيًا. ماذا تفعل؟
+v1,Q10_11,quick_10,11,You have an idea to improve something. What do you do?,لديك فكرة لتحسين شيء. ماذا تفعل؟
+v1,Q10_12,quick_10,12,Someone shares a success. What do you do?,شخص يشارك نجاحًا. ماذا تفعل؟

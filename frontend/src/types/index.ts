@@ -73,6 +73,10 @@ export interface JourneyStartRequest {
   journey_type?: JourneyType;
 }
 
+export interface JourneyResumeRequest {
+  test_run_id: number;
+}
+
 export interface JourneyAnswerSubmission {
   scenario_code: string;
   option_code: string;

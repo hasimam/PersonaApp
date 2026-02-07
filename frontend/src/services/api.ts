@@ -11,6 +11,7 @@ import {
   JourneyFeedbackResponse,
   JourneyCancelRequest,
   JourneyCancelResponse,
+  JourneyResumeRequest,
 } from '../types';
 import { Language } from '../i18n/translations';
 
@@ -49,6 +50,11 @@ export const resultsApi = {
 export const journeyApi = {
   startJourney: async (payload?: JourneyStartRequest): Promise<JourneyStartResponse> => {
     const response = await api.post('/journey/start', payload);
+    return response.data;
+  },
+
+  resumeJourney: async (payload: JourneyResumeRequest): Promise<JourneyStartResponse> => {
+    const response = await api.post('/journey/resume', payload);
     return response.data;
   },
 

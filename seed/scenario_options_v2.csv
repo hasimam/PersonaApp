@@ -191,3 +191,1923 @@ v2,D48,A,Set clear priorities.,أحدد أولويات واضحة.
 v2,D48,B,Spend more time with loved ones.,أقضي وقتًا أطول مع من أحب.
 v2,D48,C,Reduce workload.,أقلل عبء العمل.
 v2,D48,D,Organize schedule carefully.,أنظم جدولي بعناية.
+v2,D01_01,A,Check on them with warmth.,تطمئن عليه بلطف.
+v2,D01_01,B,Make a quick plan for tomorrow together.,تضعان خطة سريعة للغد معًا.
+v2,D01_01,C,Suggest a small fun moment at the table.,تقترح لحظة خفيفة وممتعة على الطاولة.
+v2,D01_01,D,Give them space and keep your own routine.,تعطيه مساحة وتكمل روتينك.
+v2,D01_02,A,Focus on finishing the key deliverable.,تركز على إنهاء الجزء الأهم.
+v2,D01_02,B,Protect sleep and recover early.,تحمي نومك وتستعيد طاقتك مبكرًا.
+v2,D01_02,C,Set boundaries and decline extra requests.,تضع حدودًا وترفض طلبات إضافية.
+v2,D01_02,D,Build a safer buffer plan for tomorrow.,تضع خطة أكثر أمانًا للغد.
+v2,D01_03,A,Do something that lifts your mood.,تفعل شيئًا يرفع مزاجك.
+v2,D01_03,B,Choose your own plan and time.,تختار خطتك ووقتك بنفسك.
+v2,D01_03,C,Spend time on your health and energy.,تقضي وقتًا لصحتك وطاقتك.
+v2,D01_03,D,Join them for a playful activity.,تنضم لنشاط مرح.
+v2,D01_04,A,Respond with respectful language.,ترد بلغة محترمة.
+v2,D01_04,B,Ask for a fair solution.,تطلب حلًا عادلًا.
+v2,D01_04,C,Try to understand each person’s feelings.,تحاول فهم مشاعر كل طرف.
+v2,D01_04,D,Take a bold step to stop escalation.,تتخذ خطوة جريئة لإيقاف التصعيد.
+v2,D01_05,A,Choose the safest version of the plan.,تختار النسخة الأكثر أمانًا من الخطة.
+v2,D01_05,B,Take a small step to build confidence.,تأخذ خطوة صغيرة لتعزيز الثقة.
+v2,D01_05,C,Ask someone for guidance or tips.,تسأل شخصًا عن نصيحة أو توجيه.
+v2,D01_05,D,Try it as an adventure and learn by doing.,تجربها كمغامرة وتتعلم بالتجربة.
+v2,D01_06,A,Do a short movement break.,تأخذ استراحة حركة قصيرة.
+v2,D01_06,B,Set a focused goal and finish a chunk.,تضع هدفًا مركّزًا وتنهي جزءًا.
+v2,D01_06,C,Remind yourself of your dignity and limits.,تتذكر كرامتك وحدودك.
+v2,D01_06,D,Plan a balanced schedule for the next hour.,تخطط لتوازن الساعة القادمة.
+v2,D01_07,A,State your boundary respectfully.,توضح حدك باحترام.
+v2,D01_07,B,Look for the fair standard for everyone.,تبحث عن معيار عادل للجميع.
+v2,D01_07,C,Turn it into a learning moment about tone.,تحوله لدرس عن الأسلوب.
+v2,D01_07,D,Ask for recognition of your role calmly.,تطلب تقدير دورك بهدوء.
+v2,D01_08,A,Ask for a fair credit correction.,تطلب تصحيحًا عادلًا للفضل.
+v2,D01_08,B,Document contributions clearly.,توثق المساهمات بوضوح.
+v2,D01_08,C,Request a quick check-in with the manager.,تطلب لقاءً قصيرًا مع المدير.
+v2,D01_08,D,Stand up confidently and speak directly.,تتكلم بثقة وبشكل مباشر.
+v2,D01_09,A,Reach out and invite them for a chat.,تبادر وتدعوه لحديث.
+v2,D01_09,B,Plan a shared activity to reconnect.,تخطط لنشاط مشترك للتقارب.
+v2,D01_09,C,Create a calm space for them to open up.,تخلق مساحة هادئة ليتحدث.
+v2,D01_09,D,Set a boundary and protect your time.,تضع حدًا وتحمي وقتك.
+v2,D01_10,A,Start with one reliable learning source.,تبدأ بمصدر تعلم موثوق.
+v2,D01_10,B,Turn it into a clear achievement goal.,تحولها لهدف إنجاز واضح.
+v2,D01_10,C,Choose a course with deeper meaning to you.,تختار دورة لها معنى أعمق لك.
+v2,D01_10,D,Ask a friend to practice together.,تطلب من صديق التدريب معًا.
+v2,D01_11,A,Do a short reflection to reconnect.,تقوم بتأمل قصير لإعادة الاتصال.
+v2,D01_11,B,Rebalance your day with one small change.,تعيد توازن يومك بتغيير صغير.
+v2,D01_11,C,Choose one priority that really matters.,تختار أولوية واحدة ذات معنى.
+v2,D01_11,D,Share gratitude for something small today.,تعبر عن امتنان لشيء صغير اليوم.
+v2,D01_12,A,Review budget and adjust spending.,تراجع الميزانية وتعدل الإنفاق.
+v2,D01_12,B,Ask for advice from someone experienced.,تطلب نصيحة من شخص خبير.
+v2,D01_12,C,Set a safety buffer for future surprises.,تضع هامش أمان للمفاجآت.
+v2,D01_12,D,Keep your routine balanced despite stress.,تحافظ على توازن روتينك رغم الضغط.
+v2,D01_13,A,Share results with the team politely.,تشارك النتائج مع الفريق بأدب.
+v2,D01_13,B,Ask for recognition in a clear way.,تطلب التقدير بشكل واضح.
+v2,D01_13,C,Focus on the next challenge and growth.,تركز على التحدي التالي والنمو.
+v2,D01_13,D,Thank those who supported the work.,تشكر من دعم العمل.
+v2,D01_14,A,Try it as a new adventure.,تجربها كمغامرة جديدة.
+v2,D01_14,B,Choose the option that protects balance.,تختار ما يحمي التوازن.
+v2,D01_14,C,Study the details before committing.,تدرس التفاصيل قبل الالتزام.
+v2,D01_14,D,Take a bold step toward the opportunity.,تأخذ خطوة جريئة نحو الفرصة.
+v2,D01_15,A,Create something small and artistic.,تنجز شيئًا فنيًا بسيطًا.
+v2,D01_15,B,Do something fun and light.,تفعل شيئًا ممتعًا وخفيفًا.
+v2,D01_15,C,Invite someone to share the moment.,تدعو شخصًا لمشاركة اللحظة.
+v2,D01_15,D,Set a personal ambition for a creative goal.,تضع طموحًا شخصيًا لهدف إبداعي.
+v2,D01_16,A,Rebalance tasks and take a short break.,تعيد توازن المهام وتأخذ استراحة قصيرة.
+v2,D01_16,B,Protect your health with rest and water.,تحمي صحتك بالراحة والماء.
+v2,D01_16,C,Speak up to protect your dignity.,تتكلم لحماية كرامتك.
+v2,D01_16,D,Organize your time to finish efficiently.,تنظم وقتك لإنهاء الأمور بكفاءة.
+v2,D01_17,A,Join and help the community effort.,تنضم وتساعد الجهد المجتمعي.
+v2,D01_17,B,Invite a friend to join you.,تدعو صديقًا لينضم معك.
+v2,D01_17,C,Offer support with appreciation and thanks.,تقدم دعمًا مع تقدير وشكر.
+v2,D01_17,D,Choose a role that fits your freedom and time.,تختار دورًا يناسب حريتك ووقتك.
+v2,D01_18,A,Set a bigger ambition and timeline.,تضع طموحًا أكبر وإطارًا زمنيًا.
+v2,D01_18,B,Plan practical steps and learning milestones.,تخطط لخطوات عملية ومحطات تعلم.
+v2,D01_18,C,Think about meaning and values behind it.,تفكر في المعنى والقيم وراءه.
+v2,D01_18,D,Ensure balance so you don’t burn out.,تضمن التوازن حتى لا تُرهق.
+v2,D01_19,A,Send a sincere thank-you message.,ترسل رسالة شكر صادقة.
+v2,D01_19,B,Do a kind return favor soon.,ترد المعروف بلطف قريبًا.
+v2,D01_19,C,Celebrate the moment with joy.,تحتفل باللحظة بسعادة.
+v2,D01_19,D,Share appreciation publicly if appropriate.,تظهر التقدير علنًا إن كان مناسبًا.
+v2,D01_20,A,Restructure your week for balance.,تعيد تنظيم أسبوعك للتوازن.
+v2,D01_20,B,Protect sleep and health first.,تحمي النوم والصحة أولًا.
+v2,D01_20,C,Reduce risk by saying no to extras.,تقلل المخاطرة برفض الزائد.
+v2,D01_20,D,Ask for support from someone you trust.,تطلب دعمًا من شخص تثق به.
+v2,D01_21,A,Show love and presence for them.,تُظهر حبًا وحضورًا لهم.
+v2,D01_21,B,Set one clear achievement task only.,تحدد مهمة إنجاز واحدة فقط.
+v2,D01_21,C,Take a small joyful break together.,تأخذان استراحة سعيدة صغيرة.
+v2,D01_21,D,Choose freely what you can realistically offer.,تختار بحرية ما تستطيع تقديمه واقعيًا.
+v2,D01_22,A,Handle a safety-related check or admin.,تنهي أمرًا يتعلق بالسلامة أو الإجراءات.
+v2,D01_22,B,Do a short health walk.,تقوم بمشي صحي قصير.
+v2,D01_22,C,Clarify a boundary for your time.,توضح حدًا لوقتك.
+v2,D01_22,D,Learn one useful thing for tomorrow.,تتعلم شيئًا مفيدًا للغد.
+v2,D01_23,A,Protect your dignity and decline politely.,تحمي كرامتك وتعتذر بأدب.
+v2,D01_23,B,Choose the fair option for everyone’s time.,تختار الخيار العادل لوقت الجميع.
+v2,D01_23,C,Invite a close friend to join you.,تدعو صديقًا مقرّبًا لينضم.
+v2,D01_23,D,Take the adventure and go.,تأخذ المغامرة وتذهب.
+v2,D01_24,A,Speak up for fairness.,تتحدث دفاعًا عن العدالة.
+v2,D01_24,B,Create a clear structure/rule to follow.,تضع تنظيمًا/قاعدة واضحة للالتزام.
+v2,D01_24,C,Ask the group to consider feelings.,تطلب من المجموعة مراعاة المشاعر.
+v2,D01_24,D,Show courage and address it directly.,تُظهر شجاعة وتواجهه مباشرة.
+v2,D01_25,A,Choose a habit that supports your health.,تختار عادة تدعم صحتك.
+v2,D01_25,B,Track progress like an achievement.,تتابع التقدم كإنجاز.
+v2,D01_25,C,Keep it joyful and easy to enjoy.,تجعلها ممتعة وسهلة الاستمتاع.
+v2,D01_25,D,Build a balanced routine you can sustain.,تبني روتينًا متوازنًا يمكن استمراره.
+v2,D01_26,A,Do a quick health reset (water/move).,تقوم بإعادة ضبط صحية سريعة (ماء/حركة).
+v2,D01_26,B,Protect your dignity by saying no to overload.,تحمي كرامتك برفض الحمل الزائد.
+v2,D01_26,C,Set safety-first choices for the day.,تجعل اختياراتك اليوم أولوية للسلامة.
+v2,D01_26,D,Do one fun activity to lift energy.,تفعل نشاطًا ممتعًا لرفع الطاقة.
+v2,D01_27,A,Respond with respectful firmness.,ترد بحزم محترم.
+v2,D01_27,B,Ask for a fair speaking turn.,تطلب دورًا عادلًا للكلام.
+v2,D01_27,C,Share a useful point you learned.,تشارك نقطة تعلمتها.
+v2,D01_27,D,Request recognition for your contribution.,تطلب تقدير مساهمتك.
+v2,D01_28,A,Support the fair decision.,تدعم القرار العادل.
+v2,D01_28,B,Ask questions to learn both sides.,تسأل لتتعلم وجهتي النظر.
+v2,D01_28,C,Bring the team back to collaboration.,تعيد الفريق للتعاون.
+v2,D01_28,D,Take a bold stance if needed.,تتخذ موقفًا جريئًا عند الحاجة.
+v2,D01_29,A,Make time for the friendship.,تخصص وقتًا للصداقة.
+v2,D01_29,B,Choose freedom and suggest another time.,تختار الحرية وتقترح وقتًا آخر.
+v2,D01_29,C,Offer a meaningful check-in.,تقدم تواصلًا ذا معنى.
+v2,D01_29,D,Protect balance and rest today.,تحمي التوازن والراحة اليوم.
+v2,D01_30,A,Pick a topic that expands your knowledge.,تختار موضوعًا يوسع معرفتك.
+v2,D01_30,B,Choose what supports your ambition.,تختار ما يدعم طموحك.
+v2,D01_30,C,Find joy in a light learning style.,تجد متعة في تعلم خفيف.
+v2,D01_30,D,Do it with a friend for accountability.,تفعله مع صديق للالتزام.
+v2,D01_31,A,Do a spiritual reflection moment.,تقوم بلحظة تأمل روحي.
+v2,D01_31,B,Express gratitude for what’s steady.,تعبر عن امتنان لما هو ثابت.
+v2,D01_31,C,Rebalance your day with fewer tasks.,تعيد توازن يومك بتقليل المهام.
+v2,D01_31,D,Seek community or group support.,تطلب دعمًا من مجتمع/مجموعة.
+v2,D01_32,A,Set a simple savings plan.,تضع خطة ادخار بسيطة.
+v2,D01_32,B,Learn one practical money skill.,تتعلم مهارة مالية عملية.
+v2,D01_32,C,Choose safety buffers before spending.,تجعل هامش الأمان قبل الإنفاق.
+v2,D01_32,D,Keep a balanced lifestyle budget.,توازن ميزانية أسلوب حياتك.
+v2,D01_33,A,Ask for recognition clearly.,تطلب التقدير بوضوح.
+v2,D01_33,B,Turn it into a bigger ambition goal.,تحوله لهدف طموح أكبر.
+v2,D01_33,C,Share appreciation to the team.,تشارك التقدير مع الفريق.
+v2,D01_33,D,Reflect on what you learned from it.,تتأمل ما تعلمته منه.
+v2,D01_34,A,Try it as an adventure with caution.,تجربها كمغامرة بحذر.
+v2,D01_34,B,Choose the option that protects safety.,تختار ما يحمي السلامة.
+v2,D01_34,C,Study and learn before jumping in.,تتعلم وتدرس قبل الإقدام.
+v2,D01_34,D,Take a bold step to test it.,تأخذ خطوة جريئة لتجربته.
+v2,D01_35,A,Create a small artistic touch.,تضيف لمسة فنية صغيرة.
+v2,D01_35,B,Make it fun with simple decor.,تجعلها ممتعة بزينة بسيطة.
+v2,D01_35,C,Balance beauty with practicality.,توازن بين الجمال والعملية.
+v2,D01_35,D,Set a personal goal for the space.,تضع هدفًا شخصيًا للمكان.
+v2,D01_36,A,Do something purely fun.,تفعل شيئًا للمرح فقط.
+v2,D01_36,B,Deepen friendship with real talk.,تعزز الصداقة بحديث صادق.
+v2,D01_36,C,Plan a balanced hangout time.,تخطط لوقت متوازن.
+v2,D01_36,D,Try a new activity together.,تجربون نشاطًا جديدًا معًا.
+v2,D01_37,A,Call for a community solution.,تدعو لحل مجتمعي.
+v2,D01_37,B,Ask for a fair sharing of responsibility.,تطلب توزيعًا عادلًا للمسؤولية.
+v2,D01_37,C,Ensure safety is handled first.,تضمن معالجة السلامة أولًا.
+v2,D01_37,D,Offer gratitude to those helping.,تقدم شكرًا لمن يساعد.
+v2,D01_38,A,Set a higher ambition target.,تضع هدفًا طموحًا أعلى.
+v2,D01_38,B,Focus on achievement milestones.,تركز على محطات الإنجاز.
+v2,D01_38,C,Learn a key skill for promotion.,تتعلم مهارة مهمة للترقي.
+v2,D01_38,D,Seek recognition strategically.,تسعى للتقدير بشكل ذكي.
+v2,D01_39,A,Receive it with gratitude.,تستقبل الشكر بامتنان.
+v2,D01_39,B,Share the credit with love.,تشارك الفضل بمحبة.
+v2,D01_39,C,Enjoy the happy moment.,تستمتع باللحظة السعيدة.
+v2,D01_39,D,Turn it into motivation for more.,تحوله لدافع لمزيد من الإنجاز.
+v2,D01_40,A,Choose balance and stop on time.,تختار التوازن وتتوقف في الوقت.
+v2,D01_40,B,Protect health with rest.,تحمي صحتك بالراحة.
+v2,D01_40,C,Finish one achievement task only.,تنهي مهمة إنجاز واحدة فقط.
+v2,D01_40,D,Plan a smarter schedule for tomorrow.,تضع جدولًا أذكى للغد.
+v2,D01_41,A,Reach out with care and love.,تبادر باهتمام ومحبة.
+v2,D01_41,B,Invite them to a friendly meet-up.,تدعوه للقاء ودي.
+v2,D01_41,C,Offer a meaningful supportive message.,ترسل رسالة دعم ذات معنى.
+v2,D01_41,D,Connect them to a community space.,تربطه بمساحة مجتمعية.
+v2,D01_42,A,Set clear milestones and push for achievement.,تضع مراحل واضحة وتدفع للإنجاز.
+v2,D01_42,B,Protect balance by scheduling breaks.,تحمي التوازن بجدولة الاستراحات.
+v2,D01_42,C,Ask for help from a friend.,تطلب مساعدة من صديق.
+v2,D01_42,D,Take a bold step and start now.,تبدأ الآن بخطوة جريئة.
+v2,D01_43,A,Do something joyful and light.,تفعل شيئًا سعيدًا وخفيفًا.
+v2,D01_43,B,Express gratitude for one good thing.,تعبر عن امتنان لشيء جيد واحد.
+v2,D01_43,C,Do a short spiritual reset.,تقوم بإعادة ضبط روحية قصيرة.
+v2,D01_43,D,Watch something fun for a bit.,تشاهد شيئًا ممتعًا قليلًا.
+v2,D01_44,A,Choose freedom and decide for yourself.,تختار الحرية وتقرر بنفسك.
+v2,D01_44,B,Choose what feels safest.,تختار ما يبدو أكثر أمانًا.
+v2,D01_44,C,Pick what protects your dignity.,تختار ما يحمي كرامتك.
+v2,D01_44,D,Choose balance and avoid extremes.,تختار التوازن وتبتعد عن التطرف.
+v2,D01_45,A,Handle it with safety-first steps.,تتعامل معه بخطوات سلامة أولًا.
+v2,D01_45,B,Set a clear rule to prevent repeats.,تضع قاعدة واضحة لمنع التكرار.
+v2,D01_45,C,Learn the correct procedure.,تتعلم الإجراء الصحيح.
+v2,D01_45,D,Speak up firmly to stop the risk.,تتكلم بحزم لإيقاف الخطر.
+v2,D01_46,A,Take one health habit seriously.,تلتزم بعادة صحية واحدة بجدية.
+v2,D01_46,B,Make it fun so you keep going.,تجعلها ممتعة لتستمر.
+v2,D01_46,C,Balance effort with rest.,توازن بين الجهد والراحة.
+v2,D01_46,D,Set an ambitious body goal.,تضع هدفًا طموحًا لجسمك.
+v2,D01_47,A,Protect your dignity with a firm response.,تحمي كرامتك برد حازم.
+v2,D01_47,B,Ask for fair respect in the conversation.,تطلب احترامًا عادلًا في الحديث.
+v2,D01_47,C,Choose a calm, wise reply.
+v2,D01_47,D,Seek support from a friend.,تطلب دعمًا من صديق.
+v2,D01_48,A,Stand for justice and speak up.,تدافع عن العدالة وتتحدث.
+v2,D01_48,B,Support the person with compassion.,تدعم الشخص برحمة.
+v2,D01_48,C,Ask questions to understand context.,تسأل لفهم السياق.
+v2,D01_48,D,Create a community norm that includes everyone.,تضع قاعدة مجتمعية تشمل الجميع.
+v2,D02_01,A,Call and check in with warmth.,تتصل وتطمئن بمحبة.
+v2,D02_01,B,Plan a visit and set a time.,تخطط لزيارة وتحدد وقتًا.
+v2,D02_01,C,Send a light funny message to reopen talk.,ترسل رسالة خفيفة ومضحكة لفتح الحديث.
+v2,D02_01,D,Give them space and wait for a better moment.,تعطيهم مساحة وتنتظر وقتًا أفضل.
+v2,D02_02,A,Start with the hardest piece first.,تبدأ بأصعب جزء أولًا.
+v2,D02_02,B,Make a clear plan and schedule.,تضع خطة واضحة وجدولًا.
+v2,D02_02,C,Ask someone to review your approach.,تطلب من شخص مراجعة أسلوبك.
+v2,D02_02,D,Protect your balance with breaks.,تحمي توازنك باستراحات.
+v2,D02_03,A,Add a small fun activity to the day.,تضيف نشاطًا ممتعًا صغيرًا لليوم.
+v2,D02_03,B,Try a new challenge outside routine.,تجرب تحديًا جديدًا خارج الروتين.
+v2,D02_03,C,Rebuild a balanced routine step by step.,تعيد بناء روتين متوازن تدريجيًا.
+v2,D02_03,D,Choose one ambition goal to pursue.,تختار هدفًا طموحًا واحدًا لمتابعته.
+v2,D02_04,A,Thank them and keep it private.,تشكرهم وتحافظ على السر.
+v2,D02_04,B,Offer emotional support and presence.,تقدم دعمًا وحضورًا.
+v2,D02_04,C,Share a practical next step they can take.,تشارك خطوة عملية يمكنهم فعلها.
+v2,D02_04,D,Set a boundary if it’s too much for you.,تضع حدًا إذا كان الأمر يفوقك.
+v2,D02_05,A,Use the freedom to work your way.,تستفيد من الحرية لتعمل بطريقتك.
+v2,D02_05,B,Set a safe structure for the week.,تضع تنظيمًا آمنًا للأسبوع.
+v2,D02_05,C,Protect health with movement and meals.,تحمي صحتك بالحركة والغذاء.
+v2,D02_05,D,Focus on finishing key achievements.,تركز على إنجاز الأهم.
+v2,D02_06,A,Fix it immediately.,تعالجه فورًا.
+v2,D02_06,B,Learn the proper safe way to handle it.,تتعلم الطريقة الآمنة الصحيحة للتعامل معه.
+v2,D02_06,C,Create a simple rule so it won’t repeat.,تضع قاعدة بسيطة حتى لا يتكرر.
+v2,D02_06,D,Ask others to be mindful too.,تطلب من الآخرين الانتباه أيضًا.
+v2,D02_07,A,Speak firmly and protect your dignity.,تتكلم بحزم وتحمي كرامتك.
+v2,D02_07,B,Ask for a fair turn to speak.,تطلب دورًا عادلًا للكلام.
+v2,D02_07,C,Stay calm and focus on outcomes.,تبقى هادئًا وتركز على النتائج.
+v2,D02_07,D,Use humor to lighten and continue.,تستخدم المزاح لتخفيف الجو وتكمل.
+v2,D02_08,A,Offer practical help quietly.,تعرض مساعدة عملية بهدوء.
+v2,D02_08,B,Check in with compassion.,تطمئن عليه برحمة.
+v2,D02_08,C,Invite them for a friendly chat.,تدعوه لحديث ودي.
+v2,D02_08,D,Encourage them to take time off for health.,تشجعه على أخذ وقت لصحتهم.
+v2,D02_09,A,Do a quick tidy for balance.,ترتب بسرعة لتحقيق التوازن.
+v2,D02_09,B,Make it visually nicer with a small touch.,تجعلها أجمل بلمسة بسيطة.
+v2,D02_09,C,Set a strict system to keep it clean.,تضع نظامًا صارمًا للحفاظ عليها.
+v2,D02_09,D,Finish one work goal before cleaning.,تنهي هدف عمل واحد قبل التنظيف.
+v2,D02_10,A,Pick one trusted learning source and start.,تختار مصدر تعلم موثوق وتبدأ.
+v2,D02_10,B,Set a measurable achievement target.,تضع هدف إنجاز قابلًا للقياس.
+v2,D02_10,C,Learn with a friend and practice together.,تتعلم مع صديق وتتدربان معًا.
+v2,D02_10,D,Connect it to deeper meaning for you.,تربطه بمعنى أعمق لديك.
+v2,D02_11,A,Share your results clearly.,تشارك نتائجك بوضوح.
+v2,D02_11,B,Ask for recognition directly.,تطلب التقدير مباشرة.
+v2,D02_11,C,Focus on the next achievement.,تركز على الإنجاز التالي.
+v2,D02_11,D,Stay grateful and grounded.,تبقى ممتنًا ومتزنًا.
+v2,D02_12,A,Check the pay and financial impact.,تفحص العائد والأثر المالي.
+v2,D02_12,B,See if it grows your skills and ambition.,تنظر هل يرفع مهاراتك وطموحك.
+v2,D02_12,C,Choose what keeps your balance.,تختار ما يحافظ على توازنك.
+v2,D02_12,D,Make sure it feels safe and stable.,تتأكد أنه آمن ومستقر.
+v2,D02_13,A,Go to build friendships.,تذهب لبناء صداقات.
+v2,D02_13,B,Choose what feels comfortable and fun.,تختار ما يبدو مريحًا وممتعًا.
+v2,D02_13,C,Protect your independence and leave early.,تحمي استقلالك وتغادر مبكرًا.
+v2,D02_13,D,Join to support community connection.,تنضم لدعم الارتباط بالمجتمع.
+v2,D02_14,A,Go for the adventure.,تذهب من أجل المغامرة.
+v2,D02_14,B,Check safety and logistics first.,تفحص السلامة والتفاصيل أولًا.
+v2,D02_14,C,Keep your spending controlled.,تحافظ على إنفاقك مضبوطًا.
+v2,D02_14,D,Choose what keeps your work-life balance.,تختار ما يحافظ على توازن العمل والحياة.
+v2,D02_15,A,Do a small artistic piece now.,تنجز قطعة فنية صغيرة الآن.
+v2,D02_15,B,Turn it into a clear goal and finish.,تحوله لهدف واضح وتنهيه.
+v2,D02_15,C,Take a short fun break then return.,تأخذ استراحة ممتعة قصيرة ثم تعود.
+v2,D02_15,D,Learn a technique to focus better.,تتعلم تقنية لزيادة التركيز.
+v2,D02_16,A,Do a short spiritual reset.,تقوم بإعادة ضبط روحية قصيرة.
+v2,D02_16,B,Take care of your body (walk/water).,تعتني بجسمك (مشي/ماء).
+v2,D02_16,C,Call a friend for support.,تتصل بصديق للدعم.
+v2,D02_16,D,Set one boundary to protect your time.,تضع حدًا واحدًا لحماية وقتك.
+v2,D02_17,A,Join and help organize.,تنضم وتساعد في التنظيم.
+v2,D02_17,B,Invite neighbors to participate.,تدعو الجيران للمشاركة.
+v2,D02_17,C,Advocate for a fair solution.,تدافع عن حل عادل.
+v2,D02_17,D,Support with gratitude and appreciation.,تدعم مع شكر وتقدير.
+v2,D02_18,A,Set a bigger ambition target.,تضع هدفًا طموحًا أكبر.
+v2,D02_18,B,Build a step-by-step achievement plan.,تضع خطة إنجاز خطوة بخطوة.
+v2,D02_18,C,Learn the key skill you’re missing.,تتعلم المهارة الناقصة.
+v2,D02_18,D,Seek visibility and recognition.,تسعى للظهور والتقدير.
+v2,D02_19,A,Send a sincere thank-you.,ترسل شكرًا صادقًا.
+v2,D02_19,B,Return the favor in a kind way.,ترد المعروف بلطف.
+v2,D02_19,C,Celebrate the moment with joy.,تحتفل باللحظة بسعادة.
+v2,D02_19,D,Share appreciation publicly if suitable.,تظهر التقدير علنًا إن كان مناسبًا.
+v2,D02_20,A,Set strict stop-times for work.,تضع وقت توقف صارم للعمل.
+v2,D02_20,B,Protect health with sleep and recovery.,تحمي صحتك بالنوم والتعافي.
+v2,D02_20,C,Rebalance your schedule realistically.,تعيد توازن جدولك بواقعية.
+v2,D02_20,D,Say no to protect your freedom.,تقول لا لحماية حريتك.
+v2,D02_21,A,Show love and be present briefly.,تُظهر المحبة وتكون حاضرًا قليلًا.
+v2,D02_21,B,Choose a balanced slot and stick to it.,تختار وقتًا متوازنًا وتلتزم به.
+v2,D02_21,C,Offer practical help to reduce burden.,تقدم مساعدة عملية لتخفيف العبء.
+v2,D02_21,D,Make it a joyful moment together.,تجعلها لحظة سعيدة معًا.
+v2,D02_22,A,Start a new challenge.,تبدأ تحديًا جديدًا.
+v2,D02_22,B,Do something fun and light.,تفعل شيئًا ممتعًا وخفيفًا.
+v2,D02_22,C,Learn something useful.,تتعلم شيئًا مفيدًا.
+v2,D02_22,D,Take care of your health.,تعتني بصحتك.
+v2,D02_23,A,Set a boundary for your time.,تضع حدًا لوقتك.
+v2,D02_23,B,Choose the option that feels fair.,تختار الخيار الأكثر عدلًا.
+v2,D02_23,C,Keep connection through friendship.,تحافظ على الارتباط عبر الصداقة.
+v2,D02_23,D,Make a plan that preserves balance.,تضع خطة تحافظ على التوازن.
+v2,D02_24,A,Speak up for justice.,تتحدث دفاعًا عن العدالة.
+v2,D02_24,B,Propose a clear structure for tasks.,تقترح تنظيمًا واضحًا للمهام.
+v2,D02_24,C,Ask everyone to consider feelings.,تطلب من الجميع مراعاة المشاعر.
+v2,D02_24,D,Take initiative to redistribute.,تبادر لإعادة التوزيع.
+v2,D02_25,A,Track it like an achievement.,تتابعها كإنجاز.
+v2,D02_25,B,Make it joyful and easy.,تجعلها ممتعة وسهلة.
+v2,D02_25,C,Build it into a balanced routine.,تضمها إلى روتين متوازن.
+v2,D02_25,D,Get support from a friend.,تحصل على دعم من صديق.
+v2,D02_26,A,Do a quick health reset.,تقوم بإعادة ضبط صحية سريعة.
+v2,D02_26,B,Create a calmer, safer day plan.
+v2,D02_26,C,Protect dignity by reducing overload.,تحمي كرامتك بتقليل الحمل.
+v2,D02_26,D,Do a short fun activity.,تفعل نشاطًا ممتعًا قصيرًا.
+v2,D02_27,A,Respond firmly to protect dignity.,ترد بحزم لحماية الكرامة.
+v2,D02_27,B,Ask for a fair standard of respect.,تطلب معيار احترام عادل.
+v2,D02_27,C,Stay calm and choose balanced words.,تبقى هادئًا وتختار كلمات متوازنة.
+v2,D02_27,D,Turn it into a learning point about manners.,تحوله لنقطة تعلم عن الأدب.
+v2,D02_28,A,Support the fair option.,تدعم الخيار العادل.
+v2,D02_28,B,Help them reconnect as friends.,تساعدهم على التقارب كأصدقاء.
+v2,D02_28,C,Encourage a calm, safe pause.
+v2,D02_28,D,Take a bold stance if needed.,تتخذ موقفًا جريئًا عند الحاجة.
+v2,D02_29,A,Meet them to maintain friendship.,تلتقي به للحفاظ على الصداقة.
+v2,D02_29,B,Choose your freedom and reschedule.,تختار حريتك وتعيد الجدولة.
+v2,D02_29,C,Send a caring message instead.,ترسل رسالة اهتمام بدلًا من ذلك.
+v2,D02_29,D,Protect your balance and rest.,تحمي توازنك وترتاح.
+v2,D02_30,A,Pick one course and commit.,تختار دورة وتلتزم.
+v2,D02_30,B,Read lightly for enjoyment.,تقرأ بشكل خفيف للمتعة.
+v2,D02_30,C,Learn with a friend.,تتعلم مع صديق.
+v2,D02_30,D,Choose what supports your ambition.,تختار ما يدعم طموحك.
+v2,D02_31,A,Do a spiritual reflection.,تقوم بتأمل روحي.
+v2,D02_31,B,Write gratitude for what you have.,تكتب امتنانًا لما لديك.
+v2,D02_31,C,Connect with community activities.,تتواصل مع أنشطة المجتمع.
+v2,D02_31,D,Set one meaningful goal.,تضع هدفًا ذا معنى.
+v2,D02_32,A,Build a simple budget.,تضع ميزانية بسيطة.
+v2,D02_32,B,Create a safety buffer.,تضع هامش أمان.
+v2,D02_32,C,Learn a money habit.,تتعلم عادة مالية.
+v2,D02_32,D,Keep balance by reducing stress spending.,تحافظ على التوازن بتقليل إنفاق التوتر.
+v2,D02_33,A,Ask for recognition politely.,تطلب التقدير بأدب.
+v2,D02_33,B,Share results publicly.,تشارك النتائج علنًا.
+v2,D02_33,C,Focus on the next achievement.,تركز على الإنجاز التالي.
+v2,D02_33,D,Thank the team and show gratitude.,تشكر الفريق وتُظهر امتنانًا.
+v2,D02_34,A,Try it as an adventure.,تجربها كمغامرة.
+v2,D02_34,B,Check safety and start small.,تفحص السلامة وتبدأ صغيرًا.
+v2,D02_34,C,Learn about it before trying.,تتعلم عنها قبل التجربة.
+v2,D02_34,D,Take a bold step and go.,تتخذ خطوة جريئة وتذهب.
+v2,D02_35,A,Add a loving touch for guests/family.,تضيف لمسة محبة للعائلة/الضيوف.
+v2,D02_35,B,Create a small artistic corner.,تصنع زاوية فنية صغيرة.
+v2,D02_35,C,Make it practical and balanced.,تجعلها عملية ومتوازنة.
+v2,D02_35,D,Make it fun with small details.,تجعلها ممتعة بتفاصيل صغيرة.
+v2,D02_36,A,Have real talk to deepen friendship.,حديث صادق لتعميق الصداقة.
+v2,D02_36,B,Do something fun together.,تفعلون شيئًا ممتعًا معًا.
+v2,D02_36,C,Plan a balanced, calm hangout.
+v2,D02_36,D,Try a new activity together.,تجربون نشاطًا جديدًا معًا.
+v2,D02_37,A,Help coordinate the community effort.,تساعد في تنسيق الجهد المجتمعي.
+v2,D02_37,B,Ensure fairness in responsibilities.,تضمن العدالة في المسؤوليات.
+v2,D02_37,C,Create a safe plan for everyone.,تضع خطة آمنة للجميع.
+v2,D02_37,D,Appreciate volunteers openly.,تقدر المتطوعين علنًا.
+v2,D02_38,A,Set a bigger ambition target.,تضع هدفًا طموحًا أكبر.
+v2,D02_38,B,Choose one achievement milestone.,تختار محطة إنجاز واحدة.
+v2,D02_38,C,Learn a key skill to grow.,تتعلم مهارة أساسية للنمو.
+v2,D02_38,D,Ask for recognition strategically.,تطلب التقدير بشكل ذكي.
+v2,D02_39,A,Accept it with gratitude.,تقبله بامتنان.
+v2,D02_39,B,Share the credit with love.,تشارك الفضل بمحبة.
+v2,D02_39,C,Enjoy the joyful moment.,تستمتع باللحظة السعيدة.
+v2,D02_39,D,Use it to push ambition further.,تستخدمه لدفع الطموح أكثر.
+v2,D02_40,A,Set boundaries and stop on time.,تضع حدودًا وتتوقف في الوقت.
+v2,D02_40,B,Protect your health with rest.,تحمي صحتك بالراحة.
+v2,D02_40,C,Rebalance priorities weekly.,تعيد توازن الأولويات أسبوعيًا.
+v2,D02_40,D,Choose freedom by dropping one task.,تختار الحرية بإسقاط مهمة واحدة.
+v2,D02_41,A,Invite them for a friendly meet.,تدعوه للقاء ودي.
+v2,D02_41,B,Send a caring message.,ترسل رسالة اهتمام.
+v2,D02_41,C,Connect them to a community group.,تربطه بمجموعة مجتمعية.
+v2,D02_41,D,Share a light fun moment.,تشارك لحظة مرحة وخفيفة.
+v2,D02_42,A,Push for achievement with focus.,تدفع للإنجاز بتركيز.
+v2,D02_42,B,Plan safely with buffers.,تخطط بأمان مع هوامش.
+v2,D02_42,C,Ask for help from others.,تطلب المساعدة من الآخرين.
+v2,D02_42,D,Take a bold step and start now.,تبدأ الآن بخطوة جريئة.
+v2,D02_43,A,Do something joyful.,تفعل شيئًا سعيدًا.
+v2,D02_43,B,Do something fun and silly.,تفعل شيئًا مرحًا وخفيفًا.
+v2,D02_43,C,Write a gratitude note.,تكتب ملاحظة امتنان.
+v2,D02_43,D,Take a balanced quiet break.,تأخذ استراحة هادئة متوازنة.
+v2,D02_44,A,Choose what aligns with your values and meaning.,تختار ما ينسجم مع قيمك ومعناه.
+v2,D02_44,B,Choose what protects your independence.,تختار ما يحمي استقلالك.
+v2,D02_44,C,Choose the safest path for now.,تختار المسار الأكثر أمانًا الآن.
+v2,D02_44,D,Choose what supports your ambition.,تختار ما يدعم طموحك.
+v2,D02_45,A,Fix it immediately for safety.,تعالجه فورًا من أجل السلامة.
+v2,D02_45,B,Set a clear rule and enforce it.,تضع قاعدة واضحة وتطبقها.
+v2,D02_45,C,Learn the right procedure and share it.,تتعلم الإجراء الصحيح وتشاركه.
+v2,D02_45,D,Speak up firmly to stop the risk.,تتحدث بحزم لإيقاف الخطر.
+v2,D02_46,A,Start a simple health habit.,تبدأ بعادة صحية بسيطة.
+v2,D02_46,B,Make it enjoyable so you continue.,تجعلها ممتعة لتستمر.
+v2,D02_46,C,Balance effort with rest.,توازن بين الجهد والراحة.
+v2,D02_46,D,Set an ambitious health goal.,تضع هدفًا صحيًا طموحًا.
+v2,D02_47,A,Protect your dignity calmly.,تحمي كرامتك بهدوء.
+v2,D02_47,B,Ask for fair consideration.,تطلب اعتبارًا عادلًا.
+v2,D02_47,C,Improve the idea with learning.,تحسن الفكرة بالتعلم.
+v2,D02_47,D,Ask a friend to back you up.,تطلب من صديق دعمك.
+v2,D02_48,A,Speak up for justice.,تتحدث دفاعًا عن العدالة.
+v2,D02_48,B,Support them with compassion.,تدعمهم برحمة.
+v2,D02_48,C,Invite others to include them.,تدعو الآخرين لاحتوائهم.
+v2,D02_48,D,Create a clear group rule.,تضع قاعدة واضحة للمجموعة.
+v2,D03_01,A,Stay close and offer affection.,تبقى قريبًا وتُظهر محبة.
+v2,D03_01,B,Do one practical supportive task.,تقوم بمساعدة عملية واحدة.
+v2,D03_01,C,Create a small joyful moment together.,تصنع لحظة سعيدة صغيرة معًا.
+v2,D03_01,D,Give them space while staying available.,تعطيه مساحة مع بقاءك قريبًا.
+v2,D03_02,A,Break it into milestones and push to finish.,تقسمه لمراحل وتدفع للإنهاء.
+v2,D03_02,B,Focus on one concrete achievement first.,تركز على إنجاز ملموس أولًا.
+v2,D03_02,C,Ask for resources to ensure success.,تطلب موارد لضمان النجاح.
+v2,D03_02,D,Protect balance to sustain performance.,تحمي التوازن للاستمرار.
+v2,D03_03,A,Do something that makes you smile.,تفعل شيئًا يجعلك تبتسم.
+v2,D03_03,B,Spend time with someone you love.,تقضي وقتًا مع من تحب.
+v2,D03_03,C,Take a restful break to recover.,تأخذ استراحة مريحة للتعافي.
+v2,D03_03,D,Try a fun activity with friends.,تجرب نشاطًا ممتعًا مع الأصدقاء.
+v2,D03_04,A,Set a clear boundary for your time.,تضع حدًا واضحًا لوقتك.
+v2,D03_04,B,Choose a schedule that gives you freedom.,تختار جدولًا يمنحك حرية.
+v2,D03_04,C,Negotiate a fair arrangement with others.,تتفاوض على ترتيب عادل مع الآخرين.
+v2,D03_04,D,Organize tasks to reduce pressure.,تنظم المهام لتقليل الضغط.
+v2,D03_05,A,Fix it with safety-first steps.,تعالجه بخطوات سلامة أولًا.
+v2,D03_05,B,Ask others to follow a clear rule.,تطلب من الآخرين الالتزام بقاعدة واضحة.
+v2,D03_05,C,Learn the correct way to handle it.,تتعلم الطريقة الصحيحة للتعامل معه.
+v2,D03_05,D,Speak up firmly to stop the risk.,تتكلم بحزم لإيقاف الخطر.
+v2,D03_06,A,Start a simple health habit today.,تبدأ عادة صحية بسيطة اليوم.
+v2,D03_06,B,Make it balanced and realistic.,تجعلها متوازنة وواقعية.
+v2,D03_06,C,Add movement and hydration now.,تضيف حركة وماء الآن.
+v2,D03_06,D,Choose a fun form of exercise.,تختار نوع رياضة ممتعًا.
+v2,D03_07,A,State your dignity respectfully.,توضح كرامتك باحترام.
+v2,D03_07,B,Ask for fair respect in tone.,تطلب احترامًا عادلًا في الأسلوب.
+v2,D03_07,C,Respond calmly and keep balance.,ترد بهدوء وتحافظ على التوازن.
+v2,D03_07,D,Request recognition for your effort calmly.,تطلب تقدير جهدك بهدوء.
+v2,D03_08,A,Speak up for justice.,تتحدث دفاعًا عن العدالة.
+v2,D03_08,B,Support the person with compassion.,تدعم الشخص برحمة.
+v2,D03_08,C,Ask questions to understand context.,تسأل لفهم السياق.
+v2,D03_08,D,Create a clear group rule.,تضع قاعدة واضحة للمجموعة.
+v2,D03_09,A,Plan a regular meet-up.,تخطط للقاء منتظم.
+v2,D03_09,B,Have a sincere friendly talk.,تجري حديثًا صادقًا وديًا.
+v2,D03_09,C,Do something fun together.,تفعلون شيئًا ممتعًا معًا.
+v2,D03_09,D,Offer care through a small gesture.,تقدم اهتمامًا بلفتة صغيرة.
+v2,D03_10,A,Pick one course and start today.,تختار دورة وتبدأ اليوم.
+v2,D03_10,B,Set a clear learning goal per week.,تضع هدف تعلم أسبوعي واضح.
+v2,D03_10,C,Study with a friend for consistency.,تدرس مع صديق للاستمرار.
+v2,D03_10,D,Connect it to deeper meaning for you.,تربطه بمعنى أعمق لديك.
+v2,D03_11,A,Do a short spiritual reflection.,تقوم بتأمل روحي قصير.
+v2,D03_11,B,Write gratitude for one steady thing.,تكتب امتنانًا لشيء ثابت واحد.
+v2,D03_11,C,Rebalance your schedule and reduce noise.,تعيد توازن جدولك وتقلل الضجيج.
+v2,D03_11,D,Join a community activity.,تنضم لنشاط مجتمعي.
+v2,D03_12,A,Review spending and make a budget.,تراجع الإنفاق وتضع ميزانية.
+v2,D03_12,B,Create a savings buffer.,تضع هامش ادخار.
+v2,D03_12,C,Learn one practical money habit.,تتعلم عادة مالية عملية.
+v2,D03_12,D,Keep lifestyle balanced to avoid stress spending.,تحافظ على توازن نمط الحياة لتجنب إنفاق التوتر.
+v2,D03_13,A,Share your results clearly.,تشارك نتائجك بوضوح.
+v2,D03_13,B,Ask for recognition politely.,تطلب التقدير بأدب.
+v2,D03_13,C,Turn it into motivation for ambition.,تحوله لدافع للطموح.
+v2,D03_13,D,Stay grateful and move on.,تبقى ممتنًا وتكمل.
+v2,D03_14,A,Try it as a new adventure.,تجربها كمغامرة جديدة.
+v2,D03_14,B,Choose the safer option first.,تختار الخيار الأكثر أمانًا أولًا.
+v2,D03_14,C,Check finances before committing.,تفحص المال قبل الالتزام.
+v2,D03_14,D,Balance excitement with your responsibilities.,توازن الحماس مع مسؤولياتك.
+v2,D03_15,A,Create a small artistic piece.,تنجز عملًا فنيًا صغيرًا.
+v2,D03_15,B,Do something playful and fun.,تفعل شيئًا مرحًا وممتعًا.
+v2,D03_15,C,Share it with someone you trust.,تشاركه مع شخص تثق به.
+v2,D03_15,D,Set a creative goal to achieve.,تضع هدفًا إبداعيًا لإنجازه.
+v2,D03_16,A,Choose a fun activity together.,تختار نشاطًا ممتعًا معًا.
+v2,D03_16,B,Do a short gratitude moment together.,تقومون بلحظة امتنان قصيرة.
+v2,D03_16,C,Protect balance by ending on time.,تحمي التوازن بإنهاء اللقاء في الوقت.
+v2,D03_16,D,Take a small adventurous detour.,تأخذون منعطفًا مغامرًا صغيرًا.
+v2,D03_17,A,Join and help organize.,تنضم وتساعد في التنظيم.
+v2,D03_17,B,Invite neighbors to participate.,تدعو الجيران للمشاركة.
+v2,D03_17,C,Ask for fair sharing of effort.,تطلب توزيعًا عادلًا للجهد.
+v2,D03_17,D,Offer thanks to volunteers.,تقدم شكرًا للمتطوعين.
+v2,D03_18,A,Set a bigger ambition target.,تضع هدفًا طموحًا أكبر.
+v2,D03_18,B,Plan key achievements and milestones.,تخطط للإنجازات والمحطات.
+v2,D03_18,C,Choose a skill to learn deeply.,تختار مهارة لتتعلمها بعمق.
+v2,D03_18,D,Protect work-life balance in the plan.,تحمي توازن العمل والحياة في الخطة.
+v2,D03_19,A,Send a sincere thank-you.,ترسل شكرًا صادقًا.
+v2,D03_19,B,Return the favor kindly.,ترد المعروف بلطف.
+v2,D03_19,C,Share appreciation publicly if suitable.,تظهر التقدير علنًا إن كان مناسبًا.
+v2,D03_19,D,Celebrate the good feeling.,تحتفل بالشعور الجميل.
+v2,D03_20,A,Set strict stop times.,تضع أوقات توقف صارمة.
+v2,D03_20,B,Protect your health with rest.,تحمي صحتك بالراحة.
+v2,D03_20,C,Negotiate workload for fairness.,تتفاوض على الحمل لتحقيق عدالة.
+v2,D03_20,D,Keep your plan balanced weekly.,تحافظ على خطة أسبوعية متوازنة.
+v2,D03_21,A,Give them loving presence briefly.,تعطيهم حضورًا محبًا قليلًا.
+v2,D03_21,B,Offer practical help instead of long talk.,تقدم مساعدة عملية بدل حديث طويل.
+v2,D03_21,C,Make it a small joyful moment.,تجعلها لحظة سعيدة صغيرة.
+v2,D03_21,D,Protect your time with a clear boundary.,تحمي وقتك بحد واضح.
+v2,D03_22,A,Work on an achievement task.,تعمل على مهمة إنجاز.
+v2,D03_22,B,Do a health walk or stretch.,تقوم بمشي صحي أو تمدد.
+v2,D03_22,C,Learn something useful.,تتعلم شيئًا مفيدًا.
+v2,D03_22,D,Do something fun and light.,تفعل شيئًا ممتعًا وخفيفًا.
+v2,D03_23,A,Choose freedom and drop one commitment.,تختار الحرية وتسقط التزامًا واحدًا.
+v2,D03_23,B,Set a clear boundary going forward.,تضع حدًا واضحًا للمستقبل.
+v2,D03_23,C,Create a balanced schedule you can keep.,تصنع جدولًا متوازنًا يمكن الاستمرار به.
+v2,D03_23,D,Check what’s safest to keep or remove.,تفحص ما هو الأكثر أمانًا للاستمرار أو الإلغاء.
+v2,D03_24,A,Speak up for justice.,تتحدث دفاعًا عن العدالة.
+v2,D03_24,B,Set a clear rule and follow it.,تضع قاعدة واضحة وتلتزم بها.
+v2,D03_24,C,Ask people to consider community impact.,تطلب مراعاة أثره على المجتمع.
+v2,D03_24,D,Document and escalate if needed.,توثق وتتصعد عند الحاجة.
+v2,D03_25,A,Track it like an achievement.,تتابعها كإنجاز.
+v2,D03_25,B,Make it joyful and easy.,تجعلها ممتعة وسهلة.
+v2,D03_25,C,Build it into a balanced routine.,تضمها لروتين متوازن.
+v2,D03_25,D,Do it with a friend for support.,تفعلها مع صديق للدعم.
+v2,D03_26,A,Start with a simple health reset.,تبدأ بإعادة ضبط صحية بسيطة.
+v2,D03_26,B,Choose a calm safety-first day plan.,تختار خطة يوم هادئة وآمنة.
+v2,D03_26,C,Protect your dignity by saying no to overload.,تحمي كرامتك برفض الحمل الزائد.
+v2,D03_26,D,Add a fun movement break.,تضيف استراحة حركة ممتعة.
+v2,D03_27,A,Ask for respect and dignity.,تطلب الاحترام والكرامة.
+v2,D03_27,B,Request a fair turn to speak.,تطلب دورًا عادلًا للكلام.
+v2,D03_27,C,Stay calm and keep balance.,تبقى هادئًا وتحافظ على التوازن.
+v2,D03_27,D,Ask to be recognized for your input.,تطلب تقدير مساهمتك.
+v2,D03_28,A,Support the fair option.,تدعم الخيار العادل.
+v2,D03_28,B,Help the team reconnect and collaborate.,تساعد الفريق على التعاون.
+v2,D03_28,C,Choose the safest calm pause.,تختار توقفًا هادئًا وآمنًا.
+v2,D03_28,D,Take a bold stance if needed.,تتخذ موقفًا جريئًا عند الحاجة.
+v2,D03_29,A,Make time for the friendship.,تخصص وقتًا للصداقة.
+v2,D03_29,B,Reschedule to protect your freedom.,تعيد الجدولة لحماية حريتك.
+v2,D03_29,C,Send a caring message instead.,ترسل رسالة اهتمام بدلًا من اللقاء.
+v2,D03_29,D,Protect balance and rest today.,تحمي التوازن وترتاح اليوم.
+v2,D03_30,A,Choose one learning source and commit.,تختار مصدر تعلم وتلتزم.
+v2,D03_30,B,Set weekly study milestones.,تضع محطات أسبوعية للدراسة.
+v2,D03_30,C,Study with a friend for accountability.,تدرس مع صديق للالتزام.
+v2,D03_30,D,Keep it fun to stay motivated.,تجعلها ممتعة لتبقى متحفزًا.
+v2,D03_31,A,Do a spiritual reflection session.,تقوم بجلسة تأمل روحي.
+v2,D03_31,B,Write gratitude for your journey.,تكتب امتنانًا لرحلتك.
+v2,D03_31,C,Join a community circle/activity.,تنضم لدائرة/نشاط مجتمعي.
+v2,D03_31,D,Rebalance your week and simplify.,تعيد توازن أسبوعك وتبسطه.
+v2,D03_32,A,Build a simple budget plan.,تضع خطة ميزانية بسيطة.
+v2,D03_32,B,Create a safety buffer first.,تضع هامش أمان أولًا.
+v2,D03_32,C,Learn a practical money habit.,تتعلم عادة مالية عملية.
+v2,D03_32,D,Keep spending balanced with priorities.,توازن الإنفاق مع الأولويات.
+v2,D03_33,A,Ask for recognition politely.,تطلب التقدير بأدب.
+v2,D03_33,B,Share outcomes publicly.,تشارك النتائج علنًا.
+v2,D03_33,C,Focus on next achievement goal.,تركز على هدف إنجاز تالي.
+v2,D03_33,D,Express gratitude to supporters.,تعبر عن الامتنان لمن دعمك.
+v2,D03_34,A,Try it as an adventure.,تجربها كمغامرة.
+v2,D03_34,B,Check safety and start small.,تفحص السلامة وتبدأ صغيرًا.
+v2,D03_34,C,Bring a friend along.,تصطحب صديقًا.
+v2,D03_34,D,Keep balance and don’t overcommit.,تحافظ على التوازن ولا تفرط.
+v2,D03_35,A,Add an artistic touch.,تضيف لمسة فنية.
+v2,D03_35,B,Make it fun with small details.,تجعلها ممتعة بتفاصيل صغيرة.
+v2,D03_35,C,Organize it for balance and calm.,تنظمها لتوازن وهدوء.
+v2,D03_35,D,Set a goal to refresh the space.,تضع هدفًا لتجديد المكان.
+v2,D03_36,A,Do something purely fun.,تفعل شيئًا للمرح فقط.
+v2,D03_36,B,Go for a short adventure.,تذهب لمغامرة قصيرة.
+v2,D03_36,C,Learn something interesting.,تتعلم شيئًا مثيرًا.
+v2,D03_36,D,Take care of your health.,تعتني بصحتك.
+v2,D03_37,A,Join the community effort.,تنضم للجهد المجتمعي.
+v2,D03_37,B,Invite friends to help.,تدعو الأصدقاء للمساعدة.
+v2,D03_37,C,Ensure fair sharing of tasks.,تضمن توزيعًا عادلًا للمهام.
+v2,D03_37,D,Thank the helpers openly.,تشكر المساعدين علنًا.
+v2,D03_38,A,Set a bigger ambition target.,تضع هدفًا طموحًا أكبر.
+v2,D03_38,B,Pick one measurable achievement milestone.,تختار محطة إنجاز قابلة للقياس.
+v2,D03_38,C,Learn the key skill needed.,تتعلم المهارة الأساسية المطلوبة.
+v2,D03_38,D,Seek recognition strategically.,تسعى للتقدير بشكل ذكي.
+v2,D03_39,A,Accept it with gratitude.,تقبله بامتنان.
+v2,D03_39,B,Share the credit with love.,تشارك الفضل بمحبة.
+v2,D03_39,C,Enjoy the joyful moment.,تستمتع باللحظة السعيدة.
+v2,D03_39,D,Use it as motivation for more.,تستخدمه كدافع للمزيد.
+v2,D03_40,A,Choose balance and stop on time.,تختار التوازن وتتوقف في الوقت.
+v2,D03_40,B,Protect health with rest.,تحمي صحتك بالراحة.
+v2,D03_40,C,Finish one achievement task only.,تنهي مهمة إنجاز واحدة فقط.
+v2,D03_40,D,Plan your week more wisely.,تخطط لأسبوعك بحكمة أكبر.
+v2,D03_41,A,Invite them to a friendly meet-up.,تدعوه للقاء ودي.
+v2,D03_41,B,Send a caring message.,ترسل رسالة اهتمام.
+v2,D03_41,C,Connect them to a community space.,تربطه بمساحة مجتمعية.
+v2,D03_41,D,Share a small fun moment.,تشارك لحظة مرحة صغيرة.
+v2,D03_42,A,Focus on achievement milestones.,تركز على محطات الإنجاز.
+v2,D03_42,B,Ask for community/team support.,تطلب دعم الفريق/المجتمع.
+v2,D03_42,C,Protect balance with planned breaks.,تحمي التوازن باستراحات مخططة.
+v2,D03_42,D,Take a bold step and start now.,تبدأ الآن بخطوة جريئة.
+v2,D03_43,A,Add one joyful ritual daily.,تضيف طقسًا يوميًا سعيدًا.
+v2,D03_43,B,Do something fun with others.,تفعل شيئًا ممتعًا مع الآخرين.
+v2,D03_43,C,Practice gratitude for small wins.,تمارس الامتنان للنجاحات الصغيرة.
+v2,D03_43,D,Express love through a small gesture.,تعبر عن المحبة بلفتة صغيرة.
+v2,D03_44,A,Choose what aligns with meaning.,تختار ما ينسجم مع المعنى.
+v2,D03_44,B,Choose the option that protects freedom.,تختار ما يحمي الحرية.
+v2,D03_44,C,Choose the safest path for now.,تختار المسار الأكثر أمانًا الآن.
+v2,D03_44,D,Choose what supports ambition.,تختار ما يدعم الطموح.
+v2,D03_45,A,Take safety-first action now.,تتخذ إجراء سلامة فورًا.
+v2,D03_45,B,Set a clear rule to prevent repeats.,تضع قاعدة واضحة لمنع التكرار.
+v2,D03_45,C,Learn the right procedure and share it.,تتعلم الإجراء الصحيح وتشاركه.
+v2,D03_45,D,Speak up firmly to stop the risk.,تتحدث بحزم لإيقاف الخطر.
+v2,D03_46,A,Start with one health habit.,تبدأ بعادة صحية واحدة.
+v2,D03_46,B,Make it fun so you continue.,تجعلها ممتعة لتستمر.
+v2,D03_46,C,Balance effort with rest.,توازن بين الجهد والراحة.
+v2,D03_46,D,Set an ambitious health goal.,تضع هدفًا صحيًا طموحًا.
+v2,D03_47,A,Protect your dignity calmly.,تحمي كرامتك بهدوء.
+v2,D03_47,B,Ask for fair consideration.,تطلب اعتبارًا عادلًا.
+v2,D03_47,C,Learn and improve the idea.,تتعلم وتحسن الفكرة.
+v2,D03_47,D,Ask a friend to support you.,تطلب من صديق دعمك.
+v2,D03_48,A,Speak up for justice.,تتحدث دفاعًا عن العدالة.
+v2,D03_48,B,Support the person with compassion.,تدعم الشخص برحمة.
+v2,D03_48,C,Invite others to include them.,تدعو الآخرين لاحتوائهم.
+v2,D03_48,D,Create a clear team norm.,تضع قاعدة واضحة للفريق.
+v2,D04_01,A,Listen and show care.,تستمع وتُظهر اهتمامًا.
+v2,D04_01,B,Do a helpful task without being asked.,تقوم بمساعدة عملية دون طلب.
+v2,D04_01,C,Add a small cheerful moment.,تضيف لحظة مبهجة صغيرة.
+v2,D04_01,D,Give them space and respect their pace.,تعطيه مساحة وتحترم وتيرته.
+v2,D04_02,A,Pick the most important and finish it.,تختار الأهم وتنهيه.
+v2,D04_02,B,Set a realistic plan with time blocks.,تضع خطة واقعية بوقت محدد.
+v2,D04_02,C,Ask for support or delegation.,تطلب دعمًا أو تفويضًا.
+v2,D04_02,D,Protect balance with breaks and stop-time.,تحمي التوازن باستراحات ووقت توقف.
+v2,D04_03,A,Plan a small new adventure this week.,تخطط لمغامرة صغيرة هذا الأسبوع.
+v2,D04_03,B,Add a fun activity to your routine.,تضيف نشاطًا مرحًا لروتينك.
+v2,D04_03,C,Learn something fresh to break repetition.,تتعلم شيئًا جديدًا لكسر التكرار.
+v2,D04_03,D,Set an ambition goal to energize you.,تضع هدفًا طموحًا ليحفزك.
+v2,D04_04,A,Send a warm message and reschedule.,ترسل رسالة لطيفة وتعيد الموعد.
+v2,D04_04,B,Use the time to rest and recover.,تستغل الوقت للراحة والتعافي.
+v2,D04_04,C,Do something fun on your own.,تفعل شيئًا ممتعًا بمفردك.
+v2,D04_04,D,Choose freely a new plan for the evening.,تختار بحرية خطة جديدة للمساء.
+v2,D04_05,A,Clarify expectations and rules first.,توضح التوقعات والقواعد أولًا.
+v2,D04_05,B,Choose what preserves your freedom.,تختار ما يحافظ على حريتك.
+v2,D04_05,C,Pick the option that feels safest.,تختار الخيار الأكثر أمانًا.
+v2,D04_05,D,Go for the challenge to grow.,تخوض التحدي للنمو.
+v2,D04_06,A,Fix it immediately and warn others.,تعالجه فورًا وتنبه الآخرين.
+v2,D04_06,B,Report it through the right channel.,تبلّغ عبر القناة الصحيحة.
+v2,D04_06,C,Learn the correct safety procedure.,تتعلم إجراء السلامة الصحيح.
+v2,D04_06,D,Coordinate with neighbors to prevent repeat.,تنسق مع الجيران لمنع التكرار.
+v2,D04_07,A,Respond firmly and protect your dignity.,ترد بحزم وتحمي كرامتك.
+v2,D04_07,B,Ask for respectful tone calmly.,تطلب نبرة محترمة بهدوء.
+v2,D04_07,C,Step away to keep balance.,تبتعد لتحافظ على التوازن.
+v2,D04_07,D,Address it later in a private talk.,تتعامل معه لاحقًا بحديث خاص.
+v2,D04_08,A,Speak up for fairness.,تتحدث دفاعًا عن الإنصاف.
+v2,D04_08,B,Support them with compassion.,تدعمهم برحمة.
+v2,D04_08,C,Document facts and follow process.,توثق الحقائق وتتبع الإجراء.
+v2,D04_08,D,Bring the group to a fair agreement.,تساعد المجموعة للوصول لاتفاق عادل.
+v2,D04_09,A,Plan a regular meet-up.,تخطط للقاء منتظم.
+v2,D04_09,B,Send a thoughtful message.,ترسل رسالة لطيفة ومدروسة.
+v2,D04_09,C,Do something fun together.,تفعلان شيئًا ممتعًا معًا.
+v2,D04_09,D,Offer help in a practical way.,تعرض مساعدة عملية.
+v2,D04_10,A,Choose one trusted resource and start.,تختار مصدرًا موثوقًا وتبدأ.
+v2,D04_10,B,Set a weekly goal and track it.,تضع هدفًا أسبوعيًا وتتابعه.
+v2,D04_10,C,Study with a friend for consistency.,تدرس مع صديق للاستمرار.
+v2,D04_10,D,Connect learning to a bigger purpose.,تربط التعلم بهدف أكبر.
+v2,D04_11,A,Do a short inner reflection.,تقوم بتأمل داخلي قصير.
+v2,D04_11,B,Write gratitude for one stable thing.,تكتب امتنانًا لشيء ثابت.
+v2,D04_11,C,Join a community activity.,تنضم لنشاط مجتمعي.
+v2,D04_11,D,Rebalance your week and simplify.,تعيد توازن أسبوعك وتبسطه.
+v2,D04_12,A,Review budget and cut extras.,تراجع الميزانية وتقلل الزوائد.
+v2,D04_12,B,Create a safety buffer for next month.,تضع هامش أمان للشهر القادم.
+v2,D04_12,C,Learn one money skill.,تتعلم مهارة مالية واحدة.
+v2,D04_12,D,Keep lifestyle balanced to avoid stress spending.,تحافظ على توازن نمط الحياة لتجنب إنفاق التوتر.
+v2,D04_13,A,Ask for feedback directly.,تطلب ملاحظات مباشرة.
+v2,D04_13,B,Share outcomes in a short update.,تشارك النتائج بتحديث قصير.
+v2,D04_13,C,Focus on next achievement milestone.,تركز على محطة إنجاز تالية.
+v2,D04_13,D,Thank supporters and stay grateful.,تشكر الداعمين وتبقى ممتنًا.
+v2,D04_14,A,Try it as a small adventure first.,تجربها كمغامرة صغيرة أولًا.
+v2,D04_14,B,Check safety and start slowly.,تفحص السلامة وتبدأ تدريجيًا.
+v2,D04_14,C,See if it fits your budget.,تتأكد أنه يناسب ميزانيتك.
+v2,D04_14,D,Keep balance and don’t overcommit.,تحافظ على التوازن ولا تفرط.
+v2,D04_15,A,Create a small artistic piece.,تنجز عملًا فنيًا صغيرًا.
+v2,D04_15,B,Do something playful and fun.,تفعل شيئًا مرحًا.
+v2,D04_15,C,Share it with someone you trust.,تشاركه مع شخص تثق به.
+v2,D04_15,D,Set a creative goal to achieve.,تضع هدفًا إبداعيًا لإنجازه.
+v2,D04_16,A,Take a short joy break (music/tea).,تأخذ استراحة فرح قصيرة (موسيقى/شاي).
+v2,D04_16,B,Call someone you care about.,تتصل بشخص تهتم به.
+v2,D04_16,C,Write one gratitude line.,تكتب سطر امتنان واحد.
+v2,D04_16,D,Do a quick spiritual reset.,تقوم بإعادة ضبط روحية سريعة.
+v2,D04_17,A,Join and help organize.,تنضم وتساعد في التنظيم.
+v2,D04_17,B,Invite a friend to come with you.,تدعو صديقًا ليأتي معك.
+v2,D04_17,C,Ensure fair sharing of tasks.,تضمن توزيعًا عادلًا للمهام.
+v2,D04_17,D,Thank volunteers openly.,تشكر المتطوعين علنًا.
+v2,D04_18,A,Choose one ambition target.,تختار هدفًا طموحًا واحدًا.
+v2,D04_18,B,Plan measurable achievements.,تخطط لإنجازات قابلة للقياس.
+v2,D04_18,C,Pick one skill to learn deeply.,تختار مهارة لتتعلمها بعمق.
+v2,D04_18,D,Protect balance in your plan.,تحمي التوازن في خطتك.
+v2,D04_19,A,Send a sincere thank-you.,ترسل شكرًا صادقًا.
+v2,D04_19,B,Return the favor kindly.,ترد المعروف بلطف.
+v2,D04_19,C,Appreciate them publicly if suitable.,تقدرهم علنًا إن كان مناسبًا.
+v2,D04_19,D,Do something kind for someone else.,تقوم بعمل لطيف لشخص آخر.
+v2,D04_20,A,Set a hard stop time for work.,تضع وقت توقف صارم للعمل.
+v2,D04_20,B,Protect sleep and health first.,تحمي النوم والصحة أولًا.
+v2,D04_20,C,Ask for support from a trusted person.,تطلب دعمًا من شخص تثق به.
+v2,D04_20,D,Simplify priorities to keep balance.,تبسط الأولويات للحفاظ على التوازن.
+v2,D04_21,A,Choose love and make time briefly.,تختار المحبة وتخصص وقتًا قليلًا.
+v2,D04_21,B,Protect your plan with a boundary.,تحمي خطتك بحد واضح.
+v2,D04_21,C,Offer practical help instead.,تقدم مساعدة عملية بدلًا من ذلك.
+v2,D04_21,D,Find a balanced compromise time.,تجد وقتًا وسطًا متوازنًا.
+v2,D04_22,A,Do something fun and light.,تفعل شيئًا ممتعًا وخفيفًا.
+v2,D04_22,B,Work on one achievement goal.,تعمل على هدف إنجاز واحد.
+v2,D04_22,C,Learn something useful.,تتعلم شيئًا مفيدًا.
+v2,D04_22,D,Do a health activity (walk/stretch).,تفعل نشاطًا صحيًا (مشي/تمدد).
+v2,D04_23,A,Restructure commitments for freedom.,تعيد تنظيم الالتزامات لحماية الحرية.
+v2,D04_23,B,Set a clear boundary going forward.,تضع حدًا واضحًا للمستقبل.
+v2,D04_23,C,Check what is safest to keep.,تفحص ما هو الأكثر أمانًا للاستمرار.
+v2,D04_23,D,Keep balance by spacing tasks.,تحافظ على التوازن بتوزيع المهام.
+v2,D04_24,A,Remind people of fairness for all.,تذكر الناس بالإنصاف للجميع.
+v2,D04_24,B,Suggest a clear rule and follow it.,تقترح قاعدة واضحة وتلتزم بها.
+v2,D04_24,C,Report through the proper channel.,تبلّغ عبر القناة المناسبة.
+v2,D04_24,D,Speak up confidently to stop it.,تتحدث بثقة لإيقافه.
+v2,D04_25,A,Track it like an achievement.,تتابعها كإنجاز.
+v2,D04_25,B,Make it enjoyable and easy.,تجعلها ممتعة وسهلة.
+v2,D04_25,C,Build it into a balanced routine.,تضمها لروتين متوازن.
+v2,D04_25,D,Do it with a friend for support.,تفعلها مع صديق للدعم.
+v2,D04_26,A,Start with a simple health reset.,تبدأ بإعادة ضبط صحية بسيطة.
+v2,D04_26,B,Choose a calmer, safer day plan.
+v2,D04_26,C,Protect dignity by saying no to overload.,تحمي كرامتك برفض الحمل الزائد.
+v2,D04_26,D,Add a fun movement break.,تضيف استراحة حركة ممتعة.
+v2,D04_27,A,Ask for your turn with dignity.,تطلب دورك بكرامة.
+v2,D04_27,B,Request a fair speaking order.,تطلب ترتيبًا عادلًا للكلام.
+v2,D04_27,C,Stay calm to keep balance.,تبقى هادئًا لتحافظ على التوازن.
+v2,D04_27,D,Ask to be recognized for your input.,تطلب تقدير مساهمتك.
+v2,D04_28,A,Support the fair solution.,تدعم الحل العادل.
+v2,D04_28,B,Help them reconnect as friends.,تساعدهم على التقارب كأصدقاء.
+v2,D04_28,C,Suggest a safe pause and calm down.,تقترح توقفًا آمنًا وتهدئة.
+v2,D04_28,D,Take a bold stance if needed.,تتخذ موقفًا جريئًا عند الحاجة.
+v2,D04_29,A,Meet briefly to support the friendship.,تلتقي قليلًا لدعم الصداقة.
+v2,D04_29,B,Choose freedom and reschedule.,تختار الحرية وتعيد الجدولة.
+v2,D04_29,C,Send a caring message instead.,ترسل رسالة اهتمام بدلًا من اللقاء.
+v2,D04_29,D,Protect balance and rest.,تحمي التوازن وتستريح.
+v2,D04_30,A,Pick one course and commit.,تختار دورة وتلتزم.
+v2,D04_30,B,Set a measurable skill goal.,تضع هدفًا مهاريًا قابلًا للقياس.
+v2,D04_30,C,Learn with a friend or mentor.,تتعلم مع صديق أو مُرشد.
+v2,D04_30,D,Choose a topic that fits your purpose.,تختار موضوعًا يناسب هدفك.
+v2,D04_31,A,Do a short spiritual reflection.,تقوم بتأمل روحي قصير.
+v2,D04_31,B,Write gratitude for your path.,تكتب امتنانًا لطريقك.
+v2,D04_31,C,Spend time with community/group.,تقضي وقتًا مع مجتمع/مجموعة.
+v2,D04_31,D,Simplify your week for balance.,تبسط أسبوعك لتحقيق التوازن.
+v2,D04_32,A,Build a clear budget.,تضع ميزانية واضحة.
+v2,D04_32,B,Create a savings buffer.,تضع هامش ادخار.
+v2,D04_32,C,Learn a practical money habit.,تتعلم عادة مالية عملية.
+v2,D04_32,D,Choose the safest spending plan.,تختار خطة إنفاق أكثر أمانًا.
+v2,D04_33,A,Ask for recognition politely.,تطلب التقدير بأدب.
+v2,D04_33,B,Share outcomes in a short message.,تشارك النتائج برسالة قصيرة.
+v2,D04_33,C,Stand for fairness in credit.,تدافع عن عدالة الفضل.
+v2,D04_33,D,Focus on the next achievement.,تركز على الإنجاز التالي.
+v2,D04_34,A,Go and treat it as adventure.,تذهب وتعتبرها مغامرة.
+v2,D04_34,B,Check safety and start small.,تفحص السلامة وتبدأ صغيرًا.
+v2,D04_34,C,Bring a friend for support.,تصطحب صديقًا للدعم.
+v2,D04_34,D,Choose freely what fits you now.,تختار بحرية ما يناسبك الآن.
+v2,D04_35,A,Add an artistic touch.,تضيف لمسة فنية.
+v2,D04_35,B,Make it fun with small details.,تجعلها ممتعة بتفاصيل صغيرة.
+v2,D04_35,C,Declutter for a calm balance.,تقلل الفوضى لتوازن هادئ.
+v2,D04_35,D,Set a small goal to refresh the room.,تضع هدفًا صغيرًا لتجديد الغرفة.
+v2,D04_36,A,Do something purely fun.,تفعل شيئًا للمرح فقط.
+v2,D04_36,B,Take a quick health walk.,تأخذ مشيًا صحيًا سريعًا.
+v2,D04_36,C,Learn one useful tip.,تتعلم نصيحة مفيدة واحدة.
+v2,D04_36,D,Finish one pending task.,تنهي مهمة واحدة معلقة.
+v2,D04_37,A,Join and coordinate with neighbors.,تنضم وتنسق مع الجيران.
+v2,D04_37,B,Invite friends to help.,تدعو الأصدقاء للمساعدة.
+v2,D04_37,C,Ensure fair sharing of effort.,تضمن توزيعًا عادلًا للجهد.
+v2,D04_37,D,Thank everyone for participating.,تشكر الجميع على المشاركة.
+v2,D04_38,A,Set a bigger ambition target.,تضع هدفًا طموحًا أكبر.
+v2,D04_38,B,Pick one achievement milestone.,تختار محطة إنجاز واحدة.
+v2,D04_38,C,Learn the key skill to level up.,تتعلم مهارة أساسية للتقدم.
+v2,D04_38,D,Protect balance with smart pacing.,تحمي التوازن بوتيرة ذكية.
+v2,D04_39,A,Receive it with gratitude.,تستقبل ذلك بامتنان.
+v2,D04_39,B,Share credit with love.,تشارك الفضل بمحبة.
+v2,D04_39,C,Enjoy the joyful moment.,تستمتع باللحظة السعيدة.
+v2,D04_39,D,Use it to motivate more achievement.,تستخدمه لتحفيز مزيد من الإنجاز.
+v2,D04_40,A,Set strict stop times.,تضع أوقات توقف صارمة.
+v2,D04_40,B,Protect health with rest.,تحمي صحتك بالراحة.
+v2,D04_40,C,Choose freedom by dropping one task.,تختار الحرية بإسقاط مهمة واحدة.
+v2,D04_40,D,Rebalance priorities weekly.,تعيد توازن الأولويات أسبوعيًا.
+v2,D04_41,A,Invite them for a friendly coffee.,تدعوه لقهوة ودية.
+v2,D04_41,B,Send a caring message.,ترسل رسالة اهتمام.
+v2,D04_41,C,Connect them to a group/community.,تربطه بمجموعة/مجتمع.
+v2,D04_41,D,Share a light fun moment.,تشارك لحظة مرحة وخفيفة.
+v2,D04_42,A,Focus on milestones and execute.,تركز على المراحل وتنفّذ.
+v2,D04_42,B,Ask for help and coordinate support.,تطلب المساعدة وتنسق الدعم.
+v2,D04_42,C,Protect balance with planned breaks.,تحمي التوازن باستراحات مخططة.
+v2,D04_42,D,Take a bold step and start now.,تبدأ الآن بخطوة جريئة.
+v2,D04_43,A,Add a small daily joy ritual.,تضيف طقس فرح يومي صغير.
+v2,D04_43,B,Do a fun activity with someone.,تفعل نشاطًا ممتعًا مع شخص.
+v2,D04_43,C,Practice gratitude for small wins.,تمارس الامتنان للنجاحات الصغيرة.
+v2,D04_43,D,Create a loving gesture daily.,تقوم بلفتة محبة يوميًا.
+v2,D04_44,A,Choose what aligns with meaning.,تختار ما ينسجم مع المعنى.
+v2,D04_44,B,Choose what protects your freedom.,تختار ما يحمي حريتك.
+v2,D04_44,C,Choose the safest path now.,تختار المسار الأكثر أمانًا الآن.
+v2,D04_44,D,Choose what supports ambition.,تختار ما يدعم الطموح.
+v2,D04_45,A,Fix it immediately for safety.,تعالجه فورًا من أجل السلامة.
+v2,D04_45,B,Set a clear rule to prevent repeat.,تضع قاعدة واضحة لمنع التكرار.
+v2,D04_45,C,Learn the correct procedure and share it.,تتعلم الإجراء الصحيح وتشاركه.
+v2,D04_45,D,Speak up firmly to stop the risk.,تتحدث بحزم لإيقاف الخطر.
+v2,D04_46,A,Start with one health habit.,تبدأ بعادة صحية واحدة.
+v2,D04_46,B,Make it fun so you continue.,تجعلها ممتعة لتستمر.
+v2,D04_46,C,Balance effort with rest.,توازن بين الجهد والراحة.
+v2,D04_46,D,Set an ambitious health goal.,تضع هدفًا صحيًا طموحًا.
+v2,D04_47,A,Protect your dignity calmly.,تحمي كرامتك بهدوء.
+v2,D04_47,B,Ask for fair respect.,تطلب احترامًا عادلًا.
+v2,D04_47,C,Respond with balanced words.,ترد بكلمات متوازنة.
+v2,D04_47,D,Ask a friend to support you.,تطلب من صديق دعمك.
+v2,D04_48,A,Speak up for justice.,تتحدث دفاعًا عن العدالة.
+v2,D04_48,B,Support the person with compassion.,تدعم الشخص برحمة.
+v2,D04_48,C,Invite the team to include everyone.,تدعو الفريق لاحتواء الجميع.
+v2,D04_48,D,Set a clear shared rule.,تضع قاعدة مشتركة واضحة.
+v2,D05_01,A,Offer warmth and listen.,تُظهر محبة وتستمع.
+v2,D05_01,B,Do one practical helpful task.,تقوم بمساعدة عملية واحدة.
+v2,D05_01,C,Add a small joyful moment.,تضيف لحظة فرح صغيرة.
+v2,D05_01,D,Give space and respect their pace.,تعطي مساحة وتحترم الوتيرة.
+v2,D05_02,A,Finish the key deliverable first.,تنهي الجزء الأهم أولًا.
+v2,D05_02,B,Set time blocks and a strict plan.,تضع كتل زمنية وخطة صارمة.
+v2,D05_02,C,Ask for help/delegation.,تطلب المساعدة/التفويض.
+v2,D05_02,D,Protect balance with breaks and a stop time.,تحمي التوازن باستراحات ووقت توقف.
+v2,D05_03,A,Add one small daily joy ritual.,تضيف طقس فرح يومي صغير.
+v2,D05_03,B,Plan a fun activity with someone.,تخطط لنشاط مرح مع شخص.
+v2,D05_03,C,Try a new experience this week.,تجرب تجربة جديدة هذا الأسبوع.
+v2,D05_03,D,Write gratitude for small wins.,تكتب امتنانًا للنجاحات الصغيرة.
+v2,D05_04,A,Respond with compassion and presence.,ترد برحمة وحضور.
+v2,D05_04,B,Offer practical support steps.,تقدم دعمًا عمليًا بخطوات.
+v2,D05_04,C,Invite them for a friendly meet-up.,تدعوه للقاء ودي.
+v2,D05_04,D,Keep a calm boundary if it’s heavy.,تحافظ على حد هادئ إذا كان ثقيلاً.
+v2,D05_05,A,Ask to clarify expectations and details.,تطلب توضيح التوقعات والتفاصيل.
+v2,D05_05,B,Choose what protects your independence.,تختار ما يحمي استقلالك.
+v2,D05_05,C,Pick the option that feels safest.,تختار ما يبدو أكثر أمانًا.
+v2,D05_05,D,Take it as a challenge to grow.,تخوضها كتحدٍ للنمو.
+v2,D05_06,A,Fix it immediately for safety.,تعالجه فورًا من أجل السلامة.
+v2,D05_06,B,Create a simple rule so it won’t repeat.,تضع قاعدة بسيطة حتى لا يتكرر.
+v2,D05_06,C,Learn the correct safe procedure.,تتعلم الإجراء الآمن الصحيح.
+v2,D05_06,D,Coordinate with others to prevent risk.,تنسق مع الآخرين لمنع الخطر.
+v2,D05_07,A,State your boundary and dignity calmly.,توضح حدك وكرامتك بهدوء.
+v2,D05_07,B,Ask for fair respectful tone.,تطلب نبرة احترام عادلة.
+v2,D05_07,C,Step away to keep balance.,تبتعد لتحافظ على التوازن.
+v2,D05_07,D,Ask for acknowledgment of your role.,تطلب الاعتراف بدورك.
+v2,D05_08,A,Ask for fair credit correction.,تطلب تصحيحًا منصفًا للفضل.
+v2,D05_08,B,Document your contribution clearly.,توثق مساهمتك بوضوح.
+v2,D05_08,C,Request feedback/visibility politely.,تطلب ملاحظات/ظهورًا بأدب.
+v2,D05_08,D,Focus on next achievement and deliver more.,تركز على الإنجاز التالي وتقدم أكثر.
+v2,D05_09,A,Reach out and invite a chat.,تبادر وتدعو لحديث.
+v2,D05_09,B,Plan a small activity together.,تخطط لنشاط صغير معًا.
+v2,D05_09,C,Give them space but stay supportive.,تعطي مساحة مع بقاء الدعم.
+v2,D05_09,D,Send a caring message to show love.,ترسل رسالة اهتمام لتُظهر المحبة.
+v2,D05_10,A,Pick one trusted learning source and start.,تختار مصدر تعلم موثوق وتبدأ.
+v2,D05_10,B,Set a weekly learning goal and track it.,تضع هدف تعلم أسبوعي وتتابعه.
+v2,D05_10,C,Learn with a friend/mentor.,تتعلم مع صديق/مرشد.
+v2,D05_10,D,Connect it to your bigger purpose.,تربطها بهدفك الأكبر.
+v2,D05_11,A,Do a short inner reflection.,تقوم بتأمل داخلي قصير.
+v2,D05_11,B,Write one gratitude line.,تكتب سطر امتنان واحد.
+v2,D05_11,C,Join a community activity.,تنضم لنشاط مجتمعي.
+v2,D05_11,D,Simplify and rebalance your week.,تبسط وتعيد توازن أسبوعك.
+v2,D05_12,A,Review budget and adjust spending.,تراجع الميزانية وتعدل الإنفاق.
+v2,D05_12,B,Create a safety buffer for next month.,تضع هامش أمان للشهر القادم.
+v2,D05_12,C,Learn one practical money habit.,تتعلم عادة مالية عملية.
+v2,D05_12,D,Keep lifestyle balanced to avoid stress spending.,تحافظ على توازن نمط الحياة لتجنب إنفاق التوتر.
+v2,D05_13,A,Share results in a short update.,تشارك النتائج بتحديث قصير.
+v2,D05_13,B,Ask for recognition politely.,تطلب التقدير بأدب.
+v2,D05_13,C,Turn it into a bigger ambition goal.,تحوله لهدف طموح أكبر.
+v2,D05_13,D,Stay grateful and move forward.,تبقى ممتنًا وتكمل.
+v2,D05_14,A,Try it as a small adventure first.,تجربها كمغامرة صغيرة أولًا.
+v2,D05_14,B,Check safety and start slowly.,تفحص السلامة وتبدأ تدريجيًا.
+v2,D05_14,C,Make sure it fits your budget.,تتأكد أنه يناسب ميزانيتك.
+v2,D05_14,D,Keep balance and don’t overcommit.,تحافظ على التوازن ولا تفرط.
+v2,D05_15,A,Create a small artistic piece.,تنجز عملًا فنيًا صغيرًا.
+v2,D05_15,B,Do something playful and fun.,تفعل شيئًا مرحًا.
+v2,D05_15,C,Share it with someone close.,تشاركه مع شخص قريب.
+v2,D05_15,D,Set a creative goal to achieve.,تضع هدفًا إبداعيًا لإنجازه.
+v2,D05_16,A,Take a short joy break (music/tea).,تأخذ استراحة فرح قصيرة (موسيقى/شاي).
+v2,D05_16,B,Do a quick spiritual reset.,تقوم بإعادة ضبط روحية سريعة.
+v2,D05_16,C,Move your body briefly for health.,تحرك جسمك قليلًا لصحتك.
+v2,D05_16,D,Call a friend to reconnect.,تتصل بصديق للتواصل.
+v2,D05_17,A,Join and help organize.,تنضم وتساعد في التنظيم.
+v2,D05_17,B,Invite a friend to join.,تدعو صديقًا لينضم.
+v2,D05_17,C,Ensure fair sharing of tasks.,تضمن توزيعًا عادلًا للمهام.
+v2,D05_17,D,Thank volunteers openly.,تشكر المتطوعين علنًا.
+v2,D05_18,A,Set a bigger ambition target.,تضع هدفًا طموحًا أكبر.
+v2,D05_18,B,Plan measurable achievements.,تخطط لإنجازات قابلة للقياس.
+v2,D05_18,C,Pick one skill to learn deeply.,تختار مهارة لتتعلمها بعمق.
+v2,D05_18,D,Protect balance in your plan.,تحمي التوازن في خطتك.
+v2,D05_19,A,Send a sincere thank-you.,ترسل شكرًا صادقًا.
+v2,D05_19,B,Return the favor kindly.,ترد المعروف بلطف.
+v2,D05_19,C,Appreciate them publicly if suitable.,تقدرهم علنًا إن كان مناسبًا.
+v2,D05_19,D,Do something kind for someone else.,تقوم بعمل لطيف لشخص آخر.
+v2,D05_20,A,Set strict stop times for work.,تضع أوقات توقف صارمة للعمل.
+v2,D05_20,B,Protect sleep and health first.,تحمي النوم والصحة أولًا.
+v2,D05_20,C,Drop one commitment to regain freedom.,تسقط التزامًا واحدًا لاستعادة الحرية.
+v2,D05_20,D,Rebalance priorities weekly.,تعيد توازن الأولويات أسبوعيًا.
+v2,D05_21,A,Choose love and make time briefly.,تختار المحبة وتخصص وقتًا قليلًا.
+v2,D05_21,B,Offer practical help instead.,تقدم مساعدة عملية بدلًا من ذلك.
+v2,D05_21,C,Keep it a joyful moment together.,تجعلها لحظة سعيدة معًا.
+v2,D05_21,D,Set a boundary and reschedule.,تضع حدًا وتعيد الجدولة.
+v2,D05_22,A,Work on one achievement task.,تعمل على مهمة إنجاز واحدة.
+v2,D05_22,B,Do a short health walk/stretch.,تقوم بمشي/تمدد صحي قصير.
+v2,D05_22,C,Learn one useful thing.,تتعلم شيئًا مفيدًا واحدًا.
+v2,D05_22,D,Do something fun and light.,تفعل شيئًا ممتعًا وخفيفًا.
+v2,D05_23,A,Restructure commitments for freedom.,تعيد تنظيم الالتزامات لحماية الحرية.
+v2,D05_23,B,Set a clear boundary going forward.,تضع حدًا واضحًا للمستقبل.
+v2,D05_23,C,Choose what feels safest to keep.,تختار ما يبدو الأكثر أمانًا للاستمرار.
+v2,D05_23,D,Build a balanced schedule you can sustain.,تبني جدولًا متوازنًا يمكن الاستمرار به.
+v2,D05_24,A,Speak up for justice and fairness.,تتحدث دفاعًا عن العدالة والإنصاف.
+v2,D05_24,B,Propose a clear rule and follow it.,تقترح قاعدة واضحة وتلتزم بها.
+v2,D05_24,C,Document and follow the process.,توثق وتتبع الإجراء.
+v2,D05_24,D,Invite the group to consider community impact.,تدعو المجموعة لمراعاة أثره على المجتمع.
+v2,D05_25,A,Track progress like an achievement.,تتابع التقدم كإنجاز.
+v2,D05_25,B,Make it enjoyable so it’s easy to continue.,تجعلها ممتعة لتسهل الاستمرار.
+v2,D05_25,C,Build it into a balanced routine.,تضمها إلى روتين متوازن.
+v2,D05_25,D,Do it with a friend for support.,تفعلها مع صديق للدعم.
+v2,D05_26,A,Start with a simple health reset.,تبدأ بإعادة ضبط صحية بسيطة.
+v2,D05_26,B,Choose a safer, calmer plan for the day.
+v2,D05_26,C,Protect dignity by saying no to overload.,تحمي كرامتك برفض الحمل الزائد.
+v2,D05_26,D,Add a short fun activity to lift energy.,تضيف نشاطًا ممتعًا قصيرًا لرفع الطاقة.
+v2,D05_27,A,Ask for your turn with dignity.,تطلب دورك بكرامة.
+v2,D05_27,B,Request a fair speaking order.,تطلب ترتيبًا عادلًا للكلام.
+v2,D05_27,C,Stay calm to keep balance.,تبقى هادئًا لتحافظ على التوازن.
+v2,D05_27,D,Ask to be recognized for your input.,تطلب تقدير مساهمتك.
+v2,D05_28,A,Support the fair solution.,تدعم الحل العادل.
+v2,D05_28,B,Help them reconnect as friends.,تساعدهم على التقارب كأصدقاء.
+v2,D05_28,C,Suggest a safe pause and calm down.,تقترح توقفًا آمنًا وتهدئة.
+v2,D05_28,D,Take a bold stance if needed.,تتخذ موقفًا جريئًا عند الحاجة.
+v2,D05_29,A,Make time for the friendship.,تخصص وقتًا للصداقة.
+v2,D05_29,B,Reschedule to protect your freedom.,تعيد الجدولة لحماية حريتك.
+v2,D05_29,C,Send a caring message instead.,ترسل رسالة اهتمام بدلًا من اللقاء.
+v2,D05_29,D,Protect balance and rest today.,تحمي التوازن وترتاح اليوم.
+v2,D05_30,A,Choose one learning source and commit.,تختار مصدر تعلم وتلتزم.
+v2,D05_30,B,Set weekly study milestones.,تضع محطات أسبوعية للدراسة.
+v2,D05_30,C,Study with a friend for accountability.,تدرس مع صديق للالتزام.
+v2,D05_30,D,Keep it fun to stay motivated.,تجعلها ممتعة لتبقى متحفزًا.
+v2,D05_31,A,Do a short spiritual reflection.,تقوم بتأمل روحي قصير.
+v2,D05_31,B,Write gratitude for what’s steady.,تكتب امتنانًا لما هو ثابت.
+v2,D05_31,C,Join a community circle/activity.,تنضم لدائرة/نشاط مجتمعي.
+v2,D05_31,D,Simplify your week for balance.,تبسط أسبوعك لتحقيق التوازن.
+v2,D05_32,A,Build a clear budget.,تضع ميزانية واضحة.
+v2,D05_32,B,Create a savings buffer.,تضع هامش ادخار.
+v2,D05_32,C,Learn a practical money habit.,تتعلم عادة مالية عملية.
+v2,D05_32,D,Choose the safest spending plan.,تختار خطة إنفاق أكثر أمانًا.
+v2,D05_33,A,Ask for recognition politely.,تطلب التقدير بأدب.
+v2,D05_33,B,Share outcomes in a short message.,تشارك النتائج برسالة قصيرة.
+v2,D05_33,C,Stand for fairness in credit.,تدافع عن عدالة الفضل.
+v2,D05_33,D,Focus on the next achievement.,تركز على الإنجاز التالي.
+v2,D05_34,A,Go and treat it as adventure.,تذهب وتعتبرها مغامرة.
+v2,D05_34,B,Check safety and start small.,تفحص السلامة وتبدأ صغيرًا.
+v2,D05_34,C,Bring a friend for support.,تصطحب صديقًا للدعم.
+v2,D05_34,D,Choose freely what fits you now.,تختار بحرية ما يناسبك الآن.
+v2,D05_35,A,Add an artistic touch.,تضيف لمسة فنية.
+v2,D05_35,B,Make it fun with small details.,تجعلها ممتعة بتفاصيل صغيرة.
+v2,D05_35,C,Declutter for a calm balance.,تقلل الفوضى لتوازن هادئ.
+v2,D05_35,D,Set a small goal to refresh the space.,تضع هدفًا صغيرًا لتجديد المكان.
+v2,D05_36,A,Do something purely fun.,تفعل شيئًا للمرح فقط.
+v2,D05_36,B,Take a short adventure break.,تأخذ استراحة مغامرة قصيرة.
+v2,D05_36,C,Learn something interesting.,تتعلم شيئًا ممتعًا ومفيدًا.
+v2,D05_36,D,Do a health activity.,تفعل نشاطًا صحيًا.
+v2,D05_37,A,Coordinate and join the community effort.,تنسق وتنضم للجهد المجتمعي.
+v2,D05_37,B,Invite others to help.,تدعو الآخرين للمساعدة.
+v2,D05_37,C,Ensure fairness in responsibilities.,تضمن العدالة في المسؤوليات.
+v2,D05_37,D,Thank helpers openly.,تشكر المساعدين علنًا.
+v2,D05_38,A,Set a bigger ambition target.,تضع هدفًا طموحًا أكبر.
+v2,D05_38,B,Pick one measurable achievement milestone.,تختار محطة إنجاز قابلة للقياس.
+v2,D05_38,C,Learn the key skill to level up.,تتعلم مهارة أساسية للتقدم.
+v2,D05_38,D,Protect balance with smart pacing.,تحمي التوازن بوتيرة ذكية.
+v2,D05_39,A,Receive it with gratitude.,تستقبل ذلك بامتنان.
+v2,D05_39,B,Share credit with love.,تشارك الفضل بمحبة.
+v2,D05_39,C,Enjoy the joyful moment.,تستمتع باللحظة السعيدة.
+v2,D05_39,D,Use it to motivate more achievement.,تستخدمه لتحفيز مزيد من الإنجاز.
+v2,D05_40,A,Set strict stop times.,تضع أوقات توقف صارمة.
+v2,D05_40,B,Protect health with rest.,تحمي صحتك بالراحة.
+v2,D05_40,C,Choose freedom by dropping one task.,تختار الحرية بإسقاط مهمة واحدة.
+v2,D05_40,D,Rebalance priorities weekly.,تعيد توازن الأولويات أسبوعيًا.
+v2,D05_41,A,Invite them for a friendly coffee.,تدعوه لقهوة ودية.
+v2,D05_41,B,Send a caring message.,ترسل رسالة اهتمام.
+v2,D05_41,C,Connect them to a group/community.,تربطه بمجموعة/مجتمع.
+v2,D05_41,D,Share a light fun moment.,تشارك لحظة مرحة وخفيفة.
+v2,D05_42,A,Focus on milestones and execute.,تركز على المراحل وتنفّذ.
+v2,D05_42,B,Ask for help and coordinate support.,تطلب المساعدة وتنسق الدعم.
+v2,D05_42,C,Protect balance with planned breaks.,تحمي التوازن باستراحات مخططة.
+v2,D05_42,D,Take a bold step and start now.,تبدأ الآن بخطوة جريئة.
+v2,D05_43,A,Add a small daily joy ritual.,تضيف طقس فرح يومي صغير.
+v2,D05_43,B,Do a fun activity with someone.,تفعل نشاطًا ممتعًا مع شخص.
+v2,D05_43,C,Practice gratitude for small wins.,تمارس الامتنان للنجاحات الصغيرة.
+v2,D05_43,D,Show love through a small gesture.,تُظهر المحبة بلفتة صغيرة.
+v2,D05_44,A,Choose what aligns with meaning.,تختار ما ينسجم مع المعنى.
+v2,D05_44,B,Choose what protects your freedom.,تختار ما يحمي حريتك.
+v2,D05_44,C,Choose the safest path now.,تختار المسار الأكثر أمانًا الآن.
+v2,D05_44,D,Choose what supports ambition.,تختار ما يدعم الطموح.
+v2,D05_45,A,Take safety-first action now.,تتخذ إجراء سلامة فورًا.
+v2,D05_45,B,Set a clear rule to prevent repeat.,تضع قاعدة واضحة لمنع التكرار.
+v2,D05_45,C,Learn the correct procedure and share it.,تتعلم الإجراء الصحيح وتشاركه.
+v2,D05_45,D,Speak up firmly to stop the risk.,تتحدث بحزم لإيقاف الخطر.
+v2,D05_46,A,Start with one health habit.,تبدأ بعادة صحية واحدة.
+v2,D05_46,B,Make it fun so you continue.,تجعلها ممتعة لتستمر.
+v2,D05_46,C,Balance effort with rest.,توازن بين الجهد والراحة.
+v2,D05_46,D,Set an ambitious health goal.,تضع هدفًا صحيًا طموحًا.
+v2,D05_47,A,Protect your dignity calmly.,تحمي كرامتك بهدوء.
+v2,D05_47,B,Ask for fair respect.,تطلب احترامًا عادلًا.
+v2,D05_47,C,Respond with balanced words.,ترد بكلمات متوازنة.
+v2,D05_47,D,Ask a friend to support you.,تطلب من صديق دعمك.
+v2,D05_48,A,Speak up for justice.,تتحدث دفاعًا عن العدالة.
+v2,D05_48,B,Support the person with compassion.,تدعم الشخص برحمة.
+v2,D05_48,C,Invite the group to include everyone.,تدعو المجموعة لاحتواء الجميع.
+v2,D05_48,D,Set a clear shared rule.,تضع قاعدة مشتركة واضحة.
+v2,D06_01,A,Start a gentle conversation and listen well,تبدأ حديثًا لطيفًا وتستمع جيدًا
+v2,D06_01,B,Plan a shared activity this week,تخطط لنشاط مشترك هذا الأسبوع
+v2,D06_01,C,Give space and focus on your own balance,تعطي مساحة وتركز على توازنك
+v2,D06_01,D,Write what you need and ask clearly,تكتب ما تحتاجه وتطلبه بوضوح
+v2,D06_02,A,Ask for fair credit in private,تطلب إنصاف الفضل على انفراد
+v2,D06_02,B,Document your contribution and share it,توثق مساهمتك وتشاركها
+v2,D06_02,C,Focus on delivering the next win,تركز على تحقيق إنجاز قادم
+v2,D06_02,D,Seek visibility through a formal update,تسعى للظهور عبر تحديث رسمي
+v2,D06_03,A,Book the appointment today,تحجز الموعد اليوم
+v2,D06_03,B,Start a small daily health routine,تبدأ روتينًا صحيًا يوميًا صغيرًا
+v2,D06_03,C,Learn what the check includes and why,تتعلم ما يشمله الفحص ولماذا
+v2,D06_03,D,Ask a friend to keep you accountable,تطلب من صديق أن يساعدك على الالتزام
+v2,D06_04,A,Reach out with warmth and curiosity,تبادر بمحبة وفضول
+v2,D06_04,B,Set a boundary to reduce pressure,تضع حدًا لتقليل الضغط
+v2,D06_04,C,Invite a calm honest talk,تدعو لحديث هادئ وصادق
+v2,D06_04,D,Do something fun together soon,تفعلون شيئًا ممتعًا قريبًا
+v2,D06_05,A,Accept for the adventure and growth,تقبل من أجل المغامرة والنمو
+v2,D06_05,B,Negotiate terms to protect your freedom,تتفاوض على الشروط لحماية حريتك
+v2,D06_05,C,Choose the option that keeps you safest,تختار الخيار الأكثر أمانًا لك
+v2,D06_05,D,Set an ambition plan and milestones,تضع خطة طموح ومحطات
+v2,D06_06,A,Build a clear budget and track it,تضع ميزانية واضحة وتتابعها
+v2,D06_06,B,Create a safety buffer fund,تؤسس صندوق أمان
+v2,D06_06,C,Learn one money habit and apply it,تتعلم عادة مالية وتطبقها
+v2,D06_06,D,Rebalance lifestyle to reduce stress spending,تعيد توازن نمط الحياة لتقليل إنفاق التوتر
+v2,D06_07,A,Spend time in quiet reflection,تقضي وقتًا في تأمل هادئ
+v2,D06_07,B,Join a community activity this week,تنضم لنشاط مجتمعي هذا الأسبوع
+v2,D06_07,C,Write gratitude for what is steady,تكتب امتنانًا لما هو ثابت
+v2,D06_07,D,Set one meaningful goal and start,تضع هدفًا ذا معنى وتبدأ
+v2,D06_08,A,State your boundary firmly and respectfully,توضح حدك بحزم واحترام
+v2,D06_08,B,Choose a fair compromise for both sides,تختار حلًا وسطًا عادلًا للطرفين
+v2,D06_08,C,Help in a practical way without overgiving,تساعد عمليًا دون إفراط
+v2,D06_08,D,Protect your balance by limiting access,تحمي توازنك بتقليل الإتاحة
+v2,D06_09,A,Report it through the proper channel,تبلّغ عبر القناة المناسبة
+v2,D06_09,B,Coordinate neighbors to act together,تنسق مع الجيران للتحرك معًا
+v2,D06_09,C,Fix what you can immediately,تعالج ما تستطيع فورًا
+v2,D06_09,D,Learn the right safety procedure and share,تتعلم الإجراء الصحيح وتشاركه
+v2,D06_10,A,Design a balanced weekly rhythm,تصمم إيقاعًا أسبوعيًا متوازنًا
+v2,D06_10,B,Choose one achievement priority per day,تختار أولوية إنجاز واحدة يوميًا
+v2,D06_10,C,Start with a small health anchor habit,تبدأ بعادة صحية ثابتة صغيرة
+v2,D06_10,D,Make it enjoyable with a fun reward,تجعلها ممتعة بمكافأة مرحة
+v2,D06_11,A,Refuse politely and protect integrity,ترفض بأدب وتحمي النزاهة
+v2,D06_11,B,Offer to help fix it transparently,تعرض المساعدة لإصلاحه بشفافية
+v2,D06_11,C,Escalate through a fair process,ترفع الأمر عبر إجراء عادل
+v2,D06_11,D,Teach them how to avoid repeating it,تعلمهم كيف يتجنبون تكراره
+v2,D06_12,A,Speak up with confidence in the room,تتكلم بثقة في الاجتماع
+v2,D06_12,B,Ask for recognition of your input,تطلب تقدير مساهمتك
+v2,D06_12,C,Build an ally through friendship,تبني حليفًا عبر الصداقة
+v2,D06_12,D,Share a concise written update,تشارك تحديثًا مكتوبًا مختصرًا
+v2,D06_13,A,Declutter one area for calm balance,ترتب جزءًا واحدًا لتوازن هادئ
+v2,D06_13,B,Add an artistic touch to the space,تضيف لمسة فنية للمكان
+v2,D06_13,C,Create a cozy corner for comfort,تصنع زاوية مريحة للدفء
+v2,D06_13,D,Set a small refresh goal and finish it,تضع هدفًا صغيرًا للتجديد وتنهيه
+v2,D06_14,A,Offer help quietly and kindly,تعرض المساعدة بهدوء ولطف
+v2,D06_14,B,Invite them to join a community group,تدعوه للانضمام لمجموعة مجتمعية
+v2,D06_14,C,Start a friendly conversation first,تبدأ حديثًا وديًا أولًا
+v2,D06_14,D,Share practical resources they can use,تشارك موارد عملية يمكنه استخدامها
+v2,D06_15,A,Commit to a learning plan for 30 days,تلتزم بخطة تعلم لمدة 30 يومًا
+v2,D06_15,B,Set a measurable achievement milestone,تضع محطة إنجاز قابلة للقياس
+v2,D06_15,C,Find a mentor or study partner,تجد مرشدًا أو شريك دراسة
+v2,D06_15,D,Link it to your deeper purpose,تربطها بهدفك الأعمق
+v2,D06_16,A,Reject the shortcut and choose fairness,ترفض الاختصار وتختار العدل
+v2,D06_16,B,Hold your dignity and say no,تحفظ كرامتك وتقول لا
+v2,D06_16,C,Ask for a clear rule and follow it,تطلب قاعدة واضحة وتلتزم بها
+v2,D06_16,D,Take a brave stand even if unpopular,تتخذ موقفًا شجاعًا ولو كان غير محبوب
+v2,D06_17,A,Plan small joyful moments daily,تخطط للحظات فرح صغيرة يوميًا
+v2,D06_17,B,Do a playful activity at home,تفعل نشاطًا مرحًا في المنزل
+v2,D06_17,C,Spend time with loved ones without cost,تقضي وقتًا مع الأحبة دون كلفة
+v2,D06_17,D,Write gratitude for simple blessings,تكتب امتنانًا للنعم البسيطة
+v2,D06_18,A,Set a boundary for contact frequency,تضع حدًا لتكرار التواصل
+v2,D06_18,B,Suggest a weekly planned catch up,تقترح تواصلًا مخططًا أسبوعيًا
+v2,D06_18,C,Send a warm message then rest,ترسل رسالة محبة ثم ترتاح
+v2,D06_18,D,Invite them into a group activity,تدعوه لنشاط جماعي
+v2,D06_19,A,Respond calmly to protect your dignity,ترد بهدوء لحماية كرامتك
+v2,D06_19,B,Ask for fair feedback in private,تطلب ملاحظات منصفة على انفراد
+v2,D06_19,C,Use it to learn and improve,تستفيد للتعلم والتحسن
+v2,D06_19,D,Rebalance your emotions before replying,تعيد توازن مشاعرك قبل الرد
+v2,D06_20,A,Choose the safer option with stability,تختار الخيار الأكثر أمانًا واستقرارًا
+v2,D06_20,B,Choose freedom and a fresh start,تختار الحرية وبداية جديدة
+v2,D06_20,C,Plan finances first then decide,تخطط ماليًا أولًا ثم تقرر
+v2,D06_20,D,Take it as an adventure change,تعتبرها تغييرًا مغامرًا
+v2,D06_21,A,Set a firm boundary for your time,تضع حدًا ثابتًا لوقتك
+v2,D06_21,B,Rebuild a balanced weekly calendar,تعيد بناء جدول أسبوعي متوازن
+v2,D06_21,C,Prioritize the most meaningful yes,تعطي الأولوية لنعم الأكثر معنى
+v2,D06_21,D,Push for achievement with fewer tasks,تدفع للإنجاز بمهام أقل
+v2,D06_22,A,Set a clear ambition vision for it,تضع رؤية طموح واضحة له
+v2,D06_22,B,Start small and track achievements,تبدأ صغيرًا وتتابع الإنجازات
+v2,D06_22,C,Protect rest and health first,تحمي الراحة والصحة أولًا
+v2,D06_22,D,Make it creative and artistic,تجعل المشروع إبداعيًا وفنيًا
+v2,D06_23,A,Seek a fair agreement for everyone,تسعى لاتفاق عادل للجميع
+v2,D06_23,B,Hold space with compassion and calm,تحتوي برحمة وهدوء
+v2,D06_23,C,Set boundaries to prevent harm,تضع حدودًا لمنع الأذى
+v2,D06_23,D,Bring the family together gently,تجمع العائلة بلطف
+v2,D06_24,A,Stop it and defend dignity,توقفها وتدافع عن الكرامة
+v2,D06_24,B,Redirect to a fair principle,توجه الحديث لمبدأ العدل
+v2,D06_24,C,Move the group to healthier talk,تنقل المجموعة لحديث أ healthier
+v2,D06_24,D,Check on the person with compassion,تطمئن على الشخص برحمة
+v2,D06_25,A,Choose rest and recovery as priority,تجعل الراحة والتعافي أولوية
+v2,D06_25,B,Set a balanced pace for the week,تضع وتيرة متوازنة للأسبوع
+v2,D06_25,C,Start a gentle health routine,تبدأ روتينًا صحيًا لطيفًا
+v2,D06_25,D,Say no to protect your dignity,تقول لا لحماية كرامتك
+v2,D06_26,A,Pick one learning slot daily,تحدد وقت تعلم يومي ثابت
+v2,D06_26,B,Study with a friend for accountability,تتعلم مع صديق للالتزام
+v2,D06_26,C,Turn learning into an achievement target,تحول التعلم لهدف إنجاز
+v2,D06_26,D,Keep it fun and light to continue,تجعلها ممتعة وخفيفة للاستمرار
+v2,D06_27,A,Build a safety buffer fund,تبني صندوق أمان
+v2,D06_27,B,Create a clear budget structure,تنشئ هيكل ميزانية واضح
+v2,D06_27,C,Learn investing basics carefully,تتعلم أساسيات الاستثمار بحذر
+v2,D06_27,D,Rebalance fears with calm planning,توازن المخاوف بتخطيط هادئ
+v2,D06_28,A,Join a local community activity,تنضم لنشاط مجتمعي محلي
+v2,D06_28,B,Reach out to a friend and meet,تبادر لصديق وتلتقي به
+v2,D06_28,C,Do a spiritual reflection reset,تقوم بإعادة ضبط روحية
+v2,D06_28,D,Take a small adventure outside,تخرج لمغامرة صغيرة
+v2,D06_29,A,Ask for recognition of your contributions,تطلب الاعتراف بمساهماتك
+v2,D06_29,B,Speak up for fairness in decisions,تتكلم دفاعًا عن عدالة القرار
+v2,D06_29,C,Build influence through consistent results,تبني تأثيرًا عبر نتائج ثابتة
+v2,D06_29,D,Document and share a clear proposal,توثق وتقترح بوضوح
+v2,D06_30,A,Choose dignity and decline respectfully,تختار الكرامة وترفض باحترام
+v2,D06_30,B,Go for community reasons and support others,تذهب لأسباب مجتمعية ودعم الآخرين
+v2,D06_30,C,Protect your freedom and make your own plan,تحمي حريتك وتضع خطتك
+v2,D06_30,D,Rebalance by attending briefly then leaving,توازن بالحضور قليلًا ثم المغادرة
+v2,D06_31,A,Create one small artistic piece,تنجز قطعة فنية صغيرة
+v2,D06_31,B,Learn a new creative technique,تتعلم تقنية إبداعية جديدة
+v2,D06_31,C,Take a fun playful break to reset,تأخذ استراحة مرحة لإعادة الضبط
+v2,D06_31,D,Set a goal and finish a draft,تضع هدفًا وتنهي مسودة
+v2,D06_32,A,Rest without guilt and protect health,ترتاح دون ذنب وتحمي صحتك
+v2,D06_32,B,Plan a balanced day with both rest and work,تخطط ليوم متوازن بين الراحة والعمل
+v2,D06_32,C,Do something joyful with someone,تفعل شيئًا سعيدًا مع شخص
+v2,D06_32,D,Use the time to learn something useful,تستغل الوقت لتعلم شيء مفيد
+v2,D06_33,A,Set a clear boundary and say no,تضع حدًا واضحًا وتقول لا
+v2,D06_33,B,Offer a smaller help that is safe,تعرض مساعدة أصغر وأكثر أمانًا
+v2,D06_33,C,Decide based on finances and plan,تقرر بناءً على المال وخطة
+v2,D06_33,D,Support them emotionally with compassion,تدعمه عاطفيًا برحمة
+v2,D06_34,A,Track it like an achievement streak,تتابعها كسلسلة إنجاز
+v2,D06_34,B,Build it into a balanced routine,تجعلها ضمن روتين متوازن
+v2,D06_34,C,Make it fun with a small reward,تجعلها ممتعة بمكافأة صغيرة
+v2,D06_34,D,Do it with a friend for support,تفعلها مع صديق للدعم
+v2,D06_35,A,Take a small adventure step first,تأخذ خطوة مغامرة صغيرة أولًا
+v2,D06_35,B,Check safety risks and plan,تفحص مخاطر السلامة وتخطط
+v2,D06_35,C,Choose freedom and try it anyway,تختار الحرية وتجرب رغم ذلك
+v2,D06_35,D,Make it a structured growth goal,تجعلها هدف نمو منظم
+v2,D06_36,A,Push for better planning and safety,تدفع لتخطيط أفضل وسلامة
+v2,D06_36,B,Go for fun and accept imperfection,تذهب للمرح وتقبل عدم الكمال
+v2,D06_36,C,Set a fair plan for costs and roles,تضع خطة عادلة للتكاليف والأدوار
+v2,D06_36,D,Opt out to protect balance,تعتذر لتحمي التوازن
+v2,D06_37,A,State your expectations with dignity,توضح توقعاتك بكرامة
+v2,D06_37,B,Ask for fair treatment and consistency,تطلب معاملة عادلة واتساقًا
+v2,D06_37,C,Deliver strong results to earn recognition,تقدم نتائج قوية لتحصل على تقدير
+v2,D06_37,D,Build allies through respectful friendships,تبني حلفاء عبر صداقات محترمة
+v2,D06_38,A,Coordinate tasks and follow up weekly,تنسق المهام وتتابع أسبوعيًا
+v2,D06_38,B,Invite more people into the community effort,تدعو المزيد للجهد المجتمعي
+v2,D06_38,C,Ensure fairness in responsibilities,تضمن العدالة في المسؤوليات
+v2,D06_38,D,Thank volunteers and recognize them,تشكر المتطوعين وتقدرهم
+v2,D06_39,A,Write gratitude for the journey,تكتب امتنانًا للرحلة
+v2,D06_39,B,Reconnect with meaning through reflection,تتصل بالمعنى عبر تأمل
+v2,D06_39,C,Celebrate with friends and joy,تحتفل مع الأصدقاء وبفرح
+v2,D06_39,D,Set a new ambition horizon,تضع أفقًا طموحًا جديدًا
+v2,D06_40,A,Set strict stop times and protect balance,تضع أوقات توقف وتحمي التوازن
+v2,D06_40,B,Protect health with sleep and movement,تحمي صحتك بالنوم والحركة
+v2,D06_40,C,Negotiate workload for fairness,تتفاوض على الحمل لتحقيق عدالة
+v2,D06_40,D,Choose freedom by dropping one commitment,تختار الحرية بإسقاط التزام واحد
+v2,D06_41,A,Set a learning goal and reduce scrolling,تضع هدف تعلم وتقلل التصفح
+v2,D06_41,B,Practice gratitude for your real progress,تمارس الامتنان لتقدمك الحقيقي
+v2,D06_41,C,Protect dignity by limiting comparison triggers,تحمي كرامتك بتقليل محفزات المقارنة
+v2,D06_41,D,Do something fun offline with friends,تفعل شيئًا ممتعًا خارج الإنترنت مع الأصدقاء
+v2,D06_42,A,Invite them into a friendly chat,تدعوه لحديث ودي
+v2,D06_42,B,Include them in a community task,تشركه في مهمة مجتمعية
+v2,D06_42,C,Support them with compassion quietly,تدعمه برحمة بهدوء
+v2,D06_42,D,Share resources to help them learn faster,تشارك موارد لتسريع تعلمه
+v2,D06_43,A,Apologize with love and clarity,تعتذر بمحبة ووضوح
+v2,D06_43,B,Protect your dignity and explain your side,تحمي كرامتك وتشرح موقفك
+v2,D06_43,C,Rebalance the relationship with boundaries,تعيد توازن العلاقة بحدود
+v2,D06_43,D,Do a practical repair action,تقوم بخطوة عملية للإصلاح
+v2,D06_44,A,Choose the safest path for stability,تختار المسار الآمن للاستقرار
+v2,D06_44,B,Choose the bold path for growth,تختار المسار الجريء للنمو
+v2,D06_44,C,Choose freedom and design your own route,تختار الحرية وتصمم طريقك
+v2,D06_44,D,Choose balance with a phased approach,تختار التوازن بخطوات تدريجية
+v2,D06_45,A,Fix it immediately and reduce risk,تعالجه فورًا وتقلل الخطر
+v2,D06_45,B,Set a clear rule and enforce it,تضع قاعدة واضحة وتطبقها
+v2,D06_45,C,Learn the right procedure and share it,تتعلم الإجراء الصحيح وتشاركه
+v2,D06_45,D,Escalate to protect others fairly,ترفع الأمر لحماية الآخرين بعدل
+v2,D06_46,A,Rebuild a balanced schedule first,تعيد بناء جدول متوازن أولًا
+v2,D06_46,B,Set one achievement target only,تضع هدف إنجاز واحد فقط
+v2,D06_46,C,Add a daily joy micro break,تضيف استراحة فرح صغيرة يوميًا
+v2,D06_46,D,Reset through short reflection and meaning,تعيد الضبط بتأمل قصير ومعنى
+v2,D06_47,A,Receive it with gratitude,تستقبله بامتنان
+v2,D06_47,B,Share credit with love,تشارك الفضل بمحبة
+v2,D06_47,C,Use it to fuel ambition,تستخدمه لدفع الطموح
+v2,D06_47,D,Keep dignity and stay humble,تحافظ على كرامتك وتتواضع
+v2,D06_48,A,End with a spiritual reset routine,تنهي بروتين إعادة ضبط روحي
+v2,D06_48,B,Write a short gratitude note then sleep,تكتب امتنانًا قصيرًا ثم تنام
+v2,D06_48,C,Call a friend for a brief check in,تتصل بصديق للاطمئنان سريعًا
+v2,D06_48,D,Protect balance with a strict phone cutoff,تحمي التوازن بقطع الهاتف بوقت صارم
+v2,D07_01,A,Plan a weekly ritual together,تخططون لطقس أسبوعي معًا
+v2,D07_01,B,Offer one caring gesture daily,تقدم لفتة اهتمام يومية
+v2,D07_01,C,Set a clear boundary for your time,تضع حدًا واضحًا لوقتك
+v2,D07_01,D,Create a joyful moment at home,تصنع لحظة فرح في البيت
+v2,D07_02,A,Ask for recognition in writing,تطلب تقديرًا برسالة مكتوبة
+v2,D07_02,B,Share your results with the team,تشارك نتائجك مع الفريق
+v2,D07_02,C,Use it to fuel your ambition plan,تستخدمه لدفع خطة طموحك
+v2,D07_02,D,Stay grateful and keep improving,تبقى ممتنًا وتواصل التحسن
+v2,D07_03,A,Book a check up and commit,تحجز فحصًا وتلتزم
+v2,D07_03,B,Start a simple daily health habit,تبدأ عادة صحية يومية بسيطة
+v2,D07_03,C,Rebalance sleep and workload,تعيد توازن النوم والضغط
+v2,D07_03,D,Make movement fun with music,تجعل الحركة ممتعة مع الموسيقى
+v2,D07_04,A,Invite an honest calm talk,تدعو لحديث صريح وهادئ
+v2,D07_04,B,Send a warm message and patience,ترسل رسالة محبة وتصبر
+v2,D07_04,C,Give space and protect your balance,تعطي مساحة وتحمي توازنك
+v2,D07_04,D,Plan a friendly activity together,تخططون لنشاط ودي معًا
+v2,D07_05,A,Take it for the adventure,تقبلها من أجل المغامرة
+v2,D07_05,B,Negotiate terms to keep freedom,تتفاوض على الشروط لحفظ الحرية
+v2,D07_05,C,Choose the safest option for now,تختار الخيار الأكثر أمانًا الآن
+v2,D07_05,D,Set clear achievement milestones,تضع محطات إنجاز واضحة
+v2,D07_06,A,Create a budget and track leaks,تضع ميزانية وتتابع التسربات
+v2,D07_06,B,Build a small safety buffer,تبني هامش أمان صغير
+v2,D07_06,C,Learn one money rule and apply,تتعلم قاعدة مالية وتطبقها
+v2,D07_06,D,Replace spending with free fun,تستبدل الإنفاق بمرح مجاني
+v2,D07_07,A,Do a short spiritual reflection,تقوم بتأمل روحي قصير
+v2,D07_07,B,Write gratitude for one steady thing,تكتب امتنانًا لشيء ثابت
+v2,D07_07,C,Join a community circle this week,تنضم لدائرة مجتمعية هذا الأسبوع
+v2,D07_07,D,Study a topic that gives meaning,تدرس موضوعًا يمنحك معنى
+v2,D07_08,A,State your boundary with dignity,توضح حدك بكرامة
+v2,D07_08,B,Offer help in a limited way,تقدم مساعدة بحدود
+v2,D07_08,C,Choose a fair compromise time,تختار وقتًا وسطًا عادلًا
+v2,D07_08,D,Protect your freedom by declining,تحمي حريتك بالاعتذار
+v2,D07_09,A,Fix the hazard immediately,تعالج الخطر فورًا
+v2,D07_09,B,Report it through the right channel,تبلّغ عبر القناة الصحيحة
+v2,D07_09,C,Coordinate neighbors to act,تنسق مع الجيران للتحرك
+v2,D07_09,D,Learn the safe procedure and share,تتعلم الإجراء الآمن وتشاركه
+v2,D07_10,A,Design a balanced weekly rhythm,تصمم إيقاعًا أسبوعيًا متوازنًا
+v2,D07_10,B,Pick one daily achievement priority,تختار أولوية إنجاز يومية
+v2,D07_10,C,Set a learning slot each day,تحدد وقت تعلم يومي
+v2,D07_10,D,Add a joyful reward after tasks,تضيف مكافأة فرح بعد المهام
+v2,D07_11,A,Say no and keep dignity,تقول لا وتحافظ على الكرامة
+v2,D07_11,B,Ask for a clear rule to follow,تطلب قاعدة واضحة للالتزام
+v2,D07_11,C,Explain the fairness impact calmly,تشرح أثر العدل بهدوء
+v2,D07_11,D,Offer a safer alternative process,تعرض بديلًا أكثر أمانًا
+v2,D07_12,A,Speak up confidently in the moment,تتكلم بثقة في اللحظة
+v2,D07_12,B,Ask to be included by name,تطلب إشراكك بالاسم
+v2,D07_12,C,Build allies through friendships,تبني حلفاء عبر الصداقات
+v2,D07_12,D,Share a concise written update,تشارك تحديثًا مكتوبًا مختصرًا
+v2,D07_13,A,Declutter one zone for calm,ترتب منطقة واحدة للهدوء
+v2,D07_13,B,Add an artistic touch,تضيف لمسة فنية
+v2,D07_13,C,Create a warm comfort corner,تصنع زاوية دفء مريحة
+v2,D07_13,D,Set a small refresh goal,تضع هدف تجديد صغير
+v2,D07_14,A,Start a friendly hello and check in,تبدأ بتحية ودية وتطمئن
+v2,D07_14,B,Invite them to a community event,تدعوه لفعالية مجتمعية
+v2,D07_14,C,Offer practical help quietly,تعرض مساعدة عملية بهدوء
+v2,D07_14,D,Share a fun local tip,تشارك نصيحة محلية ممتعة
+v2,D07_15,A,Commit to a learning plan,تلتزم بخطة تعلم
+v2,D07_15,B,Set measurable progress goals,تضع أهداف تقدم قابلة للقياس
+v2,D07_15,C,Find a study partner,تجد شريك دراسة
+v2,D07_15,D,Link it to deeper purpose,تربطها بهدف أعمق
+v2,D07_16,A,Speak up for justice,تتحدث دفاعًا عن العدالة
+v2,D07_16,B,Support the person with love,تدعم الشخص بمحبة
+v2,D07_16,C,Document facts and process,توثق الحقائق والإجراء
+v2,D07_16,D,Bring the group to a fair rule,تقود المجموعة لقاعدة عادلة
+v2,D07_17,A,Plan small joy rituals,تخطط لطقوس فرح صغيرة
+v2,D07_17,B,Do a playful activity offline,تفعل نشاطًا مرحًا دون شاشة
+v2,D07_17,C,Meet loved ones for a walk,تلتقي الأحبة في مشي
+v2,D07_17,D,Try a small home adventure,تجرب مغامرة منزلية صغيرة
+v2,D07_18,A,Set a boundary for voice notes,تضع حدًا للرسائل الصوتية
+v2,D07_18,B,Suggest weekly catch ups,تقترح تواصلًا أسبوعيًا
+v2,D07_18,C,Reply with a short loving message,ترد برسالة محبة قصيرة
+v2,D07_18,D,Invite them to a group activity,تدعوه لنشاط جماعي
+v2,D07_19,A,Ask for fair feedback privately,تطلب ملاحظة منصفة على انفراد
+v2,D07_19,B,Learn one improvement and apply,تتعلم تحسينًا وتطبقه
+v2,D07_19,C,Protect your dignity and respond calmly,تحمي كرامتك وترد بهدوء
+v2,D07_19,D,Reset emotions then continue,تعيد ضبط مشاعرك ثم تواصل
+v2,D07_20,A,Check finances then decide,تفحص المال ثم تقرر
+v2,D07_20,B,Choose the safer option,تختار الخيار الأكثر أمانًا
+v2,D07_20,C,Delay to protect balance,تؤجل لحماية التوازن
+v2,D07_20,D,Buy it as a reward for achievement,تشتريه كمكافأة إنجاز
+v2,D07_21,A,Drop one commitment for freedom,تسقط التزامًا لاستعادة الحرية
+v2,D07_21,B,Rebuild a balanced calendar,تعيد بناء جدول متوازن
+v2,D07_21,C,Focus on one meaningful priority,تركز على أولوية ذات معنى
+v2,D07_21,D,Say no with dignity,تقول لا بكرامة
+v2,D07_22,A,Set an ambition vision,تضع رؤية طموح
+v2,D07_22,B,Start small and track achievements,تبدأ صغيرًا وتتابع الإنجازات
+v2,D07_22,C,Ask a friend to join,تطلب من صديق أن يشارك
+v2,D07_22,D,Make it creative and artistic,تجعلها إبداعية وفنية
+v2,D07_23,A,Seek a fair agreement,تسعى لاتفاق عادل
+v2,D07_23,B,Hold both sides with compassion,تحتوي الطرفين برحمة
+v2,D07_23,C,Protect safety by pausing conflict,تحمي السلامة بإيقاف التصعيد
+v2,D07_23,D,Bring family together to talk,تجمع العائلة للحوار
+v2,D07_24,A,Stop it and protect dignity,توقفها وتحمي الكرامة
+v2,D07_24,B,Redirect to a justice principle,توجهها لمبدأ عدل
+v2,D07_24,C,Check on the person with care,تطمئن على الشخص باهتمام
+v2,D07_24,D,Change the topic to something fun,تغير الموضوع لشيء ممتع
+v2,D07_25,A,Choose rest for health,تختار الراحة للصحة
+v2,D07_25,B,Set a balanced pace,تضع وتيرة متوازنة
+v2,D07_25,C,Push for achievement anyway,تدفع للإنجاز رغم ذلك
+v2,D07_25,D,Ask for recognition of your load,تطلب تقدير حملك
+v2,D07_26,A,Pick one daily learning slot,تحدد وقت تعلم يومي
+v2,D07_26,B,Study with a friend,تدرس مع صديق
+v2,D07_26,C,Turn it into a goal with milestones,تحولها لهدف بمحطات
+v2,D07_26,D,Keep it fun to continue,تجعلها ممتعة للاستمرار
+v2,D07_27,A,Build a safety buffer,تبني هامش أمان
+v2,D07_27,B,Create a strict budget plan,تنشئ خطة ميزانية صارمة
+v2,D07_27,C,Learn a careful investment basic,تتعلم أساسًا استثماريًا بحذر
+v2,D07_27,D,Practice gratitude for stability,تمارس الامتنان للاستقرار
+v2,D07_28,A,Join a local community effort,تنضم لجهد مجتمعي محلي
+v2,D07_28,B,Invite a friend to attend with you,تدعو صديقًا ليذهب معك
+v2,D07_28,C,Volunteer for a shared task,تتطوع لمهمة مشتركة
+v2,D07_28,D,Host a small gathering at home,تستضيف لقاءً صغيرًا في البيت
+v2,D07_29,A,Speak up for justice,تتحدث دفاعًا عن العدالة
+v2,D07_29,B,Propose a disciplined process,تقترح إجراء منضبطًا
+v2,D07_29,C,Build influence through results,تبني تأثيرًا عبر النتائج
+v2,D07_29,D,Protect your dignity by naming the issue,تحمي كرامتك بتسمية المشكلة
+v2,D07_30,A,Decline with dignity,تعتذر بكرامة
+v2,D07_30,B,Attend briefly for community,تحضر قليلًا لأجل المجتمع
+v2,D07_30,C,Choose freedom and make your own plan,تختار الحرية وتضع خطتك
+v2,D07_30,D,Go for joy then leave early,تذهب للفرح ثم تغادر مبكرًا
+v2,D07_31,A,Create a small art piece,تنجز عملًا فنيًا صغيرًا
+v2,D07_31,B,Learn a creative technique,تتعلم تقنية إبداعية
+v2,D07_31,C,Share it with friends,تشاركه مع الأصدقاء
+v2,D07_31,D,Set a goal and finish a draft,تضع هدفًا وتنهي مسودة
+v2,D07_32,A,Rest and protect health,ترتاح وتحمي صحتك
+v2,D07_32,B,Plan a balanced day,تخطط ليوم متوازن
+v2,D07_32,C,Do something joyful outside,تفعل شيئًا سعيدًا خارجًا
+v2,D07_32,D,Study something useful,تدرس شيئًا مفيدًا
+v2,D07_33,A,Say no to protect freedom,تقول لا لحماية الحرية
+v2,D07_33,B,Offer smaller help that is safe,تعرض مساعدة أصغر وآمنة
+v2,D07_33,C,Decide by finances and plan,تقرر وفق المال والخطة
+v2,D07_33,D,Support with compassion not money,تدعم برحمة دون مال
+v2,D07_34,A,Track it as an achievement streak,تتابعها كسلسلة إنجاز
+v2,D07_34,B,Build it into your balance routine,تجعلها ضمن روتين التوازن
+v2,D07_34,C,Make it fun with a reward,تجعلها ممتعة بمكافأة
+v2,D07_34,D,Do it with a friend,تفعلها مع صديق
+v2,D07_35,A,Take a small adventure step,تأخذ خطوة مغامرة صغيرة
+v2,D07_35,B,Check safety and plan carefully,تفحص السلامة وتخطط بحذر
+v2,D07_35,C,Choose freedom and act,تختار الحرية وتتحرك
+v2,D07_35,D,Set an ambition plan for growth,تضع خطة طموح للنمو
+v2,D07_36,A,Ask to clarify costs and roles,تطلب توضيح التكاليف والأدوار
+v2,D07_36,B,Go for fun and adapt,تذهب للمرح وتتأقلم
+v2,D07_36,C,Set a fair plan for everyone,تضع خطة عادلة للجميع
+v2,D07_36,D,Opt out to keep balance,تعتذر لتحافظ على التوازن
+v2,D07_37,A,State expectations with dignity,توضح توقعاتك بكرامة
+v2,D07_37,B,Ask for fair treatment,تطلب معاملة عادلة
+v2,D07_37,C,Deliver strong results for recognition,تقدم نتائج قوية للتقدير
+v2,D07_37,D,Build allies through friendship,تبني حلفاء عبر الصداقة
+v2,D07_38,A,Coordinate tasks and follow up,تنسق المهام وتتابع
+v2,D07_38,B,Invite more people to join,تدعو مزيدًا للانضمام
+v2,D07_38,C,Set a disciplined schedule,تضع جدولًا منضبطًا
+v2,D07_38,D,Thank helpers publicly,تشكر المساعدين علنًا
+v2,D07_39,A,Reconnect with meaning and purpose,تعود للمعنى والهدف
+v2,D07_39,B,Write gratitude for the journey,تكتب امتنانًا للرحلة
+v2,D07_39,C,Celebrate with friends and joy,تحتفل مع الأصدقاء وبفرح
+v2,D07_39,D,Set a new ambition horizon,تضع أفقًا طموحًا جديدًا
+v2,D07_40,A,Set strict stop times,تضع أوقات توقف صارمة
+v2,D07_40,B,Protect health with sleep,تحمي الصحة بالنوم
+v2,D07_40,C,Choose freedom by dropping one task,تختار الحرية بإسقاط مهمة
+v2,D07_40,D,Plan a balanced weekly rhythm,تخطط لإيقاع أسبوعي متوازن
+v2,D07_41,A,Set a learning goal and reduce scrolling,تضع هدف تعلم وتقلل التصفح
+v2,D07_41,B,Practice gratitude for your progress,تمارس الامتنان لتقدمك
+v2,D07_41,C,Protect dignity by limiting triggers,تحمي كرامتك بتقليل المحفزات
+v2,D07_41,D,Do a fun offline activity,تفعل نشاطًا ممتعًا دون إنترنت
+v2,D07_42,A,Invite them for a friendly chat,تدعوه لحديث ودي
+v2,D07_42,B,Include them in a community task,تشركه في مهمة مجتمعية
+v2,D07_42,C,Support them with care,تدعمه باهتمام
+v2,D07_42,D,Share learning resources,تشاركه موارد تعلم
+v2,D07_43,A,Apologize with love and clarity,تعتذر بمحبة ووضوح
+v2,D07_43,B,Do a practical repair action,تقوم بخطوة إصلاح عملية
+v2,D07_43,C,Set a boundary to rebalance,تضع حدًا لإعادة التوازن
+v2,D07_43,D,Plan quality time together,تخطط لوقت نوعي معًا
+v2,D07_44,A,Choose safety and stability,تختار الأمان والاستقرار
+v2,D07_44,B,Choose growth and challenge,تختار النمو والتحدي
+v2,D07_44,C,Choose freedom and your own route,تختار الحرية وطريقك
+v2,D07_44,D,Choose balance with gradual steps,تختار التوازن بخطوات تدريجية
+v2,D07_45,A,Fix it now to reduce risk,تعالجه الآن لتقليل الخطر
+v2,D07_45,B,Set a rule and enforce it,تضع قاعدة وتطبقها
+v2,D07_45,C,Learn the right procedure,تتعلم الإجراء الصحيح
+v2,D07_45,D,Raise it through fair channels,ترفعه عبر قنوات عادلة
+v2,D07_46,A,Rebuild balance before pushing,تعيد التوازن قبل الضغط
+v2,D07_46,B,Set one achievement target only,تضع هدف إنجاز واحد فقط
+v2,D07_46,C,Add a daily joy micro break,تضيف استراحة فرح يومية
+v2,D07_46,D,Protect freedom by reducing demands,تحمي الحرية بتقليل المطالب
+v2,D07_47,A,Receive it with gratitude,تستقبله بامتنان
+v2,D07_47,B,Share credit with love,تشارك الفضل بمحبة
+v2,D07_47,C,Use it to aim higher,تستخدمه لرفع الطموح
+v2,D07_47,D,Ask the team to be recognized too,تطلب تقدير الفريق أيضًا
+v2,D07_48,A,End with a spiritual reset,تنهي بإعادة ضبط روحية
+v2,D07_48,B,Write gratitude then sleep,تكتب امتنانًا ثم تنام
+v2,D07_48,C,Call a friend briefly,تتصل بصديق قليلًا
+v2,D07_48,D,Set a strict phone cutoff,تضع قطعًا صارمًا للهاتف
+v2,D08_01,A,Offer warm words and steady presence,تقدم كلمات دافئة وحضورًا ثابتًا
+v2,D08_01,B,Plan a shared evening this week,تخطط لمساء مشترك هذا الأسبوع
+v2,D08_01,C,Ask for space then return later,تطلب مساحة ثم تعود لاحقًا
+v2,D08_01,D,Write what you need and speak clearly,تكتب ما تحتاجه وتتكلم بوضوح
+v2,D08_02,A,Invite a sincere talk soon,تدعو لحديث صادق قريبًا
+v2,D08_02,B,Send a caring message now,ترسل رسالة اهتمام الآن
+v2,D08_02,C,Plan a fun meet up together,تخططون للقاء ممتع معًا
+v2,D08_02,D,Set a boundary and protect your rhythm,تضع حدًا وتحمي إيقاعك
+v2,D08_03,A,State your limit with respect,توضح حدك باحترام
+v2,D08_03,B,Offer help in a practical way,تقدم مساعدة بطريقة عملية
+v2,D08_03,C,Choose a fair compromise time,تختار وقتًا وسطًا عادلًا
+v2,D08_03,D,Decline to protect your independence,تعتذر لحماية استقلالك
+v2,D08_04,A,Follow the proper steps with discipline,تلتزم بالخطوات الصحيحة بانضباط
+v2,D08_04,B,Check safety and slow the pace,تتحقق من السلامة وتبطئ الوتيرة
+v2,D08_04,C,Speak up and refuse pressure,تتحدث وترفض الضغط
+v2,D08_04,D,Propose a balanced timeline,تقترح جدولًا متوازنًا
+v2,D08_05,A,Set a strict sleep routine,تضع روتين نوم صارم
+v2,D08_05,B,Add a simple health habit,تضيف عادة صحية بسيطة
+v2,D08_05,C,Drop one late commitment,تسقط التزامًا متأخرًا واحدًا
+v2,D08_05,D,Do a calming evening reset,تقوم بإعادة ضبط مسائية هادئة
+v2,D08_06,A,Plan a small new adventure,تخطط لمغامرة صغيرة جديدة
+v2,D08_06,B,Add a playful fun activity,تضيف نشاطًا مرحًا
+v2,D08_06,C,Start learning something fresh,تبدأ تعلم شيء جديد
+v2,D08_06,D,Set an ambitious goal for the month,تضع هدفًا طموحًا للشهر
+v2,D08_07,A,Ask for clear expectations in writing,تطلب توقعات واضحة كتابيًا
+v2,D08_07,B,Negotiate scope to keep freedom,تتفاوض على النطاق لحفظ الحرية
+v2,D08_07,C,Accept and focus on achievement,تقبل وتركز على الإنجاز
+v2,D08_07,D,Protect balance by limiting overload,تحمي التوازن بتقليل الحمل
+v2,D08_08,A,Name the line calmly and protect dignity,تسمي الحد بهدوء وتحمي الكرامة
+v2,D08_08,B,Ask for respectful tone for everyone,تطلب نبرة محترمة للجميع
+v2,D08_08,C,Turn it into a light joke and move on,تحولها لمزحة خفيفة وتمضي
+v2,D08_08,D,Step away to keep your calm,تبتعد لتحافظ على هدوئك
+v2,D08_09,A,Speak up for justice in the moment,تتحدث دفاعًا عن العدالة في اللحظة
+v2,D08_09,B,Support the person with care,تدعم الشخص باهتمام
+v2,D08_09,C,Suggest a clear fair rule,تقترح قاعدة عادلة وواضحة
+v2,D08_09,D,Bring the group toward inclusion,توجه المجموعة نحو الاحتواء
+v2,D08_10,A,Help briefly then pause,تساعد قليلًا ثم تتوقف
+v2,D08_10,B,Invite others to share the load,تدعو آخرين لتقاسم الحمل
+v2,D08_10,C,Protect your health and say no,تحمي صحتك وتقول لا
+v2,D08_10,D,Offer a safe alternative plan,تقدم خطة بديلة آمنة
+v2,D08_11,A,Build a clear budget plan,تضع خطة ميزانية واضحة
+v2,D08_11,B,Create a safety buffer fund,تنشئ صندوق أمان
+v2,D08_11,C,Learn one money habit and apply,تتعلم عادة مالية وتطبقها
+v2,D08_11,D,Replace spending with free joy,تستبدل الإنفاق بفرح مجاني
+v2,D08_12,A,Receive it with gratitude,تستقبله بامتنان
+v2,D08_12,B,Share credit with the team,تشارك الفضل مع الفريق
+v2,D08_12,C,Use it to aim higher,تستخدمه لرفع طموحك
+v2,D08_12,D,Ask for fair ongoing recognition,تطلب تقديرًا مستمرًا بإنصاف
+v2,D08_13,A,Commit to a learning plan,تلتزم بخطة تعلم
+v2,D08_13,B,Set measurable milestones,تضع محطات قابلة للقياس
+v2,D08_13,C,Find a study partner,تجد شريك دراسة
+v2,D08_13,D,Link it to deeper meaning,تربطها بمعنى أعمق
+v2,D08_14,A,Do a short inner reflection,تقوم بتأمل داخلي قصير
+v2,D08_14,B,Join a community activity,تنضم لنشاط مجتمعي
+v2,D08_14,C,Write gratitude for what is steady,تكتب امتنانًا لما هو ثابت
+v2,D08_14,D,Choose a new purpose driven goal,تختار هدفًا جديدًا مرتبطًا بالمعنى
+v2,D08_15,A,Say yes for the adventure,تقول نعم من أجل المغامرة
+v2,D08_15,B,Go if it stays safe and clear,تذهب إن كان آمنًا وواضحًا
+v2,D08_15,C,Invite another friend to join,تدعو صديقًا آخر للانضمام
+v2,D08_15,D,Choose freely based on your energy,تختار بحرية حسب طاقتك
+v2,D08_16,A,Decide today and move forward,تقرر اليوم وتمضي
+v2,D08_16,B,Make a list and choose the safest,تضع قائمة وتختار الأكثر أمانًا
+v2,D08_16,C,Ask someone wise for input,تطلب رأيًا حكيمًا من شخص
+v2,D08_16,D,Set a deadline then rebalance,تضع موعدًا نهائيًا ثم تعيد التوازن
+v2,D08_17,A,Declutter one area for calm,ترتب منطقة واحدة للهدوء
+v2,D08_17,B,Add an artistic touch,تضيف لمسة فنية
+v2,D08_17,C,Finish one small home task,تنهي مهمة منزلية صغيرة
+v2,D08_17,D,Create a warm comfort corner,تصنع زاوية مريحة دافئة
+v2,D08_18,A,Plan small joy rituals daily,تخطط لطقوس فرح يومية صغيرة
+v2,D08_18,B,Do a playful activity at home,تفعل نشاطًا مرحًا في البيت
+v2,D08_18,C,Share time with loved ones,تشارك وقتًا مع الأحبة
+v2,D08_18,D,Try a simple gratitude note,تجرب كتابة امتنان بسيطة
+v2,D08_19,A,Apologize with love and clarity,تعتذر بمحبة ووضوح
+v2,D08_19,B,Do one practical repair action,تقوم بخطوة إصلاح عملية
+v2,D08_19,C,Protect dignity and explain calmly,تحمي كرامتك وتشرح بهدوء
+v2,D08_19,D,Rebalance with a clear boundary,تعيد التوازن بحد واضح
+v2,D08_20,A,Choose the safer stability option,تختار خيار الاستقرار الأكثر أمانًا
+v2,D08_20,B,Choose growth and ambition,تختار النمو والطموح
+v2,D08_20,C,Negotiate terms for freedom,تتفاوض على الشروط للحرية
+v2,D08_20,D,Plan finances carefully then decide,تخطط ماليًا بحذر ثم تقرر
+v2,D08_21,A,Set strict stop times this week,تضع أوقات توقف صارمة هذا الأسبوع
+v2,D08_21,B,Rebuild a balanced calendar,تعيد بناء جدول متوازن
+v2,D08_21,C,Choose one priority to achieve,تختار أولوية واحدة للإنجاز
+v2,D08_21,D,Add a health anchor habit,تضيف عادة صحية ثابتة
+v2,D08_22,A,Say no to protect your freedom,تقول لا لحماية حريتك
+v2,D08_22,B,Offer smaller help that is safe,تعرض مساعدة أصغر وآمنة
+v2,D08_22,C,Decide by budget and plan,تقرر وفق الميزانية والخطة
+v2,D08_22,D,Support with compassion not money,تدعم برحمة دون مال
+v2,D08_23,A,Fix what you can now,تعالج ما تستطيع الآن
+v2,D08_23,B,Report through the proper channel,تبلّغ عبر القناة المناسبة
+v2,D08_23,C,Coordinate neighbors to act,تنسق مع الجيران للتحرك
+v2,D08_23,D,Learn the safe procedure and share,تتعلم الإجراء الآمن وتشاركه
+v2,D08_24,A,Set a clear rule with discipline,تضع قاعدة واضحة بانضباط
+v2,D08_24,B,Speak up for fairness of time,تتحدث عن عدالة الوقت
+v2,D08_24,C,Protect balance by starting on time,تحمي التوازن بالبدء في الوقت
+v2,D08_24,D,Keep it light and reduce tension,تجعل الأمر خفيفًا وتقلل التوتر
+v2,D08_25,A,Ask for recognition politely,تطلب التقدير بأدب
+v2,D08_25,B,Share results in a short update,تشارك النتائج بتحديث قصير
+v2,D08_25,C,Focus on the next achievement,تركز على الإنجاز التالي
+v2,D08_25,D,Stay grateful and steady,تبقى ممتنًا وثابتًا
+v2,D08_26,A,Choose rest and recovery,تختار الراحة والتعافي
+v2,D08_26,B,Set a balanced pace for the week,تضع وتيرة متوازنة للأسبوع
+v2,D08_26,C,Start a gentle movement habit,تبدأ عادة حركة لطيفة
+v2,D08_26,D,Protect dignity and say no,تحمي كرامتك وتقول لا
+v2,D08_27,A,Drop one commitment for freedom,تسقط التزامًا واحدًا للحرية
+v2,D08_27,B,Set a boundary and keep it,تضع حدًا وتلتزم به
+v2,D08_27,C,Choose the safest schedule change,تختار تغييرًا آمنًا في الجدول
+v2,D08_27,D,Rebuild balance with time blocks,تعيد التوازن بكتل زمنية
+v2,D08_28,A,Join and help coordinate,تنضم وتساعد في التنسيق
+v2,D08_28,B,Invite friends to volunteer too,تدعو الأصدقاء للتطوع أيضًا
+v2,D08_28,C,Ensure fair roles for all,تضمن أدوارًا عادلة للجميع
+v2,D08_28,D,Thank volunteers and recognize them,تشكر المتطوعين وتقدرهم
+v2,D08_29,A,Set a learning goal and limit scrolling,تضع هدف تعلم وتقلل التصفح
+v2,D08_29,B,Practice gratitude for your progress,تمارس الامتنان لتقدمك
+v2,D08_29,C,Protect dignity by removing triggers,تحمي كرامتك بإزالة المحفزات
+v2,D08_29,D,Plan an offline fun activity,تخطط لنشاط ممتع دون إنترنت
+v2,D08_30,A,Ask for fair credit in private,تطلب إنصاف الفضل على انفراد
+v2,D08_30,B,Document your contribution clearly,توثق مساهمتك بوضوح
+v2,D08_30,C,Deliver the next big result,تقدم النتيجة الكبيرة التالية
+v2,D08_30,D,Share a formal team update,تشارك تحديثًا رسميًا للفريق
+v2,D08_31,A,Do a short spiritual reset,تقوم بإعادة ضبط روحية قصيرة
+v2,D08_31,B,Write one gratitude line,تكتب سطر امتنان واحد
+v2,D08_31,C,Join a community circle,تنضم لدائرة مجتمعية
+v2,D08_31,D,Create a calm balanced evening,تصنع مساءً متوازنًا هادئًا
+v2,D08_32,A,Rest to protect health,ترتاح لحماية الصحة
+v2,D08_32,B,Plan a balanced day gently,تخطط ليوم متوازن بهدوء
+v2,D08_32,C,Do something joyful with friends,تفعل شيئًا سعيدًا مع الأصدقاء
+v2,D08_32,D,Learn something useful for you,تتعلم شيئًا مفيدًا لك
+v2,D08_33,A,Hold a fair middle position,تحافظ على موقف وسط عادل
+v2,D08_33,B,Support the hurt one with care,تدعم المتأذي باهتمام
+v2,D08_33,C,Protect your freedom to step back,تحمي حريتك في الابتعاد
+v2,D08_33,D,Reconnect them as friends,تعيد وصلهم كأصدقاء
+v2,D08_34,A,Choose the safest stable option,تختار الخيار الأكثر أمانًا واستقرارًا
+v2,D08_34,B,Choose freedom and a fresh start,تختار الحرية وبداية جديدة
+v2,D08_34,C,Plan finances before moving,تخطط ماليًا قبل الانتقال
+v2,D08_34,D,Explore it as an adventure,تستكشفه كمغامرة
+v2,D08_35,A,Take a small bold step,تأخذ خطوة جريئة صغيرة
+v2,D08_35,B,Check safety risks and plan,تفحص مخاطر السلامة وتخطط
+v2,D08_35,C,Choose freedom and act,تختار الحرية وتتحرك
+v2,D08_35,D,Turn it into an ambition plan,تحولها لخطة طموح
+v2,D08_36,A,Track it like an achievement streak,تتابعها كسلسلة إنجاز
+v2,D08_36,B,Build it into a balanced routine,تجعلها ضمن روتين متوازن
+v2,D08_36,C,Make it fun with a reward,تجعلها ممتعة بمكافأة
+v2,D08_36,D,Do it with a friend,تفعلها مع صديق
+v2,D08_37,A,Create a disciplined plan and timeline,تضع خطة وجدولًا منضبطًا
+v2,D08_37,B,Focus on key achievements first,تركز على أهم الإنجازات أولًا
+v2,D08_37,C,Ask the team to learn missing skills,تطلب من الفريق تعلم المهارات الناقصة
+v2,D08_37,D,Coordinate roles for smooth flow,تنسق الأدوار لسير سلس
+v2,D08_38,A,Invite them for a friendly chat,تدعوه لحديث ودي
+v2,D08_38,B,Include them in a shared task,تشركه في مهمة مشتركة
+v2,D08_38,C,Show compassion and check in quietly,تُظهر رحمة وتطمئن بهدوء
+v2,D08_38,D,Share resources to help them learn,تشارك موارد لمساعدته على التعلم
+v2,D08_39,A,Reconnect with meaning through reflection,تعود للمعنى عبر التأمل
+v2,D08_39,B,Write gratitude for the journey,تكتب امتنانًا للرحلة
+v2,D08_39,C,Celebrate with friends and joy,تحتفل مع الأصدقاء وبفرح
+v2,D08_39,D,Set a new ambition horizon,تضع أفقًا طموحًا جديدًا
+v2,D08_40,A,Set strict boundaries for evenings,تضع حدودًا صارمة للأمسيات
+v2,D08_40,B,Protect balance with a weekly review,تحمي التوازن بمراجعة أسبوعية
+v2,D08_40,C,Drop one task to regain freedom,تسقط مهمة لاستعادة الحرية
+v2,D08_40,D,Protect health with rest and movement,تحمي الصحة بالراحة والحركة
+v2,D08_41,A,Create a small art piece,تنجز عملًا فنيًا صغيرًا
+v2,D08_41,B,Learn a new creative technique,تتعلم تقنية إبداعية جديدة
+v2,D08_41,C,Do a playful reset break,تأخذ استراحة مرحة لإعادة الضبط
+v2,D08_41,D,Finish a draft as an achievement,تنهي مسودة كإنجاز
+v2,D08_42,A,Send a loving message and ask directly,ترسل رسالة محبة وتسأل مباشرة
+v2,D08_42,B,Set a boundary on cancellations,تضع حدًا لثقافة الإلغاء
+v2,D08_42,C,Plan a fun activity with others,تخطط لنشاط ممتع مع آخرين
+v2,D08_42,D,Choose a calm balanced response,تختار ردًا متوازنًا هادئًا
+v2,D08_43,A,Choose justice and refuse the shortcut,تختار العدل وترفض الاختصار
+v2,D08_43,B,Keep discipline and follow the process,تحافظ على الانضباط وتتبع الإجراء
+v2,D08_43,C,Protect dignity and say no,تحمي كرامتك وتقول لا
+v2,D08_43,D,Support others with compassion,تدعم الآخرين برحمة
+v2,D08_44,A,Build a stronger safety buffer,تبني هامش أمان أقوى
+v2,D08_44,B,Create a clear financial plan,تضع خطة مالية واضحة
+v2,D08_44,C,Learn money basics to feel stable,تتعلم أساسيات المال للشعور بالثبات
+v2,D08_44,D,Write gratitude to reduce fear,تكتب امتنانًا لتقليل الخوف
+v2,D08_45,A,Fix it now to reduce risk,تعالجه الآن لتقليل الخطر
+v2,D08_45,B,Report it and follow rules,تبلّغ وتلتزم بالقواعد
+v2,D08_45,C,Learn the procedure and share,تتعلم الإجراء وتشاركه
+v2,D08_45,D,Stand up firmly to protect others,تتخذ موقفًا حازمًا لحماية الآخرين
+v2,D08_46,A,Rebuild balance before pushing,تعيد التوازن قبل الضغط
+v2,D08_46,B,Set one achievement target only,تضع هدف إنجاز واحد فقط
+v2,D08_46,C,Add a daily joy micro break,تضيف استراحة فرح يومية
+v2,D08_46,D,Ask for help and coordinate,تطلب المساعدة وتنسق
+v2,D08_47,A,Respond with dignity and calm,ترد بكرامة وهدوء
+v2,D08_47,B,Ask for fair feedback privately,تطلب ملاحظات منصفة على انفراد
+v2,D08_47,C,Turn it into a learning point,تحولها لنقطة تعلم
+v2,D08_47,D,Name your results and seek recognition,تذكر نتائجك وتطلب التقدير
+v2,D08_48,A,End with a spiritual reset,تنهي بإعادة ضبط روحية
+v2,D08_48,B,Write gratitude then sleep,تكتب امتنانًا ثم تنام
+v2,D08_48,C,Call a friend briefly,تتصل بصديق قليلًا
+v2,D08_48,D,Set a strict phone cutoff,تضع قطعًا صارمًا للهاتف
+v2,D09_01,A,Ask for honesty and rebuild slowly,تطلب الصراحة وتعيد البناء تدريجيًا
+v2,D09_01,B,Set a clear boundary and consequence,تضع حدًا واضحًا ونتيجة
+v2,D09_01,C,Seek a fair repair conversation,تسعى لحوار إصلاح منصف
+v2,D09_01,D,Reflect on what you truly need,تتأمل ما تحتاجه فعلًا
+v2,D09_02,A,Request clearer recognition criteria,تطلب معايير تقدير أوضح
+v2,D09_02,B,Share your results in a brief update,تشارك نتائجك بتحديث قصير
+v2,D09_02,C,Use it to push a bigger ambition plan,تجعلها دافعًا لطموح أكبر
+v2,D09_02,D,Focus on next achievement and deliver,تركز على إنجاز قادم وتنجز
+v2,D09_03,A,Book a health check and commit,تحجز فحصًا صحيًا وتلتزم
+v2,D09_03,B,Create a calmer balanced week plan,تصنع خطة أسبوع متوازن أهدأ
+v2,D09_03,C,Start a small daily movement habit,تبدأ عادة حركة يومية صغيرة
+v2,D09_03,D,Add a fun activity to lift energy,تضيف نشاطًا ممتعًا لرفع الطاقة
+v2,D09_04,A,Name the pattern with dignity,تسمي النمط بكرامة
+v2,D09_04,B,Set limits on help and time,تضع حدودًا للمساعدة والوقت
+v2,D09_04,C,Invite a friendship reset talk,تدعو لحديث إعادة ضبط للصداقة
+v2,D09_04,D,Shift energy to other friendships,تحول طاقتك لصداقات أخرى
+v2,D09_05,A,Accept for adventure and growth,تقبل من أجل المغامرة والنمو
+v2,D09_05,B,Choose the safer stable option,تختار الخيار الآمن المستقر
+v2,D09_05,C,Negotiate for freedom and clarity,تتفاوض للحرية والوضوح
+v2,D09_05,D,Plan milestones to secure achievement,تضع محطات لضمان الإنجاز
+v2,D09_06,A,Build a strict budget for three months,تبني ميزانية صارمة لثلاثة أشهر
+v2,D09_06,B,Create a safety buffer fund,تنشئ صندوق أمان
+v2,D09_06,C,Learn one money skill and apply,تتعلم مهارة مالية وتطبقها
+v2,D09_06,D,Practice gratitude to reduce fear,تمارس الامتنان لتقليل الخوف
+v2,D09_07,A,Do a short spiritual reset daily,تقوم بإعادة ضبط روحية يومية قصيرة
+v2,D09_07,B,Write what gives meaning then act,تكتب ما يعطي معنى ثم تتحرك
+v2,D09_07,C,Join a community circle this month,تنضم لدائرة مجتمعية هذا الشهر
+v2,D09_07,D,Study a topic that strengthens direction,تدرس موضوعًا يقوي الاتجاه
+v2,D09_08,A,Speak for yourself with dignity,تتحدث عن نفسك بكرامة
+v2,D09_08,B,Choose a calm boundary to protect balance,تختار حدًا هادئًا لحماية التوازن
+v2,D09_08,C,Ask for fairness in how decisions are shared,تطلب عدلًا في مشاركة القرارات
+v2,D09_08,D,Protect freedom by limiting involvement,تحمي حريتك بتقليل التدخل
+v2,D09_09,A,Fix the risk immediately,تعالج الخطر فورًا
+v2,D09_09,B,Set a clear rule for the home,تضع قاعدة واضحة للبيت
+v2,D09_09,C,Learn safe steps and teach others,تتعلم خطوات السلامة وتعلم غيرك
+v2,D09_09,D,Coordinate with family for follow through,تنسق مع الأسرة للمتابعة
+v2,D09_10,A,Rebuild balance with a weekly rhythm,تعيد التوازن بإيقاع أسبوعي
+v2,D09_10,B,Choose one achievement priority daily,تختار أولوية إنجاز يومية
+v2,D09_10,C,Set a learning slot and protect it,تحدد وقت تعلم وتحميه
+v2,D09_10,D,Add a small joy reward after tasks,تضيف مكافأة فرح صغيرة بعد المهام
+v2,D09_11,A,Refuse and protect dignity,ترفض وتحمي كرامتك
+v2,D09_11,B,Insist on the right process,تصر على الإجراء الصحيح
+v2,D09_11,C,Report through fair channels,تبلّغ عبر قنوات عادلة
+v2,D09_11,D,Offer help to fix it transparently,تعرض المساعدة لإصلاحه بشفافية
+v2,D09_12,A,Ask to be included by name,تطلب إشراكك بالاسم
+v2,D09_12,B,Document your contribution in writing,توثق مساهمتك كتابيًا
+v2,D09_12,C,Speak up confidently in the moment,تتكلم بثقة في اللحظة
+v2,D09_12,D,Build allies through friendships,تبني حلفاء عبر الصداقات
+v2,D09_13,A,Create a warm comfort corner,تصنع زاوية دفء مريحة
+v2,D09_13,B,Declutter one space for calm,ترتب مساحة واحدة للهدوء
+v2,D09_13,C,Add an artistic touch,تضيف لمسة فنية
+v2,D09_13,D,Finish one home task as achievement,تنهي مهمة منزلية كإنجاز
+v2,D09_14,A,Offer quiet practical help,تعرض مساعدة عملية بهدوء
+v2,D09_14,B,Start a friendly check in,تبدأ تواصلًا وديًا
+v2,D09_14,C,Invite them to a community event,تدعوه لفعالية مجتمعية
+v2,D09_14,D,Share a small fun local tip,تشارك نصيحة محلية ممتعة
+v2,D09_15,A,Commit to a 30 day learning plan,تلتزم بخطة تعلم 30 يومًا
+v2,D09_15,B,Set measurable milestones and track,تضع محطات قابلة للقياس وتتابع
+v2,D09_15,C,Find a mentor or study partner,تجد مرشدًا أو شريك دراسة
+v2,D09_15,D,Turn skill growth into ambition path,تحول نمو المهارة لمسار طموح
+v2,D09_16,A,Speak up for justice,تتحدث دفاعًا عن العدالة
+v2,D09_16,B,Propose a fair rule for access,تقترح قاعدة عادلة للإتاحة
+v2,D09_16,C,Support the person with care,تدعم الشخص باهتمام
+v2,D09_16,D,Document evidence with discipline,توثق الأدلة بانضباط
+v2,D09_17,A,Plan a small joy ritual nightly,تخطط لطقس فرح ليلي صغير
+v2,D09_17,B,Do a playful activity offline,تفعل نشاطًا مرحًا دون شاشة
+v2,D09_17,C,Meet a friend for a simple walk,تلتقي صديقًا لمشية بسيطة
+v2,D09_17,D,Try a small home adventure,تجرب مغامرة منزلية صغيرة
+v2,D09_18,A,Set a boundary for late messages,تضع حدًا لرسائل الليل
+v2,D09_18,B,Reply with love then pause,ترد بمحبة ثم تتوقف
+v2,D09_18,C,Suggest weekly structured catch ups,تقترح تواصلًا أسبوعيًا منظمًا
+v2,D09_18,D,Protect your balance with phone cutoff,تحمي توازنك بقطع الهاتف
+v2,D09_19,A,Ask for fair feedback privately,تطلب ملاحظات منصفة على انفراد
+v2,D09_19,B,Turn it into a learning point,تحولها لنقطة تعلم
+v2,D09_19,C,Protect dignity with calm words,تحمي كرامتك بكلمات هادئة
+v2,D09_19,D,Reset emotions through reflection,تعيد ضبط المشاعر بالتأمل
+v2,D09_20,A,Choose safety and stability,تختار الأمان والاستقرار
+v2,D09_20,B,Choose freedom and a fresh start,تختار الحرية وبداية جديدة
+v2,D09_20,C,Plan finances carefully first,تخطط ماليًا بحذر أولًا
+v2,D09_20,D,Take the adventure move,تختار الانتقال كمغامرة
+v2,D09_21,A,Drop one obligation to regain freedom,تسقط التزامًا لاستعادة الحرية
+v2,D09_21,B,Rebuild a balanced calendar,تعيد بناء جدول متوازن
+v2,D09_21,C,Choose a meaningful yes only,تختار نعمًا ذات معنى فقط
+v2,D09_21,D,Protect dignity by saying no,تحمي كرامتك بقول لا
+v2,D09_22,A,Set an ambition vision and timeline,تضع رؤية طموح وجدولًا
+v2,D09_22,B,Start small and track achievements,تبدأ صغيرًا وتتابع الإنجازات
+v2,D09_22,C,Keep it creative and artistic,تجعل المشروع إبداعيًا وفنيًا
+v2,D09_22,D,Protect health by limiting late work,تحمي صحتك بتقليل السهر
+v2,D09_23,A,Hold space with compassion,تحتوي برحمة
+v2,D09_23,B,Seek a fair agreement,تسعى لاتفاق عادل
+v2,D09_23,C,Pause for safety and calm,توقف للتأمين والتهدئة
+v2,D09_23,D,Bring family together to talk,تجمع العائلة للحوار
+v2,D09_24,A,Stop it and protect dignity,توقفها وتحمي الكرامة
+v2,D09_24,B,Support the person with love,تدعم الشخص بمحبة
+v2,D09_24,C,Redirect to a justice principle,توجه الحديث لمبدأ عدل
+v2,D09_24,D,Shift the moment with light fun,تخفف اللحظة بمرح خفيف
+v2,D09_25,A,Choose rest and recovery,تختار الراحة والتعافي
+v2,D09_25,B,Set a balanced pace for the week,تضع وتيرة متوازنة للأسبوع
+v2,D09_25,C,Start a gentle health habit,تبدأ عادة صحية لطيفة
+v2,D09_25,D,Push for achievement then stop early,تدفع للإنجاز ثم تتوقف مبكرًا
+v2,D09_26,A,Pick one daily learning slot,تحدد وقت تعلم يومي
+v2,D09_26,B,Study with a friend for support,تدرس مع صديق للدعم
+v2,D09_26,C,Track progress as achievement streak,تتابع التقدم كسلسلة إنجاز
+v2,D09_26,D,Make learning fun to continue,تجعل التعلم ممتعًا للاستمرار
+v2,D09_27,A,Build a safety buffer fund,تبني صندوق أمان
+v2,D09_27,B,Create disciplined routines for stability,تنشئ روتينًا منضبطًا للثبات
+v2,D09_27,C,Choose freedom with smart limits,تختار الحرية بحدود ذكية
+v2,D09_27,D,Rebalance fear with calm planning,توازن الخوف بتخطيط هادئ
+v2,D09_28,A,Join a local community effort,تنضم لجهد مجتمعي محلي
+v2,D09_28,B,Invite friends to attend with you,تدعو الأصدقاء ليذهبوا معك
+v2,D09_28,C,Volunteer for a shared task,تتطوع لمهمة مشتركة
+v2,D09_28,D,Host a small gathering,تستضيف لقاءً صغيرًا
+v2,D09_29,A,Speak up for justice,تتحدث دفاعًا عن العدالة
+v2,D09_29,B,Propose a disciplined quality process,تقترح إجراء جودة منضبط
+v2,D09_29,C,Document issues and share clearly,توثق المشكلات وتشارك بوضوح
+v2,D09_29,D,Protect dignity by naming the risk,تحمي كرامتك بتسمية الخطر
+v2,D09_30,A,Decline with dignity,تعتذر بكرامة
+v2,D09_30,B,Attend briefly for community reasons,تحضر قليلًا لأسباب مجتمعية
+v2,D09_30,C,Choose freedom and your own plan,تختار الحرية وخطتك
+v2,D09_30,D,Go for joy then leave early,تذهب للفرح ثم تغادر مبكرًا
+v2,D09_31,A,Create one small art piece,تنجز عملًا فنيًا صغيرًا
+v2,D09_31,B,Learn a creative technique,تتعلم تقنية إبداعية
+v2,D09_31,C,Take a playful break to reset,تأخذ استراحة مرحة لإعادة الضبط
+v2,D09_31,D,Finish a draft as achievement,تنهي مسودة كإنجاز
+v2,D09_32,A,Rest to protect health,ترتاح لحماية الصحة
+v2,D09_32,B,Plan a balanced day gently,تخطط ليوم متوازن بهدوء
+v2,D09_32,C,Meet a friend for joy,تلتقي صديقًا للفرح
+v2,D09_32,D,Use time to learn something useful,تستغل الوقت لتعلم شيء مفيد
+v2,D09_33,A,Say no to protect freedom,تقول لا لحماية الحرية
+v2,D09_33,B,Offer smaller help that is safe,تعرض مساعدة أصغر وآمنة
+v2,D09_33,C,Decide based on budget and plan,تقرر وفق الميزانية والخطة
+v2,D09_33,D,Offer compassion without money,تقدم رحمة دون مال
+v2,D09_34,A,Keep balance with a travel routine,تحافظ على التوازن بروتين سفر
+v2,D09_34,B,Track the habit as a streak,تتابع العادة كسلسلة
+v2,D09_34,C,Make it fun with a small reward,تجعلها ممتعة بمكافأة صغيرة
+v2,D09_34,D,Learn a simple travel system,تتعلم نظامًا بسيطًا للسفر
+v2,D09_35,A,Take it as an adventure step,تأخذها كخطوة مغامرة
+v2,D09_35,B,Check safety risks and plan,تفحص مخاطر السلامة وتخطط
+v2,D09_35,C,Choose freedom and act decisively,تختار الحرية وتتحرك بحسم
+v2,D09_35,D,Turn it into a bold ambition plan,تحولها لخطة طموح جريئة
+v2,D09_36,A,Ask to clarify roles and costs,تطلب توضيح الأدوار والتكاليف
+v2,D09_36,B,Set a fair plan for everyone,تضع خطة عادلة للجميع
+v2,D09_36,C,Go for fun and adapt,تذهب للمرح وتتأقلم
+v2,D09_36,D,Opt out to protect balance,تعتذر لتحمي التوازن
+v2,D09_37,A,State expectations with dignity,توضح توقعاتك بكرامة
+v2,D09_37,B,Ask for fair treatment,تطلب معاملة عادلة
+v2,D09_37,C,Deliver results to earn recognition,تقدم نتائج لتحصل على تقدير
+v2,D09_37,D,Build alliances through friendships,تبني تحالفات عبر الصداقات
+v2,D09_38,A,Coordinate tasks and follow up weekly,تنسق المهام وتتابع أسبوعيًا
+v2,D09_38,B,Invite more people to help,تدعو مزيدًا للمساعدة
+v2,D09_38,C,Set a disciplined schedule,تضع جدولًا منضبطًا
+v2,D09_38,D,Thank volunteers publicly,تشكر المتطوعين علنًا
+v2,D09_39,A,Reconnect with meaning through reflection,تعود للمعنى عبر التأمل
+v2,D09_39,B,Write gratitude for the journey,تكتب امتنانًا للرحلة
+v2,D09_39,C,Celebrate with friends and joy,تحتفل مع الأصدقاء وبفرح
+v2,D09_39,D,Set a new ambition horizon,تضع أفقًا طموحًا جديدًا
+v2,D09_40,A,Set strict boundaries for messages,تضع حدودًا صارمة للرسائل
+v2,D09_40,B,Protect balance with stop times,تحمي التوازن بأوقات توقف
+v2,D09_40,C,Choose freedom by dropping one task,تختار الحرية بإسقاط مهمة
+v2,D09_40,D,Protect health with sleep and rest,تحمي الصحة بالنوم والراحة
+v2,D09_41,A,Limit triggers to protect dignity,تقلل المحفزات لحماية الكرامة
+v2,D09_41,B,Practice gratitude for real progress,تمارس الامتنان لتقدمك الحقيقي
+v2,D09_41,C,Set a learning goal and focus,تضع هدف تعلم وتركز
+v2,D09_41,D,Do an offline fun activity,تفعل نشاطًا ممتعًا دون إنترنت
+v2,D09_42,A,Invite them for a friendly chat,تدعوه لحديث ودي
+v2,D09_42,B,Include them in a shared task,تشركه في مهمة مشتركة
+v2,D09_42,C,Support them with compassion,تدعمه برحمة
+v2,D09_42,D,Share learning resources,تشاركه موارد تعلم
+v2,D09_43,A,Apologize with love and clarity,تعتذر بمحبة ووضوح
+v2,D09_43,B,Do a practical repair action,تقوم بخطوة إصلاح عملية
+v2,D09_43,C,Set boundaries to restore balance,تضع حدودًا لاستعادة التوازن
+v2,D09_43,D,Protect dignity and explain calmly,تحمي كرامتك وتشرح بهدوء
+v2,D09_44,A,Choose safety and stability,تختار الأمان والاستقرار
+v2,D09_44,B,Choose growth through challenge,تختار النمو عبر التحدي
+v2,D09_44,C,Choose freedom and your own route,تختار الحرية وطريقك
+v2,D09_44,D,Choose balance with phased steps,تختار التوازن بخطوات تدريجية
+v2,D09_45,A,Fix it now to reduce risk,تعالجها الآن لتقليل الخطر
+v2,D09_45,B,Set a rule and follow it,تضع قاعدة وتلتزم بها
+v2,D09_45,C,Learn the safe procedure and share,تتعلم الإجراء الآمن وتشاركه
+v2,D09_45,D,Coordinate with others quickly,تنسق مع الآخرين بسرعة
+v2,D09_46,A,Set one achievement target only,تضع هدف إنجاز واحد فقط
+v2,D09_46,B,Rebuild balance before pushing,تعيد التوازن قبل الضغط
+v2,D09_46,C,Ask for help and coordinate,تطلب المساعدة وتنسق
+v2,D09_46,D,Take a short joy micro break,تأخذ استراحة فرح قصيرة
+v2,D09_47,A,Receive it with gratitude,تستقبله بامتنان
+v2,D09_47,B,Share credit with love,تشارك الفضل بمحبة
+v2,D09_47,C,Ask for consistent recognition,تطلب تقديرًا مستمرًا
+v2,D09_47,D,Stay humble and protect dignity,تتواضع وتحمي الكرامة
+v2,D09_48,A,End with a spiritual reset,تنهي بإعادة ضبط روحية
+v2,D09_48,B,Write gratitude then sleep,تكتب امتنانًا ثم تنام
+v2,D09_48,C,Call a friend briefly,تتصل بصديق قليلًا
+v2,D09_48,D,Set a strict phone cutoff,تضع قطعًا صارمًا للهاتف
+v2,D10_01,A,Ask for honesty and rebuild slowly,تطلب الصراحة وتعيد البناء تدريجيًا
+v2,D10_01,B,Set a boundary to protect dignity,تضع حدًا لحماية الكرامة
+v2,D10_01,C,Seek a fair repair conversation,تسعى لحوار إصلاح منصف
+v2,D10_01,D,Reflect on your values and needs,تتأمل قيمك واحتياجاتك
+v2,D10_02,A,Request clearer recognition criteria,تطلب معايير تقدير أوضح
+v2,D10_02,B,Share results in a brief update,تشارك النتائج بتحديث مختصر
+v2,D10_02,C,Use it to fuel ambition,تجعلها وقودًا للطموح
+v2,D10_02,D,Focus on the next achievement,تركز على الإنجاز التالي
+v2,D10_03,A,Book a health check and commit,تحجز فحصًا صحيًا وتلتزم
+v2,D10_03,B,Create a calmer balanced week plan,تصنع خطة أسبوع متوازن أهدأ
+v2,D10_03,C,Start a small daily movement habit,تبدأ عادة حركة يومية صغيرة
+v2,D10_03,D,Add a fun activity to lift energy,تضيف نشاطًا ممتعًا لرفع الطاقة
+v2,D10_04,A,Name what you need in the friendship,توضح ما تحتاجه في الصداقة
+v2,D10_04,B,Set a boundary for effort and time,تضع حدًا للجهد والوقت
+v2,D10_04,C,Plan a friendly shared moment soon,تخططون للحظة ودية قريبًا
+v2,D10_04,D,Shift toward other supportive friends,تتجه لصداقات داعمة أخرى
+v2,D10_05,A,Accept for adventure and growth,تقبل من أجل المغامرة والنمو
+v2,D10_05,B,Choose the safer stable option,تختار الخيار الآمن المستقر
+v2,D10_05,C,Negotiate for freedom and clarity,تتفاوض للحرية والوضوح
+v2,D10_05,D,Plan milestones to secure achievement,تضع محطات لضمان الإنجاز
+v2,D10_06,A,Build a disciplined budget structure,تبني هيكل ميزانية منضبط
+v2,D10_06,B,Create a safety buffer fund,تنشئ صندوق أمان
+v2,D10_06,C,Learn one money skill and apply,تتعلم مهارة مالية وتطبقها
+v2,D10_06,D,Practice gratitude to reduce fear,تمارس الامتنان لتقليل الخوف
+v2,D10_07,A,Do a short spiritual reset daily,تقوم بإعادة ضبط روحية يومية قصيرة
+v2,D10_07,B,Write gratitude for one steady thing,تكتب امتنانًا لشيء ثابت
+v2,D10_07,C,Join a community circle this month,تنضم لدائرة مجتمعية هذا الشهر
+v2,D10_07,D,Study a topic that strengthens direction,تدرس موضوعًا يقوي الاتجاه
+v2,D10_08,A,Speak up with dignity and request privacy,تتحدث بكرامة وتطلب الخصوصية
+v2,D10_08,B,Set a clear boundary for sharing,تضع حدًا واضحًا للمشاركة
+v2,D10_08,C,Ask for fairness and accountability,تطلب عدلًا ومساءلة
+v2,D10_08,D,Limit access to protect your freedom,تقلل الإتاحة لحماية حريتك
+v2,D10_09,A,Fix the risk immediately,تعالج الخطر فورًا
+v2,D10_09,B,Set a clear home rule and follow,تضع قاعدة منزلية واضحة وتلتزم
+v2,D10_09,C,Learn safe steps and teach others,تتعلم خطوات السلامة وتعلم غيرك
+v2,D10_09,D,Coordinate family for follow through,تنسق مع الأسرة للمتابعة
+v2,D10_10,A,Keep balance with a travel routine,تحافظ على التوازن بروتين سفر
+v2,D10_10,B,Track the habit as an achievement streak,تتابع العادة كسلسلة إنجاز
+v2,D10_10,C,Make it fun with a small reward,تجعلها ممتعة بمكافأة صغيرة
+v2,D10_10,D,Learn a simple system for travel days,تتعلم نظامًا بسيطًا لأيام السفر
+v2,D10_11,A,Refuse and protect dignity,ترفض وتحمي كرامتك
+v2,D10_11,B,Insist on the right process,تصر على الإجراء الصحيح
+v2,D10_11,C,Report through fair channels,تبلّغ عبر قنوات عادلة
+v2,D10_11,D,Offer transparent help to fix it,تعرض مساعدة شفافة لإصلاحه
+v2,D10_12,A,Ask to be included by name,تطلب إشراكك بالاسم
+v2,D10_12,B,Document your contribution in writing,توثق مساهمتك كتابيًا
+v2,D10_12,C,Speak up confidently in the moment,تتكلم بثقة في اللحظة
+v2,D10_12,D,Build allies through friendships,تبني حلفاء عبر الصداقات
+v2,D10_13,A,Create a warm comfort corner,تصنع زاوية دفء مريحة
+v2,D10_13,B,Declutter one space for calm,ترتب مساحة واحدة للهدوء
+v2,D10_13,C,Add an artistic touch,تضيف لمسة فنية
+v2,D10_13,D,Finish one home task as achievement,تنهي مهمة منزلية كإنجاز
+v2,D10_14,A,Offer quiet practical help,تعرض مساعدة عملية بهدوء
+v2,D10_14,B,Start a friendly check in,تبدأ تواصلًا وديًا
+v2,D10_14,C,Invite them to a community event,تدعوه لفعالية مجتمعية
+v2,D10_14,D,Share a small fun local tip,تشارك نصيحة محلية ممتعة
+v2,D10_15,A,Commit to a 30 day learning plan,تلتزم بخطة تعلم 30 يومًا
+v2,D10_15,B,Set measurable milestones and track,تضع محطات قابلة للقياس وتتابع
+v2,D10_15,C,Find a mentor or study partner,تجد مرشدًا أو شريك دراسة
+v2,D10_15,D,Turn skill growth into ambition path,تحول نمو المهارة لمسار طموح
+v2,D10_16,A,Speak up for justice,تتحدث دفاعًا عن العدالة
+v2,D10_16,B,Propose a fair rule for access,تقترح قاعدة عادلة للإتاحة
+v2,D10_16,C,Support the person with care,تدعم الشخص باهتمام
+v2,D10_16,D,Document evidence with discipline,توثق الأدلة بانضباط
+v2,D10_17,A,Plan a small joy ritual nightly,تخطط لطقس فرح ليلي صغير
+v2,D10_17,B,Do a playful activity offline,تفعل نشاطًا مرحًا دون شاشة
+v2,D10_17,C,Meet a friend for a simple walk,تلتقي صديقًا لمشية بسيطة
+v2,D10_17,D,Try a small home adventure,تجرب مغامرة منزلية صغيرة
+v2,D10_18,A,Set a boundary for late messages,تضع حدًا لرسائل الليل
+v2,D10_18,B,Reply with love then pause,ترد بمحبة ثم تتوقف
+v2,D10_18,C,Suggest weekly structured catch ups,تقترح تواصلًا أسبوعيًا منظمًا
+v2,D10_18,D,Protect balance with phone cutoff,تحمي التوازن بقطع الهاتف
+v2,D10_19,A,Ask for fair feedback privately,تطلب ملاحظات منصفة على انفراد
+v2,D10_19,B,Turn it into a learning point,تحولها لنقطة تعلم
+v2,D10_19,C,Protect dignity with calm words,تحمي كرامتك بكلمات هادئة
+v2,D10_19,D,Reset emotions through reflection,تعيد ضبط المشاعر بالتأمل
+v2,D10_20,A,Choose safety and stability,تختار الأمان والاستقرار
+v2,D10_20,B,Choose freedom and a fresh start,تختار الحرية وبداية جديدة
+v2,D10_20,C,Plan finances carefully first,تخطط ماليًا بحذر أولًا
+v2,D10_20,D,Take the adventure move,تختار الانتقال كمغامرة
+v2,D10_21,A,Drop one obligation to regain freedom,تسقط التزامًا لاستعادة الحرية
+v2,D10_21,B,Rebuild a balanced calendar,تعيد بناء جدول متوازن
+v2,D10_21,C,Choose a meaningful yes only,تختار نعمًا ذات معنى فقط
+v2,D10_21,D,Protect dignity by saying no,تحمي كرامتك بقول لا
+v2,D10_22,A,Set an ambition vision and timeline,تضع رؤية طموح وجدولًا
+v2,D10_22,B,Start small and track achievements,تبدأ صغيرًا وتتابع الإنجازات
+v2,D10_22,C,Keep it creative and artistic,تجعل المشروع إبداعيًا وفنيًا
+v2,D10_22,D,Protect health by limiting late work,تحمي صحتك بتقليل السهر
+v2,D10_23,A,Hold space with compassion,تحتوي برحمة
+v2,D10_23,B,Seek a fair agreement,تسعى لاتفاق عادل
+v2,D10_23,C,Pause for safety and calm,توقف للتأمين والتهدئة
+v2,D10_23,D,Bring family together to talk,تجمع العائلة للحوار
+v2,D10_24,A,Stop it and protect dignity,توقفها وتحمي الكرامة
+v2,D10_24,B,Support the person with love,تدعم الشخص بمحبة
+v2,D10_24,C,Redirect to a justice principle,توجه الحديث لمبدأ عدل
+v2,D10_24,D,Shift the moment with light fun,تخفف اللحظة بمرح خفيف
+v2,D10_25,A,Choose rest and recovery,تختار الراحة والتعافي
+v2,D10_25,B,Set a balanced pace for the week,تضع وتيرة متوازنة للأسبوع
+v2,D10_25,C,Start a gentle health habit,تبدأ عادة صحية لطيفة
+v2,D10_25,D,Push for achievement then stop early,تدفع للإنجاز ثم تتوقف مبكرًا
+v2,D10_26,A,Pick one daily learning slot,تحدد وقت تعلم يومي
+v2,D10_26,B,Study with a friend for support,تدرس مع صديق للدعم
+v2,D10_26,C,Track progress as achievement streak,تتابع التقدم كسلسلة إنجاز
+v2,D10_26,D,Make learning fun to continue,تجعل التعلم ممتعًا للاستمرار
+v2,D10_27,A,Build a safety buffer fund,تبني صندوق أمان
+v2,D10_27,B,Create disciplined routines for stability,تنشئ روتينًا منضبطًا للثبات
+v2,D10_27,C,Choose freedom with smart limits,تختار الحرية بحدود ذكية
+v2,D10_27,D,Rebalance fear with calm planning,توازن الخوف بتخطيط هادئ
+v2,D10_28,A,Join a local community effort,تنضم لجهد مجتمعي محلي
+v2,D10_28,B,Invite friends to attend with you,تدعو الأصدقاء ليذهبوا معك
+v2,D10_28,C,Volunteer for a shared task,تتطوع لمهمة مشتركة
+v2,D10_28,D,Host a small gathering,تستضيف لقاءً صغيرًا
+v2,D10_29,A,Speak up for justice,تتحدث دفاعًا عن العدالة
+v2,D10_29,B,Propose a disciplined quality process,تقترح إجراء جودة منضبط
+v2,D10_29,C,Document issues and share clearly,توثق المشكلات وتشارك بوضوح
+v2,D10_29,D,Protect dignity by naming the risk,تحمي كرامتك بتسمية الخطر
+v2,D10_30,A,Decline with dignity,تعتذر بكرامة
+v2,D10_30,B,Attend briefly for community reasons,تحضر قليلًا لأسباب مجتمعية
+v2,D10_30,C,Choose freedom and your own plan,تختار الحرية وخطتك
+v2,D10_30,D,Go for joy then leave early,تذهب للفرح ثم تغادر مبكرًا
+v2,D10_31,A,Create one small art piece,تنجز عملًا فنيًا صغيرًا
+v2,D10_31,B,Learn a creative technique,تتعلم تقنية إبداعية
+v2,D10_31,C,Take a playful break to reset,تأخذ استراحة مرحة لإعادة الضبط
+v2,D10_31,D,Finish a draft as achievement,تنهي مسودة كإنجاز
+v2,D10_32,A,Rest to protect health,ترتاح لحماية الصحة
+v2,D10_32,B,Plan a balanced day gently,تخطط ليوم متوازن بهدوء
+v2,D10_32,C,Meet a friend for joy,تلتقي صديقًا للفرح
+v2,D10_32,D,Use time to learn something useful,تستغل الوقت لتعلم شيء مفيد
+v2,D10_33,A,Say no to protect freedom,تقول لا لحماية الحرية
+v2,D10_33,B,Offer smaller help that is safe,تعرض مساعدة أصغر وآمنة
+v2,D10_33,C,Decide based on budget and plan,تقرر وفق الميزانية والخطة
+v2,D10_33,D,Offer compassion without money,تقدم رحمة دون مال
+v2,D10_34,A,Keep balance with a new routine,تحافظ على التوازن بروتين جديد
+v2,D10_34,B,Track the habit as a streak,تتابع العادة كسلسلة
+v2,D10_34,C,Make it fun with a small reward,تجعلها ممتعة بمكافأة صغيرة
+v2,D10_34,D,Learn a simple system and repeat,تتعلم نظامًا بسيطًا وتكرره
+v2,D10_35,A,Take it as an adventure step,تأخذها كخطوة مغامرة
+v2,D10_35,B,Check safety risks and plan,تفحص مخاطر السلامة وتخطط
+v2,D10_35,C,Choose freedom and act decisively,تختار الحرية وتتحرك بحسم
+v2,D10_35,D,Turn it into a bold ambition plan,تحولها لخطة طموح جريئة
+v2,D10_36,A,Ask to clarify roles and costs,تطلب توضيح الأدوار والتكاليف
+v2,D10_36,B,Set a fair plan for everyone,تضع خطة عادلة للجميع
+v2,D10_36,C,Go for fun and adapt,تذهب للمرح وتتأقلم
+v2,D10_36,D,Opt out to protect balance,تعتذر لتحمي التوازن
+v2,D10_37,A,State expectations with dignity,توضح توقعاتك بكرامة
+v2,D10_37,B,Ask for fair treatment,تطلب معاملة عادلة
+v2,D10_37,C,Deliver results to earn recognition,تقدم نتائج لتحصل على تقدير
+v2,D10_37,D,Build alliances through friendships,تبني تحالفات عبر الصداقات
+v2,D10_38,A,Coordinate tasks and follow up weekly,تنسق المهام وتتابع أسبوعيًا
+v2,D10_38,B,Invite more people to help,تدعو مزيدًا للمساعدة
+v2,D10_38,C,Set a disciplined schedule,تضع جدولًا منضبطًا
+v2,D10_38,D,Thank volunteers publicly,تشكر المتطوعين علنًا
+v2,D10_39,A,Reconnect with meaning through reflection,تعود للمعنى عبر التأمل
+v2,D10_39,B,Write gratitude for the journey,تكتب امتنانًا للرحلة
+v2,D10_39,C,Celebrate with friends and joy,تحتفل مع الأصدقاء وبفرح
+v2,D10_39,D,Set a new ambition horizon,تضع أفقًا طموحًا جديدًا
+v2,D10_40,A,Set strict boundaries for messages,تضع حدودًا صارمة للرسائل
+v2,D10_40,B,Protect balance with stop times,تحمي التوازن بأوقات توقف
+v2,D10_40,C,Choose freedom by dropping one task,تختار الحرية بإسقاط مهمة
+v2,D10_40,D,Protect health with sleep and rest,تحمي الصحة بالنوم والراحة
+v2,D10_41,A,Limit triggers to protect dignity,تقلل المحفزات لحماية الكرامة
+v2,D10_41,B,Practice gratitude for real progress,تمارس الامتنان لتقدمك الحقيقي
+v2,D10_41,C,Set a learning goal and focus,تضع هدف تعلم وتركز
+v2,D10_41,D,Do an offline fun activity,تفعل نشاطًا ممتعًا دون إنترنت
+v2,D10_42,A,Invite them for a friendly chat,تدعوه لحديث ودي
+v2,D10_42,B,Include them in a shared task,تشركه في مهمة مشتركة
+v2,D10_42,C,Support them with compassion,تدعمه برحمة
+v2,D10_42,D,Share learning resources,تشاركه موارد تعلم
+v2,D10_43,A,Apologize with love and clarity,تعتذر بمحبة ووضوح
+v2,D10_43,B,Do a practical repair action,تقوم بخطوة إصلاح عملية
+v2,D10_43,C,Set boundaries to restore balance,تضع حدودًا لاستعادة التوازن
+v2,D10_43,D,Protect dignity and explain calmly,تحمي كرامتك وتشرح بهدوء
+v2,D10_44,A,Choose safety and stability,تختار الأمان والاستقرار
+v2,D10_44,B,Choose growth through challenge,تختار النمو عبر التحدي
+v2,D10_44,C,Choose freedom and your own route,تختار الحرية وطريقك
+v2,D10_44,D,Choose balance with phased steps,تختار التوازن بخطوات تدريجية
+v2,D10_45,A,Fix it now to reduce risk,تعالجها الآن لتقليل الخطر
+v2,D10_45,B,Set a rule and follow it,تضع قاعدة وتلتزم بها
+v2,D10_45,C,Learn the safe procedure and share,تتعلم الإجراء الآمن وتشاركه
+v2,D10_45,D,Coordinate with others quickly,تنسق مع الآخرين بسرعة
+v2,D10_46,A,Set one achievement target only,تضع هدف إنجاز واحد فقط
+v2,D10_46,B,Rebuild balance before pushing,تعيد التوازن قبل الضغط
+v2,D10_46,C,Ask for help and coordinate,تطلب المساعدة وتنسق
+v2,D10_46,D,Take a short joy micro break,تأخذ استراحة فرح قصيرة
+v2,D10_47,A,Receive it with gratitude,تستقبله بامتنان
+v2,D10_47,B,Share credit with love,تشارك الفضل بمحبة
+v2,D10_47,C,Ask for consistent recognition,تطلب تقديرًا مستمرًا
+v2,D10_47,D,Stay humble and protect dignity,تتواضع وتحمي الكرامة
+v2,D10_48,A,End with a spiritual reset,تنهي بإعادة ضبط روحية
+v2,D10_48,B,Write gratitude then sleep,تكتب امتنانًا ثم تنام
+v2,D10_48,C,Call a friend briefly,تتصل بصديق قليلًا
+v2,D10_48,D,Set a strict phone cutoff,تضع قطعًا صارمًا للهاتف

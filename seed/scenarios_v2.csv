@@ -47,3 +47,483 @@ v2,D45,deep,45,You want to strengthen friendships.,ترغب في تقوية صد
 v2,D46,deep,46,You face a moral dilemma at work.,تواجه موقفًا أخلاقيًا في العمل.
 v2,D47,deep,47,You want more independence in decisions.,ترغب في مزيد من الاستقلالية في قراراتك.
 v2,D48,deep,48,You feel your life lacks balance.,تشعر بأن حياتك تفتقر إلى التوازن.
+v2,D01_01,deep_01,1,You notice your partner/parent is unusually quiet at dinner. What do you do?,تلاحظ أن شريكك/أحد والديك صامت بشكل غير معتاد على العشاء. ماذا تفعل؟
+v2,D01_02,deep_01,2,You have a deadline tomorrow but your energy is low tonight. What do you do?,لديك موعد تسليم غدًا لكن طاقتك منخفضة الليلة. ماذا تفعل؟
+v2,D01_03,deep_01,3,Your friend invites you out, but you also need time alone. What do you do?,صديق يدعوك للخروج، لكنك تحتاج أيضًا وقتًا لنفسك. ماذا تفعل؟
+v2,D01_04,deep_01,4,A small conflict starts in a group chat. What’s your first move?,بدأ خلاف صغير في مجموعة دردشة. ما أول خطوة تقوم بها؟
+v2,D01_05,deep_01,5,You’re about to try something new, but you feel hesitant. What do you do?,أنت على وشك تجربة شيء جديد لكنك متردد. ماذا تفعل؟
+v2,D01_06,deep_01,6,You’ve been sitting too long while working/studying. What do you do?,جلست وقتًا طويلًا أثناء العمل/الدراسة. ماذا تفعل؟
+v2,D01_07,deep_01,7,Someone makes a joke that feels disrespectful. What do you do?,أطلق أحدهم مزحة تشعرك بعدم الاحترام. ماذا تفعل؟
+v2,D01_08,deep_01,8,A colleague takes credit for shared work. What do you do?,زميل أخذ الفضل لعمل مشترك. ماذا تفعل؟
+v2,D01_09,deep_01,9,A close friend seems distant recently. What do you do?,يبدو أن صديقًا مقرّبًا أصبح بعيدًا مؤخرًا. ماذا تفعل؟
+v2,D01_10,deep_01,10,You want to upgrade a skill but don’t know where to start. What do you do?,تريد تطوير مهارة لكن لا تعرف من أين تبدأ. ماذا تفعل؟
+v2,D01_11,deep_01,11,You feel your day is full but empty of meaning. What do you do?,تشعر أن يومك ممتلئ لكنه بلا معنى. ماذا تفعل؟
+v2,D01_12,deep_01,12,An unexpected expense appears this week. What do you do?,ظهر مصروف مفاجئ هذا الأسبوع. ماذا تفعل؟
+v2,D01_13,deep_01,13,You did good work but no one noticed. What do you do?,قدمت عملًا جيدًا لكن لم يلاحظه أحد. ماذا تفعل؟
+v2,D01_14,deep_01,14,You’re offered a chance that feels exciting but uncertain. What do you do?,عُرضت عليك فرصة تبدو ممتعة لكنها غير مؤكدة. ماذا تفعل؟
+v2,D01_15,deep_01,15,You feel the urge to express yourself after a long week. What do you do?,تشعر برغبة في التعبير عن نفسك بعد أسبوع طويل. ماذا تفعل؟
+v2,D01_16,deep_01,16,Your schedule is tight and you’re getting irritated. What do you do?,جدولك مزدحم وتبدأ تشعر بالانزعاج. ماذا تفعل؟
+v2,D01_17,deep_01,17,Your neighborhood plans a small volunteer activity. What do you do?,الحي يخطط لنشاط تطوعي صغير. ماذا تفعل؟
+v2,D01_18,deep_01,18,You think about your long-term future. What do you do next?,تفكر في مستقبلك على المدى البعيد. ماذا تفعل بعد ذلك؟
+v2,D01_19,deep_01,19,Someone helped you recently without asking. How do you respond?,ساعدك شخص مؤخرًا دون أن يطلب شيئًا. كيف ترد؟
+v2,D01_20,deep_01,20,You’ve been overworking and feel close to burnout. What do you do?,تعمل أكثر من اللازم وتشعر بقرب الإرهاق. ماذا تفعل؟
+v2,D01_21,deep_01,21,A family member needs support, but you’re also stressed. What do you do?,أحد أفراد العائلة يحتاج دعمًا وأنت أيضًا متوتر. ماذا تفعل؟
+v2,D01_22,deep_01,22,You finish a task and have extra time. What do you do?,أنهيت مهمة ولديك وقت إضافي. ماذا تفعل؟
+v2,D01_23,deep_01,23,You’re invited to an event but prefer independence. What do you do?,دُعيت لفعالية لكنك تفضل الاستقلال. ماذا تفعل؟
+v2,D01_24,deep_01,24,You see a rule being ignored that affects everyone. What do you do?,ترى قاعدة يتم تجاهلها وتؤثر على الجميع. ماذا تفعل؟
+v2,D01_25,deep_01,25,You want to start a new habit but worry about consistency. What do you do?,تريد بدء عادة جديدة لكن تقلق من الاستمرار. ماذا تفعل؟
+v2,D01_26,deep_01,26,You feel physically sluggish today. What helps first?,تشعر بخمول جسدي اليوم. ما الذي يساعد أولًا؟
+v2,D01_27,deep_01,27,Someone interrupts you repeatedly in a meeting. What do you do?,شخص يقاطعك مرارًا في اجتماع. ماذا تفعل؟
+v2,D01_28,deep_01,28,Two teammates disagree and ask you to weigh in. What do you do?,زميلان يختلفان ويطلبان رأيك. ماذا تفعل؟
+v2,D01_29,deep_01,29,A friend asks for time when your calendar is packed. What do you do?,صديق يطلب وقتك وجدولك ممتلئ. ماذا تفعل؟
+v2,D01_30,deep_01,30,You’re considering learning something new. What attracts you most?,تفكر في تعلم شيء جديد. ما الذي يجذبك أكثر؟
+v2,D01_31,deep_01,31,You feel disconnected from your inner self. What do you do?,تشعر بانفصال عن ذاتك الداخلية. ماذا تفعل؟
+v2,D01_32,deep_01,32,You want to improve your financial stability. What do you do?,تريد تحسين استقرارك المالي. ماذا تفعل؟
+v2,D01_33,deep_01,33,You delivered results and want them to be seen. What do you do?,حققت نتائج وتريد أن تُرى. ماذا تفعل؟
+v2,D01_34,deep_01,34,A new experience is available but feels risky. What do you do?,تجربة جديدة متاحة لكنها تبدو فيها مخاطرة. ماذا تفعل؟
+v2,D01_35,deep_01,35,You want to make your space feel more beautiful. What do you do?,تريد أن تجعل مساحتك أجمل. ماذا تفعل؟
+v2,D01_36,deep_01,36,You have one hour with friends. What do you do?,لديك ساعة مع الأصدقاء. ماذا تفعل؟
+v2,D01_37,deep_01,37,Your building/area has a shared issue. What do you do?,في المبنى/المنطقة مشكلة مشتركة. ماذا تفعل؟
+v2,D01_38,deep_01,38,You want to push your career forward. What do you do?,تريد دفع مسارك المهني للأمام. ماذا تفعل؟
+v2,D01_39,deep_01,39,Someone thanks you publicly. What do you do?,شخص يشكرك علنًا. ماذا تفعل؟
+v2,D01_40,deep_01,40,You’re torn between work and rest today. What do you do?,أنت ممزق بين العمل والراحة اليوم. ماذا تفعل؟
+v2,D01_41,deep_01,41,You notice someone close feels lonely. What do you do?,تلاحظ أن شخصًا قريبًا يشعر بالوحدة. ماذا تفعل؟
+v2,D01_42,deep_01,42,You have a tough goal and a short timeline. What do you do?,لديك هدف صعب ووقت قصير. ماذا تفعل؟
+v2,D01_43,deep_01,43,You want a lighter mood after a heavy day. What do you do?,تريد مزاجًا أخف بعد يوم ثقيل. ماذا تفعل؟
+v2,D01_44,deep_01,44,You need to make a personal choice without pressure. What do you do?,تحتاج لاتخاذ قرار شخصي دون ضغط. ماذا تفعل؟
+v2,D01_45,deep_01,45,A safety concern comes up at home/work. What do you do?,ظهر أمر يتعلق بالسلامة في البيت/العمل. ماذا تفعل؟
+v2,D01_46,deep_01,46,You want to feel better in your body this week. What do you do?,تريد أن تشعر بتحسن جسدي هذا الأسبوع. ماذا تفعل؟
+v2,D01_47,deep_01,47,Someone dismisses your opinion rudely. What do you do?,شخص يرفض رأيك بفظاظة. ماذا تفعل؟
+v2,D01_48,deep_01,48,You see unequal treatment in a group. What do you do?,ترى معاملة غير متساوية في مجموعة. ماذا تفعل؟
+v2,D02_01,deep_02,1,You notice you haven’t spoken to a sibling in weeks. What do you do?,تلاحظ أنك لم تتحدث مع أخ/أخت منذ أسابيع. ماذا تفعل؟
+v2,D02_02,deep_02,2,You have two tasks due soon. How do you start?,لديك مهمتان قريبتان. كيف تبدأ؟
+v2,D02_03,deep_02,3,You feel bored with your routine. What do you do?,تشعر بالملل من الروتين. ماذا تفعل؟
+v2,D02_04,deep_02,4,A friend shares a secret. How do you respond?,صديق يشاركك سرًا. كيف ترد؟
+v2,D02_05,deep_02,5,You get a chance to work remotely for a week. What do you prioritize?,لديك فرصة للعمل عن بُعد لأسبوع. ما أولويتك؟
+v2,D02_06,deep_02,6,You notice a small safety risk in your home. What do you do?,تلاحظ خطرًا بسيطًا للسلامة في المنزل. ماذا تفعل؟
+v2,D02_07,deep_02,7,Someone speaks over you in a discussion. What do you do?,شخص يتحدث فوق كلامك في نقاش. ماذا تفعل؟
+v2,D02_08,deep_02,8,A coworker is struggling quietly. What do you do?,زميل يعاني بصمت. ماذا تفعل؟
+v2,D02_09,deep_02,9,Your study/work space feels messy. What do you do?,مساحة عملك/دراستك فوضوية. ماذا تفعل؟
+v2,D02_10,deep_02,10,You want to learn a new tool. What is your approach?,تريد تعلم أداة جديدة. ما أسلوبك؟
+v2,D02_11,deep_02,11,You feel your efforts are unnoticed. What do you do?,تشعر أن جهودك غير ملحوظة. ماذا تفعل؟
+v2,D02_12,deep_02,12,You’re offered a side gig. What do you consider first?,عُرضت عليك فرصة عمل جانبي. ما أول ما تضعه في الاعتبار؟
+v2,D02_13,deep_02,13,You’re invited to a new social circle. What do you do?,دُعيت لمجموعة اجتماعية جديدة. ماذا تفعل؟
+v2,D02_14,deep_02,14,A spontaneous trip comes up. What do you do?,ظهرت رحلة عفوية. ماذا تفعل؟
+v2,D02_15,deep_02,15,You feel creative but distracted. What helps?,تشعر بإبداع لكنك مشتت. ما الذي يساعد؟
+v2,D02_16,deep_02,16,Your day feels heavy. What gives you relief?,يومك يبدو ثقيلًا. ما الذي يمنحك ارتياحًا؟
+v2,D02_17,deep_02,17,Your neighborhood has a shared need. What do you do?,لدى الحي حاجة مشتركة. ماذا تفعل؟
+v2,D02_18,deep_02,18,You want to take a bigger step in your career/study. What do you do?,تريد خطوة أكبر في مسارك المهني/الدراسي. ماذا تفعل؟
+v2,D02_19,deep_02,19,Someone did you a favor. What do you do next?,شخص قدم لك معروفًا. ماذا تفعل بعد ذلك؟
+v2,D02_20,deep_02,20,You keep working late. What do you change?,تواصل العمل حتى وقت متأخر. ماذا تغيّر؟
+v2,D02_21,deep_02,21,A family member asks for time during your busiest week. What do you do?,أحد أفراد العائلة يطلب وقتك في أكثر أسابيعك انشغالًا. ماذا تفعل؟
+v2,D02_22,deep_02,22,You finish early and feel restless. What do you do?,أنهيت مبكرًا وتشعر بعدم استقرار. ماذا تفعل؟
+v2,D02_23,deep_02,23,You want more independence in a relationship/work. What do you do?,تريد استقلالية أكثر في علاقة/عمل. ماذا تفعل؟
+v2,D02_24,deep_02,24,You see unfair distribution of tasks. What do you do?,ترى توزيعًا غير عادل للمهام. ماذا تفعل؟
+v2,D02_25,deep_02,25,You’re starting a habit and might quit. What helps you continue?,تبدأ عادة وقد تتوقف. ما الذي يساعدك على الاستمرار؟
+v2,D02_26,deep_02,26,You feel low energy and tense. What do you do first?,تشعر بانخفاض الطاقة والتوتر. ماذا تفعل أولًا؟
+v2,D02_27,deep_02,27,Someone makes a comment that feels insulting. What do you do?,شخص يقول تعليقًا يبدو مهينًا. ماذا تفعل؟
+v2,D02_28,deep_02,28,Two friends argue and ask you to choose a side. What do you do?,صديقان يتجادلان ويطلبان منك اختيار طرف. ماذا تفعل؟
+v2,D02_29,deep_02,29,A friend wants to meet, but you need quiet time. What do you do?,صديق يريد اللقاء لكنك تحتاج وقتًا هادئًا. ماذا تفعل؟
+v2,D02_30,deep_02,30,You want to improve your knowledge this month. What do you pick?,تريد رفع معرفتك هذا الشهر. ماذا تختار؟
+v2,D02_31,deep_02,31,You feel disconnected from purpose. What do you do?,تشعر بانفصال عن الهدف. ماذا تفعل؟
+v2,D02_32,deep_02,32,You want to reduce financial stress. What do you do?,تريد تقليل الضغط المالي. ماذا تفعل؟
+v2,D02_33,deep_02,33,You want your contributions recognized. What’s your move?,تريد الاعتراف بمساهماتك. ما خطوتك؟
+v2,D02_34,deep_02,34,You’re offered a new experience that scares you a bit. What do you do?,عُرضت عليك تجربة جديدة تخيفك قليلًا. ماذا تفعل؟
+v2,D02_35,deep_02,35,You want your home to feel more inviting. What do you do?,تريد أن يكون منزلك أكثر ترحيبًا. ماذا تفعل؟
+v2,D02_36,deep_02,36,You have limited time with friends today. What do you do?,لديك وقت محدود مع الأصدقاء اليوم. ماذا تفعل؟
+v2,D02_37,deep_02,37,A community issue needs coordination. What do you do?,قضية مجتمعية تحتاج تنسيقًا. ماذا تفعل؟
+v2,D02_38,deep_02,38,You want to raise your ambition level. What do you do?,تريد رفع مستوى طموحك. ماذا تفعل؟
+v2,D02_39,deep_02,39,Someone appreciates you in front of others. What do you do?,شخص يقدرك أمام الآخرين. ماذا تفعل؟
+v2,D02_40,deep_02,40,Work is taking over your life. What do you adjust?,العمل يسيطر على حياتك. ماذا تعدّل؟
+v2,D02_41,deep_02,41,A friend feels lonely but won’t say it. What do you do?,صديق يشعر بالوحدة لكنه لا يقول ذلك. ماذا تفعل؟
+v2,D02_42,deep_02,42,You face a hard target and pressure. What do you do?,تواجه هدفًا صعبًا وضغطًا. ماذا تفعل؟
+v2,D02_43,deep_02,43,You want a lighter mood after stress. What do you do?,تريد مزاجًا أخف بعد الضغط. ماذا تفعل؟
+v2,D02_44,deep_02,44,You need to choose a personal direction. What guides you?,تحتاج اختيار اتجاه شخصي. ما الذي يوجهك؟
+v2,D02_45,deep_02,45,A safety rule is ignored at work/home. What do you do?,يتم تجاهل قاعدة سلامة في العمل/البيت. ماذا تفعل؟
+v2,D02_46,deep_02,46,You want to feel healthier this week. What do you start with?,تريد أن تكون أكثر صحة هذا الأسبوع. بماذا تبدأ؟
+v2,D02_47,deep_02,47,Someone dismisses your idea. What do you do?,شخص يقلل من فكرتك. ماذا تفعل؟
+v2,D02_48,deep_02,48,You see someone treated unequally. What do you do?,ترى شخصًا يُعامل بشكل غير متساوٍ. ماذا تفعل؟
+v2,D03_01,deep_03,1,You notice a loved one is overwhelmed. What do you do?,تلاحظ أن شخصًا تحبه مثقل. ماذا تفعل؟
+v2,D03_02,deep_03,2,You have a tough target due soon. How do you respond?,لديك هدف صعب قريب. كيف تتصرف؟
+v2,D03_03,deep_03,3,Your mood is low after a long week. What helps?,مزاجك منخفض بعد أسبوع طويل. ما الذي يساعد؟
+v2,D03_04,deep_03,4,You want more control over your time. What do you do?,تريد تحكمًا أكبر بوقتك. ماذا تفعل؟
+v2,D03_05,deep_03,5,A small risk appears at home/work. What do you do?,ظهر خطر بسيط في البيت/العمل. ماذا تفعل؟
+v2,D03_06,deep_03,6,You’ve ignored your body for days. What do you do?,أهملت جسدك لأيام. ماذا تفعل؟
+v2,D03_07,deep_03,7,Someone speaks to you in a disrespectful tone. What do you do?,شخص يتحدث معك بنبرة غير محترمة. ماذا تفعل؟
+v2,D03_08,deep_03,8,You see an unfair situation in a group. What do you do?,ترى موقفًا غير عادل في مجموعة. ماذا تفعل؟
+v2,D03_09,deep_03,9,You want to deepen a friendship. What do you do?,تريد تعميق صداقة. ماذا تفعل؟
+v2,D03_10,deep_03,10,You want to learn something new. How do you start?,تريد تعلم شيء جديد. كيف تبدأ؟
+v2,D03_11,deep_03,11,You feel disconnected from meaning. What do you do?,تشعر بانفصال عن المعنى. ماذا تفعل؟
+v2,D03_12,deep_03,12,Your spending increased this month. What do you do?,زاد إنفاقك هذا الشهر. ماذا تفعل؟
+v2,D03_13,deep_03,13,You did strong work but it went unnoticed. What do you do?,قمت بعمل قوي ولم يلاحظه أحد. ماذا تفعل؟
+v2,D03_14,deep_03,14,A new opportunity feels exciting and uncertain. What do you do?,فرصة جديدة تبدو مثيرة وغير مؤكدة. ماذا تفعل؟
+v2,D03_15,deep_03,15,You feel like expressing yourself today. What do you do?,تشعر برغبة في التعبير اليوم. ماذا تفعل؟
+v2,D03_16,deep_03,16,You need a lighter moment with friends/family. What do you do?,تحتاج لحظة أخف مع الأصدقاء/العائلة. ماذا تفعل؟
+v2,D03_17,deep_03,17,Your neighborhood has a small issue to solve. What do you do?,في الحي مشكلة صغيرة تحتاج حلًا. ماذا تفعل؟
+v2,D03_18,deep_03,18,You’re planning your next year. What do you focus on?,تخطط لعامك القادم. على ماذا تركز؟
+v2,D03_19,deep_03,19,Someone helped you recently. How do you respond?,شخص ساعدك مؤخرًا. كيف ترد؟
+v2,D03_20,deep_03,20,Work is taking too much space. What do you change?,العمل يأخذ مساحة كبيرة. ماذا تغيّر؟
+v2,D03_21,deep_03,21,A loved one needs time, but you’re tired. What do you do?,شخص تحبه يحتاج وقتًا وأنت متعب. ماذا تفعل؟
+v2,D03_22,deep_03,22,You finish early today. What do you do with extra time?,أنهيت مبكرًا اليوم. ماذا تفعل بالوقت الإضافي؟
+v2,D03_23,deep_03,23,You feel your freedom is limited by commitments. What do you do?,تشعر أن التزاماتك تقلل حريتك. ماذا تفعل؟
+v2,D03_24,deep_03,24,A shared rule is ignored and affects everyone. What do you do?,قاعدة مشتركة تُتجاهل وتؤثر على الجميع. ماذا تفعل؟
+v2,D03_25,deep_03,25,You want a habit to stick. What approach do you take?,تريد عادة تستمر. ما الأسلوب الذي تتبعه؟
+v2,D03_26,deep_03,26,You feel physically tense. What helps first?,تشعر بتوتر جسدي. ما الذي يساعد أولًا؟
+v2,D03_27,deep_03,27,Someone interrupts you repeatedly. What do you do?,شخص يقاطعك مرارًا. ماذا تفعل؟
+v2,D03_28,deep_03,28,Two people disagree and ask you to weigh in. What do you do?,شخصان يختلفان ويطلبان رأيك. ماذا تفعل؟
+v2,D03_29,deep_03,29,A friend asks to meet but your schedule is packed. What do you do?,صديق يطلب لقاءً وجدولك ممتلئ. ماذا تفعل؟
+v2,D03_30,deep_03,30,You want to study more effectively. What do you do?,تريد الدراسة بفعالية أكبر. ماذا تفعل؟
+v2,D03_31,deep_03,31,You want a deeper inner reset. What do you do?,تريد إعادة ضبط داخلية أعمق. ماذا تفعل؟
+v2,D03_32,deep_03,32,You want to feel safer financially. What do you do?,تريد شعورًا أكبر بالأمان المالي. ماذا تفعل؟
+v2,D03_33,deep_03,33,You want your effort to be recognized fairly. What do you do?,تريد تقدير جهدك بشكل منصف. ماذا تفعل؟
+v2,D03_34,deep_03,34,You’re invited to try something outside your comfort zone. What do you do?,دُعيت لتجربة خارج منطقة راحتك. ماذا تفعل؟
+v2,D03_35,deep_03,35,Your space feels dull. What do you do?,مساحتك تبدو مملة. ماذا تفعل؟
+v2,D03_36,deep_03,36,You have one free hour. What do you choose?,لديك ساعة فراغ. ماذا تختار؟
+v2,D03_37,deep_03,37,A community task needs volunteers. What do you do?,مهمة مجتمعية تحتاج متطوعين. ماذا تفعل؟
+v2,D03_38,deep_03,38,You want to raise your ambition level. What do you do?,تريد رفع مستوى طموحك. ماذا تفعل؟
+v2,D03_39,deep_03,39,Someone thanks you publicly. What do you do?,شخص يشكرك علنًا. ماذا تفعل؟
+v2,D03_40,deep_03,40,You’re torn between rest and productivity. What do you do?,أنت ممزق بين الراحة والإنتاجية. ماذا تفعل؟
+v2,D03_41,deep_03,41,You notice a friend feels lonely. What do you do?,تلاحظ أن صديقًا يشعر بالوحدة. ماذا تفعل؟
+v2,D03_42,deep_03,42,You must deliver results under pressure. What do you do?,يجب أن تسلّم نتائج تحت ضغط. ماذا تفعل؟
+v2,D03_43,deep_03,43,You want to increase daily joy. What do you do?,تريد زيادة الفرح اليومي. ماذا تفعل؟
+v2,D03_44,deep_03,44,You need to make a personal decision. What guides you?,تحتاج قرارًا شخصيًا. ما الذي يوجهك؟
+v2,D03_45,deep_03,45,A safety concern is raised by someone. What do you do?,أثار أحدهم قلقًا يتعلق بالسلامة. ماذا تفعل؟
+v2,D03_46,deep_03,46,You want to improve your health this week. What do you start with?,تريد تحسين صحتك هذا الأسبوع. بماذا تبدأ؟
+v2,D03_47,deep_03,47,Someone dismisses your idea rudely. What do you do?,شخص يقلل من فكرتك بفظاظة. ماذا تفعل؟
+v2,D03_48,deep_03,48,You see unequal treatment in a team. What do you do?,ترى معاملة غير متساوية في فريق. ماذا تفعل؟
+v2,D04_01,deep_04,1,You notice your mother/father is stressed today. What do you do?,تلاحظ أن والدك/والدتك متوتر اليوم. ماذا تفعل؟
+v2,D04_02,deep_04,2,Your to-do list is too long for one day. What do you do?,قائمة مهامك أطول من يوم واحد. ماذا تفعل؟
+v2,D04_03,deep_04,3,You feel your week is repetitive. What do you change?,تشعر أن أسبوعك متكرر. ماذا تغيّر؟
+v2,D04_04,deep_04,4,A friend cancels last minute. What do you do?,صديق يلغي في آخر لحظة. ماذا تفعل؟
+v2,D04_05,deep_04,5,You’re offered a flexible role with unclear rules. What do you do?,عُرض عليك دور مرن لكن قواعده غير واضحة. ماذا تفعل؟
+v2,D04_06,deep_04,6,You spot a small safety hazard in the hallway. What do you do?,تلاحظ خطر سلامة بسيط في الممر. ماذا تفعل؟
+v2,D04_07,deep_04,7,Someone speaks to you sharply in public. What do you do?,شخص يتحدث معك بحدة أمام الناس. ماذا تفعل؟
+v2,D04_08,deep_04,8,A teammate is treated unfairly. What do you do?,زميل يُعامل بظلم. ماذا تفعل؟
+v2,D04_09,deep_04,9,You want to strengthen a friendship. What’s your step?,تريد تقوية صداقة. ما خطوتك؟
+v2,D04_10,deep_04,10,You want to learn faster for work/study. What do you do?,تريد التعلم أسرع للعمل/الدراسة. ماذا تفعل؟
+v2,D04_11,deep_04,11,You feel you’re busy but not fulfilled. What do you do?,تشعر أنك مشغول لكن غير مُشبَع. ماذا تفعل؟
+v2,D04_12,deep_04,12,Your bills surprise you this month. What do you do?,فواتيرك فاجأتك هذا الشهر. ماذا تفعل؟
+v2,D04_13,deep_04,13,You delivered results but got no feedback. What do you do?,قدمت نتائج ولم تحصل على ملاحظات. ماذا تفعل؟
+v2,D04_14,deep_04,14,A new experience is available but you’re unsure. What do you do?,تجربة جديدة متاحة لكنك غير متأكد. ماذا تفعل؟
+v2,D04_15,deep_04,15,You want to express yourself after pressure. What do you do?,تريد التعبير عن نفسك بعد ضغط. ماذا تفعل؟
+v2,D04_16,deep_04,16,You need a quick mood reset. What do you choose?,تحتاج إعادة ضبط سريعة للمزاج. ماذا تختار؟
+v2,D04_17,deep_04,17,Your building plans a clean-up day. What do you do?,المبنى يخطط ليوم تنظيف. ماذا تفعل؟
+v2,D04_18,deep_04,18,You’re thinking about your next 6 months. What do you focus on?,تفكر في الستة أشهر القادمة. على ماذا تركز؟
+v2,D04_19,deep_04,19,Someone supported you quietly. How do you respond?,شخص دعمك بهدوء. كيف ترد؟
+v2,D04_20,deep_04,20,You feel close to burnout. What do you do first?,تشعر بقرب الإرهاق. ماذا تفعل أولًا؟
+v2,D04_21,deep_04,21,A family request conflicts with your plan. What do you do?,طلب عائلي يتعارض مع خطتك. ماذا تفعل؟
+v2,D04_22,deep_04,22,You have a free evening unexpectedly. What do you do?,لديك مساء فارغ فجأة. ماذا تفعل؟
+v2,D04_23,deep_04,23,You want more independence in your schedule. What do you do?,تريد استقلالية أكثر في جدولك. ماذا تفعل؟
+v2,D04_24,deep_04,24,People ignore a shared rule in the office. What do you do?,الناس يتجاهلون قاعدة مشتركة في المكتب. ماذا تفعل؟
+v2,D04_25,deep_04,25,You want a habit to last. What do you try?,تريد عادة تستمر. ماذا تجرب؟
+v2,D04_26,deep_04,26,You feel tension in your body. What helps first?,تشعر بتوتر في جسدك. ما الذي يساعد أولًا؟
+v2,D04_27,deep_04,27,A colleague interrupts you repeatedly. What do you do?,زميل يقاطعك مرارًا. ماذا تفعل؟
+v2,D04_28,deep_04,28,Two friends ask you to mediate. What do you do?,صديقان يطلبان منك الوساطة. ماذا تفعل؟
+v2,D04_29,deep_04,29,A friend wants to talk but you’re drained. What do you do?,صديق يريد الحديث وأنت مُنهك. ماذا تفعل؟
+v2,D04_30,deep_04,30,You want to upgrade your skills this month. What do you pick?,تريد تطوير مهاراتك هذا الشهر. ماذا تختار؟
+v2,D04_31,deep_04,31,You feel your inner life is noisy. What do you do?,تشعر أن داخلك مزدحم. ماذا تفعل؟
+v2,D04_32,deep_04,32,You want more financial stability. What do you do?,تريد استقرارًا ماليًا أكبر. ماذا تفعل؟
+v2,D04_33,deep_04,33,You want your effort to be seen fairly. What do you do?,تريد أن يُرى جهدك بإنصاف. ماذا تفعل؟
+v2,D04_34,deep_04,34,You get invited to try something new alone. What do you do?,دُعيت لتجربة شيء جديد وحدك. ماذا تفعل؟
+v2,D04_35,deep_04,35,Your room feels dull. What do you do?,غرفتك تبدو باهتة. ماذا تفعل؟
+v2,D04_36,deep_04,36,You have 30 minutes break. What do you do?,لديك استراحة 30 دقيقة. ماذا تفعل؟
+v2,D04_37,deep_04,37,A neighbor asks for help organizing something. What do you do?,جار يطلب مساعدتك في تنظيم أمر ما. ماذا تفعل؟
+v2,D04_38,deep_04,38,You want to push your ambition without stress. What do you do?,تريد دفع طموحك دون ضغط زائد. ماذا تفعل؟
+v2,D04_39,deep_04,39,Someone praises you publicly. What do you do?,شخص يمدحك علنًا. ماذا تفعل؟
+v2,D04_40,deep_04,40,Your work-life boundary is slipping. What do you do?,حدود عملك وحياتك تتراجع. ماذا تفعل؟
+v2,D04_41,deep_04,41,You notice someone at work seems isolated. What do you do?,تلاحظ أن شخصًا في العمل يبدو معزولًا. ماذا تفعل؟
+v2,D04_42,deep_04,42,You must deliver under pressure and limited time. What do you do?,يجب أن تُسلّم تحت ضغط ووقت محدود. ماذا تفعل؟
+v2,D04_43,deep_04,43,You want more joy in daily life. What do you do?,تريد فرحًا أكثر في الحياة اليومية. ماذا تفعل؟
+v2,D04_44,deep_04,44,You need to make a personal choice. What guides you?,تحتاج لاتخاذ خيار شخصي. ما الذي يوجهك؟
+v2,D04_45,deep_04,45,A safety incident almost happens. What do you do?,كاد يحدث حادث سلامة. ماذا تفعل؟
+v2,D04_46,deep_04,46,You want to feel healthier this week. What’s your start?,تريد أن تشعر بصحة أفضل هذا الأسبوع. ما بدايتك؟
+v2,D04_47,deep_04,47,Someone mocks your opinion. What do you do?,شخص يسخر من رأيك. ماذا تفعل؟
+v2,D04_48,deep_04,48,You notice unequal opportunities in a team. What do you do?,تلاحظ فرصًا غير متساوية في فريق. ماذا تفعل؟
+v2,D05_01,deep_05,1,You notice your spouse/parent looks exhausted after work. What do you do?,تلاحظ أن شريكك/أحد والديك مرهق بعد العمل. ماذا تفعل؟
+v2,D05_02,deep_05,2,You have an important deadline and distractions keep coming. What do you do?,لديك موعد تسليم مهم وتأتيك مشتتات متكررة. ماذا تفعل؟
+v2,D05_03,deep_05,3,You feel your days are missing joy. What do you add?,تشعر أن أيامك تفتقد الفرح. ماذا تضيف؟
+v2,D05_04,deep_05,4,A friend shares a personal struggle. How do you respond?,صديق يشاركك معاناة شخصية. كيف ترد؟
+v2,D05_05,deep_05,5,You’re offered a flexible opportunity but it’s unclear. What do you do?,عُرضت عليك فرصة مرنة لكنها غير واضحة. ماذا تفعل؟
+v2,D05_06,deep_05,6,You notice a safety concern in your routine (door, cable, etc.). What do you do?,تلاحظ أمرًا يخص السلامة في روتينك (باب/سلك...). ماذا تفعل؟
+v2,D05_07,deep_05,7,Someone jokes about you in a way that feels disrespectful. What do you do?,شخص يمزح عنك بطريقة تشعرك بعدم الاحترام. ماذا تفعل؟
+v2,D05_08,deep_05,8,A teammate gets credit for your contribution. What do you do?,زميل يحصل على الفضل بدلًا منك. ماذا تفعل؟
+v2,D05_09,deep_05,9,A close friend seems distant lately. What do you do?,صديق مقرّب يبدو بعيدًا مؤخرًا. ماذا تفعل؟
+v2,D05_10,deep_05,10,You want to build a new skill. How do you start?,تريد بناء مهارة جديدة. كيف تبدأ؟
+v2,D05_11,deep_05,11,You feel busy but not grounded. What do you do?,تشعر بالانشغال لكن دون ثبات داخلي. ماذا تفعل؟
+v2,D05_12,deep_05,12,An unexpected bill shows up. What do you do?,ظهرت فاتورة غير متوقعة. ماذا تفعل؟
+v2,D05_13,deep_05,13,You did good work but it wasn’t noticed. What do you do?,قدمت عملًا جيدًا ولم يلاحظه أحد. ماذا تفعل؟
+v2,D05_14,deep_05,14,You’re invited to a new experience that feels uncertain. What do you do?,دُعيت لتجربة جديدة تبدو غير مؤكدة. ماذا تفعل؟
+v2,D05_15,deep_05,15,You want to express yourself after pressure. What do you do?,تريد التعبير عن نفسك بعد ضغط. ماذا تفعل؟
+v2,D05_16,deep_05,16,You need a quick reset after a stressful day. What do you do?,تحتاج إعادة ضبط سريعة بعد يوم مرهق. ماذا تفعل؟
+v2,D05_17,deep_05,17,Your neighborhood plans a small volunteer task. What do you do?,الحي يخطط لمهمة تطوعية صغيرة. ماذا تفعل؟
+v2,D05_18,deep_05,18,You’re thinking about your next year. What do you focus on?,تفكر في عامك القادم. على ماذا تركز؟
+v2,D05_19,deep_05,19,Someone helped you quietly. How do you respond?,شخص ساعدك بهدوء. كيف ترد؟
+v2,D05_20,deep_05,20,You’ve been overworking for weeks. What do you change?,تعمل فوق طاقتك منذ أسابيع. ماذا تغيّر؟
+v2,D05_21,deep_05,21,A family request comes during your busiest day. What do you do?,طلب عائلي يأتي في أكثر أيامك انشغالًا. ماذا تفعل؟
+v2,D05_22,deep_05,22,You finish early and feel you should “use the time well.” What do you do?,تنهي مبكرًا وتشعر أنك يجب أن “تستفيد من الوقت”. ماذا تفعل؟
+v2,D05_23,deep_05,23,You want more independence in how you work/live. What do you do?,تريد استقلالية أكبر في طريقة عملك/حياتك. ماذا تفعل؟
+v2,D05_24,deep_05,24,A shared rule is ignored and affects everyone. What do you do?,قاعدة مشتركة تُتجاهل وتؤثر على الجميع. ماذا تفعل؟
+v2,D05_25,deep_05,25,You’re starting a habit and fear you’ll quit. What helps?,تبدأ عادة وتخاف أن تتوقف. ما الذي يساعد؟
+v2,D05_26,deep_05,26,You feel low energy today. What do you do first?,تشعر بانخفاض الطاقة اليوم. ماذا تفعل أولًا؟
+v2,D05_27,deep_05,27,Someone interrupts you repeatedly in a meeting. What do you do?,شخص يقاطعك مرارًا في اجتماع. ماذا تفعل؟
+v2,D05_28,deep_05,28,Two friends disagree and ask you to mediate. What do you do?,صديقان يختلفان ويطلبان منك الوساطة. ماذا تفعل؟
+v2,D05_29,deep_05,29,A friend wants to meet, but your schedule is packed. What do you do?,صديق يريد اللقاء لكن جدولك ممتلئ. ماذا تفعل؟
+v2,D05_30,deep_05,30,You want to study more effectively. What do you do?,تريد الدراسة بفعالية أكبر. ماذا تفعل؟
+v2,D05_31,deep_05,31,You feel your inner life is noisy. What helps you reset?,تشعر أن داخلك مزدحم. ما الذي يساعدك على إعادة الضبط؟
+v2,D05_32,deep_05,32,You want more financial stability. What do you do?,تريد استقرارًا ماليًا أكبر. ماذا تفعل؟
+v2,D05_33,deep_05,33,You want fair recognition for your effort. What do you do?,تريد تقديرًا منصفًا لجهدك. ماذا تفعل؟
+v2,D05_34,deep_05,34,You can try a new activity, but it’s outside your comfort zone. What do you do?,يمكنك تجربة نشاط جديد لكنه خارج منطقة راحتك. ماذا تفعل؟
+v2,D05_35,deep_05,35,Your space feels dull. What do you do?,مساحتك تبدو باهتة. ماذا تفعل؟
+v2,D05_36,deep_05,36,You have one free hour today. What do you choose?,لديك ساعة فراغ اليوم. ماذا تختار؟
+v2,D05_37,deep_05,37,A community issue needs coordination. What do you do?,قضية مجتمعية تحتاج تنسيقًا. ماذا تفعل؟
+v2,D05_38,deep_05,38,You want to push your ambition without burning out. What do you do?,تريد دفع طموحك دون إرهاق. ماذا تفعل؟
+v2,D05_39,deep_05,39,Someone praises you publicly. What do you do?,شخص يمدحك علنًا. ماذا تفعل؟
+v2,D05_40,deep_05,40,Your work-life boundary is slipping. What do you do?,حدود العمل والحياة تتراجع. ماذا تفعل؟
+v2,D05_41,deep_05,41,You notice someone at work seems isolated. What do you do?,تلاحظ أن شخصًا في العمل يبدو معزولًا. ماذا تفعل؟
+v2,D05_42,deep_05,42,You must deliver results under pressure and limited time. What do you do?,يجب أن تُسلّم نتائج تحت ضغط ووقت محدود. ماذا تفعل؟
+v2,D05_43,deep_05,43,You want more joy in daily life. What do you do?,تريد فرحًا أكثر في الحياة اليومية. ماذا تفعل؟
+v2,D05_44,deep_05,44,You need to make a personal decision. What guides you?,تحتاج لاتخاذ قرار شخصي. ما الذي يوجهك؟
+v2,D05_45,deep_05,45,A safety concern is raised by someone. What do you do?,أثار أحدهم قلقًا يتعلق بالسلامة. ماذا تفعل؟
+v2,D05_46,deep_05,46,You want to feel healthier this week. What’s your start?,تريد أن تشعر بصحة أفضل هذا الأسبوع. ما بدايتك؟
+v2,D05_47,deep_05,47,Someone dismisses your idea rudely. What do you do?,شخص يقلل من فكرتك بفظاظة. ماذا تفعل؟
+v2,D05_48,deep_05,48,You see unequal opportunities in a group. What do you do?,ترى فرصًا غير متساوية في مجموعة. ماذا تفعل؟
+v2,D06_01,deep_06,1,Your partner feels emotionally distant this week,شريكك يبدو بعيدًا عاطفيًا هذا الأسبوع
+v2,D06_02,deep_06,2,A senior at work takes credit for your idea,شخص أقدم في العمل يأخذ الفضل لفكرتك
+v2,D06_03,deep_06,3,You keep postponing an important health check,تؤجل فحصًا صحيًا مهمًا باستمرار
+v2,D06_04,deep_06,4,You notice rising tension with a close friend,تلاحظ توترًا متزايدًا مع صديق مقرّب
+v2,D06_05,deep_06,5,A new role offers growth but demands travel,دور جديد يقدم نموًا لكنه يتطلب سفرًا
+v2,D06_06,deep_06,6,Your monthly spending is higher than expected,إنفاقك الشهري أعلى من المتوقع
+v2,D06_07,deep_06,7,You feel your days lack meaning lately,تشعر أن أيامك تفتقد المعنى مؤخرًا
+v2,D06_08,deep_06,8,A family member keeps crossing your boundaries,أحد أفراد العائلة يتجاوز حدودك باستمرار
+v2,D06_09,deep_06,9,You discover a safety issue in your building,تكتشف مشكلة سلامة في مبناك
+v2,D06_10,deep_06,10,You want to rebuild your routine after a messy month,تريد إعادة بناء روتينك بعد شهر فوضوي
+v2,D06_11,deep_06,11,A colleague asks you to cover their mistakes,زميل يطلب منك تغطية أخطائه
+v2,D06_12,deep_06,12,You feel invisible in your team meetings,تشعر أنك غير مرئي في اجتماعات الفريق
+v2,D06_13,deep_06,13,Your home feels heavy and uninspiring,منزلك يبدو ثقيلًا وغير ملهم
+v2,D06_14,deep_06,14,A neighbor hints they need help but feels shy,جار يلمح أنه يحتاج مساعدة لكنه يستحي
+v2,D06_15,deep_06,15,You have a chance to learn a skill that can change your path,لديك فرصة لتعلم مهارة قد تغيّر مسارك
+v2,D06_16,deep_06,16,You are offered a quick shortcut that feels unfair,عُرض عليك اختصار سريع لكنه يبدو غير عادل
+v2,D06_17,deep_06,17,You want more joy without spending more money,تريد فرحًا أكثر دون إنفاق إضافي
+v2,D06_18,deep_06,18,A friend wants daily contact and you feel overwhelmed,صديق يريد تواصلًا يوميًا وأنت تشعر بالإرهاق
+v2,D06_19,deep_06,19,You receive criticism in front of others,تتلقى نقدًا أمام الآخرين
+v2,D06_20,deep_06,20,You are deciding whether to move to a new place,تقرر إن كنت ستنتقل إلى مكان جديد
+v2,D06_21,deep_06,21,You keep saying yes and your calendar is full,تقول نعم دائمًا وجدولك ممتلئ
+v2,D06_22,deep_06,22,You want to start a side project after work,تريد بدء مشروع جانبي بعد العمل
+v2,D06_23,deep_06,23,A family disagreement needs someone to mediate,خلاف عائلي يحتاج من يتوسط
+v2,D06_24,deep_06,24,You notice gossip harming someone in your circle,تلاحظ نميمة تضر شخصًا في دائرتك
+v2,D06_25,deep_06,25,You feel your body needs recovery not pressure,تشعر أن جسدك يحتاج تعافيًا لا ضغطًا
+v2,D06_26,deep_06,26,You want to be more consistent with learning,تريد أن تكون أكثر ثباتًا في التعلم
+v2,D06_27,deep_06,27,Your finances are stable but you feel no security,وضعك المالي مستقر لكنك لا تشعر بالأمان
+v2,D06_28,deep_06,28,You miss your community and feel isolated,تفتقد مجتمعك وتشعر بالعزلة
+v2,D06_29,deep_06,29,A team decision ignores your input repeatedly,قرار الفريق يتجاهل رأيك مرارًا
+v2,D06_30,deep_06,30,You are invited to an event that clashes with your values,دُعيت لفعالية تتعارض مع قيمك
+v2,D06_31,deep_06,31,You want to express creativity but you feel blocked,تريد التعبير الإبداعي لكنك تشعر بالانسداد
+v2,D06_32,deep_06,32,You have a free day and feel guilty resting,لديك يوم فراغ وتشعر بالذنب إن ارتحت
+v2,D06_33,deep_06,33,A friend asks for a loan and you are unsure,صديق يطلب قرضًا وأنت متردد
+v2,D06_34,deep_06,34,A new habit starts well then fades in week two,عادة جديدة تبدأ جيدًا ثم تضعف في الأسبوع الثاني
+v2,D06_35,deep_06,35,You want to take a risk but fear the consequences,تريد المخاطرة لكنك تخاف العواقب
+v2,D06_36,deep_06,36,Your friend group plans a trip with poor planning,مجموعة الأصدقاء تخطط لرحلة بتخطيط ضعيف
+v2,D06_37,deep_06,37,You want more respect at work without conflict,تريد احترامًا أكثر في العمل دون صدام
+v2,D06_38,deep_06,38,A community project needs coordination and follow through,مشروع مجتمعي يحتاج تنسيقًا ومتابعة
+v2,D06_39,deep_06,39,You achieve something big and feel empty after,تحقق إنجازًا كبيرًا ثم تشعر بالفراغ
+v2,D06_40,deep_06,40,You want to improve your work life balance this month,تريد تحسين توازن العمل والحياة هذا الشهر
+v2,D06_41,deep_06,41,You keep comparing yourself to others online,تستمر في مقارنة نفسك بالآخرين عبر الإنترنت
+v2,D06_42,deep_06,42,You notice someone new in the team feels excluded,تلاحظ شخصًا جديدًا في الفريق يشعر بالإقصاء
+v2,D06_43,deep_06,43,A close person is disappointed in you,شخص قريب منك يشعر بخيبة أمل تجاهك
+v2,D06_44,deep_06,44,You are choosing between a safe path and a bold path,تختار بين مسار آمن ومسار جريء
+v2,D06_45,deep_06,45,A small mistake could become a bigger risk if ignored,خطأ صغير قد يتحول لخطر أكبر إن تُرك
+v2,D06_46,deep_06,46,You want to reduce stress without losing performance,تريد تقليل الضغط دون خسارة الأداء
+v2,D06_47,deep_06,47,You receive unexpected praise from someone you respect,تتلقى مدحًا غير متوقع من شخص تحترمه
+v2,D06_48,deep_06,48,You want to end the day with calm not scrolling,تريد إنهاء اليوم بهدوء لا بتصفح
+v2,D07_01,deep_07,1,Your partner asks for more time together,شريكك يطلب وقتًا أكثر معًا
+v2,D07_02,deep_07,2,A manager praises you privately but not publicly,مديرك يمدحك على انفراد دون إعلان
+v2,D07_03,deep_07,3,You feel your health habits are slipping,تشعر أن عاداتك الصحية تتراجع
+v2,D07_04,deep_07,4,A close friend avoids talking about an issue,صديق مقرّب يتجنب الحديث عن مشكلة
+v2,D07_05,deep_07,5,You are offered a role with autonomy and risk,عُرض عليك دور باستقلالية لكنه يحمل مخاطرة
+v2,D07_06,deep_07,6,You notice repeated small expenses add up,تلاحظ أن مصاريف صغيرة متكررة تتراكم
+v2,D07_07,deep_07,7,You feel disconnected from inner calm,تشعر بانفصال عن السكينة الداخلية
+v2,D07_08,deep_07,8,A family member expects access to your time anytime,فرد من العائلة يتوقع إتاحة وقتك في أي وقت
+v2,D07_09,deep_07,9,You see a safety hazard near children in your area,ترى خطر سلامة قرب الأطفال في منطقتك
+v2,D07_10,deep_07,10,Your week lacks structure and you feel scattered,أسبوعك بلا هيكلة وتشعر بالتشتت
+v2,D07_11,deep_07,11,A colleague asks you to bend a rule to save time,زميل يطلب منك تجاوز قاعدة لتوفير الوقت
+v2,D07_12,deep_07,12,In meetings your ideas are ignored until repeated,في الاجتماعات تُهمل أفكارك حتى يكررها غيرك
+v2,D07_13,deep_07,13,Your home feels noisy and stressful,منزلك يبدو صاخبًا ومجهدًا
+v2,D07_14,deep_07,14,A neighbor is new and looks isolated,جار جديد يبدو معزولًا
+v2,D07_15,deep_07,15,A course could upgrade your career but needs discipline,دورة قد ترفع مستواك المهني لكنها تحتاج انضباطًا
+v2,D07_16,deep_07,16,You witness someone being treated unfairly in a group,تشهد معاملة غير عادلة لشخص في مجموعة
+v2,D07_17,deep_07,17,You want joy without relying on screens,تريد فرحًا دون الاعتماد على الشاشات
+v2,D07_18,deep_07,18,A friend sends long voice notes every day,صديق يرسل رسائل صوتية طويلة يوميًا
+v2,D07_19,deep_07,19,You receive harsh feedback from a client,تتلقى ملاحظة قاسية من عميل
+v2,D07_20,deep_07,20,You are deciding whether to buy something expensive,تفكر في شراء شيء مكلف
+v2,D07_21,deep_07,21,Your calendar is full and you feel trapped,جدولك ممتلئ وتشعر أنك محاصر
+v2,D07_22,deep_07,22,You want a side project but fear failure,تريد مشروعًا جانبيًا لكن تخاف الفشل
+v2,D07_23,deep_07,23,Two family members argue and expect your support,شخصان من العائلة يختلفان ويتوقعان دعمك
+v2,D07_24,deep_07,24,Gossip spreads about someone you know,تنتشر نميمة عن شخص تعرفه
+v2,D07_25,deep_07,25,Your body feels tired and you still push,جسدك متعب وأنت تواصل الضغط
+v2,D07_26,deep_07,26,You want a learning routine that sticks,تريد روتين تعلم يستمر
+v2,D07_27,deep_07,27,You earn well but still worry about money,دخلك جيد لكنك تقلق ماليًا
+v2,D07_28,deep_07,28,You want to feel part of a community again,تريد الشعور بالانتماء لمجتمع مجددًا
+v2,D07_29,deep_07,29,A repeated decision harms the team and no one speaks,قرار متكرر يضر الفريق ولا أحد يتكلم
+v2,D07_30,deep_07,30,An invitation conflicts with your priorities,دعوة تتعارض مع أولوياتك
+v2,D07_31,deep_07,31,You want to express yourself creatively this month,تريد التعبير الإبداعي هذا الشهر
+v2,D07_32,deep_07,32,You have a free day and feel pressure to be productive,لديك يوم فراغ وتشعر بضغط للإنتاج
+v2,D07_33,deep_07,33,A friend asks for money and you feel uneasy,صديق يطلب مالًا وتشعر بعدم ارتياح
+v2,D07_34,deep_07,34,Your new habit drops after one stressful week,عادتك الجديدة تتوقف بعد أسبوع ضاغط
+v2,D07_35,deep_07,35,You consider a bold move that could change your path,تفكر بخطوة جريئة قد تغيّر مسارك
+v2,D07_36,deep_07,36,Friends plan a trip with unclear roles and costs,الأصدقاء يخططون لرحلة دون وضوح أدوار وتكاليف
+v2,D07_37,deep_07,37,You want more respect at work without drama,تريد احترامًا أكثر في العمل دون دراما
+v2,D07_38,deep_07,38,A volunteer effort needs someone to organize follow up,جهد تطوعي يحتاج من ينظم المتابعة
+v2,D07_39,deep_07,39,After success you feel no satisfaction,بعد النجاح لا تشعر بالرضا
+v2,D07_40,deep_07,40,Work is leaking into your evenings,العمل يتسرب إلى أمسياتك
+v2,D07_41,deep_07,41,Online comparison makes you feel behind,المقارنة عبر الإنترنت تجعلك تشعر أنك متأخر
+v2,D07_42,deep_07,42,A new teammate struggles to fit in,زميل جديد يجد صعوبة في الاندماج
+v2,D07_43,deep_07,43,Someone close feels hurt by your absence,شخص قريب تأذى من غيابك
+v2,D07_44,deep_07,44,You must choose between safety and growth,عليك الاختيار بين الأمان والنمو
+v2,D07_45,deep_07,45,A small mistake could become a bigger risk,خطأ صغير قد يتحول لخطر أكبر
+v2,D07_46,deep_07,46,You want less stress without losing results,تريد ضغطًا أقل دون خسارة النتائج
+v2,D07_47,deep_07,47,You get public praise and feel awkward,تحصل على مدح علني وتشعر بالحرج
+v2,D07_48,deep_07,48,You want to end the day with calm and presence,تريد إنهاء اليوم بهدوء وحضور
+v2,D08_01,deep_08,1,Your partner asks for reassurance after a hard week,شريكك يطلب طمأنة بعد أسبوع صعب
+v2,D08_02,deep_08,2,A friend says you have been distant lately,صديق يقول إنك كنت بعيدًا مؤخرًا
+v2,D08_03,deep_08,3,A family member expects constant availability,أحد أفراد العائلة يتوقع إتاحتك دائمًا
+v2,D08_04,deep_08,4,A colleague pushes you to rush and skip steps,زميل يدفعك للاستعجال وتجاوز الخطوات
+v2,D08_05,deep_08,5,You notice your sleep is getting worse,تلاحظ أن نومك يزداد سوءًا
+v2,D08_06,deep_08,6,You feel stuck in the same routine for weeks,تشعر أنك عالق في نفس الروتين لأسابيع
+v2,D08_07,deep_08,7,A manager asks you to take on extra work without clarity,مدير يطلب منك عملًا إضافيًا دون وضوح
+v2,D08_08,deep_08,8,Someone makes a joke that crosses the line,شخص يمزح بطريقة تتجاوز الحد
+v2,D08_09,deep_08,9,You see unfair treatment in a group discussion,ترى معاملة غير عادلة في نقاش جماعي
+v2,D08_10,deep_08,10,A neighbor asks for help but you are overloaded,جار يطلب مساعدة وأنت مثقل
+v2,D08_11,deep_08,11,Your monthly expenses are drifting upward,مصاريفك الشهرية تتجه للارتفاع
+v2,D08_12,deep_08,12,You receive public praise and feel uneasy,تتلقى مدحًا علنيًا وتشعر بعدم ارتياح
+v2,D08_13,deep_08,13,You want to learn a skill that improves your career,تريد تعلم مهارة تحسن مسارك المهني
+v2,D08_14,deep_08,14,You feel your work has no meaning lately,تشعر أن عملك بلا معنى مؤخرًا
+v2,D08_15,deep_08,15,A friend invites you to try something new,صديق يدعوك لتجربة شيء جديد
+v2,D08_16,deep_08,16,You keep postponing an important decision,تؤجل قرارًا مهمًا باستمرار
+v2,D08_17,deep_08,17,Your home feels cluttered and heavy,منزلك يبدو مزدحمًا وثقيلًا
+v2,D08_18,deep_08,18,You want more joy without spending money,تريد فرحًا أكثر دون إنفاق
+v2,D08_19,deep_08,19,A close person is disappointed in you,شخص قريب يشعر بخيبة أمل منك
+v2,D08_20,deep_08,20,You are offered a higher salary with higher risk,عُرض عليك راتب أعلى مع مخاطرة أعلى
+v2,D08_21,deep_08,21,You feel your week is full but not balanced,تشعر أن أسبوعك ممتلئ لكنه غير متوازن
+v2,D08_22,deep_08,22,A friend asks for a loan and you are unsure,صديق يطلب قرضًا وأنت متردد
+v2,D08_23,deep_08,23,You notice a safety hazard in a shared space,تلاحظ خطر سلامة في مساحة مشتركة
+v2,D08_24,deep_08,24,People keep arriving late and it affects the team,الناس يتأخرون باستمرار ويؤثر ذلك على الفريق
+v2,D08_25,deep_08,25,You want recognition but dislike asking for it,تريد تقديرًا لكنك لا تحب طلبه
+v2,D08_26,deep_08,26,You feel your body needs recovery not pressure,تشعر أن جسدك يحتاج تعافيًا لا ضغطًا
+v2,D08_27,deep_08,27,You want more independence in your schedule,تريد استقلالية أكثر في جدولك
+v2,D08_28,deep_08,28,A community initiative needs volunteers,مبادرة مجتمعية تحتاج متطوعين
+v2,D08_29,deep_08,29,You keep comparing yourself to others online,تستمر في مقارنة نفسك بالآخرين عبر الإنترنت
+v2,D08_30,deep_08,30,A teammate takes your idea and presents it as theirs,زميل يأخذ فكرتك ويعرضها كأنها له
+v2,D08_31,deep_08,31,You want to deepen your inner calm,تريد تعميق السكينة الداخلية
+v2,D08_32,deep_08,32,You have a free evening and feel guilty resting,لديك مساء فارغ وتشعر بالذنب إن ارتحت
+v2,D08_33,deep_08,33,Two friends expect you to choose a side,صديقان يتوقعان منك اختيار طرف
+v2,D08_34,deep_08,34,You consider moving to a new neighborhood,تفكر في الانتقال إلى حي جديد
+v2,D08_35,deep_08,35,You want to take a risk that could change your path,تريد مخاطرة قد تغيّر مسارك
+v2,D08_36,deep_08,36,You want a habit that lasts beyond week one,تريد عادة تستمر بعد الأسبوع الأول
+v2,D08_37,deep_08,37,Your team needs a clear plan for a complex task,فريقك يحتاج خطة واضحة لمهمة معقدة
+v2,D08_38,deep_08,38,You notice someone new feels excluded,تلاحظ أن شخصًا جديدًا يشعر بالإقصاء
+v2,D08_39,deep_08,39,You achieve a goal but feel empty after,تحقق هدفًا ثم تشعر بالفراغ
+v2,D08_40,deep_08,40,Work is leaking into your personal time,العمل يتسرب إلى وقتك الشخصي
+v2,D08_41,deep_08,41,You want to express creativity but feel blocked,تريد التعبير الإبداعي لكنك تشعر بالانسداد
+v2,D08_42,deep_08,42,A friend cancels repeatedly and it hurts,صديق يلغي مرارًا وهذا يؤلمك
+v2,D08_43,deep_08,43,You face a choice between fairness and convenience,تواجه خيارًا بين العدل والسهولة
+v2,D08_44,deep_08,44,Your spending is stable but you still feel insecure,إنفاقك مستقر لكنك ما زلت تشعر بعدم الأمان
+v2,D08_45,deep_08,45,A small mistake could become a bigger risk,خطأ صغير قد يتحول لخطر أكبر
+v2,D08_46,deep_08,46,You want less stress without losing results,تريد ضغطًا أقل دون خسارة النتائج
+v2,D08_47,deep_08,47,Someone questions your competence in front of others,شخص يشكك في كفاءتك أمام الآخرين
+v2,D08_48,deep_08,48,You want to end the day with calm and presence,تريد إنهاء اليوم بهدوء وحضور
+v2,D09_01,deep_09,1,Trust feels weaker after a small lie,الثقة تضعف بعد كذبة صغيرة
+v2,D09_02,deep_09,2,You are overlooked for a visible project,تم تجاهلك في مشروع ظاهر
+v2,D09_03,deep_09,3,Your body signals stress more often,جسدك يعطي إشارات ضغط أكثر
+v2,D09_04,deep_09,4,A friend only calls when they need something,صديق لا يتصل إلا عند الحاجة
+v2,D09_05,deep_09,5,A new job offer promises growth but uncertainty,عرض عمل جديد يعد بالنمو لكنه غير مؤكد
+v2,D09_06,deep_09,6,Money feels tight despite stable income,المال يبدو ضيقًا رغم دخل ثابت
+v2,D09_07,deep_09,7,You want a clearer inner direction,تريد اتجاهًا داخليًا أوضح
+v2,D09_08,deep_09,8,A relative speaks for you in public,قريب يتحدث نيابة عنك أمام الناس
+v2,D09_09,deep_09,9,You notice repeated safety neglect at home,تلاحظ إهمال سلامة متكرر في المنزل
+v2,D09_10,deep_09,10,Your routine collapses after one busy week,روتينك ينهار بعد أسبوع مزدحم
+v2,D09_11,deep_09,11,A colleague asks you to hide a mistake,زميل يطلب منك إخفاء خطأ
+v2,D09_12,deep_09,12,Your idea is ignored then accepted when repeated,فكرتك تُهمل ثم تُقبل حين يكررها غيرك
+v2,D09_13,deep_09,13,Home feels empty and cold,البيت يبدو فارغًا وباردًا
+v2,D09_14,deep_09,14,A neighbor seems lonely but proud,جار يبدو وحيدًا لكنه معتد بنفسه
+v2,D09_15,deep_09,15,A skill gap blocks your next step,فجوة مهارية تعيق خطوتك التالية
+v2,D09_16,deep_09,16,You witness unfair distribution of opportunities,تشهد توزيعًا غير عادل للفرص
+v2,D09_17,deep_09,17,Joy is missing from your evenings,الفرح غائب عن أمسياتك
+v2,D09_18,deep_09,18,A friend sends intense messages late at night,صديق يرسل رسائل مكثفة ليلًا
+v2,D09_19,deep_09,19,You receive criticism that feels personal,تتلقى نقدًا يبدو شخصيًا
+v2,D09_20,deep_09,20,Choosing whether to relocate for work,تختار إن كنت ستنتقل من أجل العمل
+v2,D09_21,deep_09,21,You feel trapped by obligations you accepted,تشعر أنك محاصر بالتزامات قبلتها
+v2,D09_22,deep_09,22,Starting a side project after a long day,بدء مشروع جانبي بعد يوم طويل
+v2,D09_23,deep_09,23,A family conflict escalates quickly,خلاف عائلي يتصاعد بسرعة
+v2,D09_24,deep_09,24,Someone is being mocked in your circle,شخص يتعرض للسخرية في دائرتك
+v2,D09_25,deep_09,25,You keep pushing when your body needs rest,تواصل الضغط حين يحتاج جسدك للراحة
+v2,D09_26,deep_09,26,Learning goals keep slipping month after month,أهداف التعلم تتأجل شهرًا بعد شهر
+v2,D09_27,deep_09,27,You want security without becoming rigid,تريد أمانًا دون أن تصبح جامدًا
+v2,D09_28,deep_09,28,You miss belonging in your community,تفتقد الانتماء في مجتمعك
+v2,D09_29,deep_09,29,A team choice harms quality and no one objects,قرار فريق يضر الجودة ولا أحد يعترض
+v2,D09_30,deep_09,30,An event invitation clashes with your priorities,دعوة لفعالية تتعارض مع أولوياتك
+v2,D09_31,deep_09,31,Creativity feels blocked by stress,الإبداع متوقف بسبب الضغط
+v2,D09_32,deep_09,32,A free day appears and you feel guilt,يأتي يوم فراغ وتشعر بالذنب
+v2,D09_33,deep_09,33,A friend asks for financial help again,صديق يطلب مساعدة مالية مرة أخرى
+v2,D09_34,deep_09,34,A habit breaks when travel happens,عادة تنكسر عند السفر
+v2,D09_35,deep_09,35,A bold opportunity appears with real risk,فرصة جريئة تظهر مع مخاطرة حقيقية
+v2,D09_36,deep_09,36,Friends plan a trip without clear roles,الأصدقاء يخططون لرحلة دون أدوار واضحة
+v2,D09_37,deep_09,37,You want respect at work with minimal conflict,تريد احترامًا في العمل بأقل صدام
+v2,D09_38,deep_09,38,A volunteer initiative needs consistent follow up,مبادرة تطوعية تحتاج متابعة ثابتة
+v2,D09_39,deep_09,39,After a win you feel empty inside,بعد إنجاز تشعر بفراغ داخلي
+v2,D09_40,deep_09,40,Work messages invade your personal time,رسائل العمل تتدخل في وقتك الشخصي
+v2,D09_41,deep_09,41,Comparison online makes you doubt your path,المقارنة عبر الإنترنت تجعلك تشك بمسارك
+v2,D09_42,deep_09,42,A new teammate is left out of the group,زميل جديد مُستبعد من المجموعة
+v2,D09_43,deep_09,43,Someone close feels hurt by your choices,شخص قريب تأذى من خياراتك
+v2,D09_44,deep_09,44,You must choose between comfort and growth,عليك الاختيار بين الراحة والنمو
+v2,D09_45,deep_09,45,A small issue could become a safety risk,مشكلة صغيرة قد تصبح خطر سلامة
+v2,D09_46,deep_09,46,Pressure rises and your performance matters,الضغط يرتفع وأداؤك مهم
+v2,D09_47,deep_09,47,Public praise comes and you feel exposed,مدح علني يأتي وتشعر بأنك مكشوف
+v2,D09_48,deep_09,48,Ending the day with calm feels hard,إنهاء اليوم بهدوء يبدو صعبًا
+v2,D10_01,deep_10,1,A small breach of trust appears in a close relationship,يظهر خرق صغير للثقة في علاقة قريبة
+v2,D10_02,deep_10,2,Your work contribution is minimized in public,يتم التقليل من مساهمتك في العمل أمام الآخرين
+v2,D10_03,deep_10,3,Stress shows up as headaches or tight chest,الضغط يظهر كصداع أو ضيق في الصدر
+v2,D10_04,deep_10,4,A friend repeatedly forgets your important days,صديق ينسى مناسباتك المهمة مرارًا
+v2,D10_05,deep_10,5,A new opportunity offers growth but unclear expectations,فرصة جديدة تقدم نموًا لكن توقعاتها غير واضحة
+v2,D10_06,deep_10,6,You feel finances are stable but not secure,تشعر أن المال مستقر لكنه غير آمن
+v2,D10_07,deep_10,7,You feel spiritually dry and distracted,تشعر بجفاف روحي وتشتت
+v2,D10_08,deep_10,8,A family member shares your private news,أحد أفراد العائلة يشارك خبرًا خاصًا عنك
+v2,D10_09,deep_10,9,You notice a safety risk being ignored at home,تلاحظ خطر سلامة يتم تجاهله في المنزل
+v2,D10_10,deep_10,10,Your routine is strong then breaks after travel,روتينك قوي ثم ينكسر بعد السفر
+v2,D10_11,deep_10,11,A colleague suggests hiding a mistake to look good,زميل يقترح إخفاء خطأ للظهور بمظهر جيد
+v2,D10_12,deep_10,12,Your ideas are heard only when someone else repeats them,أفكارك تُسمع فقط حين يكررها شخص آخر
+v2,D10_13,deep_10,13,Home feels cold and without warmth,المنزل يبدو باردًا وبدون دفء
+v2,D10_14,deep_10,14,A neighbor seems lonely but avoids help,جار يبدو وحيدًا لكنه يتجنب المساعدة
+v2,D10_15,deep_10,15,A learning goal could change your career path,هدف تعلم قد يغير مسارك المهني
+v2,D10_16,deep_10,16,You see unequal opportunities in a group,ترى فرصًا غير متساوية في مجموعة
+v2,D10_17,deep_10,17,Evenings feel empty and joyless,الأمسيات تبدو فارغة بلا فرح
+v2,D10_18,deep_10,18,A friend messages late nightly and expects replies,صديق يراسل ليلًا يوميًا ويتوقع ردًا
+v2,D10_19,deep_10,19,You receive feedback that feels humiliating,تتلقى ملاحظة تشعرك بالإهانة
+v2,D10_20,deep_10,20,You are deciding whether to relocate for a role,تقرر إن كنت ستنتقل من أجل وظيفة
+v2,D10_21,deep_10,21,You feel trapped by commitments you accepted,تشعر أنك محاصر بالتزامات قبلتها
+v2,D10_22,deep_10,22,You want a side project but you are exhausted,تريد مشروعًا جانبيًا لكنك مرهق
+v2,D10_23,deep_10,23,Family conflict escalates and needs a mediator,خلاف عائلي يتصاعد ويحتاج وسيطًا
+v2,D10_24,deep_10,24,Someone is mocked and the room stays silent,شخص يتعرض للسخرية والجميع صامت
+v2,D10_25,deep_10,25,Your body asks for recovery but you keep pushing,جسدك يطلب التعافي وأنت تواصل الضغط
+v2,D10_26,deep_10,26,Your learning plans keep slipping every month,خطط التعلم تتأجل كل شهر
+v2,D10_27,deep_10,27,You want security without losing flexibility,تريد أمانًا دون فقدان المرونة
+v2,D10_28,deep_10,28,You miss a sense of belonging,تفتقد شعور الانتماء
+v2,D10_29,deep_10,29,A team decision harms quality and no one speaks up,قرار فريق يضر الجودة ولا أحد يتكلم
+v2,D10_30,deep_10,30,An invitation clashes with your priorities,دعوة تتعارض مع أولوياتك
+v2,D10_31,deep_10,31,Stress blocks your creativity,الضغط يوقف إبداعك
+v2,D10_32,deep_10,32,A free day comes and guilt appears,يأتي يوم فراغ ويظهر الذنب
+v2,D10_33,deep_10,33,A friend asks again for financial help,صديق يطلب مجددًا مساعدة مالية
+v2,D10_34,deep_10,34,A habit breaks when your schedule changes,عادة تنكسر عندما يتغير جدولك
+v2,D10_35,deep_10,35,A bold opportunity appears with real risk,فرصة جريئة تظهر مع مخاطرة حقيقية
+v2,D10_36,deep_10,36,Friends plan a trip without clear roles and costs,الأصدقاء يخططون لرحلة دون وضوح أدوار وتكاليف
+v2,D10_37,deep_10,37,You want respect at work without conflict,تريد احترامًا في العمل دون صدام
+v2,D10_38,deep_10,38,A community initiative needs consistent follow up,مبادرة مجتمعية تحتاج متابعة ثابتة
+v2,D10_39,deep_10,39,After a big win you feel empty inside,بعد إنجاز كبير تشعر بفراغ داخلي
+v2,D10_40,deep_10,40,Work invades your evenings and weekends,العمل يقتحم أمسياتك وعطلاتك
+v2,D10_41,deep_10,41,Online comparison makes you doubt your worth,المقارنة عبر الإنترنت تجعلك تشك في قيمتك
+v2,D10_42,deep_10,42,A new teammate is left out of the group,زميل جديد يُستبعد من المجموعة
+v2,D10_43,deep_10,43,Someone close feels hurt by your absence,شخص قريب تأذى من غيابك
+v2,D10_44,deep_10,44,You must choose between comfort and growth,عليك الاختيار بين الراحة والنمو
+v2,D10_45,deep_10,45,A small issue could become a safety risk,مشكلة صغيرة قد تصبح خطر سلامة
+v2,D10_46,deep_10,46,Pressure rises and performance matters,الضغط يرتفع والأداء مهم
+v2,D10_47,deep_10,47,Unexpected praise comes and you feel exposed,مدح غير متوقع يأتي وتشعر بأنك مكشوف
+v2,D10_48,deep_10,48,You want to end the day with calm not scrolling,تريد إنهاء اليوم بهدوء لا بتصفح

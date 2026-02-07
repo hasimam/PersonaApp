@@ -8,6 +8,10 @@ class JourneyStartRequest(BaseModel):
     journey_type: Optional[Literal["quick", "deep"]] = None
 
 
+class JourneyResumeRequest(BaseModel):
+    test_run_id: int = Field(..., ge=1)
+
+
 class JourneyScenarioOption(BaseModel):
     option_code: str
     option_text_en: str
