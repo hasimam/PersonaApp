@@ -64,6 +64,9 @@ class _RowErrorBuilder:
 
 
 def _default_seed_dir() -> Path:
+    container_seed = Path("/app/seed")
+    if container_seed.exists():
+        return container_seed
     return Path(__file__).resolve().parents[3] / "seed"
 
 

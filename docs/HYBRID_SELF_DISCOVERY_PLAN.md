@@ -1,5 +1,7 @@
 # Hybrid Self-Discovery MVP Integration Plan
 
+> NOTE (2026-02-07): Consolidated plan lives in `docs/PLAN.md`. This file is kept for reference.
+
 Last updated: 2026-02-04
 
 ## 1) Product decision

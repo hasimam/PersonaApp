@@ -1,5 +1,7 @@
 # V2 Expansion Plan (Quick + Deep Journeys)
 
+> NOTE (2026-02-07): Consolidated plan lives in `docs/PLAN.md`. This file is kept for reference.
+
 Last updated: 2026-02-06
 
 ## Scope

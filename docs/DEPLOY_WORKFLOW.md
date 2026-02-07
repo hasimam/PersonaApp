@@ -75,13 +75,23 @@ npm run build
 
 ## 3) Production deployment workflow
 
+### 3.0 Vercel same-origin setup (one-time)
+- Vercel project root: `frontend`
+- Keep `REACT_APP_API_URL` unset for production.
+- Ensure `frontend/vercel.json` includes rewrites for `/api/*`, `/docs`, `/openapi.json`, `/redoc` to the Fly backend.
+
+### 3.0.1 Neon reset (destructive)
+- In Neon, reset or recreate the `personaapp` database.
+- Update `DATABASE_URL` in Fly to the new/clean database.
+
 ### 3.1 Deploy backend
 1. Deploy backend service (Fly/other).
 2. Set production env vars on host:
    - `DATABASE_URL`
    - `SECRET_KEY`
-   - `CORS_ORIGINS` (include your frontend production origin)
+   - `CORS_ORIGINS` (include your frontend production origin; update this when the public domain changes)
    - `ENVIRONMENT=production`
+   - `ADMIN_API_KEY` (protects admin endpoints + docs in production)
 3. Run migrations on production DB:
 ```bash
 cd backend
@@ -96,10 +106,11 @@ python -m app.db.hybrid_seed_importer
 ```
 
 ### 3.2 Deploy frontend
-Set production frontend env:
+Set production frontend env (optional):
 ```env
 REACT_APP_API_URL=https://<your-backend-domain>
 ```
+If you use Vercel rewrites for same‑origin API calls, leave `REACT_APP_API_URL` unset.
 
 Build and deploy frontend artifact:
 ```bash
@@ -109,12 +120,17 @@ npm run build
 
 ## 4) Post-deploy smoke checks
 
-1. `GET /docs` loads.
+1. `GET /docs?admin_key=<ADMIN_API_KEY>` loads.
 2. Journey flow works end-to-end:
    - `/journey/start` returns scenarios
    - `/journey/submit-answers` returns genes + activation
    - `/journey/feedback` stores judged score and selected activation
 3. Confirm pilot metrics queries run (`docs/DEV_OPERATIONS.md` section 8).
+
+## 4.1 Online testing (public domain)
+- Frontend UI: `https://<vercel-domain>/`
+- Docs (admin-protected): `https://<vercel-domain>/docs?admin_key=<ADMIN_API_KEY>`
+- API (same-origin): `https://<vercel-domain>/api/v1/journey/start`
 
 ## 5) Safety rules
 

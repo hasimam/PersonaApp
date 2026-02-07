@@ -1,0 +1,3 @@
+version_id,name,is_active,published_at,notes
+v1,MVP Pilot v1,1,2026-02-04,"12 scenarios, 5 genes, 6 models, activation advice only"
+v2,Deep Journey v2,0,2026-02-06,"48 scenarios, 20 genes, 30 models, deep activation + mappings"

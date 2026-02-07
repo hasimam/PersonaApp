@@ -53,6 +53,7 @@ RUN_STATUS_STARTED = "started"
 RUN_STATUS_COMPLETED = "completed"
 RUN_STATUS_CANCELLED = "cancelled"
 RUN_INACTIVITY_TTL = timedelta(hours=24)
+DEEP_VERSION_PREFIXES = ("v2",)
 
 
 def _resolve_version_id(
@@ -105,6 +106,13 @@ def _load_scenario_set_codes(db: Session, version_id: str) -> List[str]:
         .all()
     )
     return [set_code for (set_code,) in rows if set_code]
+
+
+def _top_gene_count_for_version(version_id: str) -> int:
+    normalized = version_id.lower()
+    if normalized.startswith(DEEP_VERSION_PREFIXES):
+        return 5
+    return 3
 
 
 def _select_scenario_set_code(set_codes: Sequence[str], test_run_id: int) -> str:
@@ -428,7 +436,8 @@ def submit_journey_answers(
     models = db.query(SahabaModel).filter(SahabaModel.version_id == payload.version_id).all()
     models_by_code = {model.model_code: model for model in models}
 
-    top_gene_rows = outcome.gene_scores[:5]
+    top_gene_count = _top_gene_count_for_version(payload.version_id)
+    top_gene_rows = outcome.gene_scores[:top_gene_count]
     top_genes = [
         JourneyTopGene(
             gene_code=row.gene_code,

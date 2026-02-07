@@ -1,0 +1,26 @@
+version_id,gene_code,name_en,name_ar,desc_en,desc_ar
+v1,WIS,Wisdom / Hikmah,الحكمة,"Pauses, observes, and seeks the bigger picture before acting.",يميل للتريث وفهم الصورة قبل التحرك.
+v1,CRG,Courage / Shaja'ah,الشجاعة,"Speaks up, takes initiative, and accepts risk when needed.",يميل للمبادرة وقول الرأي وتحمل المخاطرة.
+v1,HRM,Harmony / Insijam,الانسجام,"Protects relationships, reduces tension, and values emotional safety.",يميل لحماية العلاقات وتهدئة التوتر.
+v1,DSC,Discipline / Iltizam,الانضباط,"Creates structure, follows through, and prefers clarity and order.",يميل للنظام والالتزام وإنهاء ما يبدأه.
+v1,EMP,Mercy / Rahmah,الرحمة,"Shows compassion, understands emotions, and responds gently under stress.",يميل للتعاطف واللطف وفهم مشاعر الآخرين.
+v2,LOVE,Love & Care,الحب والرعاية,"Expresses care through empathy, loyalty, and emotional presence in close relationships.",يعبر عن الرعاية بالتعاطف والوفاء والحضور العاطفي في العلاقات القريبة.
+v2,ACHV,Achievement,الإنجاز,Sets clear goals and follows through to deliver meaningful results.,يضع أهدافا واضحة ويلتزم بالتنفيذ لتحقيق نتائج ذات معنى.
+v2,JOY,Happiness & Contentment,السعادة والرضا,Maintains inner positivity and practices gratitude to feel satisfied with life.,يحافظ على نظرة إيجابية ويمارس الامتنان ليشعر بالرضا عن حياته.
+v2,FREE,Autonomy,الاستقلالية,Thinks independently and makes responsible personal choices.,يفكر باستقلالية ويتخذ قرارات شخصية بمسؤولية.
+v2,SAFE,Safety & Security,الأمن,Seeks stability and creates safe environments for self and others.,يسعى إلى الاستقرار ويوفر بيئة آمنة لنفسه ولمن حوله.
+v2,HLTH,Health & Wellness,الصحة والعافية,Prioritizes physical and mental well-being through balanced habits.,يعتني بصحته الجسدية والنفسية عبر عادات متوازنة.
+v2,DIGN,Dignity & Respect,الكرامة والاحترام,Values self-respect and treats others with fairness and courtesy.,يقدّر كرامته الشخصية ويعامل الآخرين بعدل واحترام.
+v2,JUST,Justice & Fairness,العدالة والمساواة,Acts with fairness and stands against discrimination or injustice.,يتصرف بعدل ويرفض التمييز أو الظلم.
+v2,FRND,Friendship,الصداقة,"Builds loyal, supportive relationships based on trust.",يبني علاقات داعمة تقوم على الثقة والوفاء.
+v2,LEARN,Learning & Knowledge,التعلم والمعرفة,Seeks knowledge and continuously develops skills and awareness.,يسعى لاكتساب المعرفة ويطور مهاراته ووعيه باستمرار.
+v2,SPIR,Meaning & Purpose,المعنى والغاية,Seeks meaning and alignment between beliefs and daily actions.,يسعى للمعنى والانسجام بين قناعاته وسلوكه اليومي.
+v2,FINC,Financial Stability,الاستقرار المالي,Manages money wisely to create long-term security and independence.,يدير موارده المالية بحكمة لتحقيق استقرار طويل المدى.
+v2,RECO,Recognition,التقدير والاعتراف,Values appreciation and acknowledges the efforts of others.,يقدّر الاعتراف بالجهد ويحرص على تقدير جهود الآخرين.
+v2,ADVN,Adventure & Challenge,المغامرة والتحدي,Seeks new experiences and embraces challenge for growth.,يحب التجارب الجديدة ويستقبل التحديات بروح النمو.
+v2,ARTS,Beauty & Art,الجمال والفن,Appreciates aesthetics and expresses creativity in daily life.,يقدّر الجمال ويعبر عن إبداعه في حياته اليومية.
+v2,FUN,Fun & Enjoyment,المرح والترفيه,Creates joyful moments and balances seriousness with play.,يصنع لحظات ممتعة ويوازن بين الجدية والمرح.
+v2,COMM,Community & Belonging,الانتماء والمجتمع,Feels connected to groups and contributes positively to them.,يشعر بالانتماء ويساهم بإيجابية في مجتمعه.
+v2,AMBT,Ambition & Growth,الطموح والتطور,Strives to improve and reach higher personal standards.,يسعى للتطور المستمر ورفع مستواه الشخصي.
+v2,GRAT,Gratitude,الامتنان,Recognizes blessings and expresses appreciation regularly.,يدرك النعم ويعبر عن الشكر والتقدير باستمرار.
+v2,BALN,Work-Life Balance,التوازن بين العمل والحياة,Balances responsibilities with personal time and relationships.,يوازن بين مسؤولياته العملية ووقته الشخصي وعلاقاته.

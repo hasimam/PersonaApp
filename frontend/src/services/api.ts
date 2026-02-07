@@ -15,7 +15,7 @@ import {
 } from '../types';
 import { Language } from '../i18n/translations';
 
-const API_URL = process.env.REACT_APP_API_URL || 'http://localhost:8000';
+const API_URL = (process.env.REACT_APP_API_URL || '').replace(/\/+$/, '');
 const API_BASE = `${API_URL}/api/v1`;
 
 const api = axios.create({

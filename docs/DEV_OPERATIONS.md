@@ -48,12 +48,13 @@ npm start
 ### Backend (`backend/.env`)
 - `DATABASE_URL`
 - `SECRET_KEY`
-- `CORS_ORIGINS`
+- `CORS_ORIGINS` (update this when the public domain changes)
 - `ENVIRONMENT`
-- `ADMIN_API_KEY`
+- `ADMIN_API_KEY` (protects admin endpoints + `/docs` in production)
 
 ### Frontend (`frontend/.env`)
-- `REACT_APP_API_URL` (default expected: `http://localhost:8000`)
+- `REACT_APP_API_URL` (optional; default expected: `http://localhost:8000`)
+  - For production on Vercel with same‑origin rewrites, leave this unset.
 
 ## 3) Database and migrations
 
@@ -93,6 +94,7 @@ python scripts/cleanup_test_runs.py --days 30
 - Authentication: API key entered in UI and sent as `X-Admin-Key`
 - Admin entities: traits, questions, idols
 - Dashboard stats include Arabic translation coverage
+ - Production API docs are protected: use `/docs?admin_key=<ADMIN_API_KEY>` or send `X-Admin-Key` header.
 
 ## 5) Deployment notes
 - Backend deploy config present:

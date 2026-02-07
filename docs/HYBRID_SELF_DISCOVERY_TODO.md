@@ -1,5 +1,7 @@
 # Hybrid Self-Discovery Implementation TODO
 
+> NOTE (2026-02-07): Consolidated plan lives in `docs/PLAN.md`. This file is kept for reference.
+
 Source: `docs/HYBRID_SELF_DISCOVERY_PLAN.md`
 
 ## Phase checklist

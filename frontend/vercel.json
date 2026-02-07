@@ -1,6 +1,22 @@
 {
   "rewrites": [
     {
+      "source": "/api/(.*)",
+      "destination": "https://personaapp-backend.fly.dev/api/$1"
+    },
+    {
+      "source": "/docs",
+      "destination": "https://personaapp-backend.fly.dev/docs"
+    },
+    {
+      "source": "/openapi.json",
+      "destination": "https://personaapp-backend.fly.dev/openapi.json"
+    },
+    {
+      "source": "/redoc",
+      "destination": "https://personaapp-backend.fly.dev/redoc"
+    },
+    {
       "source": "/(.*)",
       "destination": "/index.html"
     }
