@@ -4,6 +4,11 @@ import LanguageSwitcher from '../components/LanguageSwitcher';
 import { useLanguage } from '../i18n/LanguageContext';
 import { journeyApi } from '../services/api';
 import { JourneyStartResponse, JourneySubmitAnswersResponse, JourneyType } from '../types';
+import logo from '../assets/logo.png';
+import decoImageOne from '../assets/deco-image-1.png';
+import decoImageTwo from '../assets/deco-image-2.png';
+import quickIcon from '../assets/icon-1.png';
+import deepIcon from '../assets/icon-2.png';
 
 type JourneyStep =
   | 'intro'
@@ -68,6 +73,12 @@ const Journey: React.FC = () => {
   const [busy, setBusy] = useState(false);
   const [isAdvancing, setIsAdvancing] = useState(false);
   const [error, setError] = useState('');
+
+  useEffect(() => {
+    if (step === 'intro') {
+      setError('');
+    }
+  }, [step]);
 
   const scenarios = journey?.scenarios ?? [];
   const currentScenario = scenarios[currentScenarioIndex];
@@ -330,8 +341,42 @@ const Journey: React.FC = () => {
 
   const canExitJourney = step !== 'intro' && step !== 'closing';
 
+  const isIntroView = step === 'intro';
+  const iconMap: Record<JourneyType, string> = {
+    quick: quickIcon,
+    deep: deepIcon,
+  };
+
   return (
-    <div className="min-h-screen bg-gradient-to-br from-primary-50 via-white to-primary-100 px-4 py-8 relative">
+    <div className="relative min-h-screen overflow-hidden bg-cream px-4 py-8 text-ink sm:px-6">
+      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top,_rgba(197,168,128,0.18)_0%,_rgba(246,241,234,0)_60%)]" />
+      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_bottom,_rgba(58,80,107,0.08)_0%,_rgba(246,241,234,0)_70%)]" />
+      <div className="pointer-events-none absolute inset-0 opacity-[0.35] [background-image:radial-gradient(rgba(58,80,107,0.06)_1px,transparent_1px)] [background-size:28px_28px]" />
+
+      {isIntroView && (
+        <>
+          <div className="pointer-events-none absolute left-6 top-20 hidden md:block">
+            <div className="h-[360px] w-[300px] overflow-hidden">
+              <img
+                src={decoImageOne}
+                alt=""
+                aria-hidden="true"
+                className="h-full w-full object-cover object-[45%_0%] opacity-70"
+              />
+            </div>
+          </div>
+          <div className="pointer-events-none absolute bottom-0 right-0 hidden sm:block">
+            <div className="h-[280px] w-[240px] overflow-hidden">
+              <img
+                src={decoImageTwo}
+                alt=""
+                aria-hidden="true"
+                className="h-full w-full object-cover object-[70%_100%] opacity-75"
+              />
+            </div>
+          </div>
+        </>
+      )}
       {canExitJourney && (
         <div className="absolute top-4 left-4 z-10">
           <button
@@ -345,47 +390,103 @@ const Journey: React.FC = () => {
         </div>
       )}
 
-      <div className="absolute top-4 right-4 z-10">
-        <LanguageSwitcher />
+      <div className="absolute top-4 right-4 z-10 sm:right-8 sm:top-6">
+        <LanguageSwitcher className="border border-sand/70 shadow-soft-card backdrop-blur-sm" />
       </div>
 
-      <div className="max-w-3xl mx-auto mt-10">
-        {(step === 'intro' || step === 'prep' || step === 'closing') && (
-          <div className="card text-center space-y-6">
-            {step === 'intro' && (
-              <>
-                <h1 className="text-4xl font-bold text-gray-900">{t.journey.introTitle}</h1>
-                <p className="text-lg text-gray-700">{t.journey.introSubtitle}</p>
-                <div className="space-y-3">
-                  <p className="text-sm font-semibold text-gray-600">{t.journey.typeLabel}</p>
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                    {(['quick', 'deep'] as const).map((type) => {
-                      const isSelected = journeyType === type;
-                      return (
-                        <button
-                          key={type}
-                          onClick={() => setJourneyType(type)}
-                          className={`rounded-lg border-2 p-4 text-left transition-colors ${
-                            isSelected
-                              ? 'border-primary-600 bg-primary-50'
-                              : 'border-gray-200 hover:border-primary-400'
-                          }`}
-                        >
-                          <p className="text-sm uppercase tracking-wide text-primary-700 mb-1">
-                            {t.journey.typeLabels[type]}
-                          </p>
-                          <p className="text-sm text-gray-700">{t.journey.typeDescriptions[type]}</p>
-                        </button>
-                      );
-                    })}
-                  </div>
-                </div>
-                <button className="btn-primary" onClick={() => setStep('prep')}>
-                  {t.journey.introCta}
-                </button>
-              </>
-            )}
+      <div className="mx-auto mt-10 max-w-5xl">
+        {step === 'intro' && (
+          <div className="text-center">
+            <div className="relative">
+              <img
+                src={logo}
+                alt="PersonaApp logo"
+                className="mx-auto h-40 w-auto object-contain md:h-60 lg:h-80"
+              />
+              <h1 className="mt-5 text-3xl font-semibold tracking-tight text-ink sm:text-4xl lg:text-5xl">
+                {t.journey.introTitle}
+              </h1>
+              <p className="mx-auto mt-4 max-w-2xl text-sm leading-relaxed text-muted sm:text-base lg:text-lg">
+                {t.journey.introSubtitle}
+              </p>
+            </div>
 
+            <div className="mt-8 flex flex-col items-center sm:mt-10">
+              <div className="flex items-center gap-3 text-accent/70">
+                <span className="h-px w-16 bg-accent/40" />
+                <span className="h-2 w-2 rotate-45 bg-accent/60" />
+                <span className="h-px w-16 bg-accent/40" />
+              </div>
+              <p className="mt-3 text-sm font-medium text-primary/80 sm:text-base">
+                {t.journey.typeLabel}
+              </p>
+            </div>
+
+            <div className="mt-8 grid grid-cols-1 gap-5 md:grid-cols-2 md:gap-6">
+              {(['quick', 'deep'] as const).map((type) => {
+                const isSelected = journeyType === type;
+                return (
+                  <div
+                    key={type}
+                    role="button"
+                    tabIndex={0}
+                    aria-pressed={isSelected}
+                    onClick={() => setJourneyType(type)}
+                    onKeyDown={(event) => {
+                      if (event.key === 'Enter' || event.key === ' ') {
+                        event.preventDefault();
+                        setJourneyType(type);
+                      }
+                    }}
+                    className={`flex min-h-[220px] flex-col rounded-soft border px-6 py-6 text-start shadow-soft-card backdrop-blur-sm transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-cream sm:min-h-[240px] ${
+                      isSelected
+                        ? 'border-accent/80 bg-white shadow-soft-float'
+                        : 'border-sand/80 bg-white/70 hover:border-accent/60'
+                    }`}
+                  >
+                    <div className="flex items-center gap-3">
+                      <span className="flex h-10 w-10 items-center justify-center rounded-full border border-sand/70 bg-[#F0EBE5]">
+                        <img
+                          src={iconMap[type]}
+                          alt=""
+                          aria-hidden="true"
+                          className="h-6 w-6 object-contain"
+                        />
+                      </span>
+                      <h3 className="text-lg font-semibold text-ink sm:text-xl">
+                        {t.journey.typeLabels[type]}
+                      </h3>
+                    </div>
+                    <p className="mt-3 text-sm leading-relaxed text-muted sm:text-base">
+                      {t.journey.typeDescriptions[type]}
+                    </p>
+                    {isSelected && (
+                      <div className="mt-auto pt-6">
+                        <div className="mb-4 flex items-center justify-center gap-2 text-accent/70">
+                          <span className="h-px w-10 bg-accent/40" />
+                          <span className="h-2 w-2 rotate-45 bg-accent/60" />
+                          <span className="h-px w-10 bg-accent/40" />
+                        </div>
+                        <button
+                          onClick={(event) => {
+                            event.stopPropagation();
+                            setStep('prep');
+                          }}
+                          className="mx-auto flex h-11 min-w-[200px] items-center justify-center rounded-full bg-primary px-6 pt-0.5 text-base font-semibold leading-none text-white shadow-[0_12px_24px_rgba(58,80,107,0.18)] transition duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-cream sm:h-12 sm:text-lg lg:hover:-translate-y-0.5 lg:hover:bg-[#31465E]"
+                        >
+                          {t.journey.introCta}
+                        </button>
+                      </div>
+                    )}
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        )}
+
+        {(step === 'prep' || step === 'closing') && (
+          <div className="card text-center space-y-6">
             {step === 'prep' && (
               <>
                 <h2 className="text-3xl font-semibold text-gray-900">{t.journey.prepTitle}</h2>

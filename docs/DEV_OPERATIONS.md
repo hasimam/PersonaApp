@@ -65,6 +65,9 @@ source venv/bin/activate
 alembic upgrade head
 ```
 
+### Migration desync recovery
+See `docs/TROUBLESHOOTING.md`.
+
 ### New migration workflow
 ```bash
 cd backend

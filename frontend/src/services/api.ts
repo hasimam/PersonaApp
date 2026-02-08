@@ -15,15 +15,56 @@ import {
 } from '../types';
 import { Language } from '../i18n/translations';
 
-const API_URL = (process.env.REACT_APP_API_URL || '').replace(/\/+$/, '');
-const API_BASE = `${API_URL}/api/v1`;
+const normalizeUrl = (url: string): string => url.replace(/\/+$/, '');
+
+const isLocalHostname = (hostname: string): boolean =>
+  hostname === 'localhost' || hostname === '127.0.0.1' || hostname === '0.0.0.0' || hostname === '::1';
+
+const resolveRemoteApiUrl = (): string => {
+  const envUrl = normalizeUrl(process.env.REACT_APP_API_URL || '');
+  if (envUrl) {
+    return envUrl;
+  }
+  if (typeof window === 'undefined') {
+    return '';
+  }
+  if (isLocalHostname(window.location.hostname)) {
+    return 'https://personaapp-backend.fly.dev';
+  }
+  return window.location.origin;
+};
+
+const localApiUrl = typeof window !== 'undefined' && isLocalHostname(window.location.hostname)
+  ? 'http://localhost:8000'
+  : '';
+const remoteApiUrl = resolveRemoteApiUrl();
+
+const toApiBase = (url: string): string => (url ? `${normalizeUrl(url)}/api/v1` : '/api/v1');
+const localApiBase = localApiUrl ? toApiBase(localApiUrl) : '';
+const remoteApiBase = toApiBase(remoteApiUrl);
 
 const api = axios.create({
-  baseURL: API_BASE,
+  baseURL: localApiBase || remoteApiBase,
   headers: {
     'Content-Type': 'application/json',
   },
 });
+
+api.interceptors.response.use(
+  (response) => response,
+  async (error) => {
+    const config = error?.config as typeof error.config & { __retryWithRemote?: boolean };
+    if (!config || config.__retryWithRemote || !localApiBase) {
+      return Promise.reject(error);
+    }
+    if (config.baseURL === localApiBase) {
+      config.__retryWithRemote = true;
+      config.baseURL = remoteApiBase;
+      return api.request(config);
+    }
+    return Promise.reject(error);
+  }
+);
 
 export const testApi = {
   startTest: async (lang: Language = 'en'): Promise<TestStartResponse> => {
