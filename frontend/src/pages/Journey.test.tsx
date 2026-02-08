@@ -132,7 +132,7 @@ describe('Journey smoke test', () => {
     });
     mockedJourneyApi.submitFeedback.mockResolvedValue({
       test_run_id: 99,
-      judged_score: 4,
+      judged_score: 3,
       selected_activation_id: null,
       status: 'recorded',
     });
@@ -164,15 +164,11 @@ describe('Journey smoke test', () => {
       jest.advanceTimersByTime(250);
     });
 
-    expect(await screen.findByText('Psychological Safety Check')).toBeInTheDocument();
-    fireEvent.click(screen.getByRole('button', { name: '4' }));
-    fireEvent.click(screen.getByRole('button', { name: 'See My Results' }));
-
     await waitFor(() => expect(mockedJourneyApi.submitAnswers).toHaveBeenCalledTimes(1));
     expect(await screen.findByText('Your Gene Results')).toBeInTheDocument();
     expect(mockedJourneyApi.submitFeedback).toHaveBeenCalledWith({
       test_run_id: 99,
-      judged_score: 4,
+      judged_score: 3,
     });
 
     fireEvent.click(screen.getByRole('button', { name: 'Choose Activation' }));
@@ -182,7 +178,7 @@ describe('Journey smoke test', () => {
     await waitFor(() => expect(mockedJourneyApi.submitFeedback).toHaveBeenCalledTimes(2));
     expect(mockedJourneyApi.submitFeedback).toHaveBeenNthCalledWith(2, {
       test_run_id: 99,
-      judged_score: 4,
+      judged_score: 3,
       selected_activation_id: 'ACT_BEH',
     });
     expect(await screen.findByText('Journey Complete')).toBeInTheDocument();

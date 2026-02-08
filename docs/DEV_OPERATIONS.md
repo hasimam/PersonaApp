@@ -131,6 +131,10 @@ python scripts/cleanup_test_runs.py --days 30
 
 Use these queries against runtime tables after pilot traffic starts.
 
+Note: The psychological safety step is temporarily hidden in the UI. The API still records
+`judged_score` with a default value of `3` for compatibility. Until the step returns,
+the judged-score distribution will be skewed and not meaningful.
+
 ### Judged-score distribution
 ```sql
 SELECT judged_score, COUNT(*) AS count

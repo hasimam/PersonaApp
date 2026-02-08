@@ -19,6 +19,8 @@ const SAFETY_SCORES = [1, 2, 3, 4, 5];
 const AUTO_NEXT_DELAY_MS = 180;
 const RESUME_STORAGE_KEY = 'journey_resume_v1';
 const RESUME_TTL_MS = 24 * 60 * 60 * 1000;
+const SHOW_SAFETY_STEP = false;
+const DEFAULT_JUDGED_SCORE = 3;
 
 type StoredJourneyState = {
   test_run_id: number;
@@ -116,17 +118,22 @@ const Journey: React.FC = () => {
     journeyApi
       .resumeJourney({ test_run_id: stored.test_run_id })
       .then((data) => {
+        const resumeStep =
+          stored.step === 'safety' && !SHOW_SAFETY_STEP ? 'scenarios' : stored.step;
+        const resumeScore = SHOW_SAFETY_STEP
+          ? stored.judgedScore ?? null
+          : stored.judgedScore ?? DEFAULT_JUDGED_SCORE;
         setJourneyType(stored.journey_type ?? 'quick');
         setJourney(data);
         setScenarioAnswers(stored.scenarioAnswers ?? {});
         setCurrentScenarioIndex(
           Math.min(stored.currentScenarioIndex ?? 0, Math.max(data.scenarios.length - 1, 0))
         );
-        setJudgedScore(stored.judgedScore ?? null);
+        setJudgedScore(resumeScore);
         setSelectedActivationId(stored.selectedActivationId ?? null);
         setSubmitResult(null);
         setIsAdvancing(false);
-        setStep(stored.step);
+        setStep(resumeStep);
       })
       .catch(() => {
         clearStoredJourney();
@@ -179,7 +186,7 @@ const Journey: React.FC = () => {
       setJourney(data);
       setCurrentScenarioIndex(0);
       setScenarioAnswers({});
-      setJudgedScore(null);
+      setJudgedScore(SHOW_SAFETY_STEP ? null : DEFAULT_JUDGED_SCORE);
       setSelectedActivationId(null);
       setIsAdvancing(false);
       setStep('scenarios');
@@ -190,38 +197,17 @@ const Journey: React.FC = () => {
     }
   };
 
-  const handleScenarioAnswer = (optionCode: string) => {
-    if (!currentScenario || isAdvancing) {
+  const submitJourneyWithAnswers = async (answersMap: Record<string, string>) => {
+    if (!journey) {
       return;
     }
 
-    setIsAdvancing(true);
-    setError('');
-    setScenarioAnswers((previous) => ({
-      ...previous,
-      [currentScenario.scenario_code]: optionCode,
-    }));
-
-    if (currentScenarioIndex >= scenarios.length - 1) {
-      window.setTimeout(() => {
-        setIsAdvancing(false);
-        setStep('safety');
-      }, AUTO_NEXT_DELAY_MS);
+    const effectiveScore = judgedScore ?? DEFAULT_JUDGED_SCORE;
+    if (SHOW_SAFETY_STEP && !judgedScore) {
       return;
     }
 
-    window.setTimeout(() => {
-      setIsAdvancing(false);
-      setCurrentScenarioIndex((value) => value + 1);
-    }, AUTO_NEXT_DELAY_MS);
-  };
-
-  const submitJourney = async () => {
-    if (!journey || !judgedScore) {
-      return;
-    }
-
-    if (Object.keys(scenarioAnswers).length !== journey.scenarios.length) {
+    if (Object.keys(answersMap).length !== journey.scenarios.length) {
       setError(t.journey.answerAllScenarios);
       setStep('scenarios');
       return;
@@ -235,7 +221,7 @@ const Journey: React.FC = () => {
         test_run_id: journey.test_run_id,
         answers: journey.scenarios.map((scenario) => ({
           scenario_code: scenario.scenario_code,
-          option_code: scenarioAnswers[scenario.scenario_code],
+          option_code: answersMap[scenario.scenario_code],
         })),
       });
 
@@ -245,7 +231,7 @@ const Journey: React.FC = () => {
       try {
         await journeyApi.submitFeedback({
           test_run_id: journey.test_run_id,
-          judged_score: judgedScore,
+          judged_score: effectiveScore,
         });
       } catch (e) {
         // Non-blocking, user should still receive results.
@@ -254,15 +240,54 @@ const Journey: React.FC = () => {
       setStep('results');
     } catch (e) {
       setError(t.journey.submitError);
-      setStep('safety');
+      setStep(SHOW_SAFETY_STEP ? 'safety' : 'scenarios');
     }
   };
 
+  const handleScenarioAnswer = (optionCode: string) => {
+    if (!currentScenario || isAdvancing) {
+      return;
+    }
+
+    setIsAdvancing(true);
+    setError('');
+    const nextAnswers = {
+      ...scenarioAnswers,
+      [currentScenario.scenario_code]: optionCode,
+    };
+    setScenarioAnswers(nextAnswers);
+
+    if (currentScenarioIndex >= scenarios.length - 1) {
+      window.setTimeout(() => {
+        setIsAdvancing(false);
+        if (SHOW_SAFETY_STEP) {
+          setStep('safety');
+          return;
+        }
+        if (!judgedScore) {
+          setJudgedScore(DEFAULT_JUDGED_SCORE);
+        }
+        void submitJourneyWithAnswers(nextAnswers);
+      }, AUTO_NEXT_DELAY_MS);
+      return;
+    }
+
+    window.setTimeout(() => {
+      setIsAdvancing(false);
+      setCurrentScenarioIndex((value) => value + 1);
+    }, AUTO_NEXT_DELAY_MS);
+  };
+
+  const submitJourney = async () => {
+    await submitJourneyWithAnswers(scenarioAnswers);
+  };
+
   const finalizeActivation = async () => {
-    if (!journey || !judgedScore) {
+    if (!journey) {
       setStep('closing');
       return;
     }
+    const effectiveScore = judgedScore ?? DEFAULT_JUDGED_SCORE;
 
     if (!selectedActivationId) {
       setError(t.journey.selectActivationPrompt);
@@ -274,7 +299,7 @@ const Journey: React.FC = () => {
     try {
       await journeyApi.submitFeedback({
         test_run_id: journey.test_run_id,
-        judged_score: judgedScore,
+        judged_score: effectiveScore,
         selected_activation_id: selectedActivationId,
       });
       clearStoredJourney();
@@ -440,7 +465,7 @@ const Journey: React.FC = () => {
           </div>
         )}
 
-        {step === 'safety' && (
+        {step === 'safety' && SHOW_SAFETY_STEP && (
           <div className="card text-center space-y-6">
             <h2 className="text-2xl font-semibold text-gray-900">{t.journey.safetyTitle}</h2>
             <p className="text-gray-700">{t.journey.safetySubtitle}</p>
