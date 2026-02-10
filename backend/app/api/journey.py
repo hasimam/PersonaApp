@@ -109,10 +109,9 @@ def _load_scenario_set_codes(db: Session, version_id: str) -> List[str]:
 
 
 def _top_gene_count_for_version(version_id: str) -> int:
-    normalized = version_id.lower()
-    if normalized.startswith(DEEP_VERSION_PREFIXES):
-        return 5
-    return 3
+    # UI expects a consistent "top 5" across journey types.
+    # If fewer than 5 genes exist, the response naturally returns fewer.
+    return 5
 
 
 def _select_scenario_set_code(set_codes: Sequence[str], test_run_id: int) -> str:
@@ -383,7 +382,7 @@ def submit_journey_answers(
             db=db,
             version_id=payload.version_id,
             answers=normalized_answers,
-            top_model_n=3,
+            top_model_n=5,
         )
     except ValueError as exc:
         raise HTTPException(status_code=400, detail=str(exc))

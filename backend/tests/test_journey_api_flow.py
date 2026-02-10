@@ -421,7 +421,7 @@ class JourneyApiFlowTests(unittest.TestCase):
         expected_gene_count = (
             self.db.query(Gene).filter(Gene.version_id == "v_test").count()
         )
-        self.assertEqual(len(submitted.top_genes), min(3, expected_gene_count))
+        self.assertEqual(len(submitted.top_genes), min(5, expected_gene_count))
         self.assertEqual(submitted.quran_values, [])
         self.assertEqual(submitted.prophet_traits, [])
         self.assertEqual([item.channel for item in submitted.activation_items], ["behavior", "reflection", "social"])
