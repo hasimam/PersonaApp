@@ -32,13 +32,13 @@ const Landing: React.FC = () => {
       <div className="pointer-events-none absolute inset-x-0 bottom-0 top-12 bg-[radial-gradient(ellipse_at_bottom,_rgba(58,80,107,0.08)_0%,_rgba(246,241,234,0)_70%)]" />
       <div className="pointer-events-none absolute inset-x-0 bottom-0 top-12 opacity-[0.35] [background-image:radial-gradient(rgba(58,80,107,0.06)_1px,transparent_1px)] [background-size:28px_28px]" />
 
-      <div className="pointer-events-none absolute left-6 top-24 hidden md:block">
-        <div className="h-[360px] w-[300px] overflow-hidden">
+      <div className="pointer-events-none absolute bottom-0 left-0 hidden sm:block">
+        <div className="h-[280px] w-[240px] overflow-hidden">
           <img
             src={decoImageOne}
             alt=""
             aria-hidden="true"
-            className="h-full w-full object-cover object-[45%_0%] opacity-70"
+            className="h-full w-full object-cover object-[30%_100%] opacity-75"
           />
         </div>
       </div>

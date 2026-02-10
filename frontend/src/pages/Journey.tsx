@@ -9,6 +9,11 @@ import decoImageOne from '../assets/deco-image-1.png';
 import decoImageTwo from '../assets/deco-image-2.png';
 import quickIcon from '../assets/icon-1.png';
 import deepIcon from '../assets/icon-2.png';
+import resultsIconOne from '../assets/icon-3.png';
+import resultsIconTwo from '../assets/icon-4.png';
+import resultsIconThree from '../assets/icon-5.png';
+import resultsIconFour from '../assets/icon-6.png';
+import activationIcon from '../assets/icon-7.png';
 
 type JourneyStep =
   | 'intro'
@@ -348,7 +353,7 @@ const Journey: React.FC = () => {
   };
 
   return (
-    <div className="relative min-h-screen overflow-hidden bg-cream px-4 py-8 text-ink sm:px-6">
+    <div className="relative min-h-screen overflow-hidden bg-cream text-ink">
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top,_rgba(197,168,128,0.18)_0%,_rgba(246,241,234,0)_60%)]" />
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_bottom,_rgba(58,80,107,0.08)_0%,_rgba(246,241,234,0)_70%)]" />
       <div className="pointer-events-none absolute inset-0 opacity-[0.35] [background-image:radial-gradient(rgba(58,80,107,0.06)_1px,transparent_1px)] [background-size:28px_28px]" />
@@ -378,7 +383,7 @@ const Journey: React.FC = () => {
         </>
       )}
       {canExitJourney && (
-        <div className="absolute top-4 left-4 z-10">
+        <div className="absolute top-4 left-4 z-20">
           <button
             onClick={() => {
               void handleExit();
@@ -390,11 +395,13 @@ const Journey: React.FC = () => {
         </div>
       )}
 
-      <div className="absolute top-4 right-4 z-10 sm:right-8 sm:top-6">
+      <div className="absolute top-4 right-4 z-20 sm:right-8 sm:top-6">
         <LanguageSwitcher className="border border-sand/70 shadow-soft-card backdrop-blur-sm" />
       </div>
 
-      <div className="mx-auto mt-10 max-w-5xl">
+      <div
+        className="relative z-10 mx-auto w-full max-w-5xl px-4 pb-16 pt-24 sm:px-6 sm:pt-24 md:pt-28 lg:px-8 lg:pt-32"
+      >
         {step === 'intro' && (
           <div className="text-center">
             <div className="relative">
@@ -486,22 +493,29 @@ const Journey: React.FC = () => {
         )}
 
         {(step === 'prep' || step === 'closing') && (
-          <div className="card text-center space-y-6">
+          <div className="mx-auto max-w-3xl space-y-6 rounded-soft border border-accent/80 bg-white/70 px-6 py-6 text-center shadow-soft-card backdrop-blur-sm">
             {step === 'prep' && (
               <>
-                <h2 className="text-3xl font-semibold text-gray-900">{t.journey.prepTitle}</h2>
+                <h2 className="text-3xl font-semibold text-ink">{t.journey.prepTitle}</h2>
                 <ul
-                  className={`${language === 'ar' ? 'text-right' : 'text-left'} text-gray-700 space-y-2 max-w-xl mx-auto`}
+                  className={`${language === 'ar' ? 'text-right' : 'text-left'} text-muted space-y-2 max-w-xl mx-auto`}
                 >
                   <li>- {t.journey.prepPointOne}</li>
                   <li>- {t.journey.prepPointTwo}</li>
                   <li>- {t.journey.prepPointThree}</li>
                 </ul>
                 <div className="flex justify-center gap-3">
-                  <button className="btn-secondary" onClick={() => setStep('intro')}>
+                  <button
+                    onClick={() => setStep('intro')}
+                    className="flex h-11 items-center justify-center rounded-full border border-sand/80 bg-white/60 px-6 pt-0.5 text-base font-semibold leading-none text-ink shadow-soft-card backdrop-blur-sm transition duration-200 hover:bg-white/80 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-cream sm:h-12 sm:text-lg"
+                  >
                     {t.journey.back}
                   </button>
-                  <button className="btn-primary" onClick={startJourney} disabled={busy}>
+                  <button
+                    onClick={startJourney}
+                    disabled={busy}
+                    className="flex h-11 min-w-[200px] items-center justify-center rounded-full bg-primary px-6 pt-0.5 text-base font-semibold leading-none text-white shadow-[0_12px_24px_rgba(58,80,107,0.18)] transition duration-200 hover:bg-[#31465E] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-cream disabled:cursor-not-allowed disabled:opacity-60 sm:h-12 sm:text-lg"
+                  >
                     {busy ? t.journey.starting : t.journey.beginScenarios}
                   </button>
                 </div>
@@ -510,9 +524,13 @@ const Journey: React.FC = () => {
 
             {step === 'closing' && (
               <>
-                <h2 className="text-3xl font-semibold text-gray-900">{t.journey.closingTitle}</h2>
-                <p className="text-gray-700">{t.journey.closingBody}</p>
-                <button className="btn-primary" onClick={resetFlow}>
+                <h2 className="text-3xl font-semibold text-ink">{t.journey.closingTitle}</h2>
+                <p className="text-muted">{t.journey.closingBody}</p>
+                <button
+                  className="mx-auto flex h-11 min-w-[200px] items-center justify-center rounded-full bg-primary px-6 pt-0.5 text-base font-semibold leading-none text-white shadow-[0_12px_24px_rgba(58,80,107,0.18)] transition duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-cream sm:h-12 sm:text-lg lg:hover:-translate-y-0.5 lg:hover:bg-[#31465E]"
+                  onClick={resetFlow}
+                  type="button"
+                >
                   {t.journey.restart}
                 </button>
               </>
@@ -521,23 +539,27 @@ const Journey: React.FC = () => {
         )}
 
         {step === 'scenarios' && currentScenario && (
-          <div className="card space-y-6">
+          <div className="mx-auto max-w-3xl space-y-6 rounded-soft border border-accent/80 bg-white/70 px-6 py-6 text-center shadow-soft-card backdrop-blur-sm">
             <div>
-              <div className="flex justify-between text-sm text-gray-600 mb-2">
+              <div
+                className={`mb-3 flex justify-between text-sm text-muted ${
+                  language === 'ar' ? 'text-right' : 'text-left'
+                }`}
+              >
                 <span>{t.journey.scenarioProgress}</span>
                 <span>
                   {currentScenarioIndex + 1} / {scenarios.length}
                 </span>
               </div>
-              <div className="w-full bg-gray-200 h-2 rounded-full">
+              <div className="h-2 w-full overflow-hidden rounded-full bg-sand/60">
                 <div
-                  className="bg-primary-600 h-2 rounded-full transition-all"
+                  className="h-2 rounded-full bg-primary transition-all"
                   style={{ width: `${((currentScenarioIndex + 1) / scenarios.length) * 100}%` }}
                 />
               </div>
             </div>
 
-            <h2 className="text-2xl font-semibold text-gray-900 text-center">
+            <h2 className="text-2xl font-semibold text-ink">
               {localizeText(currentScenario.scenario_text_en, currentScenario.scenario_text_ar)}
             </h2>
 
@@ -548,12 +570,16 @@ const Journey: React.FC = () => {
                 return (
                   <button
                     key={option.option_code}
+                    type="button"
+                    aria-pressed={isSelected}
                     onClick={() => handleScenarioAnswer(option.option_code)}
                     disabled={isAdvancing}
-                    className={`w-full ${language === 'ar' ? 'text-right' : 'text-left'} rounded-lg border-2 p-4 transition-colors ${
+                    className={`w-full rounded-soft border px-5 py-4 text-sm font-medium leading-relaxed text-ink shadow-soft-card backdrop-blur-sm transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-cream disabled:cursor-not-allowed disabled:opacity-60 sm:text-base ${
+                      language === 'ar' ? 'text-right' : 'text-left'
+                    } ${
                       isSelected
-                        ? 'border-primary-600 bg-primary-50'
-                        : 'border-gray-200 hover:border-primary-400'
+                        ? 'border-accent/80 bg-white shadow-soft-float'
+                        : 'border-sand/80 bg-white/60 hover:border-accent/60 hover:bg-white/75'
                     }`}
                   >
                     {localizeText(option.option_text_en, option.option_text_ar)}
@@ -562,7 +588,7 @@ const Journey: React.FC = () => {
               })}
             </div>
 
-            <p className="text-sm text-gray-600 text-center">{t.journey.autoNextHint}</p>
+            <p className="text-sm text-muted">{t.journey.autoNextHint}</p>
           </div>
         )}
 
@@ -610,25 +636,38 @@ const Journey: React.FC = () => {
         )}
 
         {step === 'results' && submitResult && (
-          <div className="space-y-6">
-            <div className="card">
-              <h2 className="text-3xl font-semibold text-gray-900 mb-4">{t.journey.resultsTitle}</h2>
-              <p className="text-gray-700 mb-6">{t.journey.resultsSubtitle}</p>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div className="mx-auto max-w-4xl space-y-6">
+            <div className="space-y-4 rounded-soft border border-accent/80 bg-white/70 px-6 py-6 shadow-soft-card backdrop-blur-sm">
+              <div className="flex items-center gap-3">
+                <span className="flex h-10 w-10 items-center justify-center rounded-full border border-sand/70 bg-[#F0EBE5]">
+                  <img
+                    src={resultsIconOne}
+                    alt=""
+                    aria-hidden="true"
+                    className="h-6 w-6 object-contain"
+                  />
+                </span>
+                <h2 className="text-3xl font-semibold text-ink">{t.journey.resultsTitle}</h2>
+              </div>
+              <p className="text-muted">{t.journey.resultsSubtitle}</p>
+              <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
                 {submitResult.top_genes.map((gene) => (
-                  <div key={gene.gene_code} className="rounded-lg border border-gray-200 p-4">
-                    <p className="text-xs uppercase tracking-wide text-primary-700 mb-1">
+                  <div
+                    key={gene.gene_code}
+                    className="rounded-soft border border-sand/80 bg-white/60 p-4 shadow-soft-card backdrop-blur-sm"
+                  >
+                    <p className="mb-1 text-xs uppercase tracking-wide text-primary/80">
                       {gene.role
                         ? t.journey.geneRoles[gene.role as 'dominant' | 'secondary' | 'support'] ?? gene.role
                         : `${t.journey.geneRankLabel} ${gene.rank}`}
                     </p>
-                    <h3 className="text-lg font-semibold text-gray-900">
+                    <h3 className="text-lg font-semibold text-ink">
                       {localizeText(gene.name_en, gene.name_ar)}
                     </h3>
-                    <p className="text-sm text-gray-600 mt-2">
+                    <p className="mt-2 text-sm leading-relaxed text-muted">
                       {localizeText(gene.desc_en, gene.desc_ar)}
                     </p>
-                    <p className="text-sm font-semibold text-primary-700 mt-3">
+                    <p className="mt-3 text-sm font-semibold text-primary/90">
                       {gene.normalized_score.toFixed(2)}%
                     </p>
                   </div>
@@ -637,21 +676,34 @@ const Journey: React.FC = () => {
             </div>
 
             {submitResult.archetype_matches.length > 0 && (
-              <div className="card">
-                <h3 className="text-2xl font-semibold text-gray-900 mb-4">{t.journey.archetypesTitle}</h3>
+              <div className="space-y-4 rounded-soft border border-accent/80 bg-white/70 px-6 py-6 shadow-soft-card backdrop-blur-sm">
+                <div className="flex items-center gap-3">
+                  <span className="flex h-10 w-10 items-center justify-center rounded-full border border-sand/70 bg-[#F0EBE5]">
+                    <img
+                      src={resultsIconTwo}
+                      alt=""
+                      aria-hidden="true"
+                      className="h-6 w-6 object-contain"
+                    />
+                  </span>
+                  <h3 className="text-2xl font-semibold text-ink">{t.journey.archetypesTitle}</h3>
+                </div>
                 <div className="space-y-3">
                   {submitResult.archetype_matches.map((match) => (
-                    <div key={match.model_code} className="rounded-lg border border-gray-200 p-4">
+                    <div
+                      key={match.model_code}
+                      className="rounded-soft border border-sand/80 bg-white/60 p-4 shadow-soft-card backdrop-blur-sm"
+                    >
                       <div className="flex justify-between gap-3">
-                        <h4 className="font-semibold text-gray-900">
+                        <h4 className="font-semibold text-ink">
                           {localizeText(match.name_en, match.name_ar)}
                         </h4>
-                        <span className="text-sm text-primary-700 font-semibold">
+                        <span className="text-sm font-semibold text-primary/90">
                           {(match.similarity * 100).toFixed(1)}%
                         </span>
                       </div>
                       {match.summary_ar && language === 'ar' && (
-                        <p className="text-sm text-gray-700 mt-2">{match.summary_ar}</p>
+                        <p className="mt-2 text-sm leading-relaxed text-ink">{match.summary_ar}</p>
                       )}
                     </div>
                   ))}
@@ -660,20 +712,33 @@ const Journey: React.FC = () => {
             )}
 
             {submitResult.quran_values.length > 0 && (
-              <div className="card">
-                <h3 className="text-2xl font-semibold text-gray-900 mb-4">{t.journey.quranValuesTitle}</h3>
+              <div className="space-y-4 rounded-soft border border-accent/80 bg-white/70 px-6 py-6 shadow-soft-card backdrop-blur-sm">
+                <div className="flex items-center gap-3">
+                  <span className="flex h-10 w-10 items-center justify-center rounded-full border border-sand/70 bg-[#F0EBE5]">
+                    <img
+                      src={resultsIconThree}
+                      alt=""
+                      aria-hidden="true"
+                      className="h-6 w-6 object-contain"
+                    />
+                  </span>
+                  <h3 className="text-2xl font-semibold text-ink">{t.journey.quranValuesTitle}</h3>
+                </div>
                 <div className="space-y-3">
                   {submitResult.quran_values.map((value) => (
-                    <div key={value.quran_value_code} className="rounded-lg border border-gray-200 p-4">
+                    <div
+                      key={value.quran_value_code}
+                      className="rounded-soft border border-sand/80 bg-white/60 p-4 shadow-soft-card backdrop-blur-sm"
+                    >
                       <div className="flex justify-between gap-3">
-                        <h4 className="font-semibold text-gray-900">
+                        <h4 className="font-semibold text-ink">
                           {localizeText(value.name_en, value.name_ar)}
                         </h4>
-                        <span className="text-sm text-primary-700 font-semibold">
+                        <span className="text-sm font-semibold text-primary/90">
                           {value.score.toFixed(1)}
                         </span>
                       </div>
-                      <p className="text-sm text-gray-700 mt-2">
+                      <p className="mt-2 text-sm leading-relaxed text-muted">
                         {localizeText(value.desc_en, value.desc_ar)}
                       </p>
                     </div>
@@ -683,20 +748,33 @@ const Journey: React.FC = () => {
             )}
 
             {submitResult.prophet_traits.length > 0 && (
-              <div className="card">
-                <h3 className="text-2xl font-semibold text-gray-900 mb-4">{t.journey.prophetTraitsTitle}</h3>
+              <div className="space-y-4 rounded-soft border border-accent/80 bg-white/70 px-6 py-6 shadow-soft-card backdrop-blur-sm">
+                <div className="flex items-center gap-3">
+                  <span className="flex h-10 w-10 items-center justify-center rounded-full border border-sand/70 bg-[#F0EBE5]">
+                    <img
+                      src={resultsIconFour}
+                      alt=""
+                      aria-hidden="true"
+                      className="h-6 w-6 object-contain"
+                    />
+                  </span>
+                  <h3 className="text-2xl font-semibold text-ink">{t.journey.prophetTraitsTitle}</h3>
+                </div>
                 <div className="space-y-3">
                   {submitResult.prophet_traits.map((trait) => (
-                    <div key={trait.trait_code} className="rounded-lg border border-gray-200 p-4">
+                    <div
+                      key={trait.trait_code}
+                      className="rounded-soft border border-sand/80 bg-white/60 p-4 shadow-soft-card backdrop-blur-sm"
+                    >
                       <div className="flex justify-between gap-3">
-                        <h4 className="font-semibold text-gray-900">
+                        <h4 className="font-semibold text-ink">
                           {localizeText(trait.name_en, trait.name_ar)}
                         </h4>
-                        <span className="text-sm text-primary-700 font-semibold">
+                        <span className="text-sm font-semibold text-primary/90">
                           {trait.score.toFixed(1)}
                         </span>
                       </div>
-                      <p className="text-sm text-gray-700 mt-2">
+                      <p className="mt-2 text-sm leading-relaxed text-muted">
                         {localizeText(trait.desc_en, trait.desc_ar)}
                       </p>
                     </div>
@@ -706,7 +784,10 @@ const Journey: React.FC = () => {
             )}
 
             <div className="flex justify-center">
-              <button className="btn-primary" onClick={() => setStep('activation')}>
+              <button
+                className="flex h-11 min-w-[200px] items-center justify-center rounded-full bg-primary px-6 pt-0.5 text-base font-semibold leading-none text-white shadow-[0_12px_24px_rgba(58,80,107,0.18)] transition duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-cream sm:h-12 sm:text-lg lg:hover:-translate-y-0.5 lg:hover:bg-[#31465E]"
+                onClick={() => setStep('activation')}
+              >
                 {t.journey.toActivation}
               </button>
             </div>
@@ -714,10 +795,20 @@ const Journey: React.FC = () => {
         )}
 
         {step === 'activation' && submitResult && (
-          <div className="card space-y-6">
+          <div className="mx-auto max-w-3xl space-y-6 rounded-soft border border-accent/80 bg-white/70 px-6 py-6 shadow-soft-card backdrop-blur-sm">
             <div>
-              <h2 className="text-3xl font-semibold text-gray-900 mb-2">{t.journey.activationTitle}</h2>
-              <p className="text-gray-700">{t.journey.activationSubtitle}</p>
+              <div className="flex items-center gap-3 mb-2">
+                <span className="flex h-10 w-10 items-center justify-center rounded-full border border-sand/70 bg-[#F0EBE5]">
+                  <img
+                    src={activationIcon}
+                    alt=""
+                    aria-hidden="true"
+                    className="h-6 w-6 object-contain"
+                  />
+                </span>
+                <h2 className="text-3xl font-semibold text-ink">{t.journey.activationTitle}</h2>
+              </div>
+              <p className="text-muted">{t.journey.activationSubtitle}</p>
             </div>
 
             <div className="space-y-3">
@@ -726,30 +817,34 @@ const Journey: React.FC = () => {
                 return (
                   <button
                     key={item.advice_id}
+                    type="button"
+                    aria-pressed={isSelected}
                     onClick={() => {
                       setSelectedActivationId(item.advice_id);
                       setError('');
                     }}
-                    className={`w-full ${language === 'ar' ? 'text-right' : 'text-left'} rounded-lg border-2 p-4 transition-colors ${
+                    className={`w-full rounded-soft border px-5 py-4 text-sm font-medium leading-relaxed text-ink shadow-soft-card backdrop-blur-sm transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-cream disabled:cursor-not-allowed disabled:opacity-60 sm:text-base ${
+                      language === 'ar' ? 'text-right' : 'text-left'
+                    } ${
                       isSelected
-                        ? 'border-primary-600 bg-primary-50'
-                        : 'border-gray-200 hover:border-primary-400'
+                        ? 'border-accent/80 bg-white shadow-soft-float'
+                        : 'border-sand/80 bg-white/60 hover:border-accent/60 hover:bg-white/75'
                     }`}
                   >
                     <div className="flex items-start justify-between gap-3">
                       <div>
-                        <p className="text-xs uppercase tracking-wide text-primary-700 mb-1">
+                        <p className="text-xs uppercase tracking-wide text-primary/80 mb-1">
                           {t.journey.channels[item.channel as 'behavior' | 'reflection' | 'social'] ?? item.channel}
                         </p>
-                        <h3 className="text-lg font-semibold text-gray-900">
+                        <h3 className="text-lg font-semibold text-ink">
                           {localizeText(item.title_en, item.title_ar)}
                         </h3>
-                        <p className="text-sm text-gray-700 mt-1">
+                        <p className="text-sm text-muted mt-1">
                           {localizeText(item.body_en, item.body_ar)}
                         </p>
                       </div>
                       {isSelected && (
-                        <span className="text-primary-700 font-semibold text-sm">{t.journey.selected}</span>
+                        <span className="text-primary/90 font-semibold text-sm">{t.journey.selected}</span>
                       )}
                     </div>
                   </button>
@@ -758,7 +853,11 @@ const Journey: React.FC = () => {
             </div>
 
             <div className="flex justify-center">
-              <button className="btn-primary" onClick={finalizeActivation} disabled={busy}>
+              <button
+                className="flex h-11 min-w-[200px] items-center justify-center rounded-full bg-primary px-6 pt-0.5 text-base font-semibold leading-none text-white shadow-[0_12px_24px_rgba(58,80,107,0.18)] transition duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-cream disabled:cursor-not-allowed disabled:opacity-60 sm:h-12 sm:text-lg lg:hover:-translate-y-0.5 lg:hover:bg-[#31465E]"
+                onClick={finalizeActivation}
+                disabled={busy}
+              >
                 {busy ? t.journey.saving : t.journey.finish}
               </button>
             </div>

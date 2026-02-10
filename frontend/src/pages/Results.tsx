@@ -41,10 +41,10 @@ const Results: React.FC = () => {
 
   if (loading) {
     return (
-      <div className="min-h-screen flex items-center justify-center">
+      <div className="relative min-h-screen overflow-hidden bg-cream px-4 py-10 text-ink sm:px-6 flex items-center justify-center">
         <div className="text-center">
-          <div className="animate-spin rounded-full h-16 w-16 border-b-2 border-primary-600 mx-auto mb-4"></div>
-          <p className="text-gray-600">{t.results.analyzing}</p>
+          <div className="mx-auto mb-4 h-16 w-16 animate-spin rounded-full border-b-2 border-primary" />
+          <p className="text-muted">{t.results.analyzing}</p>
         </div>
       </div>
     );
@@ -52,10 +52,13 @@ const Results: React.FC = () => {
 
   if (error || !result) {
     return (
-      <div className="min-h-screen flex items-center justify-center">
-        <div className="card max-w-md text-center">
-          <p className="text-red-600 mb-4">{error || t.results.notFound}</p>
-          <button onClick={() => navigate('/')} className="btn-primary">
+      <div className="relative min-h-screen overflow-hidden bg-cream px-4 py-10 text-ink sm:px-6 flex items-center justify-center">
+        <div className="mx-auto w-full max-w-md space-y-5 rounded-soft border border-accent/80 bg-white/70 px-6 py-6 text-center shadow-soft-card backdrop-blur-sm">
+          <p className="text-sm font-semibold text-red-700">{error || t.results.notFound}</p>
+          <button
+            onClick={() => navigate('/')}
+            className="mx-auto flex h-11 min-w-[200px] items-center justify-center rounded-full bg-primary px-6 pt-0.5 text-base font-semibold leading-none text-white shadow-[0_12px_24px_rgba(58,80,107,0.18)] transition duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-cream sm:h-12 sm:text-lg lg:hover:-translate-y-0.5 lg:hover:bg-[#31465E]"
+          >
             {t.results.backHome}
           </button>
         </div>
@@ -69,46 +72,53 @@ const Results: React.FC = () => {
   }));
 
   return (
-    <div className="min-h-screen bg-gray-50 py-12 px-4 relative">
+    <div className="relative min-h-screen overflow-hidden bg-cream px-4 py-10 text-ink sm:px-6">
       {/* Language Switcher - Top right corner */}
-      <div className="absolute top-4 right-4 z-10">
-        <LanguageSwitcher />
+      <div className="absolute top-4 right-4 z-10 sm:right-8 sm:top-6">
+        <LanguageSwitcher className="border border-sand/70 shadow-soft-card backdrop-blur-sm" />
       </div>
 
-      <div className="max-w-6xl mx-auto">
-        <div className="text-center mb-12">
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">{t.results.title}</h1>
-          <p className="text-gray-600">{t.results.subtitle}</p>
+      <div className="mx-auto max-w-6xl">
+        <div className="mb-10 text-center sm:mb-12">
+          <h1 className="text-3xl font-semibold tracking-tight text-ink sm:text-4xl lg:text-5xl">
+            {t.results.title}
+          </h1>
+          <p className="mx-auto mt-4 max-w-2xl text-sm leading-relaxed text-muted sm:text-base lg:text-lg">
+            {t.results.subtitle}
+          </p>
         </div>
 
         {/* Top Matches */}
-        <div className="mb-12">
-          <h2 className="text-2xl font-semibold text-gray-800 mb-6 text-center">
+        <div className="mb-10 sm:mb-12">
+          <h2 className="mb-6 text-center text-2xl font-semibold text-ink">
             {t.results.topMatches}
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
             {result.top_matches.map((match, index) => (
-              <div key={match.idol_id} className="card text-center hover:shadow-xl transition-shadow">
+              <div
+                key={match.idol_id}
+                className="rounded-soft border border-sand/80 bg-white/70 px-6 py-6 text-center shadow-soft-card backdrop-blur-sm transition hover:border-accent/60 hover:shadow-soft-float"
+              >
                 <div className="relative mb-4">
-                  <div className="absolute -top-4 -end-4 bg-primary-600 text-white w-12 h-12 rounded-full flex items-center justify-center font-bold text-lg">
+                  <div className="absolute -top-4 -end-4 flex h-12 w-12 items-center justify-center rounded-full bg-primary text-lg font-bold text-white shadow-soft-card">
                     #{index + 1}
                   </div>
                   <img
                     src={match.image_url || '/placeholder.png'}
                     alt={match.name}
-                    className="w-full h-64 object-cover rounded-lg mb-4"
+                    className="mb-4 h-64 w-full rounded-soft object-cover"
                     onError={(e) => {
                       e.currentTarget.src = '/placeholder.png';
                     }}
                   />
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-2">{match.name}</h3>
-                <p className="text-gray-600 text-sm mb-4">{match.description}</p>
-                <div className="bg-primary-50 rounded-lg p-4">
-                  <p className="text-3xl font-bold text-primary-600">
+                <h3 className="mb-2 text-xl font-semibold text-ink">{match.name}</h3>
+                <p className="mb-4 text-sm leading-relaxed text-muted">{match.description}</p>
+                <div className="rounded-soft border border-sand/70 bg-white/60 p-4 shadow-soft-card backdrop-blur-sm">
+                  <p className="text-3xl font-bold text-primary">
                     {match.similarity_percentage}%
                   </p>
-                  <p className="text-sm text-gray-600">{t.results.personalityMatch}</p>
+                  <p className="text-sm text-muted">{t.results.personalityMatch}</p>
                 </div>
               </div>
             ))}
@@ -116,8 +126,8 @@ const Results: React.FC = () => {
         </div>
 
         {/* Personality Profile Chart */}
-        <div className="card mb-12">
-          <h2 className="text-2xl font-semibold text-gray-800 mb-6 text-center">
+        <div className="mb-10 rounded-soft border border-accent/80 bg-white/70 px-6 py-6 shadow-soft-card backdrop-blur-sm sm:mb-12">
+          <h2 className="mb-6 text-center text-2xl font-semibold text-ink">
             {t.results.personalityProfile}
           </h2>
           <ResponsiveContainer width="100%" height={400}>
@@ -128,8 +138,8 @@ const Results: React.FC = () => {
               <Radar
                 name={t.results.yourScore}
                 dataKey="score"
-                stroke="#0284c7"
-                fill="#0284c7"
+                stroke="#3A506B"
+                fill="#3A506B"
                 fillOpacity={0.6}
               />
               <Legend />
@@ -138,18 +148,22 @@ const Results: React.FC = () => {
         </div>
 
         {/* Trait Scores */}
-        <div className="card mb-12">
-          <h2 className="text-2xl font-semibold text-gray-800 mb-6">{t.results.traitScores}</h2>
+        <div className="mb-10 rounded-soft border border-accent/80 bg-white/70 px-6 py-6 shadow-soft-card backdrop-blur-sm sm:mb-12">
+          <h2 className="mb-6 text-2xl font-semibold text-ink">{t.results.traitScores}</h2>
           <div className="space-y-4">
             {result.user_trait_scores.map((trait) => (
               <div key={trait.trait_id}>
-                <div className="flex justify-between mb-2">
-                  <span className="font-medium text-gray-700">{trait.trait_name}</span>
-                  <span className="text-primary-600 font-semibold">{trait.score.toFixed(1)}</span>
+                <div
+                  className={`mb-2 flex justify-between ${
+                    language === 'ar' ? 'text-right' : 'text-left'
+                  }`}
+                >
+                  <span className="font-medium text-ink">{trait.trait_name}</span>
+                  <span className="font-semibold text-primary">{trait.score.toFixed(1)}</span>
                 </div>
-                <div className="w-full bg-gray-200 rounded-full h-3">
+                <div className="h-3 w-full rounded-full bg-sand/60">
                   <div
-                    className="bg-primary-600 h-3 rounded-full transition-all"
+                    className="h-3 rounded-full bg-primary transition-all"
                     style={{ width: `${trait.score}%` }}
                   />
                 </div>
@@ -159,22 +173,25 @@ const Results: React.FC = () => {
         </div>
 
         {/* Actions */}
-        <div className="flex justify-center gap-4">
-          <button onClick={() => navigate('/')} className="btn-primary">
+        <div className="flex flex-col justify-center gap-3 sm:flex-row sm:gap-4">
+          <button
+            onClick={() => navigate('/')}
+            className="flex h-11 min-w-[200px] items-center justify-center rounded-full bg-primary px-6 pt-0.5 text-base font-semibold leading-none text-white shadow-[0_12px_24px_rgba(58,80,107,0.18)] transition duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-cream sm:h-12 sm:text-lg lg:hover:-translate-y-0.5 lg:hover:bg-[#31465E]"
+          >
             {t.results.retakeTest}
           </button>
           <button
             onClick={() => {
               alert(t.results.shareComingSoon);
             }}
-            className="btn-secondary"
+            className="flex h-11 items-center justify-center rounded-full border border-sand/80 bg-white/60 px-6 pt-0.5 text-base font-semibold leading-none text-ink shadow-soft-card backdrop-blur-sm transition duration-200 hover:bg-white/80 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-cream sm:h-12 sm:text-lg"
           >
             {t.results.shareResults}
           </button>
         </div>
 
         {/* Disclaimer */}
-        <p className="text-sm text-gray-500 text-center mt-8 max-w-2xl mx-auto">
+        <p className="mx-auto mt-8 max-w-2xl text-center text-sm text-muted">
           {t.results.disclaimerText}
         </p>
       </div>
