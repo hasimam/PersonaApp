@@ -1,16 +1,16 @@
 version_id,scenario_code,option_code,option_text_en,option_text_ar
-v1,S01,A,Wait and observe until the picture becomes clearer.,أراقب بصمت حتى تتضح الصورة.
-v1,S01,B,Share my view calmly without pushing hard.,أعبّر بهدوء عن رأيي دون إصرار.
-v1,S01,C,Go along to keep harmony and avoid tension.,أساير حفاظاً على الانسجام وتجنب التوتر.
-v1,S01,D,Oppose clearly even if it creates discomfort.,أعارض بوضوح حتى لو سبب توتراً.
+v1,S01,A,Wait and observe until the picture becomes clearer.,أنتظر وأراقب حتى تتضح الصورة.
+v1,S01,B,Share my view calmly without pushing hard.,أعبر بهدوء عن رأيي دون إصرار.
+v1,S01,C,Go along to keep harmony and avoid tension.,أساير للحفاظ على الانسجام وتجنب التوتر.
+v1,S01,D,Oppose clearly even if it creates discomfort.,أعارض بوضوح حتى لو سبب ذلك توترا.
 v1,S02,A,Reflect first: what pattern is happening here?,أتأمل أولاً: ما النمط المتكرر هنا؟
 v1,S02,B,Address it directly and set a boundary.,أواجه مباشرة وأضع حدّاً واضحاً.
 v1,S02,C,Choose a gentle conversation to protect the bond.,أختار حديثاً لطيفاً لحماية العلاقة.
 v1,S02,D,Create a clear agreement and steps to prevent repeats.,أضع اتفاقاً وخطوات واضحة لمنع التكرار.
-v1,S03,A,Ask for examples and clarity before reacting.,أطلب أمثلة وتوضيحاً قبل أن أتصرف.
-v1,S03,B,Propose a bold initiative to show impact quickly.,أقترح مبادرة جريئة لأُظهر الأثر سريعاً.
-v1,S03,C,Check how my feedback affects relationships and tone.,أنتبه لتأثير الملاحظة على العلاقات والنبرة.
-v1,S03,D,Turn the feedback into measurable tasks and routine.,أحوّل الملاحظة لمهام قابلة للقياس وروتين.
+v1,S03,A,Ask for examples and clarity before reacting.,أطلب أمثلة وتوضيحا قبل أن أتصرف.
+v1,S03,B,Propose a bold initiative to show impact quickly.,أقترح مبادرة جريئة لأظهر تأثيرا سريعا.
+v1,S03,C,Check how my feedback affects relationships and tone.,أراعي أثر ملاحظاتي على العلاقة وطريقة الكلام.
+v1,S03,D,Turn the feedback into measurable tasks and routine.,أحول الملاحظة إلى مهام قابلة للقياس وخطة متابعة.
 v1,S04,A,Pause and read carefully before replying.,أتوقف وأقرأ بهدوء قبل الرد.
 v1,S04,B,Step in and name the issue directly.,أتدخل وأسمي المشكلة مباشرة.
 v1,S04,C,Try to calm everyone and reduce tension.,أهدئ الأجواء وأقلل التوتر.
