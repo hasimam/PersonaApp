@@ -45,7 +45,7 @@ def get_result(
 
     # Get full idol information for top matches
     top_matches = []
-    for match_data in result.top_matches:
+    for match_data in result.top_matches[:3]:
         idol = db.query(Idol).filter(Idol.id == match_data["idol_id"]).first()
         if idol:
             # Use Arabic if available and requested, otherwise English

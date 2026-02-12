@@ -442,8 +442,8 @@ def compute_hybrid_outcome(
         gene_scores=gene_scores,
         model_matches=model_matches,
     )
-    quran_values = compute_quran_values(db=db, version_id=version_id, gene_scores=gene_scores, top_n=5)
-    prophet_traits = compute_prophet_traits(db=db, version_id=version_id, gene_scores=gene_scores, top_n=5)
+    quran_values = compute_quran_values(db=db, version_id=version_id, gene_scores=gene_scores, top_n=3)
+    prophet_traits = compute_prophet_traits(db=db, version_id=version_id, gene_scores=gene_scores, top_n=3)
 
     return HybridComputationResult(
         gene_scores=gene_scores,

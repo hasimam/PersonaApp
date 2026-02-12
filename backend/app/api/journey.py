@@ -125,9 +125,9 @@ def _load_scenario_set_codes(db: Session, version_id: str, include_drafts: bool 
 
 
 def _top_gene_count_for_version(version_id: str) -> int:
-    # UI expects a consistent "top 5" across journey types.
-    # If fewer than 5 genes exist, the response naturally returns fewer.
-    return 5
+    # UI expects a consistent top 3 across journey result types.
+    # If fewer than 3 genes exist, the response naturally returns fewer.
+    return 3
 
 
 def _select_scenario_set_code(set_codes: Sequence[str], test_run_id: int) -> str:
