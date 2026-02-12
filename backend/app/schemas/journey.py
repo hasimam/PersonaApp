@@ -8,6 +8,10 @@ class JourneyStartRequest(BaseModel):
     journey_type: Optional[Literal["quick", "deep"]] = None
 
 
+class JourneyPreviewStartRequest(BaseModel):
+    preview_token: str = Field(..., min_length=1)
+
+
 class JourneyResumeRequest(BaseModel):
     test_run_id: int = Field(..., ge=1)
 
@@ -40,6 +44,11 @@ class JourneyAnswerSubmission(BaseModel):
 class JourneySubmitAnswersRequest(BaseModel):
     version_id: str
     test_run_id: int = Field(..., ge=1)
+    answers: List[JourneyAnswerSubmission] = Field(..., min_length=1)
+
+
+class JourneyPreviewSubmitAnswersRequest(BaseModel):
+    preview_token: str = Field(..., min_length=1)
     answers: List[JourneyAnswerSubmission] = Field(..., min_length=1)
 
 

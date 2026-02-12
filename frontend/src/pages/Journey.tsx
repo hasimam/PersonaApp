@@ -1,5 +1,5 @@
 import React, { useEffect, useMemo, useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import LanguageSwitcher from '../components/LanguageSwitcher';
 import { useLanguage } from '../i18n/LanguageContext';
 import { journeyApi } from '../services/api';
@@ -66,6 +66,7 @@ const clearStoredJourney = () => {
 
 const Journey: React.FC = () => {
   const navigate = useNavigate();
+  const location = useLocation();
   const { t, language } = useLanguage();
   const [step, setStep] = useState<JourneyStep>('intro');
   const [journey, setJourney] = useState<JourneyStartResponse | null>(null);
@@ -78,6 +79,11 @@ const Journey: React.FC = () => {
   const [busy, setBusy] = useState(false);
   const [isAdvancing, setIsAdvancing] = useState(false);
   const [error, setError] = useState('');
+  const previewToken = useMemo(() => {
+    const token = new URLSearchParams(location.search).get('preview');
+    return token ? token.trim() : '';
+  }, [location.search]);
+  const isPreviewMode = previewToken.length > 0;
 
   useEffect(() => {
     if (step === 'intro') {
@@ -116,6 +122,9 @@ const Journey: React.FC = () => {
   };
 
   useEffect(() => {
+    if (isPreviewMode) {
+      return;
+    }
     const stored = loadStoredJourney();
     if (!stored) {
       return;
@@ -157,10 +166,41 @@ const Journey: React.FC = () => {
       .finally(() => {
         setBusy(false);
       });
-  }, []);
+  }, [isPreviewMode]);
+
+  useEffect(() => {
+    if (!isPreviewMode) {
+      return;
+    }
+    clearStoredJourney();
+    setBusy(true);
+    setError('');
+    journeyApi
+      .startPreviewJourney({ preview_token: previewToken })
+      .then((data) => {
+        setJourneyType(data.version_id.startsWith('v2') ? 'deep' : 'quick');
+        setJourney(data);
+        setCurrentScenarioIndex(0);
+        setScenarioAnswers({});
+        setJudgedScore(DEFAULT_JUDGED_SCORE);
+        setSelectedActivationId(null);
+        setSubmitResult(null);
+        setIsAdvancing(false);
+        setStep('scenarios');
+      })
+      .catch(() => {
+        setError(t.journey.startError);
+      })
+      .finally(() => {
+        setBusy(false);
+      });
+  }, [isPreviewMode, previewToken, t.journey.startError]);
 
   useEffect(() => {
     if (!journey) {
+      return;
+    }
+    if (isPreviewMode) {
       return;
     }
     if (
@@ -192,13 +232,16 @@ const Journey: React.FC = () => {
     scenarioAnswers,
     judgedScore,
     selectedActivationId,
+    isPreviewMode,
   ]);
 
   const startJourney = async () => {
     setBusy(true);
     setError('');
     try {
-      const data = await journeyApi.startJourney({ journey_type: journeyType });
+      const data = isPreviewMode
+        ? await journeyApi.startPreviewJourney({ preview_token: previewToken })
+        : await journeyApi.startJourney({ journey_type: journeyType });
       setJourney(data);
       setCurrentScenarioIndex(0);
       setScenarioAnswers({});
@@ -232,25 +275,35 @@ const Journey: React.FC = () => {
     setError('');
     setStep('loading');
     try {
-      const response = await journeyApi.submitAnswers({
-        version_id: journey.version_id,
-        test_run_id: journey.test_run_id,
-        answers: journey.scenarios.map((scenario) => ({
-          scenario_code: scenario.scenario_code,
-          option_code: answersMap[scenario.scenario_code],
-        })),
-      });
+      const response = isPreviewMode
+        ? await journeyApi.submitPreviewAnswers({
+            preview_token: previewToken,
+            answers: journey.scenarios.map((scenario) => ({
+              scenario_code: scenario.scenario_code,
+              option_code: answersMap[scenario.scenario_code],
+            })),
+          })
+        : await journeyApi.submitAnswers({
+            version_id: journey.version_id,
+            test_run_id: journey.test_run_id,
+            answers: journey.scenarios.map((scenario) => ({
+              scenario_code: scenario.scenario_code,
+              option_code: answersMap[scenario.scenario_code],
+            })),
+          });
 
       setSubmitResult(response);
       clearStoredJourney();
 
-      try {
-        await journeyApi.submitFeedback({
-          test_run_id: journey.test_run_id,
-          judged_score: effectiveScore,
-        });
-      } catch (e) {
-        // Non-blocking, user should still receive results.
+      if (!isPreviewMode) {
+        try {
+          await journeyApi.submitFeedback({
+            test_run_id: journey.test_run_id,
+            judged_score: effectiveScore,
+          });
+        } catch (e) {
+          // Non-blocking, user should still receive results.
+        }
       }
 
       setStep('results');
@@ -299,7 +352,7 @@ const Journey: React.FC = () => {
   };
 
   const finalizeActivation = async () => {
-    if (!journey) {
+    if (!journey || isPreviewMode) {
       setStep('closing');
       return;
     }
@@ -332,7 +385,7 @@ const Journey: React.FC = () => {
       return;
     }
 
-    if (journey?.test_run_id) {
+    if (journey?.test_run_id && !isPreviewMode) {
       try {
         await journeyApi.cancelJourney({ test_run_id: journey.test_run_id });
       } catch (e) {

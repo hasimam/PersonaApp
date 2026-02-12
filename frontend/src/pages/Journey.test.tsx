@@ -9,9 +9,12 @@ import { journeyApi } from '../services/api';
 jest.mock('../services/api', () => ({
   journeyApi: {
     startJourney: jest.fn(),
+    startPreviewJourney: jest.fn(),
     submitAnswers: jest.fn(),
+    submitPreviewAnswers: jest.fn(),
     submitFeedback: jest.fn(),
     cancelJourney: jest.fn(),
+    resumeJourney: jest.fn(),
   },
 }));
 
@@ -136,6 +139,21 @@ describe('Journey smoke test', () => {
       selected_activation_id: null,
       status: 'recorded',
     });
+    mockedJourneyApi.startPreviewJourney.mockResolvedValue({
+      test_run_id: 999,
+      version_id: 'v_test',
+      scenarios: [],
+    });
+    mockedJourneyApi.submitPreviewAnswers.mockResolvedValue({
+      version_id: 'v_test',
+      test_run_id: 999,
+      top_genes: [],
+      archetype_matches: [],
+      quran_values: [],
+      prophet_traits: [],
+      activation_items: [],
+    });
+    mockedJourneyApi.resumeJourney.mockRejectedValue(new Error('no saved run'));
     mockedJourneyApi.cancelJourney.mockResolvedValue({
       test_run_id: 99,
       status: 'cancelled',

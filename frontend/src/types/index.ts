@@ -73,6 +73,10 @@ export interface JourneyStartRequest {
   journey_type?: JourneyType;
 }
 
+export interface JourneyPreviewStartRequest {
+  preview_token: string;
+}
+
 export interface JourneyResumeRequest {
   test_run_id: number;
 }
@@ -137,6 +141,11 @@ export interface JourneyProphetTrait {
 export interface JourneySubmitAnswersRequest {
   version_id: string;
   test_run_id: number;
+  answers: JourneyAnswerSubmission[];
+}
+
+export interface JourneyPreviewSubmitAnswersRequest {
+  preview_token: string;
   answers: JourneyAnswerSubmission[];
 }
 

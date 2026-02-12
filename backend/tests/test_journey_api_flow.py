@@ -1,5 +1,10 @@
 import os
 import unittest
+import base64
+import hashlib
+import hmac
+import json
+from datetime import datetime, timedelta, timezone
 
 from fastapi import HTTPException
 from sqlalchemy import create_engine
@@ -10,7 +15,15 @@ from sqlalchemy.orm import sessionmaker
 os.environ.setdefault("DATABASE_URL", "postgresql://postgres:postgres@localhost/personaapp")
 os.environ.setdefault("SECRET_KEY", "test-secret")
 
-from app.api.journey import cancel_journey, start_journey, submit_journey_answers, submit_journey_feedback
+from app.api.journey import (
+    _load_scenario_set_codes,
+    cancel_journey,
+    start_journey,
+    start_journey_preview,
+    submit_journey_answers,
+    submit_journey_answers_preview,
+    submit_journey_feedback,
+)
 from app.db.session import Base
 from app.models import (
     AdviceItem,
@@ -35,6 +48,8 @@ from app.schemas.journey import (
     JourneyAnswerSubmission,
     JourneyCancelRequest,
     JourneyFeedbackRequest,
+    JourneyPreviewStartRequest,
+    JourneyPreviewSubmitAnswersRequest,
     JourneyStartRequest,
     JourneySubmitAnswersRequest,
 )
@@ -46,6 +61,24 @@ def compile_jsonb_sqlite(_type, _compiler, **_kwargs):
 
 
 class JourneyApiFlowTests(unittest.TestCase):
+    @staticmethod
+    def _build_preview_token(*, version_id: str, scenario_set_code: str, exp_seconds: int = 3600) -> str:
+        payload = {
+            "version_id": version_id,
+            "scenario_set_code": scenario_set_code,
+            "exp": int((datetime.now(timezone.utc) + timedelta(seconds=exp_seconds)).timestamp()),
+            "test_run_id": 9090,
+        }
+        payload_json = json.dumps(payload, separators=(",", ":"), sort_keys=True).encode("utf-8")
+        payload_b64 = base64.urlsafe_b64encode(payload_json).decode("utf-8").rstrip("=")
+        signature = hmac.new(
+            os.environ["SECRET_KEY"].encode("utf-8"),
+            payload_b64.encode("utf-8"),
+            hashlib.sha256,
+        ).digest()
+        signature_b64 = base64.urlsafe_b64encode(signature).decode("utf-8").rstrip("=")
+        return f"{payload_b64}.{signature_b64}"
+
     def setUp(self):
         self.engine = create_engine("sqlite:///:memory:")
         Base.metadata.create_all(
@@ -172,6 +205,22 @@ class JourneyApiFlowTests(unittest.TestCase):
                     scenario_text_en="Scenario B2",
                     scenario_text_ar="الموقف ب2",
                 ),
+                Scenario(
+                    version_id="v_test",
+                    scenario_code="D01",
+                    scenario_set_code="draft_set",
+                    order_index=1,
+                    scenario_text_en="Scenario D1",
+                    scenario_text_ar="الموقف د1",
+                ),
+                Scenario(
+                    version_id="v_test",
+                    scenario_code="D02",
+                    scenario_set_code="draft_set",
+                    order_index=2,
+                    scenario_text_en="Scenario D2",
+                    scenario_text_ar="الموقف د2",
+                ),
             ]
         )
 
@@ -233,6 +282,34 @@ class JourneyApiFlowTests(unittest.TestCase):
                     option_text_en="B02 B",
                     option_text_ar="الخيار ب",
                 ),
+                ScenarioOption(
+                    version_id="v_test",
+                    scenario_code="D01",
+                    option_code="A",
+                    option_text_en="D01 A",
+                    option_text_ar="الخيار أ",
+                ),
+                ScenarioOption(
+                    version_id="v_test",
+                    scenario_code="D01",
+                    option_code="B",
+                    option_text_en="D01 B",
+                    option_text_ar="الخيار ب",
+                ),
+                ScenarioOption(
+                    version_id="v_test",
+                    scenario_code="D02",
+                    option_code="A",
+                    option_text_en="D02 A",
+                    option_text_ar="الخيار أ",
+                ),
+                ScenarioOption(
+                    version_id="v_test",
+                    scenario_code="D02",
+                    option_code="B",
+                    option_text_en="D02 B",
+                    option_text_ar="الخيار ب",
+                ),
             ]
         )
 
@@ -293,6 +370,34 @@ class JourneyApiFlowTests(unittest.TestCase):
                     option_code="B",
                     gene_code="EMP",
                     weight=4.0,
+                ),
+                OptionWeight(
+                    version_id="v_test",
+                    scenario_code="D01",
+                    option_code="A",
+                    gene_code="WIS",
+                    weight=4.0,
+                ),
+                OptionWeight(
+                    version_id="v_test",
+                    scenario_code="D01",
+                    option_code="B",
+                    gene_code="CRG",
+                    weight=4.0,
+                ),
+                OptionWeight(
+                    version_id="v_test",
+                    scenario_code="D02",
+                    option_code="A",
+                    gene_code="EMP",
+                    weight=6.0,
+                ),
+                OptionWeight(
+                    version_id="v_test",
+                    scenario_code="D02",
+                    option_code="B",
+                    gene_code="WIS",
+                    weight=2.0,
                 ),
             ]
         )
@@ -472,6 +577,12 @@ class JourneyApiFlowTests(unittest.TestCase):
         self.assertIn(first_codes, [["S01", "S02"], ["B01", "B02"]])
         self.assertIn(second_codes, [["S01", "S02"], ["B01", "B02"]])
 
+    def test_public_set_loader_excludes_draft_sets(self):
+        public_sets = _load_scenario_set_codes(db=self.db, version_id="v_test")
+        with_drafts = _load_scenario_set_codes(db=self.db, version_id="v_test", include_drafts=True)
+        self.assertEqual(sorted(public_sets), ["base", "set_b"])
+        self.assertEqual(sorted(with_drafts), ["base", "draft_set", "set_b"])
+
     def test_feedback_rejects_activation_not_offered_for_test_run(self):
         started = start_journey(payload=JourneyStartRequest(version_id="v_test"), db=self.db)
         scenario_codes = [item.scenario_code for item in started.scenarios]
@@ -529,6 +640,39 @@ class JourneyApiFlowTests(unittest.TestCase):
         )
         self.assertEqual(cancelled.status, "completed")
         self.assertEqual(self.db.query(TestRun).filter(TestRun.id == started.test_run_id).first().status, "completed")
+
+    def test_preview_flow_returns_results_without_persisting(self):
+        token = self._build_preview_token(version_id="v_test", scenario_set_code="draft_set")
+
+        started = start_journey_preview(
+            payload=JourneyPreviewStartRequest(preview_token=token),
+            db=self.db,
+        )
+        self.assertEqual(started.version_id, "v_test")
+        self.assertEqual(started.test_run_id, 9090)
+        self.assertEqual([item.scenario_code for item in started.scenarios], ["D01", "D02"])
+        self.assertEqual(self.db.query(TestRun).count(), 0)
+
+        submitted = submit_journey_answers_preview(
+            payload=JourneyPreviewSubmitAnswersRequest(
+                preview_token=token,
+                answers=[
+                    JourneyAnswerSubmission(scenario_code="D01", option_code="A"),
+                    JourneyAnswerSubmission(scenario_code="D02", option_code="A"),
+                ],
+            ),
+            db=self.db,
+        )
+
+        self.assertEqual(submitted.version_id, "v_test")
+        self.assertEqual(submitted.test_run_id, 9090)
+        self.assertGreater(len(submitted.top_genes), 0)
+        self.assertEqual([item.channel for item in submitted.activation_items], ["behavior", "reflection", "social"])
+
+        self.assertEqual(self.db.query(TestRun).count(), 0)
+        self.assertEqual(self.db.query(Answer).count(), 0)
+        self.assertEqual(self.db.query(ComputedGeneScore).count(), 0)
+        self.assertEqual(self.db.query(ComputedModelMatch).count(), 0)
 
 
 if __name__ == "__main__":

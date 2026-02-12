@@ -106,6 +106,59 @@ python scripts/cleanup_test_runs.py --days 30
 - Dashboard stats include Arabic translation coverage
  - Production API docs are protected: use `/docs?admin_key=<ADMIN_API_KEY>` or send `X-Admin-Key` header.
 
+## 4.1 Draft preview flow (expert review, no DB writes)
+
+Use this flow for non-programmer expert validation before publishing a scenario set.
+
+Rules:
+- Draft sets must use `scenario_set_code` starting with `draft_` (example: `draft_deep_11`).
+- Public `/journey/start` excludes `draft_` sets.
+- Preview endpoints never write to runtime tables (`test_runs`, `answers`, computed scores, feedback).
+
+Preview endpoints:
+- `POST /api/v1/journey/preview/start`
+- `POST /api/v1/journey/preview/submit`
+
+Both endpoints require a signed `preview_token`.
+
+Generate token (local example):
+```bash
+cd backend
+source venv/bin/activate
+python3 - <<'PY'
+import base64, hashlib, hmac, json, os, time
+secret = os.environ["SECRET_KEY"].encode("utf-8")
+payload = {
+  "version_id": "v2",
+  "scenario_set_code": "draft_deep_11",
+  "exp": int(time.time()) + 7 * 24 * 3600,
+  "test_run_id": 120011
+}
+payload_b64 = base64.urlsafe_b64encode(json.dumps(payload, separators=(",", ":"), sort_keys=True).encode()).decode().rstrip("=")
+sig = hmac.new(secret, payload_b64.encode("utf-8"), hashlib.sha256).digest()
+sig_b64 = base64.urlsafe_b64encode(sig).decode().rstrip("=")
+print(f"{payload_b64}.{sig_b64}")
+PY
+```
+
+Expert link format:
+- `https://<frontend-domain>/test?preview=<TOKEN>`
+
+## 4.2 Promote approved draft set to public
+
+After expert approval:
+1. In seed CSVs, rename `scenario_set_code` from `draft_*` to public code (example `deep_11`).
+2. Re-import seeds:
+```bash
+cd backend
+source venv/bin/activate
+python -m app.db.hybrid_seed_importer --dry-run
+python -m app.db.hybrid_seed_importer
+```
+3. Smoke test:
+   - public `/journey/start` returns non-draft set
+   - preview link still works only for remaining draft sets
+
 ## 5) Deployment notes
 - Backend deploy config present:
   - `backend/Dockerfile`

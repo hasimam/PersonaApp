@@ -1,4 +1,8 @@
 from datetime import datetime, timedelta, timezone
+import base64
+import hashlib
+import hmac
+import json
 import random
 from typing import Dict, List, Optional, Sequence, Set
 
@@ -7,12 +11,14 @@ from sqlalchemy.orm import Session
 
 from app.core.hybrid_engine import (
     GeneScoreResult,
+    HybridComputationResult,
     JourneyAnswer,
     ModelMatchResult,
     compute_hybrid_outcome,
     rank_gene_scores,
     select_activation_items,
 )
+from app.core.config import settings
 from app.db.session import get_db
 from app.models import (
     Answer,
@@ -39,8 +45,10 @@ from app.schemas.journey import (
     JourneyScenario,
     JourneyScenarioOption,
     JourneyStartRequest,
+    JourneyPreviewStartRequest,
     JourneyStartResponse,
     JourneySubmitAnswersRequest,
+    JourneyPreviewSubmitAnswersRequest,
     JourneySubmitAnswersResponse,
     JourneyTopGene,
     JourneyActivationItem,
@@ -54,6 +62,7 @@ RUN_STATUS_COMPLETED = "completed"
 RUN_STATUS_CANCELLED = "cancelled"
 RUN_INACTIVITY_TTL = timedelta(hours=24)
 DEEP_VERSION_PREFIXES = ("v2",)
+DRAFT_SCENARIO_PREFIX = "draft_"
 
 
 def _resolve_version_id(
@@ -97,7 +106,7 @@ def _load_option_codes_by_scenario(db: Session, version_id: str) -> Dict[str, Se
     return option_codes_by_scenario
 
 
-def _load_scenario_set_codes(db: Session, version_id: str) -> List[str]:
+def _load_scenario_set_codes(db: Session, version_id: str, include_drafts: bool = False) -> List[str]:
     rows = (
         db.query(Scenario.scenario_set_code)
         .filter(Scenario.version_id == version_id)
@@ -105,7 +114,14 @@ def _load_scenario_set_codes(db: Session, version_id: str) -> List[str]:
         .order_by(Scenario.scenario_set_code.asc())
         .all()
     )
-    return [set_code for (set_code,) in rows if set_code]
+    set_codes: List[str] = []
+    for (set_code,) in rows:
+        if not set_code:
+            continue
+        if not include_drafts and set_code.startswith(DRAFT_SCENARIO_PREFIX):
+            continue
+        set_codes.append(set_code)
+    return set_codes
 
 
 def _top_gene_count_for_version(version_id: str) -> int:
@@ -118,6 +134,85 @@ def _select_scenario_set_code(set_codes: Sequence[str], test_run_id: int) -> str
     if not set_codes:
         raise ValueError("No scenario sets available")
     return random.choice(list(set_codes))
+
+
+def _base64url_decode(value: str) -> bytes:
+    padding = "=" * (-len(value) % 4)
+    return base64.urlsafe_b64decode(value + padding)
+
+
+def _base64url_encode(value: bytes) -> str:
+    return base64.urlsafe_b64encode(value).decode("utf-8").rstrip("=")
+
+
+def _preview_signing_secret() -> str:
+    return settings.SECRET_KEY
+
+
+def _decode_preview_token(preview_token: str) -> Dict[str, object]:
+    token = preview_token.strip()
+    if not token:
+        raise ValueError("missing preview token")
+
+    token_parts = token.split(".")
+    if len(token_parts) != 2:
+        raise ValueError("invalid preview token")
+    payload_b64, signature_b64 = token_parts
+    if not payload_b64 or not signature_b64:
+        raise ValueError("invalid preview token")
+
+    expected_signature = hmac.new(
+        _preview_signing_secret().encode("utf-8"),
+        payload_b64.encode("utf-8"),
+        hashlib.sha256,
+    ).digest()
+    expected_signature_b64 = _base64url_encode(expected_signature)
+    if not hmac.compare_digest(signature_b64, expected_signature_b64):
+        raise ValueError("invalid preview token signature")
+
+    try:
+        payload_obj = json.loads(_base64url_decode(payload_b64).decode("utf-8"))
+    except (ValueError, json.JSONDecodeError, UnicodeDecodeError):
+        raise ValueError("invalid preview token payload")
+
+    if not isinstance(payload_obj, dict):
+        raise ValueError("invalid preview token payload")
+
+    version_id = str(payload_obj.get("version_id", "")).strip()
+    scenario_set_code = str(payload_obj.get("scenario_set_code", "")).strip()
+    if not version_id or not scenario_set_code:
+        raise ValueError("preview token missing version_id or scenario_set_code")
+    if not scenario_set_code.startswith(DRAFT_SCENARIO_PREFIX):
+        raise ValueError("preview token must target a draft scenario set")
+
+    exp = payload_obj.get("exp")
+    if not isinstance(exp, (int, float)):
+        raise ValueError("preview token missing exp")
+    if int(exp) < int(datetime.now(timezone.utc).timestamp()):
+        raise ValueError("preview token expired")
+
+    payload_obj["version_id"] = version_id
+    payload_obj["scenario_set_code"] = scenario_set_code
+    return payload_obj
+
+
+def _preview_test_run_id(token_payload: Dict[str, object]) -> int:
+    run_id = token_payload.get("test_run_id")
+    if isinstance(run_id, int) and run_id >= 1:
+        return run_id
+
+    canonical_payload = json.dumps(
+        {
+            "version_id": token_payload.get("version_id"),
+            "scenario_set_code": token_payload.get("scenario_set_code"),
+            "exp": token_payload.get("exp"),
+        },
+        sort_keys=True,
+        separators=(",", ":"),
+    )
+    hashed = hashlib.sha256(canonical_payload.encode("utf-8")).digest()
+    candidate = int.from_bytes(hashed[:4], byteorder="big", signed=False)
+    return candidate or 1
 
 
 def _touch_test_run(test_run: TestRun) -> None:
@@ -281,6 +376,107 @@ def _load_allowed_activation_ids(db: Session, test_run: TestRun) -> Set[str]:
     return {item.advice_id for item in activation_items}
 
 
+def _build_submit_response(
+    db: Session,
+    *,
+    version_id: str,
+    test_run_id: int,
+    outcome: HybridComputationResult,
+) -> JourneySubmitAnswersResponse:
+    genes = db.query(Gene).filter(Gene.version_id == version_id).all()
+    genes_by_code = {gene.gene_code: gene for gene in genes}
+
+    models = db.query(SahabaModel).filter(SahabaModel.version_id == version_id).all()
+    models_by_code = {model.model_code: model for model in models}
+
+    top_gene_count = _top_gene_count_for_version(version_id)
+    top_gene_rows = outcome.gene_scores[:top_gene_count]
+    top_genes = [
+        JourneyTopGene(
+            gene_code=row.gene_code,
+            name_en=genes_by_code[row.gene_code].name_en,
+            name_ar=genes_by_code[row.gene_code].name_ar,
+            desc_en=genes_by_code[row.gene_code].desc_en,
+            desc_ar=genes_by_code[row.gene_code].desc_ar,
+            raw_score=row.raw_score,
+            normalized_score=row.normalized_score,
+            rank=row.rank,
+            role=row.role or "",
+        )
+        for row in top_gene_rows
+        if row.gene_code in genes_by_code
+    ]
+
+    archetype_matches = [
+        JourneyArchetypeMatch(
+            model_code=match.model_code,
+            name_en=models_by_code[match.model_code].name_en,
+            name_ar=models_by_code[match.model_code].name_ar,
+            summary_ar=models_by_code[match.model_code].summary_ar,
+            similarity=match.similarity,
+            rank=match.rank,
+        )
+        for match in outcome.model_matches
+        if match.model_code in models_by_code
+    ]
+
+    quran_values = db.query(QuranValue).all()
+    quran_by_code = {value.quran_value_code: value for value in quran_values}
+    quran_results = [
+        JourneyQuranValue(
+            quran_value_code=row.quran_value_code,
+            name_en=quran_by_code[row.quran_value_code].name_en,
+            name_ar=quran_by_code[row.quran_value_code].name_ar,
+            desc_en=quran_by_code[row.quran_value_code].desc_en,
+            desc_ar=quran_by_code[row.quran_value_code].desc_ar,
+            score=row.score,
+            rank=row.rank,
+        )
+        for row in outcome.quran_values
+        if row.quran_value_code in quran_by_code
+    ]
+
+    prophet_traits = db.query(ProphetTrait).all()
+    prophet_by_code = {trait.trait_code: trait for trait in prophet_traits}
+    prophet_results = [
+        JourneyProphetTrait(
+            trait_code=row.trait_code,
+            name_en=prophet_by_code[row.trait_code].name_en,
+            name_ar=prophet_by_code[row.trait_code].name_ar,
+            desc_en=prophet_by_code[row.trait_code].desc_en,
+            desc_ar=prophet_by_code[row.trait_code].desc_ar,
+            score=row.score,
+            rank=row.rank,
+        )
+        for row in outcome.prophet_traits
+        if row.trait_code in prophet_by_code
+    ]
+
+    activation_items = [
+        JourneyActivationItem(
+            channel=item.channel,
+            advice_id=item.advice_id,
+            advice_type=item.advice_type,
+            title_en=item.title_en,
+            title_ar=item.title_ar,
+            body_en=item.body_en,
+            body_ar=item.body_ar,
+            priority=item.priority,
+        )
+        for item in outcome.activation_items
+    ]
+
+    return JourneySubmitAnswersResponse(
+        version_id=version_id,
+        test_run_id=test_run_id,
+        top_genes=top_genes,
+        archetype_matches=archetype_matches,
+        quran_values=quran_results,
+        prophet_traits=prophet_results,
+        activation_items=activation_items,
+    )
+
+
 @router.post("/start", response_model=JourneyStartResponse)
 def start_journey(
     payload: Optional[JourneyStartRequest] = None,
@@ -324,6 +520,34 @@ def start_journey(
     )
 
 
+@router.post("/preview/start", response_model=JourneyStartResponse)
+def start_journey_preview(
+    payload: JourneyPreviewStartRequest,
+    db: Session = Depends(get_db),
+):
+    try:
+        token_payload = _decode_preview_token(payload.preview_token)
+    except ValueError as exc:
+        raise HTTPException(status_code=400, detail=str(exc))
+
+    version_id = str(token_payload["version_id"])
+    scenario_set_code = str(token_payload["scenario_set_code"])
+
+    scenario_set_codes = _load_scenario_set_codes(db=db, version_id=version_id, include_drafts=True)
+    if scenario_set_code not in scenario_set_codes:
+        raise HTTPException(
+            status_code=404,
+            detail=f"Draft set '{scenario_set_code}' not found for version '{version_id}'",
+        )
+
+    return _build_journey_response(
+        db=db,
+        version_id=version_id,
+        test_run_id=_preview_test_run_id(token_payload),
+        scenario_set_code=scenario_set_code,
+    )
+
+
 @router.post("/resume", response_model=JourneyStartResponse)
 def resume_journey(
     payload: JourneyResumeRequest,
@@ -349,6 +573,58 @@ def resume_journey(
         version_id=test_run.version_id,
         test_run_id=test_run.id,
         scenario_set_code=test_run.scenario_set_code,
+    )
+
+
+@router.post("/preview/submit", response_model=JourneySubmitAnswersResponse)
+def submit_journey_answers_preview(
+    payload: JourneyPreviewSubmitAnswersRequest,
+    db: Session = Depends(get_db),
+):
+    try:
+        token_payload = _decode_preview_token(payload.preview_token)
+    except ValueError as exc:
+        raise HTTPException(status_code=400, detail=str(exc))
+
+    version_id = str(token_payload["version_id"])
+    scenario_set_code = str(token_payload["scenario_set_code"])
+
+    scenario_rows = (
+        db.query(Scenario)
+        .filter(
+            Scenario.version_id == version_id,
+            Scenario.scenario_set_code == scenario_set_code,
+        )
+        .all()
+    )
+    valid_scenario_codes = {row.scenario_code for row in scenario_rows}
+    if not valid_scenario_codes:
+        raise HTTPException(
+            status_code=400,
+            detail=f"No scenarios found for version '{version_id}' and set '{scenario_set_code}'",
+        )
+
+    option_codes_by_scenario = _load_option_codes_by_scenario(db=db, version_id=version_id)
+    try:
+        normalized_answers = _validate_answer_payload(
+            answers=payload.answers,
+            valid_scenario_codes=valid_scenario_codes,
+            option_codes_by_scenario=option_codes_by_scenario,
+        )
+        outcome = compute_hybrid_outcome(
+            db=db,
+            version_id=version_id,
+            answers=normalized_answers,
+            top_model_n=5,
+        )
+    except ValueError as exc:
+        raise HTTPException(status_code=400, detail=str(exc))
+
+    return _build_submit_response(
+        db=db,
+        version_id=version_id,
+        test_run_id=_preview_test_run_id(token_payload),
+        outcome=outcome,
     )
 
 
@@ -428,97 +704,11 @@ def submit_journey_answers(
     _touch_test_run(test_run)
     test_run.status = RUN_STATUS_COMPLETED
     db.commit()
-
-    genes = db.query(Gene).filter(Gene.version_id == payload.version_id).all()
-    genes_by_code = {gene.gene_code: gene for gene in genes}
-
-    models = db.query(SahabaModel).filter(SahabaModel.version_id == payload.version_id).all()
-    models_by_code = {model.model_code: model for model in models}
-
-    top_gene_count = _top_gene_count_for_version(payload.version_id)
-    top_gene_rows = outcome.gene_scores[:top_gene_count]
-    top_genes = [
-        JourneyTopGene(
-            gene_code=row.gene_code,
-            name_en=genes_by_code[row.gene_code].name_en,
-            name_ar=genes_by_code[row.gene_code].name_ar,
-            desc_en=genes_by_code[row.gene_code].desc_en,
-            desc_ar=genes_by_code[row.gene_code].desc_ar,
-            raw_score=row.raw_score,
-            normalized_score=row.normalized_score,
-            rank=row.rank,
-            role=row.role or "",
-        )
-        for row in top_gene_rows
-    ]
-
-    archetype_matches = [
-        JourneyArchetypeMatch(
-            model_code=match.model_code,
-            name_en=models_by_code[match.model_code].name_en,
-            name_ar=models_by_code[match.model_code].name_ar,
-            summary_ar=models_by_code[match.model_code].summary_ar,
-            similarity=match.similarity,
-            rank=match.rank,
-        )
-        for match in outcome.model_matches
-        if match.model_code in models_by_code
-    ]
-
-    quran_values = db.query(QuranValue).all()
-    quran_by_code = {value.quran_value_code: value for value in quran_values}
-    quran_results = [
-        JourneyQuranValue(
-            quran_value_code=row.quran_value_code,
-            name_en=quran_by_code[row.quran_value_code].name_en,
-            name_ar=quran_by_code[row.quran_value_code].name_ar,
-            desc_en=quran_by_code[row.quran_value_code].desc_en,
-            desc_ar=quran_by_code[row.quran_value_code].desc_ar,
-            score=row.score,
-            rank=row.rank,
-        )
-        for row in outcome.quran_values
-        if row.quran_value_code in quran_by_code
-    ]
-
-    prophet_traits = db.query(ProphetTrait).all()
-    prophet_by_code = {trait.trait_code: trait for trait in prophet_traits}
-    prophet_results = [
-        JourneyProphetTrait(
-            trait_code=row.trait_code,
-            name_en=prophet_by_code[row.trait_code].name_en,
-            name_ar=prophet_by_code[row.trait_code].name_ar,
-            desc_en=prophet_by_code[row.trait_code].desc_en,
-            desc_ar=prophet_by_code[row.trait_code].desc_ar,
-            score=row.score,
-            rank=row.rank,
-        )
-        for row in outcome.prophet_traits
-        if row.trait_code in prophet_by_code
-    ]
-
-    activation_items = [
-        JourneyActivationItem(
-            channel=item.channel,
-            advice_id=item.advice_id,
-            advice_type=item.advice_type,
-            title_en=item.title_en,
-            title_ar=item.title_ar,
-            body_en=item.body_en,
-            body_ar=item.body_ar,
-            priority=item.priority,
-        )
-        for item in outcome.activation_items
-    ]
-
-    return JourneySubmitAnswersResponse(
+    return _build_submit_response(
+        db=db,
         version_id=payload.version_id,
         test_run_id=test_run.id,
-        top_genes=top_genes,
-        archetype_matches=archetype_matches,
-        quran_values=quran_results,
-        prophet_traits=prophet_results,
-        activation_items=activation_items,
+        outcome=outcome,
     )
 
 

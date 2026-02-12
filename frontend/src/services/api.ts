@@ -6,6 +6,8 @@ import {
   JourneyStartResponse,
   JourneyStartRequest,
   JourneySubmitAnswersRequest,
+  JourneyPreviewStartRequest,
+  JourneyPreviewSubmitAnswersRequest,
   JourneySubmitAnswersResponse,
   JourneyFeedbackRequest,
   JourneyFeedbackResponse,
@@ -94,6 +96,11 @@ export const journeyApi = {
     return response.data;
   },
 
+  startPreviewJourney: async (payload: JourneyPreviewStartRequest): Promise<JourneyStartResponse> => {
+    const response = await api.post('/journey/preview/start', payload);
+    return response.data;
+  },
+
   resumeJourney: async (payload: JourneyResumeRequest): Promise<JourneyStartResponse> => {
     const response = await api.post('/journey/resume', payload);
     return response.data;
@@ -101,6 +108,13 @@ export const journeyApi = {
 
   submitAnswers: async (payload: JourneySubmitAnswersRequest): Promise<JourneySubmitAnswersResponse> => {
     const response = await api.post('/journey/submit-answers', payload);
+    return response.data;
+  },
+
+  submitPreviewAnswers: async (
+    payload: JourneyPreviewSubmitAnswersRequest
+  ): Promise<JourneySubmitAnswersResponse> => {
+    const response = await api.post('/journey/preview/submit', payload);
     return response.data;
   },
 
