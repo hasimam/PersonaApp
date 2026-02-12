@@ -615,7 +615,7 @@ def submit_journey_answers_preview(
             db=db,
             version_id=version_id,
             answers=normalized_answers,
-            top_model_n=5,
+            top_model_n=3,
         )
     except ValueError as exc:
         raise HTTPException(status_code=400, detail=str(exc))
@@ -658,7 +658,7 @@ def submit_journey_answers(
             db=db,
             version_id=payload.version_id,
             answers=normalized_answers,
-            top_model_n=5,
+            top_model_n=3,
         )
     except ValueError as exc:
         raise HTTPException(status_code=400, detail=str(exc))
