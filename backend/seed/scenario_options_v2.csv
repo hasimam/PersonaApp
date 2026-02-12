@@ -2111,3 +2111,195 @@ v2,D10_48,A,End with a spiritual reset,تنهي بإعادة ضبط روحية
 v2,D10_48,B,Write gratitude then sleep,تكتب امتنانا ثم تنام
 v2,D10_48,C,Call a friend briefly,تتصل بصديق قليلا
 v2,D10_48,D,Set a strict phone cutoff,تضع قطعا صارما للهاتف
+v2,D11_01,A,Choose full material guarantees even with a predefined life path.,أختار ضمانا ماديا كاملا حتى مع مسار حياة محدد مسبقا.
+v2,D11_01,B,Choose full freedom even with no support guarantees.,أختار حرية كاملة حتى دون أي ضمانات للدعم.
+v2,D11_01,C,Choose broad freedom with a minimum safety floor for everyone.,أختار حرية واسعة مع حد أدنى من الأمان للجميع.
+v2,D11_01,D,Choose a community model where support and choice are both shared.,أختار نموذجا مجتمعيا يشارك فيه الناس الدعم والاختيار معا.
+v2,D11_02,A,Choose full material guarantees even with a predefined life path.,أختار ضمانا ماديا كاملا حتى مع مسار حياة محدد مسبقا.
+v2,D11_02,B,Choose full freedom even with no support guarantees.,أختار حرية كاملة حتى دون أي ضمانات للدعم.
+v2,D11_02,C,Choose broad freedom with a minimum safety floor for everyone.,أختار حرية واسعة مع حد أدنى من الأمان للجميع.
+v2,D11_02,D,Choose a community model where support and choice are both shared.,أختار نموذجا مجتمعيا يشارك فيه الناس الدعم والاختيار معا.
+v2,D11_03,A,Choose full material guarantees even with a predefined life path.,أختار ضمانا ماديا كاملا حتى مع مسار حياة محدد مسبقا.
+v2,D11_03,B,Choose full freedom even with no support guarantees.,أختار حرية كاملة حتى دون أي ضمانات للدعم.
+v2,D11_03,C,Choose broad freedom with a minimum safety floor for everyone.,أختار حرية واسعة مع حد أدنى من الأمان للجميع.
+v2,D11_03,D,Choose a community model where support and choice are both shared.,أختار نموذجا مجتمعيا يشارك فيه الناس الدعم والاختيار معا.
+v2,D11_04,A,Choose full material guarantees even with a predefined life path.,أختار ضمانا ماديا كاملا حتى مع مسار حياة محدد مسبقا.
+v2,D11_04,B,Choose full freedom even with no support guarantees.,أختار حرية كاملة حتى دون أي ضمانات للدعم.
+v2,D11_04,C,Choose broad freedom with a minimum safety floor for everyone.,أختار حرية واسعة مع حد أدنى من الأمان للجميع.
+v2,D11_04,D,Choose a community model where support and choice are both shared.,أختار نموذجا مجتمعيا يشارك فيه الناس الدعم والاختيار معا.
+v2,D11_05,A,Take the exceptional path and accept the personal cost for a lasting legacy.,آخذ المسار الاستثنائي وأقبل الثمن الشخصي لأثر دائم.
+v2,D11_05,B,Choose solid success that keeps family warmth and stability.,أختار نجاحا محترما يحافظ على دفء الأسرة واستقرارها.
+v2,D11_05,C,Build ambition in stages with clear boundaries for personal life.,أبني الطموح على مراحل مع حدود واضحة للحياة الشخصية.
+v2,D11_05,D,Pursue work that gives respected impact without chasing status symbols.,أسعى لعمل مؤثر ومعتبر دون مطاردة رموز المكانة.
+v2,D11_06,A,Take the exceptional path and accept the personal cost for a lasting legacy.,آخذ المسار الاستثنائي وأقبل الثمن الشخصي لأثر دائم.
+v2,D11_06,B,Choose solid success that keeps family warmth and stability.,أختار نجاحا محترما يحافظ على دفء الأسرة واستقرارها.
+v2,D11_06,C,Build ambition in stages with clear boundaries for personal life.,أبني الطموح على مراحل مع حدود واضحة للحياة الشخصية.
+v2,D11_06,D,Pursue work that gives respected impact without chasing status symbols.,أسعى لعمل مؤثر ومعتبر دون مطاردة رموز المكانة.
+v2,D11_07,A,Take the exceptional path and accept the personal cost for a lasting legacy.,آخذ المسار الاستثنائي وأقبل الثمن الشخصي لأثر دائم.
+v2,D11_07,B,Choose solid success that keeps family warmth and stability.,أختار نجاحا محترما يحافظ على دفء الأسرة واستقرارها.
+v2,D11_07,C,Build ambition in stages with clear boundaries for personal life.,أبني الطموح على مراحل مع حدود واضحة للحياة الشخصية.
+v2,D11_07,D,Pursue work that gives respected impact without chasing status symbols.,أسعى لعمل مؤثر ومعتبر دون مطاردة رموز المكانة.
+v2,D11_08,A,Take the exceptional path and accept the personal cost for a lasting legacy.,آخذ المسار الاستثنائي وأقبل الثمن الشخصي لأثر دائم.
+v2,D11_08,B,Choose solid success that keeps family warmth and stability.,أختار نجاحا محترما يحافظ على دفء الأسرة واستقرارها.
+v2,D11_08,C,Build ambition in stages with clear boundaries for personal life.,أبني الطموح على مراحل مع حدود واضحة للحياة الشخصية.
+v2,D11_08,D,Pursue work that gives respected impact without chasing status symbols.,أسعى لعمل مؤثر ومعتبر دون مطاردة رموز المكانة.
+v2,D11_09,A,Use equal random chance for every patient without exceptions.,أعتمد فرصة عشوائية متساوية لكل مريض دون استثناءات.
+v2,D11_09,B,Prioritize the most vulnerable and essential frontline roles.,أعطي الأولوية للأكثر ضعفا وللأدوار الأمامية الأساسية.
+v2,D11_09,C,Reserve part for vulnerable groups and draw lots for the rest.,أخصص جزءا للفئات الأضعف وأجري قرعة عادلة للباقي.
+v2,D11_09,D,Allocate by evidence-based survival odds and treatment benefit.,أوزع حسب فرص النجاة وفائدة العلاج بناء على الأدلة.
+v2,D11_10,A,Use equal random chance for every patient without exceptions.,أعتمد فرصة عشوائية متساوية لكل مريض دون استثناءات.
+v2,D11_10,B,Prioritize the most vulnerable and essential frontline roles.,أعطي الأولوية للأكثر ضعفا وللأدوار الأمامية الأساسية.
+v2,D11_10,C,Reserve part for vulnerable groups and draw lots for the rest.,أخصص جزءا للفئات الأضعف وأجري قرعة عادلة للباقي.
+v2,D11_10,D,Allocate by evidence-based survival odds and treatment benefit.,أوزع حسب فرص النجاة وفائدة العلاج بناء على الأدلة.
+v2,D11_11,A,Use equal random chance for every patient without exceptions.,أعتمد فرصة عشوائية متساوية لكل مريض دون استثناءات.
+v2,D11_11,B,Prioritize the most vulnerable and essential frontline roles.,أعطي الأولوية للأكثر ضعفا وللأدوار الأمامية الأساسية.
+v2,D11_11,C,Reserve part for vulnerable groups and draw lots for the rest.,أخصص جزءا للفئات الأضعف وأجري قرعة عادلة للباقي.
+v2,D11_11,D,Allocate by evidence-based survival odds and treatment benefit.,أوزع حسب فرص النجاة وفائدة العلاج بناء على الأدلة.
+v2,D11_12,A,Use equal random chance for every patient without exceptions.,أعتمد فرصة عشوائية متساوية لكل مريض دون استثناءات.
+v2,D11_12,B,Prioritize the most vulnerable and essential frontline roles.,أعطي الأولوية للأكثر ضعفا وللأدوار الأمامية الأساسية.
+v2,D11_12,C,Reserve part for vulnerable groups and draw lots for the rest.,أخصص جزءا للفئات الأضعف وأجري قرعة عادلة للباقي.
+v2,D11_12,D,Allocate by evidence-based survival odds and treatment benefit.,أوزع حسب فرص النجاة وفائدة العلاج بناء على الأدلة.
+v2,D11_13,A,Split bonus points equally to keep one shared responsibility.,أقسم الدرجات بالتساوي لأن المسؤولية مشتركة.
+v2,D11_13,B,Distribute by measured contribution and actual effort.,أوزعها حسب مقدار الجهد والمساهمة الفعلية.
+v2,D11_13,C,Give equal base points plus a smaller merit component.,أمنح أساسا متساويا مع جزء أصغر حسب الجدارة.
+v2,D11_13,D,Let peers evaluate contributions with a transparent shared rubric.,أعتمد تقييما زميليا شفافا بمعايير يتفق عليها الجميع.
+v2,D11_14,A,Split bonus points equally to keep one shared responsibility.,أقسم الدرجات بالتساوي لأن المسؤولية مشتركة.
+v2,D11_14,B,Distribute by measured contribution and actual effort.,أوزعها حسب مقدار الجهد والمساهمة الفعلية.
+v2,D11_14,C,Give equal base points plus a smaller merit component.,أمنح أساسا متساويا مع جزء أصغر حسب الجدارة.
+v2,D11_14,D,Let peers evaluate contributions with a transparent shared rubric.,أعتمد تقييما زميليا شفافا بمعايير يتفق عليها الجميع.
+v2,D11_15,A,Split bonus points equally to keep one shared responsibility.,أقسم الدرجات بالتساوي لأن المسؤولية مشتركة.
+v2,D11_15,B,Distribute by measured contribution and actual effort.,أوزعها حسب مقدار الجهد والمساهمة الفعلية.
+v2,D11_15,C,Give equal base points plus a smaller merit component.,أمنح أساسا متساويا مع جزء أصغر حسب الجدارة.
+v2,D11_15,D,Let peers evaluate contributions with a transparent shared rubric.,أعتمد تقييما زميليا شفافا بمعايير يتفق عليها الجميع.
+v2,D11_16,A,Split bonus points equally to keep one shared responsibility.,أقسم الدرجات بالتساوي لأن المسؤولية مشتركة.
+v2,D11_16,B,Distribute by measured contribution and actual effort.,أوزعها حسب مقدار الجهد والمساهمة الفعلية.
+v2,D11_16,C,Give equal base points plus a smaller merit component.,أمنح أساسا متساويا مع جزء أصغر حسب الجدارة.
+v2,D11_16,D,Let peers evaluate contributions with a transparent shared rubric.,أعتمد تقييما زميليا شفافا بمعايير يتفق عليها الجميع.
+v2,D11_17,A,Divide equally by value regardless of personal circumstances.,أقسم بالتساوي في القيمة بغض النظر عن الظروف الفردية.
+v2,D11_17,B,"Adjust shares by need, disability, and prior caregiving.",أراعي الحاجة والإعاقة ومن تولى الرعاية سابقا.
+v2,D11_17,C,Keep equal legal shares and add a support fund for hardship cases.,أحافظ على القسمة القانونية المتساوية مع صندوق دعم للحالات الأصعب.
+v2,D11_17,D,Convert part into shared long-term assets that protect all heirs.,أحول جزءا إلى أصول مشتركة طويلة الأمد تحمي الجميع.
+v2,D11_18,A,Divide equally by value regardless of personal circumstances.,أقسم بالتساوي في القيمة بغض النظر عن الظروف الفردية.
+v2,D11_18,B,"Adjust shares by need, disability, and prior caregiving.",أراعي الحاجة والإعاقة ومن تولى الرعاية سابقا.
+v2,D11_18,C,Keep equal legal shares and add a support fund for hardship cases.,أحافظ على القسمة القانونية المتساوية مع صندوق دعم للحالات الأصعب.
+v2,D11_18,D,Convert part into shared long-term assets that protect all heirs.,أحول جزءا إلى أصول مشتركة طويلة الأمد تحمي الجميع.
+v2,D11_19,A,Divide equally by value regardless of personal circumstances.,أقسم بالتساوي في القيمة بغض النظر عن الظروف الفردية.
+v2,D11_19,B,"Adjust shares by need, disability, and prior caregiving.",أراعي الحاجة والإعاقة ومن تولى الرعاية سابقا.
+v2,D11_19,C,Keep equal legal shares and add a support fund for hardship cases.,أحافظ على القسمة القانونية المتساوية مع صندوق دعم للحالات الأصعب.
+v2,D11_19,D,Convert part into shared long-term assets that protect all heirs.,أحول جزءا إلى أصول مشتركة طويلة الأمد تحمي الجميع.
+v2,D11_20,A,Divide equally by value regardless of personal circumstances.,أقسم بالتساوي في القيمة بغض النظر عن الظروف الفردية.
+v2,D11_20,B,"Adjust shares by need, disability, and prior caregiving.",أراعي الحاجة والإعاقة ومن تولى الرعاية سابقا.
+v2,D11_20,C,Keep equal legal shares and add a support fund for hardship cases.,أحافظ على القسمة القانونية المتساوية مع صندوق دعم للحالات الأصعب.
+v2,D11_20,D,Convert part into shared long-term assets that protect all heirs.,أحول جزءا إلى أصول مشتركة طويلة الأمد تحمي الجميع.
+v2,D11_21,A,Set one fixed amount for everyone under one law.,أحدد مبلغا ثابتا للجميع لأن القانون واحد.
+v2,D11_21,B,Set fines as a percentage of income so impact is comparable.,أجعل الغرامة نسبة من الدخل حتى يكون الأثر متقاربا.
+v2,D11_21,C,Use progressive brackets with minimum and maximum limits.,أعتمد شرائح تصاعدية مع حد أدنى وحد أعلى.
+v2,D11_21,D,Pair fines with restorative community service when suitable.,أقرن الغرامة بخدمة مجتمعية إصلاحية عند الملاءمة.
+v2,D11_22,A,Set one fixed amount for everyone under one law.,أحدد مبلغا ثابتا للجميع لأن القانون واحد.
+v2,D11_22,B,Set fines as a percentage of income so impact is comparable.,أجعل الغرامة نسبة من الدخل حتى يكون الأثر متقاربا.
+v2,D11_22,C,Use progressive brackets with minimum and maximum limits.,أعتمد شرائح تصاعدية مع حد أدنى وحد أعلى.
+v2,D11_22,D,Pair fines with restorative community service when suitable.,أقرن الغرامة بخدمة مجتمعية إصلاحية عند الملاءمة.
+v2,D11_23,A,Set one fixed amount for everyone under one law.,أحدد مبلغا ثابتا للجميع لأن القانون واحد.
+v2,D11_23,B,Set fines as a percentage of income so impact is comparable.,أجعل الغرامة نسبة من الدخل حتى يكون الأثر متقاربا.
+v2,D11_23,C,Use progressive brackets with minimum and maximum limits.,أعتمد شرائح تصاعدية مع حد أدنى وحد أعلى.
+v2,D11_23,D,Pair fines with restorative community service when suitable.,أقرن الغرامة بخدمة مجتمعية إصلاحية عند الملاءمة.
+v2,D11_24,A,Set one fixed amount for everyone under one law.,أحدد مبلغا ثابتا للجميع لأن القانون واحد.
+v2,D11_24,B,Set fines as a percentage of income so impact is comparable.,أجعل الغرامة نسبة من الدخل حتى يكون الأثر متقاربا.
+v2,D11_24,C,Use progressive brackets with minimum and maximum limits.,أعتمد شرائح تصاعدية مع حد أدنى وحد أعلى.
+v2,D11_24,D,Pair fines with restorative community service when suitable.,أقرن الغرامة بخدمة مجتمعية إصلاحية عند الملاءمة.
+v2,D11_25,A,"Choose fewer years with high meaning, passion, and purpose.",أختار سنوات أقل مع معنى وشغف وغاية عالية.
+v2,D11_25,B,Choose more years with gentle rhythm and simple daily joy.,أختار سنوات أكثر بإيقاع هادئ وفرح يومي بسيط.
+v2,D11_25,C,Choose a middle path: steady health with planned peak experiences.,أختار مسارا وسطا: صحة مستقرة مع قمم خبرة مخططة.
+v2,D11_25,D,Prioritize long-term physical and mental wellness across all stages.,أعطي أولوية للعافية الجسدية والنفسية على المدى الطويل.
+v2,D11_26,A,"Choose fewer years with high meaning, passion, and purpose.",أختار سنوات أقل مع معنى وشغف وغاية عالية.
+v2,D11_26,B,Choose more years with gentle rhythm and simple daily joy.,أختار سنوات أكثر بإيقاع هادئ وفرح يومي بسيط.
+v2,D11_26,C,Choose a middle path: steady health with planned peak experiences.,أختار مسارا وسطا: صحة مستقرة مع قمم خبرة مخططة.
+v2,D11_26,D,Prioritize long-term physical and mental wellness across all stages.,أعطي أولوية للعافية الجسدية والنفسية على المدى الطويل.
+v2,D11_27,A,"Choose fewer years with high meaning, passion, and purpose.",أختار سنوات أقل مع معنى وشغف وغاية عالية.
+v2,D11_27,B,Choose more years with gentle rhythm and simple daily joy.,أختار سنوات أكثر بإيقاع هادئ وفرح يومي بسيط.
+v2,D11_27,C,Choose a middle path: steady health with planned peak experiences.,أختار مسارا وسطا: صحة مستقرة مع قمم خبرة مخططة.
+v2,D11_27,D,Prioritize long-term physical and mental wellness across all stages.,أعطي أولوية للعافية الجسدية والنفسية على المدى الطويل.
+v2,D11_28,A,"Choose fewer years with high meaning, passion, and purpose.",أختار سنوات أقل مع معنى وشغف وغاية عالية.
+v2,D11_28,B,Choose more years with gentle rhythm and simple daily joy.,أختار سنوات أكثر بإيقاع هادئ وفرح يومي بسيط.
+v2,D11_28,C,Choose a middle path: steady health with planned peak experiences.,أختار مسارا وسطا: صحة مستقرة مع قمم خبرة مخططة.
+v2,D11_28,D,Prioritize long-term physical and mental wellness across all stages.,أعطي أولوية للعافية الجسدية والنفسية على المدى الطويل.
+v2,D11_29,A,Choose the perfect repeated day with total control and beauty.,أختار اليوم المثالي المتكرر مع سيطرة كاملة وإحساس بالجمال.
+v2,D11_29,B,"Choose real time flow, risk, and unpredictable growth.",أختار تدفق الزمن الحقيقي مع المخاطرة والنمو غير المتوقع.
+v2,D11_29,C,Create stable rituals but keep room for periodic change.,أبني طقوسا مستقرة مع مساحة لتجديد دوري.
+v2,D11_29,D,Prefer ongoing learning from new seasons and life transitions.,أفضل التعلم المستمر من المواسم الجديدة وتحولات الحياة.
+v2,D11_30,A,Choose the perfect repeated day with total control and beauty.,أختار اليوم المثالي المتكرر مع سيطرة كاملة وإحساس بالجمال.
+v2,D11_30,B,"Choose real time flow, risk, and unpredictable growth.",أختار تدفق الزمن الحقيقي مع المخاطرة والنمو غير المتوقع.
+v2,D11_30,C,Create stable rituals but keep room for periodic change.,أبني طقوسا مستقرة مع مساحة لتجديد دوري.
+v2,D11_30,D,Prefer ongoing learning from new seasons and life transitions.,أفضل التعلم المستمر من المواسم الجديدة وتحولات الحياة.
+v2,D11_31,A,Choose the perfect repeated day with total control and beauty.,أختار اليوم المثالي المتكرر مع سيطرة كاملة وإحساس بالجمال.
+v2,D11_31,B,"Choose real time flow, risk, and unpredictable growth.",أختار تدفق الزمن الحقيقي مع المخاطرة والنمو غير المتوقع.
+v2,D11_31,C,Create stable rituals but keep room for periodic change.,أبني طقوسا مستقرة مع مساحة لتجديد دوري.
+v2,D11_31,D,Prefer ongoing learning from new seasons and life transitions.,أفضل التعلم المستمر من المواسم الجديدة وتحولات الحياة.
+v2,D11_32,A,Choose the perfect repeated day with total control and beauty.,أختار اليوم المثالي المتكرر مع سيطرة كاملة وإحساس بالجمال.
+v2,D11_32,B,"Choose real time flow, risk, and unpredictable growth.",أختار تدفق الزمن الحقيقي مع المخاطرة والنمو غير المتوقع.
+v2,D11_32,C,Create stable rituals but keep room for periodic change.,أبني طقوسا مستقرة مع مساحة لتجديد دوري.
+v2,D11_32,D,Prefer ongoing learning from new seasons and life transitions.,أفضل التعلم المستمر من المواسم الجديدة وتحولات الحياة.
+v2,D11_33,A,I fear wasting precious time on low-value distractions.,أخاف إضاعة وقتي الثمين في مشتتات بلا قيمة.
+v2,D11_33,B,I fear avoiding bold risks and missing transformative opportunities.,أخاف تجنب المخاطرة الجريئة وفوات فرص تغير حياتي.
+v2,D11_33,C,I fear losing my daily peace while chasing either side.,أخاف فقدان سكينتي اليومية أثناء مطاردة أي طرف.
+v2,D11_33,D,I fear drifting away from people who gave life real meaning.,أخاف الابتعاد عن الناس الذين أعطوا حياتي معناها الحقيقي.
+v2,D11_34,A,I fear wasting precious time on low-value distractions.,أخاف إضاعة وقتي الثمين في مشتتات بلا قيمة.
+v2,D11_34,B,I fear avoiding bold risks and missing transformative opportunities.,أخاف تجنب المخاطرة الجريئة وفوات فرص تغير حياتي.
+v2,D11_34,C,I fear losing my daily peace while chasing either side.,أخاف فقدان سكينتي اليومية أثناء مطاردة أي طرف.
+v2,D11_34,D,I fear drifting away from people who gave life real meaning.,أخاف الابتعاد عن الناس الذين أعطوا حياتي معناها الحقيقي.
+v2,D11_35,A,I fear wasting precious time on low-value distractions.,أخاف إضاعة وقتي الثمين في مشتتات بلا قيمة.
+v2,D11_35,B,I fear avoiding bold risks and missing transformative opportunities.,أخاف تجنب المخاطرة الجريئة وفوات فرص تغير حياتي.
+v2,D11_35,C,I fear losing my daily peace while chasing either side.,أخاف فقدان سكينتي اليومية أثناء مطاردة أي طرف.
+v2,D11_35,D,I fear drifting away from people who gave life real meaning.,أخاف الابتعاد عن الناس الذين أعطوا حياتي معناها الحقيقي.
+v2,D11_36,A,I fear wasting precious time on low-value distractions.,أخاف إضاعة وقتي الثمين في مشتتات بلا قيمة.
+v2,D11_36,B,I fear avoiding bold risks and missing transformative opportunities.,أخاف تجنب المخاطرة الجريئة وفوات فرص تغير حياتي.
+v2,D11_36,C,I fear losing my daily peace while chasing either side.,أخاف فقدان سكينتي اليومية أثناء مطاردة أي طرف.
+v2,D11_36,D,I fear drifting away from people who gave life real meaning.,أخاف الابتعاد عن الناس الذين أعطوا حياتي معناها الحقيقي.
+v2,D11_37,A,Take the trade and invest peak youth energy where impact is highest.,آخذ الصفقة وأستثمر طاقة الشباب القصوى حيث يكون الأثر أعلى.
+v2,D11_37,B,Keep all years as they are and honor the full life timeline.,أحافظ على كل السنوات كما هي وأحترم المسار الكامل للحياة.
+v2,D11_37,C,Take the trade only for clear critical responsibilities.,أقبل الصفقة فقط إذا كانت هناك مسؤوليات مصيرية واضحة.
+v2,D11_37,D,Refuse timeline edits and improve today through sustainable health habits.,أرفض تعديل الخط الزمني وأطور الحاضر بعادات صحية مستدامة.
+v2,D11_38,A,Take the trade and invest peak youth energy where impact is highest.,آخذ الصفقة وأستثمر طاقة الشباب القصوى حيث يكون الأثر أعلى.
+v2,D11_38,B,Keep all years as they are and honor the full life timeline.,أحافظ على كل السنوات كما هي وأحترم المسار الكامل للحياة.
+v2,D11_38,C,Take the trade only for clear critical responsibilities.,أقبل الصفقة فقط إذا كانت هناك مسؤوليات مصيرية واضحة.
+v2,D11_38,D,Refuse timeline edits and improve today through sustainable health habits.,أرفض تعديل الخط الزمني وأطور الحاضر بعادات صحية مستدامة.
+v2,D11_39,A,Take the trade and invest peak youth energy where impact is highest.,آخذ الصفقة وأستثمر طاقة الشباب القصوى حيث يكون الأثر أعلى.
+v2,D11_39,B,Keep all years as they are and honor the full life timeline.,أحافظ على كل السنوات كما هي وأحترم المسار الكامل للحياة.
+v2,D11_39,C,Take the trade only for clear critical responsibilities.,أقبل الصفقة فقط إذا كانت هناك مسؤوليات مصيرية واضحة.
+v2,D11_39,D,Refuse timeline edits and improve today through sustainable health habits.,أرفض تعديل الخط الزمني وأطور الحاضر بعادات صحية مستدامة.
+v2,D11_40,A,Take the trade and invest peak youth energy where impact is highest.,آخذ الصفقة وأستثمر طاقة الشباب القصوى حيث يكون الأثر أعلى.
+v2,D11_40,B,Keep all years as they are and honor the full life timeline.,أحافظ على كل السنوات كما هي وأحترم المسار الكامل للحياة.
+v2,D11_40,C,Take the trade only for clear critical responsibilities.,أقبل الصفقة فقط إذا كانت هناك مسؤوليات مصيرية واضحة.
+v2,D11_40,D,Refuse timeline edits and improve today through sustainable health habits.,أرفض تعديل الخط الزمني وأطور الحاضر بعادات صحية مستدامة.
+v2,D11_41,A,Know when it will happen so I can prepare and position myself.,أعرف متى سيحدث حتى أستعد وأتموضع جيدا.
+v2,D11_41,B,Know what it is so I can orient my choices toward that meaning.,أعرف ما هو حتى أوجه اختياراتي نحو ذلك المعنى.
+v2,D11_41,C,Know who will share that peak moment with me.,أعرف مع من سأعيش تلك الذروة.
+v2,D11_41,D,"Prefer not to know, and practice gratitude for unfolding uncertainty.",أفضل ألا أعرف، وأمارس الامتنان مع غموض المستقبل.
+v2,D11_42,A,Know when it will happen so I can prepare and position myself.,أعرف متى سيحدث حتى أستعد وأتموضع جيدا.
+v2,D11_42,B,Know what it is so I can orient my choices toward that meaning.,أعرف ما هو حتى أوجه اختياراتي نحو ذلك المعنى.
+v2,D11_42,C,Know who will share that peak moment with me.,أعرف مع من سأعيش تلك الذروة.
+v2,D11_42,D,"Prefer not to know, and practice gratitude for unfolding uncertainty.",أفضل ألا أعرف، وأمارس الامتنان مع غموض المستقبل.
+v2,D11_43,A,Know when it will happen so I can prepare and position myself.,أعرف متى سيحدث حتى أستعد وأتموضع جيدا.
+v2,D11_43,B,Know what it is so I can orient my choices toward that meaning.,أعرف ما هو حتى أوجه اختياراتي نحو ذلك المعنى.
+v2,D11_43,C,Know who will share that peak moment with me.,أعرف مع من سأعيش تلك الذروة.
+v2,D11_43,D,"Prefer not to know, and practice gratitude for unfolding uncertainty.",أفضل ألا أعرف، وأمارس الامتنان مع غموض المستقبل.
+v2,D11_44,A,Know when it will happen so I can prepare and position myself.,أعرف متى سيحدث حتى أستعد وأتموضع جيدا.
+v2,D11_44,B,Know what it is so I can orient my choices toward that meaning.,أعرف ما هو حتى أوجه اختياراتي نحو ذلك المعنى.
+v2,D11_44,C,Know who will share that peak moment with me.,أعرف مع من سأعيش تلك الذروة.
+v2,D11_44,D,"Prefer not to know, and practice gratitude for unfolding uncertainty.",أفضل ألا أعرف، وأمارس الامتنان مع غموض المستقبل.
+v2,D11_45,A,I regret turning life into tasks and missing lived joy.,أندم إذا حولت حياتي إلى مهام وفقدت متعة العيش.
+v2,D11_45,B,I regret not reaching meaningful milestones worth the years.,أندم إذا لم أصل إلى محطات ذات قيمة تليق بالسنوات.
+v2,D11_45,C,I regret failing to balance progress with relationships and rest.,أندم إذا فشلت في موازنة التقدم مع العلاقات والراحة.
+v2,D11_45,D,I regret not giving enough back to my wider community.,أندم إذا لم أرد الجميل لمجتمعي بما يكفي.
+v2,D11_46,A,I regret turning life into tasks and missing lived joy.,أندم إذا حولت حياتي إلى مهام وفقدت متعة العيش.
+v2,D11_46,B,I regret not reaching meaningful milestones worth the years.,أندم إذا لم أصل إلى محطات ذات قيمة تليق بالسنوات.
+v2,D11_46,C,I regret failing to balance progress with relationships and rest.,أندم إذا فشلت في موازنة التقدم مع العلاقات والراحة.
+v2,D11_46,D,I regret not giving enough back to my wider community.,أندم إذا لم أرد الجميل لمجتمعي بما يكفي.
+v2,D11_47,A,I regret turning life into tasks and missing lived joy.,أندم إذا حولت حياتي إلى مهام وفقدت متعة العيش.
+v2,D11_47,B,I regret not reaching meaningful milestones worth the years.,أندم إذا لم أصل إلى محطات ذات قيمة تليق بالسنوات.
+v2,D11_47,C,I regret failing to balance progress with relationships and rest.,أندم إذا فشلت في موازنة التقدم مع العلاقات والراحة.
+v2,D11_47,D,I regret not giving enough back to my wider community.,أندم إذا لم أرد الجميل لمجتمعي بما يكفي.
+v2,D11_48,A,I regret turning life into tasks and missing lived joy.,أندم إذا حولت حياتي إلى مهام وفقدت متعة العيش.
+v2,D11_48,B,I regret not reaching meaningful milestones worth the years.,أندم إذا لم أصل إلى محطات ذات قيمة تليق بالسنوات.
+v2,D11_48,C,I regret failing to balance progress with relationships and rest.,أندم إذا فشلت في موازنة التقدم مع العلاقات والراحة.
+v2,D11_48,D,I regret not giving enough back to my wider community.,أندم إذا لم أرد الجميل لمجتمعي بما يكفي.
