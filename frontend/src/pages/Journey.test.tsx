@@ -224,4 +224,33 @@ describe('Journey smoke test', () => {
 
     confirmSpy.mockRestore();
   });
+
+  test('does not restart preview run when switching language', async () => {
+    mockedJourneyApi.startPreviewJourney.mockResolvedValue({
+      test_run_id: 211002,
+      version_id: 'v2',
+      scenarios: [
+        {
+          scenario_code: 'D11_01',
+          order_index: 1,
+          scenario_text_en: 'Preview Scenario 1',
+          scenario_text_ar: 'سيناريو المعاينة 1',
+          options: [
+            { option_code: 'A', option_text_en: 'Option A', option_text_ar: 'الخيار أ' },
+            { option_code: 'B', option_text_en: 'Option B', option_text_ar: 'الخيار ب' },
+          ],
+        },
+      ],
+    });
+
+    renderJourney('/test?preview=token123');
+
+    await waitFor(() => expect(mockedJourneyApi.startPreviewJourney).toHaveBeenCalledTimes(1));
+    expect(await screen.findByText('Preview Scenario 1')).toBeInTheDocument();
+
+    fireEvent.click(screen.getByRole('button', { name: 'العربية' }));
+
+    expect(await screen.findByText('سيناريو المعاينة 1')).toBeInTheDocument();
+    expect(mockedJourneyApi.startPreviewJourney).toHaveBeenCalledTimes(1);
+  });
 });

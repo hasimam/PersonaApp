@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo, useState } from 'react';
+import React, { useEffect, useMemo, useRef, useState } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import LanguageSwitcher from '../components/LanguageSwitcher';
 import { useLanguage } from '../i18n/LanguageContext';
@@ -79,6 +79,7 @@ const Journey: React.FC = () => {
   const [busy, setBusy] = useState(false);
   const [isAdvancing, setIsAdvancing] = useState(false);
   const [error, setError] = useState('');
+  const startedPreviewTokenRef = useRef<string | null>(null);
   const previewToken = useMemo(() => {
     const token = new URLSearchParams(location.search).get('preview');
     return token ? token.trim() : '';
@@ -170,8 +171,13 @@ const Journey: React.FC = () => {
 
   useEffect(() => {
     if (!isPreviewMode) {
+      startedPreviewTokenRef.current = null;
       return;
     }
+    if (startedPreviewTokenRef.current === previewToken && journey) {
+      return;
+    }
+    startedPreviewTokenRef.current = previewToken;
     clearStoredJourney();
     setBusy(true);
     setError('');
@@ -189,12 +195,13 @@ const Journey: React.FC = () => {
         setStep('scenarios');
       })
       .catch(() => {
+        startedPreviewTokenRef.current = null;
         setError(t.journey.startError);
       })
       .finally(() => {
         setBusy(false);
       });
-  }, [isPreviewMode, previewToken, t.journey.startError]);
+  }, [isPreviewMode, previewToken, t.journey.startError, journey]);
 
   useEffect(() => {
     if (!journey) {
