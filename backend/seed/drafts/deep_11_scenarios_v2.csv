@@ -1,49 +1,49 @@
 version_id,scenario_code,scenario_set_code,order_index,scenario_text_en,scenario_text_ar
-v2,D11_01,deep_11,1,"If you had to choose one social system for life, what would you pick?",لو اضطررت لاختيار نظام اجتماعي واحد طوال حياتك، ماذا تختار؟
-v2,D11_02,deep_11,2,You are moving to a new country. Which system suits you more?,أنت تنتقل إلى بلد جديد. أي نظام يناسبك أكثر؟
-v2,D11_03,deep_11,3,A future city offers two contracts for residents. Which one do you sign?,مدينة مستقبلية تعرض عقدين للسكان. أي عقد توقع؟
-v2,D11_04,deep_11,4,You can raise your children under one model only. Which model do you choose?,يمكنك تربية أطفالك ضمن نموذج واحد فقط. أي نموذج تختار؟
-v2,D11_05,deep_11,5,You are offered a once-in-a-lifetime project that may cost years with loved ones. What do you do?,عُرض عليك مشروع نادر قد يكلفك سنوات بعيدا عن من تحب. ماذا تفعل؟
-v2,D11_06,deep_11,6,Two career paths open up: legacy impact or balanced life. Which path do you take?,أمامك مساران مهنيان: أثر تاريخي أو حياة متوازنة. أي مسار تختار؟
-v2,D11_07,deep_11,7,A startup asks you for total commitment with high prestige. How do you respond?,شركة ناشئة تطلب تفرغا كاملا مع مكانة عالية. كيف ترد؟
-v2,D11_08,deep_11,8,"Your mentor tells you: now is your shot at greatness, but with a personal cost. Your choice?",مرشدك يقول: هذه فرصتك للعظمة لكن بثمن شخصي. ما اختيارك؟
-v2,D11_09,deep_11,9,A deadly epidemic spreads and medicine is limited. You are in charge of distribution.,انتشر وباء قاتل والدواء محدود. أنت مسؤول عن التوزيع.
-v2,D11_10,deep_11,10,"In your city hospital, only one shipment of treatment arrives. How do you allocate it?",في مستشفى مدينتك وصلت شحنة علاج واحدة فقط. كيف توزعها؟
-v2,D11_11,deep_11,11,An emergency committee asks for your final rule for scarce treatment.,لجنة طوارئ تطلب منك قاعدة نهائية لعلاج نادر.
-v2,D11_12,deep_11,12,A refugee camp has one life-saving stock. Which allocation principle do you apply?,مخيم لجوء لديه مخزون إنقاذ واحد. أي مبدأ توزيع تطبق؟
-v2,D11_13,deep_11,13,"In a class project, bonus marks must be distributed. What is fairest?",في مشروع دراسي جماعي يجب توزيع درجات إضافية. ما الأعدل؟
-v2,D11_14,deep_11,14,Your team asks you to design the grading rule after a group assignment.,فريقك يطلب منك وضع قاعدة التقييم بعد مشروع جماعي.
-v2,D11_15,deep_11,15,"As class representative, you decide how shared credit is awarded.",بصفتك ممثل الصف تقرر كيف توزع درجات الإنجاز المشترك.
-v2,D11_16,deep_11,16,A school policy review asks for your grading model in group work.,مراجعة سياسة المدرسة تطلب نموذجك لتقييم العمل الجماعي.
-v2,D11_17,deep_11,17,Your family is dividing inheritance among siblings. Which principle leads?,عائلتك تقسم ميراثا بين الإخوة. أي مبدأ يقود القرار؟
-v2,D11_18,deep_11,18,You are asked to mediate inheritance tensions between brothers and sisters.,طُلب منك التوسط في خلاف ميراث بين الإخوة والأخوات.
-v2,D11_19,deep_11,19,A parent leaves mixed assets and unclear expectations. How do you divide fairly?,أحد الوالدين ترك أصولا متعددة وتوقعات غير واضحة. كيف تقسم بعدل؟
-v2,D11_20,deep_11,20,A family council asks you to draft a fair inheritance framework.,مجلس عائلي يطلب منك صياغة إطار عادل لتوزيع الإرث.
-v2,D11_21,deep_11,21,"Two people commit the same offense: one rich, one poor. How should fines work?",شخصان ارتكبا نفس المخالفة: أحدهما غني والآخر فقير. كيف تكون الغرامة؟
-v2,D11_22,deep_11,22,A policy board asks you to redesign penalties for economic fairness.,مجلس سياسات يطلب منك إعادة تصميم العقوبات لتحقيق إنصاف اقتصادي.
-v2,D11_23,deep_11,23,Your city is updating traffic fines. What model do you support?,مدينتك تحدّث نظام غرامات المرور. أي نموذج تدعم؟
-v2,D11_24,deep_11,24,"As a legal advisor, you must choose one principle for monetary penalties.",كمستشار قانوني عليك اختيار مبدأ واحد للغرامات المالية.
-v2,D11_25,deep_11,25,You must choose: short intense life or long calm life. What do you pick?,عليك الاختيار: حياة قصيرة مكثفة أم طويلة هادئة. ماذا تختار؟
-v2,D11_26,deep_11,26,A thought experiment asks what gives life most value: depth or duration.,تجربة فكرية تسأل: ما الذي يعطي الحياة قيمة أكبر، العمق أم الامتداد؟
-v2,D11_27,deep_11,27,You can guarantee either peak meaning or long continuity. Which matters more to you?,يمكنك ضمان ذروة معنى أو استمرارية أطول. أيهما أهم لك؟
-v2,D11_28,deep_11,28,A medical technology offers either emotional intensity or lifespan extension. Your choice?,تقنية طبية تعرض إما كثافة شعورية أو إطالة العمر. ما اختيارك؟
-v2,D11_29,deep_11,29,"Would you prefer one perfect day repeated forever, or a changing life journey?",هل تفضل يوما مثاليا يتكرر للأبد أم حياة متغيرة تتدفق؟
-v2,D11_30,deep_11,30,A simulation can lock you into your ideal day forever. Do you accept?,محاكاة تستطيع تثبيتك في يومك المثالي للأبد. هل تقبل؟
-v2,D11_31,deep_11,31,"You may freeze time at your happiest moment, or keep aging naturally. Which do you choose?",يمكنك تجميد الزمن عند أسعد لحظة أو متابعة العمر طبيعيا. ماذا تختار؟
-v2,D11_32,deep_11,32,"In a virtual world, perfect repetition is possible, but no new surprises. Your decision?",في عالم افتراضي يمكن تكرار الكمال دون مفاجآت جديدة. ما قرارك؟
-v2,D11_33,deep_11,33,"After 20 years, which regret would hurt more: wasted time or missed chances?",بعد 20 سنة، أي ندم سيكون أثقل: هدر الوقت أم ضياع الفرص؟
-v2,D11_34,deep_11,34,You review your life and must name your biggest fear of regret. Which is it?,تراجع حياتك ويجب أن تسمي أكبر خوف من الندم. ما هو؟
-v2,D11_35,deep_11,35,"A coach asks: what pain is greater for you, stagnation or reckless drift?",مدرب يسألك: أي ألم أكبر لديك، الجمود أم التشتت؟
-v2,D11_36,deep_11,36,You write a letter to your future self. What warning do you repeat most?,تكتب رسالة لنفسك المستقبلية. أي تحذير تكرر أكثر؟
-v2,D11_37,deep_11,37,You know your exact death date. Would you trade two late years for two ideal youth years now?,تعرف تاريخ وفاتك بدقة. هل تستبدل سنتين من آخر عمرك بسنتين شباب مثاليتين الآن؟
-v2,D11_38,deep_11,38,A guaranteed life-timeline deal lets you move years from old age to young adulthood. Do you take it?,صفقة مضمونة تسمح بنقل سنوات من الشيخوخة إلى بدايات الشباب. هل تقبل؟
-v2,D11_39,deep_11,39,"A biotech offer: less total years, but stronger early years. What is your call?",عرض تقني: سنوات إجمالية أقل مقابل قوة أكبر في البدايات. ما قرارك؟
-v2,D11_40,deep_11,40,You can re-time your life energy but not increase total meaning automatically. What do you choose?,يمكنك إعادة توقيت طاقة حياتك دون زيادة تلقائية في المعنى. ماذا تختار؟
-v2,D11_41,deep_11,41,You can know one certain fact about your future success: when or what. Which do you pick?,يمكنك معرفة حقيقة واحدة مؤكدة عن نجاحك المستقبلي: متى أو ماذا. أيهما تختار؟
-v2,D11_42,deep_11,42,A prediction system offers either timing certainty or content certainty. Which helps you more?,نظام تنبؤ يمنحك يقين التوقيت أو يقين المحتوى. أيهما يفيدك أكثر؟
-v2,D11_43,deep_11,43,You may reveal only one card about your greatest future happiness. Which card?,يمكنك كشف بطاقة واحدة فقط عن أعظم سعادتك القادمة. أي بطاقة؟
-v2,D11_44,deep_11,44,"A life analyst asks where you seek control: timeline, meaning, people, or presence?",محلل حياة يسألك: أين تبحث عن السيطرة، في الزمن أم المعنى أم الناس أم الحضور؟
-v2,D11_45,deep_11,45,"After 20 years, what sentence would be your sharpest regret?",بعد 20 سنة، ما الجملة التي ستكون أشد ندما؟
-v2,D11_46,deep_11,46,"At midlife reflection, what failure hurts more: no joy in the path or no worthy arrival?",عند مراجعة منتصف العمر، أي فشل يؤلم أكثر: بلا متعة في الطريق أم بلا وصول معتبر؟
-v2,D11_47,deep_11,47,"Your diary asks one final question: enjoy enough, or achieve enough?",مذكرتك تطرح سؤالا أخيرا: استمتعت بما يكفي أم أنجزت بما يكفي؟
-v2,D11_48,deep_11,48,A mentor asks what you fear becoming: a burned-out achiever or a drifting wanderer?,مرشد يسألك: ما الذي تخشى أن تصبحه، منجزا مستنزفا أم متجولا بلا محطة؟
+v2,D11_01,deep_11,1,"If you had to live forever under one social contract, what would you choose?",لو كان عليك العيش مدى الحياة تحت عقد اجتماعي واحد، ماذا تختار؟
+v2,D11_02,deep_11,2,You are migrating with your family and must pick one governing model.,أنت تهاجر مع عائلتك وعليك اختيار نموذج حكم واحد.
+v2,D11_03,deep_11,3,A new city gives residents two paths: guaranteed support or total self-direction.,مدينة جديدة تمنح السكان مسارين: دعم مضمون أو توجيه ذاتي كامل.
+v2,D11_04,deep_11,4,You are advising a youth community on its founding principles.,أنت تنصح مجتمعا شبابيا بمبادئه التأسيسية.
+v2,D11_05,deep_11,5,A global project could make your name historic but isolate you for years.,مشروع عالمي قد يخلد اسمك لكنه يعزلك سنوات.
+v2,D11_06,deep_11,6,You can choose between a career leap or a warm predictable family rhythm.,يمكنك الاختيار بين قفزة مهنية أو إيقاع أسري دافئ ومتوقع.
+v2,D11_07,deep_11,7,A venture fund offers you leadership only if you commit with no personal boundaries.,صندوق استثماري يعرض عليك القيادة بشرط التفرغ بلا حدود شخصية.
+v2,D11_08,deep_11,8,Your mentor asks what legacy means to you in practical life choices.,مرشدك يسألك ماذا يعني الإرث في اختياراتك العملية.
+v2,D11_09,deep_11,9,A fast pandemic wave hits and one treatment batch is available.,موجة وباء سريعة تضرب والمنشأة تملك دفعة علاج واحدة.
+v2,D11_10,deep_11,10,You lead triage policy in a crowded emergency unit.,أنت تقود سياسة الفرز في قسم طوارئ مزدحم.
+v2,D11_11,deep_11,11,A crisis committee asks for one public allocation rule by tonight.,لجنة أزمة تطلب قاعدة توزيع عامة قبل نهاية الليلة.
+v2,D11_12,deep_11,12,Field medics need your final framework for scarce life-saving doses.,المسعفون الميدانيون ينتظرون إطارك النهائي لجرعات إنقاذ نادرة.
+v2,D11_13,deep_11,13,A school asks you to set bonus-mark rules for group projects.,مدرسة تطلب منك وضع قواعد الدرجات الإضافية في المشاريع الجماعية.
+v2,D11_14,deep_11,14,Your class disputes fairness after a team assignment.,صفك يختلف حول العدالة بعد تكليف جماعي.
+v2,D11_15,deep_11,15,A university policy pilot needs a grading model for teamwork.,تجربة سياسات جامعية تحتاج نموذجا لتقييم العمل التعاوني.
+v2,D11_16,deep_11,16,Students ask for a method that rewards effort without breaking trust.,الطلاب يطلبون طريقة تكافئ الجهد دون كسر الثقة.
+v2,D11_17,deep_11,17,Siblings are dividing inheritance with very different life situations.,الإخوة يقسمون ميراثا مع تفاوت كبير في أوضاعهم.
+v2,D11_18,deep_11,18,You are mediating a family inheritance dispute after caregiving years.,أنت تتوسط في نزاع ميراث بعد سنوات رعاية للوالدين.
+v2,D11_19,deep_11,19,"An estate includes cash, property, and shared liabilities.",التركة تشمل نقدا وعقارا والتزامات مشتركة.
+v2,D11_20,deep_11,20,A family council asks for one rule that avoids long-term conflict.,مجلس عائلي يطلب قاعدة واحدة تمنع نزاعات طويلة.
+v2,D11_21,deep_11,21,Two drivers commit the same offense with opposite income levels.,سائقان ارتكبا نفس المخالفة مع فرق كبير في الدخل.
+v2,D11_22,deep_11,22,A legal reform panel asks you to redesign monetary penalties.,لجنة إصلاح قانوني تطلب منك إعادة تصميم الغرامات.
+v2,D11_23,deep_11,23,Your city debates fairness of fixed fines under inflation.,مدينتك تناقش عدالة الغرامات الثابتة مع التضخم.
+v2,D11_24,deep_11,24,You draft a proposal to reduce penalty injustice without legal chaos.,تكتب مقترحا لتقليل ظلم العقوبات دون فوضى قانونية.
+v2,D11_25,deep_11,25,You must choose between a short intense life and a long calm one.,عليك الاختيار بين حياة قصيرة مكثفة وحياة طويلة هادئة.
+v2,D11_26,deep_11,26,A thought experiment asks what matters more: depth or duration.,تجربة فكرية تسأل: العمق أم الامتداد؟
+v2,D11_27,deep_11,27,A clinic offers emotional-intensity enhancement or lifespan extension.,عيادة تعرض تعزيز كثافة المشاعر أو إطالة العمر.
+v2,D11_28,deep_11,28,You design your life philosophy for the next 30 years.,تصمم فلسفة حياتك للثلاثين سنة القادمة.
+v2,D11_29,deep_11,29,Would you lock into one perfect day forever or keep changing time?,هل تحبس نفسك في يوم مثالي للأبد أم تواصل زمنك المتغير؟
+v2,D11_30,deep_11,30,A simulator can freeze your best moment permanently.,محاكي قادر على تجميد أفضل لحظة لديك بشكل دائم.
+v2,D11_31,deep_11,31,You may stop aging at your favorite day or continue uncertain growth.,يمكنك إيقاف العمر عند يومك المفضل أو متابعة نمو غير يقيني.
+v2,D11_32,deep_11,32,A virtual life offers beauty without surprise. Do you accept?,حياة افتراضية تعرض جمالا بلا مفاجآت. هل تقبل؟
+v2,D11_33,deep_11,33,"After twenty years, which regret scares you more: waste or missed chances?",بعد عشرين سنة، أي ندم يخيفك أكثر: الهدر أم ضياع الفرص؟
+v2,D11_34,deep_11,34,You are writing a life review and naming your biggest time fear.,تكتب مراجعة حياة وتحدد أكبر خوف يتعلق بالوقت.
+v2,D11_35,deep_11,35,A coach asks if your danger is stagnation or distraction.,مدرب يسألك: خطرك الأكبر الجمود أم التشتت؟
+v2,D11_36,deep_11,36,You advise your younger self with one warning sentence.,تنصح نفسك الأصغر بجملة تحذير واحدة.
+v2,D11_37,deep_11,37,You can shift two weak late-life years into prime youth years now.,يمكنك نقل سنتين ضعيفتين من آخر العمر إلى شبابك الآن.
+v2,D11_38,deep_11,38,A guaranteed life-edit offer lets you trade quantity for early strength.,عرض تعديل حياة مضمون يتيح مبادلة الكمية بقوة مبكرة.
+v2,D11_39,deep_11,39,Would you compress later life for stronger first decades?,هل تضغط آخر العمر مقابل بدايات أقوى؟
+v2,D11_40,deep_11,40,A bioethics panel asks your principle on timeline editing.,لجنة أخلاقيات حيوية تسأل عن مبدأك في تعديل المسار الزمني.
+v2,D11_41,deep_11,41,You may know one future certainty: when your biggest success happens or what it is.,يمكنك معرفة يقين مستقبلي واحد: متى يحدث نجاحك الأكبر أو ما هو.
+v2,D11_42,deep_11,42,A prediction lab offers timing certainty vs content certainty.,مختبر تنبؤ يقدم يقين التوقيت مقابل يقين المحتوى.
+v2,D11_43,deep_11,43,You can reveal one card about your peak happiness.,يمكنك كشف بطاقة واحدة عن ذروة سعادتك.
+v2,D11_44,deep_11,44,A philosopher asks where you seek control over uncertainty.,فيلسوف يسألك: أين تبحث عن السيطرة على عدم اليقين؟
+v2,D11_45,deep_11,45,"After twenty years, which sentence would hurt most?",بعد عشرين سنة، أي جملة ستؤلمك أكثر؟
+v2,D11_46,deep_11,46,Midlife reflection: no joy in path or no meaningful arrival?,مراجعة منتصف العمر: بلا متعة في الطريق أم بلا وصول معتبر؟
+v2,D11_47,deep_11,47,Your journal asks: enjoy enough or achieve enough?,مذكرتك تسأل: استمتعت بما يكفي أم أنجزت بما يكفي؟
+v2,D11_48,deep_11,48,A mentor asks what type of regret you fear becoming.,مرشد يسأل: أي نوع من الندم تخشى أن تصبحه؟
