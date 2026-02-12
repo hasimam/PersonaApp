@@ -78,6 +78,19 @@ alembic upgrade head
 
 ### Hybrid seed pack import
 ```bash
+# Optional but recommended for new scenario content:
+# normalize Arabic text (remove accidental diacritics + basic spelling normalization)
+python3 scripts/normalize_ar_seed.py --in seed/scenarios_v2.csv --out seed/scenarios_v2.csv --fields scenario_text_ar --polish-phrases
+python3 scripts/normalize_ar_seed.py --in seed/scenario_options_v2.csv --out seed/scenario_options_v2.csv --fields option_text_ar --polish-phrases
+python3 scripts/normalize_ar_seed.py --in seed/scenarios.csv --out seed/scenarios.csv --fields scenario_text_ar --polish-phrases
+python3 scripts/normalize_ar_seed.py --in seed/scenario_options.csv --out seed/scenario_options.csv --fields option_text_ar --polish-phrases
+
+# keep backend seed pack in sync with root seed/*
+cp seed/scenarios.csv backend/seed/scenarios.csv
+cp seed/scenario_options.csv backend/seed/scenario_options.csv
+cp seed/scenarios_v2.csv backend/seed/scenarios_v2.csv
+cp seed/scenario_options_v2.csv backend/seed/scenario_options_v2.csv
+
 cd backend
 source venv/bin/activate
 python -m app.db.hybrid_seed_importer --dry-run
