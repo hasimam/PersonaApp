@@ -2303,3 +2303,195 @@ v2,D11_48,A,I fear becoming a burned-out achiever.,أخاف أن أصبح منج
 v2,D11_48,B,I fear becoming a comfortable drifter.,أخاف أن أصبح متجولا مرتاحا بلا إنجاز.
 v2,D11_48,C,I fear becoming inconsistent across life domains.,أخاف أن أصبح غير متسق بين مجالات الحياة.
 v2,D11_48,D,I fear becoming detached from my community responsibility.,أخاف أن أنفصل عن مسؤوليتي تجاه المجتمع.
+v2,D12_01,A,Take away something he likes until he commits.,أحرمه من شيء يحبه حتى يلتزم.
+v2,D12_01,B,Help him tidy up this time.,أساعده في الترتيب هذه المرة.
+v2,D12_01,C,Ignore it; his room is his responsibility.,أتجاهل الأمر، فغرفته مسؤوليته.
+v2,D12_01,D,Discuss calmly why order matters.,أتحدث معه بهدوء عن أهمية النظام.
+v2,D12_02,A,Address it firmly and set clear boundaries.,أواجهها بحزم وأضع حدودا واضحة.
+v2,D12_02,B,Listen to her advice then do what fits your view.,أستمع لنصائحها ثم أفعل ما أراه مناسبا.
+v2,D12_02,C,Avoid the topic to protect her feelings.,أتجنب الموضوع حفاظا على مشاعرها.
+v2,D12_02,D,Explain your view gently and ask for understanding.,أشرح لها وجهة نظري بلطف وأطلب تفهمها.
+v2,D12_03,A,Skip dinner because the appointment is important.,أعتذر عن الحضور فالموعد مهم.
+v2,D12_03,B,Attend dinner and postpone your appointment.,أحضر العشاء وأؤجل موعدي.
+v2,D12_03,C,Try to move dinner to another day.,أحاول تأجيل العشاء ليوم آخر.
+v2,D12_03,D,Arrive late after your appointment.,أحضر متأخرا بعد انتهاء موعدي.
+v2,D12_04,A,Confront him angrily and block access to your things.,أواجهه بغضب وأمنعه من الاقتراب من أغراضي.
+v2,D12_04,B,Explain calmly why asking permission matters.,أتحدث معه بهدوء عن أهمية الاستئذان.
+v2,D12_04,C,Ignore it because he is younger.,أتجاهل الأمر، فهو أخي الصغير.
+v2,D12_04,D,Hide your important belongings from him.,أخفي أغراضي المهمة عنه.
+v2,D12_05,A,Congratulate them and hide your disappointment.,أهنئه وأخفي خيبة أملي.
+v2,D12_05,B,Ask your manager why they were chosen so you can learn.,أسأل مديري عن أسباب اختياره لأتعلم.
+v2,D12_05,C,Feel bitter and lose motivation.,أشعر بالحسرة وأفقد الحماس.
+v2,D12_05,D,Work harder for the next opportunity.,أعمل بجهد أكبر لأستحق الترقية القادمة.
+v2,D12_06,A,Agree while resenting it internally.,أوافق وأنا كاره للأمر.
+v2,D12_06,B,Decline and explain family commitments.,أعتذر وأوضح أن لدي التزامات عائلية.
+v2,D12_06,C,Agree but ask for fair compensation.,أوافق وأطلب مقابلا مناسبا.
+v2,D12_06,D,Finish quickly then leave.,أنجز العمل بسرعة ثم أنصرف.
+v2,D12_07,A,Expose the lie in front of the manager.,أواجهها أمام المدير وأفضح كذبها.
+v2,D12_07,B,Wait and address her privately after the meeting.,أنتظر انتهاء الاجتماع وأواجهها على انفراد.
+v2,D12_07,C,Stay silent and take the blame to preserve the relationship.,أسكت وأتحمل المسؤولية حفاظا على العلاقة.
+v2,D12_07,D,Clarify the facts calmly without accusing her.,أوضح الموقف بهدوء للمدير دون اتهامها.
+v2,D12_08,A,Talk to them and push for contribution.,أتحدث معه وأحثه على العمل.
+v2,D12_08,B,Escalate to the supervisor.,أشتكي للمشرف عليه.
+v2,D12_08,C,Cover the gap yourself.,أعوض تقصيره بنفسي.
+v2,D12_08,D,Ignore it and do only your part.,أتجاهل الأمر وأنجز عملي فقط.
+v2,D12_09,A,Help as much as you can without hesitation.,أساعده بقدر استطاعتي دون تردد.
+v2,D12_09,B,Lend with a clear repayment timeline.,أعيره المال بشرط إعادته في وقت محدد.
+v2,D12_09,C,Decline because your situation does not allow it.,أعتذر بأن ظروفي لا تسمح.
+v2,D12_09,D,Help by connecting them to other support sources.,أبحث له عن مصادر مساعدة أخرى.
+v2,D12_10,A,Support the one you think is right.,أنحاز لمن أعتقد أنه على حق.
+v2,D12_10,B,Completely stay out of it.,أعتزل الموقف تماما.
+v2,D12_10,C,Try to reconcile them.,أحاول التوفيق بينهما.
+v2,D12_10,D,Listen to both without taking sides.,أستمع لكليهما دون إبداء رأي.
+v2,D12_11,A,It does not matter; occasions are only habits.,لا يهمني، فالمناسبات مجرد عادات.
+v2,D12_11,B,Feel upset but hide it.,أشعر بالضيق لكني لا أظهره.
+v2,D12_11,C,Tell them directly that it hurt you.,أواجهه وأخبره أن هذا آلمني.
+v2,D12_11,D,Wait to see if they apologize.,أنتظر لأرى إن كان سيعتذر.
+v2,D12_12,A,Attend despite being exhausted.,أحضر رغم إرهاقي.
+v2,D12_12,B,Decline and explain honestly.,أعتذر وأشرح له السبب بصراحة.
+v2,D12_12,C,Decline with another excuse.,أعتذر بعذر آخر كي لا يزعجه السبب الحقيقي.
+v2,D12_12,D,Attend briefly then leave.,أحضر لفترة قصيرة ثم أنصرف.
+v2,D12_13,A,Confront loudly and force them back.,أواجهه بصوت عال وأطرده.
+v2,D12_13,B,Let it pass; it is not worth conflict.,أتركه، فالمشكلة لا تستحق.
+v2,D12_13,C,State calmly that it is your turn.,أقول له بهدوء إن الدور لي.
+v2,D12_13,D,Ask the place manager to handle it.,أشتكي للمسؤول عن المكان.
+v2,D12_14,A,Raise your voice and call the manager.,أرفع صوتي وأستدعي المدير.
+v2,D12_14,B,Wait patiently until noticed.,أنتظر بصبر حتى يلاحظني.
+v2,D12_14,C,Go remind the waiter politely.,أذهب إليه وأذكره بلطف.
+v2,D12_14,D,Leave the restaurant without ordering.,أغادر المطعم دون أن أطلب شيئا.
+v2,D12_15,A,Ignore them back.,أتجاهله هو الآخر.
+v2,D12_15,B,Initiate greeting next time.,أبادر بالسلام في المرة القادمة.
+v2,D12_15,C,Ask other neighbors about them.,أسأل عنه جيرانا آخرين.
+v2,D12_15,D,Treat it as unimportant.,لا يهمني الأمر أساسا.
+v2,D12_16,A,Sit beside them; the mosque is for everyone.,أجلس بجانبه، فالمسجد للجميع.
+v2,D12_16,B,Ask politely for space.,أطلب منه بلطف أن يفسح المكان.
+v2,D12_16,C,Wait a little hoping they leave.,أنتظر قليلا لعله يغادر.
+v2,D12_16,D,Pray elsewhere without comment.,أصلي في مكان آخر دون تعليق.
+v2,D12_17,A,Ignore the mood and continue your day.,أتجاهل المزاج وأكمل يومي.
+v2,D12_17,B,Withdraw from people until you feel better.,أعتزل الناس حتى تتحسن حالتي.
+v2,D12_17,C,Talk to a close person about it.,أتحدث مع شخص قريب عما أشعر به.
+v2,D12_17,D,Do something you enjoy to improve your mood.,أمارس شيئا أحبه لتحسين مزاجي.
+v2,D12_18,A,Blame yourself and sink into frustration.,ألوم نفسي وأشعر بالإحباط.
+v2,D12_18,B,Try again with a different plan.,أحاول مرة أخرى بخطة مختلفة.
+v2,D12_18,C,Switch to a different goal.,أبحث عن هدف جديد بديل.
+v2,D12_18,D,Pause to understand why you failed.,أتوقف قليلا لأفهم أسباب الفشل.
+v2,D12_19,A,Forgive yourself and stop replaying it.,أسامح نفسي وأتوقف عن التفكير.
+v2,D12_19,B,Try to repair the mistake if possible.,أحاول إصلاح الخطأ إن أمكن.
+v2,D12_19,C,Discuss the feeling with someone you trust.,أتحدث مع شخص أثق به عن شعوري.
+v2,D12_19,D,Carry the guilt as a painful memory.,أعيش مع الذنب كذكرى مؤلمة.
+v2,D12_20,A,Plan to use it in the best way.,أخطط لاستغلاله بأفضل طريقة.
+v2,D12_20,B,Relax and do nothing.,أسترخي ولا أفعل شيئا.
+v2,D12_20,C,Call friends for a spontaneous meetup.,أتصل بأصدقائي لعمل لقاء مفاجئ.
+v2,D12_20,D,Finish delayed tasks.,أنجز أعمالا مؤجلة.
+v2,D12_21,A,Set one clear boundary for your availability.,أضع حدا واضحا لتوفري في المجموعة.
+v2,D12_21,B,Respond kindly when you can and skip the rest.,أرد بلطف عندما أستطيع وأتجاوز الباقي.
+v2,D12_21,C,Mute the group and disengage completely.,أكتم المجموعة وأنسحب تماما.
+v2,D12_21,D,Suggest a shared schedule so participation is fair.,أقترح جدولا مشتركا ليكون التفاعل عادلا.
+v2,D12_22,A,State that instant replies are not always possible.,أوضح أن الرد الفوري ليس ممكنا دائما.
+v2,D12_22,B,Reply later with warmth and consistency.,أرد لاحقا بود وباستمرارية.
+v2,D12_22,C,Avoid opening the chat to reduce pressure.,أتجنب فتح المحادثة لتخفيف الضغط.
+v2,D12_22,D,Agree on specific response windows with family.,أتفق مع العائلة على أوقات محددة للرد.
+v2,D12_23,A,Decline surprise visits when timing does not work.,أعتذر عن الزيارات المفاجئة عندما لا يناسبني الوقت.
+v2,D12_23,B,Attend briefly to preserve family warmth.,أحضر لفترة قصيرة حفاظا على الود.
+v2,D12_23,C,Keep accepting and absorb the stress silently.,أستمر في القبول وأتحمل الضغط بصمت.
+v2,D12_23,D,Propose a simple planning rule for all visits.,أقترح قاعدة تنظيم بسيطة لكل الزيارات.
+v2,D12_24,A,Refuse unfair load and ask for equal responsibility.,أرفض العبء غير العادل وأطلب تقاسم المسؤولية.
+v2,D12_24,B,Do the tasks this time to avoid conflict.,أنجز المهام هذه المرة لتفادي الخلاف.
+v2,D12_24,C,Stay silent and keep over-carrying.,أسكت وأواصل تحمل العبء وحدي.
+v2,D12_24,D,Set a rotating family duty plan.,أضع خطة دورية لتوزيع الواجبات الأسرية.
+v2,D12_25,A,Request a compensation review with clear evidence.,أطلب مراجعة تعويض واضحة مدعومة بالأدلة.
+v2,D12_25,B,Accept praise and stay patient for now.,أقبل المديح وأصبر في المرحلة الحالية.
+v2,D12_25,C,Withdraw effort because reward feels unfair.,أقلل جهدي لأن العائد غير عادل.
+v2,D12_25,D,Document impact and set a timed follow-up.,أوثق الأثر وأحدد متابعة بزمن واضح.
+v2,D12_26,A,Accept only after authority and scope are defined.,أوافق بعد تحديد الصلاحيات والنطاق بوضوح.
+v2,D12_26,B,Accept and learn while adapting on the way.,أوافق وأتعلم وأتكيف أثناء التنفيذ.
+v2,D12_26,C,Decline to avoid ambiguity risk.,أعتذر لتجنب مخاطرة الغموض.
+v2,D12_26,D,Propose pilot phase before full commitment.,أقترح مرحلة تجريبية قبل الالتزام الكامل.
+v2,D12_27,A,Push back and renegotiate priorities.,أعترض وأعيد التفاوض على الأولويات.
+v2,D12_27,B,Work extra temporarily to protect delivery.,أعمل وقتا إضافيا مؤقتا للحفاظ على التسليم.
+v2,D12_27,C,Keep accepting until burnout starts.,أواصل القبول حتى يبدأ الاستنزاف.
+v2,D12_27,D,Create a visible priority board with tradeoffs.,أصنع لوحة أولويات واضحة مع مفاضلات معلنة.
+v2,D12_28,A,Set a no-interruption focus block.,أضع فترة تركيز بلا مقاطعات.
+v2,D12_28,B,Respond politely but keep short answers.,أرد بلطف مع إجابات مختصرة.
+v2,D12_28,C,Endure interruptions to avoid tension.,أتحمل المقاطعات لتجنب التوتر.
+v2,D12_28,D,Agree on office communication norms.,أتفق مع الفريق على قواعد تواصل واضحة.
+v2,D12_29,A,Confront the pattern directly.,أواجه النمط مباشرة.
+v2,D12_29,B,Give another chance with lower expectations.,أمنح فرصة جديدة بتوقعات أقل.
+v2,D12_29,C,Stop making plans with them silently.,أتوقف عن التخطيط معه بصمت.
+v2,D12_29,D,Set a confirmation rule before meetings.,أضع قاعدة تأكيد قبل أي موعد.
+v2,D12_30,A,Say no to outings beyond your budget.,أرفض الخروج عندما يتجاوز ميزانيتي.
+v2,D12_30,B,Attend less often but stay connected.,أحضر أقل لكن أحافظ على التواصل.
+v2,D12_30,C,Go anyway and absorb financial stress.,أذهب رغم الضغط المالي.
+v2,D12_30,D,Suggest affordable alternatives for everyone.,أقترح بدائل مناسبة للجميع.
+v2,D12_31,A,Address the breach and set a hard privacy boundary.,أواجهه بخرق الخصوصية وأضع حدا واضحا.
+v2,D12_31,B,Explain calmly why trust was affected.,أشرح بهدوء كيف تأثرت الثقة.
+v2,D12_31,C,Ignore it and share less next time.,أتجاهل وأشارك أقل لاحقا.
+v2,D12_31,D,Repair trust gradually with explicit rules.,أعيد بناء الثقة تدريجيا بقواعد صريحة.
+v2,D12_32,A,Reduce contact with draining relationships.,أقلل التواصل مع العلاقات المستنزفة.
+v2,D12_32,B,Invest only where reciprocity exists.,أستثمر في العلاقات المتبادلة فقط.
+v2,D12_32,C,Keep giving and ignore your own limits.,أستمر في العطاء وأتجاهل حدودي.
+v2,D12_32,D,Balance support with self-protection boundaries.,أوازن بين الدعم وحماية نفسي بحدود واضحة.
+v2,D12_33,A,Help quickly if it is safe.,أساعد بسرعة إذا كان الموقف آمنا.
+v2,D12_33,B,Refer them to someone more suitable.,أوجهه لمن يستطيع المساعدة بشكل أفضل.
+v2,D12_33,C,Walk away to avoid delay.,أتجاوز الموقف لتجنب التأخير.
+v2,D12_33,D,Offer a brief practical support then continue.,أقدم دعما عمليا مختصرا ثم أكمل طريقي.
+v2,D12_34,A,Intervene and stop the mockery.,أتدخل وأوقف السخرية.
+v2,D12_34,B,Support the person privately afterward.,أدعم الشخص على انفراد بعد الموقف.
+v2,D12_34,C,Stay silent to avoid becoming a target.,ألتزم الصمت حتى لا أصبح هدفا.
+v2,D12_34,D,Shift the tone and protect dignity calmly.,أغير نبرة الموقف بهدوء لحماية الكرامة.
+v2,D12_35,A,Respond firmly and demand respect.,أرد بحزم وأطالب بالاحترام.
+v2,D12_35,B,Assume pressure and respond with calm.,ألتمس له العذر وأرد بهدوء.
+v2,D12_35,C,Absorb it and leave quickly.,أتحمل الموقف وأغادر بسرعة.
+v2,D12_35,D,Clarify what happened and reset the interaction.,أوضح ما حدث وأعيد ضبط الحوار.
+v2,D12_36,A,Ask them to pick it up immediately.,أطلب منه مباشرة أن يرفع القمامة.
+v2,D12_36,B,Pick it up yourself and move on.,أرفعها بنفسي وأمضي.
+v2,D12_36,C,Ignore it because it is not your role.,أتجاهل لأن الأمر ليس دوري.
+v2,D12_36,D,Raise community awareness through the local group.,أنبه عبر مجموعة الحي لتعزيز الوعي العام.
+v2,D12_37,A,Book a checkup this week.,أحجز فحصا هذا الأسبوع.
+v2,D12_37,B,Monitor symptoms and adjust routine first.,أراقب الأعراض وأعدل الروتين أولا.
+v2,D12_37,C,Delay again and hope it passes.,أؤجل مجددا وأتمنى أن يزول.
+v2,D12_37,D,Set a clear health escalation threshold.,أضع عتبة واضحة للتصعيد الصحي.
+v2,D12_38,A,Enforce a strict screen cutoff time.,أطبق وقتا صارما لإيقاف الشاشة.
+v2,D12_38,B,Reduce scrolling gradually each night.,أخفض التصفح تدريجيا كل ليلة.
+v2,D12_38,C,Keep the habit and accept poor sleep.,أستمر في العادة وأتقبل سوء النوم.
+v2,D12_38,D,Design a wind-down ritual you can sustain.,أصمم طقسا مسائيا هادئا يمكن الالتزام به.
+v2,D12_39,A,Protect meal structure as a non-negotiable.,أحمي انتظام الوجبات كقاعدة لا تفاوض فيها.
+v2,D12_39,B,Use simple backup meals during stress.,أعتمد وجبات بسيطة احتياطية وقت الضغط.
+v2,D12_39,C,Ignore nutrition until workload drops.,أتجاهل التغذية حتى يخف الضغط.
+v2,D12_39,D,Plan weekly prep to secure minimum quality.,أخطط لتحضير أسبوعي يضمن الحد الأدنى من الجودة.
+v2,D12_40,A,Pause and renegotiate workload now.,أتوقف وأعيد التفاوض على الحمل الآن.
+v2,D12_40,B,Take short recovery windows daily.,آخذ نوافذ تعاف قصيرة يوميا.
+v2,D12_40,C,Keep pushing until forced to stop.,أواصل الضغط حتى أتوقف قسرا.
+v2,D12_40,D,Track energy and adjust pace intentionally.,أراقب الطاقة وأعدل الإيقاع بوعي.
+v2,D12_41,A,Choose and commit with a clear hypothesis.,أختار وألتزم بفرضية واضحة.
+v2,D12_41,B,Delay until you gather more perspective.,أؤجل حتى أجمع منظورا أوسع.
+v2,D12_41,C,Ask trusted people and follow consensus.,أستشير من أثق بهم وأتبع التوافق.
+v2,D12_41,D,Use a decision framework with review points.,أستخدم إطار قرار مع نقاط مراجعة.
+v2,D12_42,A,Pick the one with stronger long-term upside.,أختار الفرصة ذات العائد البعيد الأعلى.
+v2,D12_42,B,Pick the one that aligns with your values.,أختار الفرصة الأقرب لقيمي.
+v2,D12_42,C,Hesitate until one disappears.,أتردد حتى تختفي إحدى الفرص.
+v2,D12_42,D,Test both briefly before final choice.,أجرب كلا المسارين بشكل محدود قبل الحسم.
+v2,D12_43,A,Choose stability and protect fundamentals.,أختار الاستقرار وأحمي الأساسيات.
+v2,D12_43,B,Choose meaningful risk with preparation.,أختار المجازفة ذات المعنى مع استعداد.
+v2,D12_43,C,Avoid both and stay in current comfort.,أؤجل القرار وأبقى في منطقة الراحة.
+v2,D12_43,D,Split path: stable base plus calculated risk.,أقسم المسار: قاعدة مستقرة مع مجازفة محسوبة.
+v2,D12_44,A,Accept and upskill quickly.,أقبل وأطور نفسي بسرعة.
+v2,D12_44,B,Accept with support from experienced peers.,أقبل مع دعم من أصحاب الخبرة.
+v2,D12_44,C,Decline to avoid failure risk.,أعتذر لتجنب احتمال الفشل.
+v2,D12_44,D,Negotiate scope that matches your current level.,أتفاوض على نطاق يناسب مستواي الحالي.
+v2,D12_45,A,Close the day with a hard stop and one carry-over list.,أغلق اليوم بحد واضح وقائمة ترحيل واحدة.
+v2,D12_45,B,Do one small task to reduce mental load.,أنجز مهمة صغيرة لتخفيف الثقل الذهني.
+v2,D12_45,C,Keep thinking about work until sleep.,أظل أفكر في العمل حتى النوم.
+v2,D12_45,D,Use an evening reset ritual for closure.,أستخدم روتين تهدئة مسائي لإغلاق اليوم.
+v2,D12_46,A,Turn comparison into a concrete growth plan.,أحوّل المقارنة إلى خطة نمو واضحة.
+v2,D12_46,B,Limit exposure to triggering content.,أقلل التعرض للمحتوى الذي يحفز المقارنة.
+v2,D12_46,C,Scroll more and question your worth.,أستمر في التصفح وأشكك في نفسي.
+v2,D12_46,D,Track your own progress against your baseline.,أقيس تقدمي مقارنة بنقطة بدايتي.
+v2,D12_47,A,Rebuild priorities and cut nonessential tasks.,أعيد ترتيب الأولويات وأحذف غير الضروري.
+v2,D12_47,B,Start with sleep and recovery first.,أبدأ بالنوم والتعافي أولا.
+v2,D12_47,C,Continue reacting day by day.,أواصل رد الفعل اليومي دون تنظيم.
+v2,D12_47,D,Use weekly planning blocks with buffers.,أستخدم تخطيطا أسبوعيا مع هوامش مرنة.
+v2,D12_48,A,Adopt a disciplined daily structure.,أعتمد هيكلا يوميا منضبطا.
+v2,D12_48,B,Build a values-led flexible routine.,أبني روتينا مرنا يقوده المعنى.
+v2,D12_48,C,Keep changing routines without consistency.,أغيّر الروتين باستمرار دون ثبات.
+v2,D12_48,D,Choose a simple repeatable system and iterate.,أختار نظاما بسيطا قابلا للتكرار وأطوره.
