@@ -91,6 +91,27 @@ python -m app.db.hybrid_seed_importer --dry-run
 python -m app.db.hybrid_seed_importer
 ```
 
+### Expert pack intake (internal)
+Use this when external experts submit one `.xlsx` (tabs: `scenarios`, `options`, `weights`) or 3 CSV files.
+
+Expected columns from expert pack:
+- `scenarios`: `version_id,scenario_code,scenario_set_code,order_index,scenario_text_en,scenario_text_ar`
+- `options`: `version_id,scenario_code,option_code,option_text_en,option_text_ar`
+- `weights`: `version_id,scenario_code,option_code,gene_code,weight`
+
+Mapping into repo seed files:
+- Deep (`v2`): `seed/scenarios_v2.csv`, `seed/scenario_options_v2.csv`, `seed/option_weights_v2.csv`
+- Quick (`v1`): `seed/scenarios.csv`, `seed/scenario_options.csv`, `seed/option_weights.csv`
+
+Internal intake checklist:
+1. Validate set size and indexing:
+   - deep: 48 scenarios (`order_index` 1..48)
+   - quick: 12 scenarios (`order_index` 1..12)
+2. Validate option shape: every scenario has `A/B/C/D`.
+3. Validate weights: every option has at least one weight row.
+4. Validate codes: `version_id`, `scenario_set_code`, and allowed `gene_code` values.
+5. Normalize Arabic fields (recommended) and run importer dry-run, then import.
+
 ### Cleanup stale interrupted journey runs
 ```bash
 cd backend
