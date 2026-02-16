@@ -545,26 +545,34 @@ class JourneyApiFlowTests(unittest.TestCase):
         self.assertEqual(completed_run.status, "completed")
 
         feedback_response = submit_journey_feedback(
-            payload=JourneyFeedbackRequest(test_run_id=started.test_run_id, judged_score=4),
+            payload=JourneyFeedbackRequest(
+                test_run_id=started.test_run_id,
+                accuracy_score=8,
+                personality_match_score=7,
+            ),
             db=self.db,
         )
-        self.assertEqual(feedback_response.judged_score, 4)
+        self.assertEqual(feedback_response.accuracy_score, 8)
+        self.assertEqual(feedback_response.personality_match_score, 7)
         self.assertIsNone(feedback_response.selected_activation_id)
 
         selected_activation_id = submitted.activation_items[0].advice_id
         feedback_response = submit_journey_feedback(
             payload=JourneyFeedbackRequest(
                 test_run_id=started.test_run_id,
-                judged_score=5,
+                accuracy_score=9,
+                personality_match_score=8,
                 selected_activation_id=selected_activation_id,
             ),
             db=self.db,
         )
-        self.assertEqual(feedback_response.judged_score, 5)
+        self.assertEqual(feedback_response.accuracy_score, 9)
+        self.assertEqual(feedback_response.personality_match_score, 8)
         self.assertEqual(feedback_response.selected_activation_id, selected_activation_id)
 
         feedback_row = self.db.query(Feedback).filter(Feedback.test_run_id == started.test_run_id).first()
-        self.assertEqual(feedback_row.judged_score, 5)
+        self.assertEqual(feedback_row.accuracy_score, 9)
+        self.assertEqual(feedback_row.personality_match_score, 8)
         test_run = self.db.query(TestRun).filter(TestRun.id == started.test_run_id).first()
         self.assertEqual(test_run.selected_activation_id, selected_activation_id)
 
@@ -602,7 +610,8 @@ class JourneyApiFlowTests(unittest.TestCase):
             submit_journey_feedback(
                 payload=JourneyFeedbackRequest(
                     test_run_id=started.test_run_id,
-                    judged_score=4,
+                    accuracy_score=4,
+                    personality_match_score=4,
                     selected_activation_id="ACT_OTHER",
                 ),
                 db=self.db,
@@ -622,13 +631,14 @@ class JourneyApiFlowTests(unittest.TestCase):
 
     def test_cancel_does_not_override_completed_status(self):
         started = start_journey(payload=JourneyStartRequest(version_id="v_test"), db=self.db)
+        scenario_codes = [item.scenario_code for item in started.scenarios]
         submit_journey_answers(
             payload=JourneySubmitAnswersRequest(
                 version_id="v_test",
                 test_run_id=started.test_run_id,
                 answers=[
-                    JourneyAnswerSubmission(scenario_code="S01", option_code="A"),
-                    JourneyAnswerSubmission(scenario_code="S02", option_code="A"),
+                    JourneyAnswerSubmission(scenario_code=scenario_codes[0], option_code="A"),
+                    JourneyAnswerSubmission(scenario_code=scenario_codes[1], option_code="A"),
                 ],
             ),
             db=self.db,

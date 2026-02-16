@@ -68,6 +68,16 @@ const AdminDashboard: React.FC = () => {
       link: null,
       color: 'orange',
     },
+    {
+      label: 'Journey Feedback',
+      value: stats?.journey_feedback_count || 0,
+      subValue:
+        stats?.journey_feedback_avg_accuracy != null
+          ? `Avg accuracy ${stats.journey_feedback_avg_accuracy.toFixed(2)} / 10`
+          : 'No ratings yet',
+      link: null,
+      color: 'blue',
+    },
   ];
 
   const getColorClasses = (color: string) => {
@@ -84,7 +94,7 @@ const AdminDashboard: React.FC = () => {
     <div>
       <h1 className="text-2xl font-bold text-gray-900 mb-6">Dashboard</h1>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4 mb-8">
         {statCards.map((card) => (
           <div
             key={card.label}
@@ -103,6 +113,64 @@ const AdminDashboard: React.FC = () => {
             )}
           </div>
         ))}
+      </div>
+
+      <div className="bg-white rounded-lg shadow-sm p-6 mb-8">
+        <h2 className="text-lg font-semibold text-gray-900 mb-4">
+          Journey Feedback Analytics
+        </h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-5">
+          {(stats?.journey_feedback_by_run_type || []).map((item) => (
+            <div key={item.run_type} className="rounded-lg border border-gray-200 p-4">
+              <div className="text-sm text-gray-500 uppercase tracking-wide mb-1">{item.run_type}</div>
+              <div className="text-2xl font-bold text-gray-900">{item.count}</div>
+              <div className="text-sm text-gray-600">
+                Avg accuracy: {item.avg_accuracy_score != null ? item.avg_accuracy_score.toFixed(2) : '-'}
+              </div>
+              <div className="text-sm text-gray-600">
+                Avg personality match:{' '}
+                {item.avg_personality_match_score != null
+                  ? item.avg_personality_match_score.toFixed(2)
+                  : '-'}
+              </div>
+            </div>
+          ))}
+        </div>
+
+        <h3 className="text-md font-semibold text-gray-900 mb-3">By Scenario Set</h3>
+        <div className="overflow-auto">
+          <table className="w-full text-sm">
+            <thead>
+              <tr className="border-b border-gray-200 text-left text-gray-600">
+                <th className="py-2 pr-3">Set ID</th>
+                <th className="py-2 pr-3">Run Type</th>
+                <th className="py-2 pr-3">Responses</th>
+                <th className="py-2 pr-3">Avg Accuracy</th>
+                <th className="py-2 pr-3">Avg Personality Match</th>
+              </tr>
+            </thead>
+            <tbody>
+              {(stats?.journey_feedback_by_set || []).map((item) => (
+                <tr
+                  key={`${item.scenario_set_code}-${item.run_type}`}
+                  className="border-b border-gray-100 text-gray-800"
+                >
+                  <td className="py-2 pr-3 font-mono">{item.scenario_set_code}</td>
+                  <td className="py-2 pr-3">{item.run_type}</td>
+                  <td className="py-2 pr-3">{item.count}</td>
+                  <td className="py-2 pr-3">
+                    {item.avg_accuracy_score != null ? item.avg_accuracy_score.toFixed(2) : '-'}
+                  </td>
+                  <td className="py-2 pr-3">
+                    {item.avg_personality_match_score != null
+                      ? item.avg_personality_match_score.toFixed(2)
+                      : '-'}
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
       </div>
 
       {/* Translation Progress */}

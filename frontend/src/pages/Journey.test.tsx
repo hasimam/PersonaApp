@@ -135,7 +135,8 @@ describe('Journey smoke test', () => {
     });
     mockedJourneyApi.submitFeedback.mockResolvedValue({
       test_run_id: 99,
-      judged_score: 3,
+      accuracy_score: 8,
+      personality_match_score: 7,
       selected_activation_id: null,
       status: 'recorded',
     });
@@ -184,19 +185,23 @@ describe('Journey smoke test', () => {
 
     await waitFor(() => expect(mockedJourneyApi.submitAnswers).toHaveBeenCalledTimes(1));
     expect(await screen.findByText('Your Gene Results')).toBeInTheDocument();
-    expect(mockedJourneyApi.submitFeedback).toHaveBeenCalledWith({
+    fireEvent.click(screen.getAllByRole('button', { name: '8' })[0]);
+    fireEvent.click(screen.getAllByRole('button', { name: '7' })[1]);
+    fireEvent.click(screen.getByRole('button', { name: 'Choose Activation' }));
+    await waitFor(() => expect(mockedJourneyApi.submitFeedback).toHaveBeenCalledTimes(1));
+    expect(mockedJourneyApi.submitFeedback).toHaveBeenNthCalledWith(1, {
       test_run_id: 99,
-      judged_score: 3,
+      accuracy_score: 8,
+      personality_match_score: 7,
     });
 
-    fireEvent.click(screen.getByRole('button', { name: 'Choose Activation' }));
+    expect(await screen.findByText('Behavior action')).toBeInTheDocument();
     fireEvent.click(screen.getByRole('button', { name: /Behavior action/i }));
     fireEvent.click(screen.getByRole('button', { name: 'Finish Journey' }));
 
     await waitFor(() => expect(mockedJourneyApi.submitFeedback).toHaveBeenCalledTimes(2));
     expect(mockedJourneyApi.submitFeedback).toHaveBeenNthCalledWith(2, {
       test_run_id: 99,
-      judged_score: 3,
       selected_activation_id: 'ACT_BEH',
     });
     expect(await screen.findByText('Journey Complete')).toBeInTheDocument();

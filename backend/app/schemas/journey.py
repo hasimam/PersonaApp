@@ -1,6 +1,6 @@
 from typing import List, Literal, Optional
 
-from pydantic import BaseModel, ConfigDict, Field
+from pydantic import BaseModel, ConfigDict, Field, model_validator
 
 
 class JourneyStartRequest(BaseModel):
@@ -118,13 +118,27 @@ class JourneySubmitAnswersResponse(BaseModel):
 
 class JourneyFeedbackRequest(BaseModel):
     test_run_id: int = Field(..., ge=1)
-    judged_score: int = Field(..., ge=1, le=5)
+    accuracy_score: Optional[int] = Field(default=None, ge=1, le=10)
+    personality_match_score: Optional[int] = Field(default=None, ge=1, le=10)
     selected_activation_id: Optional[str] = Field(default=None, min_length=1, max_length=64)
+
+    @model_validator(mode="after")
+    def ensure_feedback_payload(self) -> "JourneyFeedbackRequest":
+        if (
+            self.accuracy_score is None
+            and self.personality_match_score is None
+            and self.selected_activation_id is None
+        ):
+            raise ValueError(
+                "At least one of accuracy_score, personality_match_score, or selected_activation_id is required"
+            )
+        return self
 
 
 class JourneyFeedbackResponse(BaseModel):
     test_run_id: int
-    judged_score: int
+    accuracy_score: Optional[int]
+    personality_match_score: Optional[int]
     selected_activation_id: Optional[str]
     status: str
 

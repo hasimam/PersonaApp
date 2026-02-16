@@ -161,13 +161,15 @@ export interface JourneySubmitAnswersResponse {
 
 export interface JourneyFeedbackRequest {
   test_run_id: number;
-  judged_score: number;
+  accuracy_score?: number;
+  personality_match_score?: number;
   selected_activation_id?: string;
 }
 
 export interface JourneyFeedbackResponse {
   test_run_id: number;
-  judged_score: number;
+  accuracy_score: number | null;
+  personality_match_score: number | null;
   selected_activation_id: string | null;
   status: string;
 }

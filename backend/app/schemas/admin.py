@@ -119,6 +119,21 @@ class TraitResponse(TraitBase):
 
 # ============ Stats Schemas ============
 
+class JourneyFeedbackByRunType(BaseModel):
+    run_type: str
+    count: int
+    avg_accuracy_score: Optional[float]
+    avg_personality_match_score: Optional[float]
+
+
+class JourneyFeedbackBySet(BaseModel):
+    scenario_set_code: str
+    run_type: str
+    count: int
+    avg_accuracy_score: Optional[float]
+    avg_personality_match_score: Optional[float]
+
+
 class AdminStats(BaseModel):
     """Schema for admin dashboard stats."""
     total_questions: int
@@ -129,3 +144,8 @@ class AdminStats(BaseModel):
     questions_with_arabic: int
     idols_with_arabic: int
     traits_with_arabic: int
+    journey_feedback_count: int
+    journey_feedback_avg_accuracy: Optional[float]
+    journey_feedback_avg_personality_match: Optional[float]
+    journey_feedback_by_run_type: List[JourneyFeedbackByRunType]
+    journey_feedback_by_set: List[JourneyFeedbackBySet]

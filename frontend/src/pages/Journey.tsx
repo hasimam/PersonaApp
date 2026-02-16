@@ -26,6 +26,7 @@ type JourneyStep =
   | 'closing';
 
 const SAFETY_SCORES = [1, 2, 3, 4, 5];
+const RESULT_RATING_SCORES = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 const AUTO_NEXT_DELAY_MS = 180;
 const RESUME_STORAGE_KEY = 'journey_resume_v1';
 const RESUME_TTL_MS = 24 * 60 * 60 * 1000;
@@ -74,6 +75,8 @@ const Journey: React.FC = () => {
   const [currentScenarioIndex, setCurrentScenarioIndex] = useState(0);
   const [scenarioAnswers, setScenarioAnswers] = useState<Record<string, string>>({});
   const [judgedScore, setJudgedScore] = useState<number | null>(null);
+  const [accuracyScore, setAccuracyScore] = useState<number | null>(null);
+  const [personalityMatchScore, setPersonalityMatchScore] = useState<number | null>(null);
   const [selectedActivationId, setSelectedActivationId] = useState<string | null>(null);
   const [journeyType, setJourneyType] = useState<JourneyType>('quick');
   const [busy, setBusy] = useState(false);
@@ -113,6 +116,8 @@ const Journey: React.FC = () => {
     setCurrentScenarioIndex(0);
     setScenarioAnswers({});
     setJudgedScore(null);
+    setAccuracyScore(null);
+    setPersonalityMatchScore(null);
     setSelectedActivationId(null);
     setJourneyType('quick');
     setBusy(false);
@@ -156,6 +161,8 @@ const Journey: React.FC = () => {
           Math.min(stored.currentScenarioIndex ?? 0, Math.max(data.scenarios.length - 1, 0))
         );
         setJudgedScore(resumeScore);
+        setAccuracyScore(null);
+        setPersonalityMatchScore(null);
         setSelectedActivationId(stored.selectedActivationId ?? null);
         setSubmitResult(null);
         setIsAdvancing(false);
@@ -189,6 +196,8 @@ const Journey: React.FC = () => {
         setCurrentScenarioIndex(0);
         setScenarioAnswers({});
         setJudgedScore(DEFAULT_JUDGED_SCORE);
+        setAccuracyScore(null);
+        setPersonalityMatchScore(null);
         setSelectedActivationId(null);
         setSubmitResult(null);
         setIsAdvancing(false);
@@ -253,6 +262,8 @@ const Journey: React.FC = () => {
       setCurrentScenarioIndex(0);
       setScenarioAnswers({});
       setJudgedScore(SHOW_SAFETY_STEP ? null : DEFAULT_JUDGED_SCORE);
+      setAccuracyScore(null);
+      setPersonalityMatchScore(null);
       setSelectedActivationId(null);
       setIsAdvancing(false);
       setStep('scenarios');
@@ -268,7 +279,6 @@ const Journey: React.FC = () => {
       return;
     }
 
-    const effectiveScore = judgedScore ?? DEFAULT_JUDGED_SCORE;
     if (SHOW_SAFETY_STEP && !judgedScore) {
       return;
     }
@@ -301,17 +311,6 @@ const Journey: React.FC = () => {
 
       setSubmitResult(response);
       clearStoredJourney();
-
-      if (!isPreviewMode) {
-        try {
-          await journeyApi.submitFeedback({
-            test_run_id: journey.test_run_id,
-            judged_score: effectiveScore,
-          });
-        } catch (e) {
-          // Non-blocking, user should still receive results.
-        }
-      }
 
       setStep('results');
     } catch (e) {
@@ -358,12 +357,39 @@ const Journey: React.FC = () => {
     await submitJourneyWithAnswers(scenarioAnswers);
   };
 
+  const moveToActivation = async () => {
+    if (!journey || !accuracyScore || !personalityMatchScore) {
+      setError(t.journey.resultsFeedbackRequired);
+      return;
+    }
+
+    if (isPreviewMode) {
+      setError('');
+      setStep('activation');
+      return;
+    }
+
+    setBusy(true);
+    setError('');
+    try {
+      await journeyApi.submitFeedback({
+        test_run_id: journey.test_run_id,
+        accuracy_score: accuracyScore,
+        personality_match_score: personalityMatchScore,
+      });
+      setStep('activation');
+    } catch (e) {
+      setError(t.journey.resultsFeedbackSaveError);
+    } finally {
+      setBusy(false);
+    }
+  };
+
   const finalizeActivation = async () => {
     if (!journey || isPreviewMode) {
       setStep('closing');
       return;
     }
-    const effectiveScore = judgedScore ?? DEFAULT_JUDGED_SCORE;
 
     if (!selectedActivationId) {
       setError(t.journey.selectActivationPrompt);
@@ -375,7 +401,6 @@ const Journey: React.FC = () => {
     try {
       await journeyApi.submitFeedback({
         test_run_id: journey.test_run_id,
-        judged_score: effectiveScore,
         selected_activation_id: selectedActivationId,
       });
       clearStoredJourney();
@@ -405,6 +430,8 @@ const Journey: React.FC = () => {
   };
 
   const canExitJourney = step !== 'intro' && step !== 'closing';
+  const resultRatingOrder = language === 'ar' ? [...RESULT_RATING_SCORES].reverse() : RESULT_RATING_SCORES;
+  const isResultsFeedbackComplete = accuracyScore !== null && personalityMatchScore !== null;
 
   const isIntroView = step === 'intro';
   const iconMap: Record<JourneyType, string> = {
@@ -844,11 +871,81 @@ const Journey: React.FC = () => {
             )}
 
             <div className="flex justify-center">
+              <div className="w-full max-w-3xl space-y-4 rounded-soft border border-accent/80 bg-white/70 px-6 py-6 shadow-soft-card backdrop-blur-sm">
+                <h3 className="text-2xl font-semibold text-ink">{t.journey.resultsFeedbackTitle}</h3>
+                <p className="text-muted">{t.journey.resultsFeedbackSubtitle}</p>
+
+                <div className="space-y-3">
+                  <p className={`${language === 'ar' ? 'text-right' : 'text-left'} text-sm font-medium text-ink`}>
+                    {t.journey.resultsAccuracyQuestion}
+                  </p>
+                  <div
+                    className={`flex flex-wrap gap-2 ${language === 'ar' ? 'justify-end' : 'justify-start'}`}
+                    dir="ltr"
+                  >
+                    {resultRatingOrder.map((score) => (
+                      <button
+                        key={`accuracy-${score}`}
+                        type="button"
+                        aria-pressed={accuracyScore === score}
+                        onClick={() => {
+                          setAccuracyScore(score);
+                          setError('');
+                        }}
+                        className={`h-10 w-10 rounded-full border text-sm font-semibold transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-cream ${
+                          accuracyScore === score
+                            ? 'border-accent/80 bg-primary text-white'
+                            : 'border-sand/80 bg-white/70 text-ink hover:border-accent/60'
+                        }`}
+                      >
+                        {score}
+                      </button>
+                    ))}
+                  </div>
+                  <p className="text-xs text-muted">{t.journey.resultsScaleHint}</p>
+                </div>
+
+                <div className="space-y-3">
+                  <p className={`${language === 'ar' ? 'text-right' : 'text-left'} text-sm font-medium text-ink`}>
+                    {t.journey.resultsPersonalityQuestion}
+                  </p>
+                  <div
+                    className={`flex flex-wrap gap-2 ${language === 'ar' ? 'justify-end' : 'justify-start'}`}
+                    dir="ltr"
+                  >
+                    {resultRatingOrder.map((score) => (
+                      <button
+                        key={`personality-${score}`}
+                        type="button"
+                        aria-pressed={personalityMatchScore === score}
+                        onClick={() => {
+                          setPersonalityMatchScore(score);
+                          setError('');
+                        }}
+                        className={`h-10 w-10 rounded-full border text-sm font-semibold transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-cream ${
+                          personalityMatchScore === score
+                            ? 'border-accent/80 bg-primary text-white'
+                            : 'border-sand/80 bg-white/70 text-ink hover:border-accent/60'
+                        }`}
+                      >
+                        {score}
+                      </button>
+                    ))}
+                  </div>
+                  <p className="text-xs text-muted">{t.journey.resultsScaleHint}</p>
+                </div>
+              </div>
+            </div>
+
+            <div className="flex justify-center">
               <button
                 className="flex h-11 min-w-[200px] items-center justify-center rounded-full bg-primary px-6 pt-0.5 text-base font-semibold leading-none text-white shadow-[0_12px_24px_rgba(58,80,107,0.18)] transition duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-cream sm:h-12 sm:text-lg lg:hover:-translate-y-0.5 lg:hover:bg-[#31465E]"
-                onClick={() => setStep('activation')}
+                onClick={() => {
+                  void moveToActivation();
+                }}
+                disabled={busy || !isResultsFeedbackComplete}
               >
-                {t.journey.toActivation}
+                {busy ? t.journey.saving : t.journey.toActivation}
               </button>
             </div>
           </div>

@@ -3,11 +3,12 @@ Admin panel API endpoints for managing content.
 """
 
 from fastapi import APIRouter, Depends, HTTPException, Header
+from sqlalchemy import case, func
 from sqlalchemy.orm import Session
 from typing import List
 
 from app.db.session import get_db
-from app.models import Question, Idol, Trait, User, Result
+from app.models import Feedback, Idol, Question, Result, TestRun, Trait, User
 from app.schemas.admin import (
     QuestionCreate, QuestionUpdate, QuestionResponse,
     IdolCreate, IdolUpdate, IdolResponse,
@@ -47,6 +48,85 @@ def get_stats(
     idols_with_arabic = db.query(Idol).filter(Idol.name_ar.isnot(None)).count()
     traits_with_arabic = db.query(Trait).filter(Trait.name_ar.isnot(None)).count()
 
+    run_type_expr = case(
+        (TestRun.version_id.like("v2%"), "deep"),
+        else_="quick",
+    )
+
+    feedback_summary = (
+        db.query(
+            func.count(Feedback.id),
+            func.avg(Feedback.accuracy_score),
+            func.avg(Feedback.personality_match_score),
+        )
+        .first()
+    )
+    journey_feedback_count = int(feedback_summary[0] or 0)
+    journey_feedback_avg_accuracy = (
+        float(feedback_summary[1]) if feedback_summary and feedback_summary[1] is not None else None
+    )
+    journey_feedback_avg_personality_match = (
+        float(feedback_summary[2]) if feedback_summary and feedback_summary[2] is not None else None
+    )
+
+    feedback_by_run_type_rows = (
+        db.query(
+            run_type_expr.label("run_type"),
+            func.count(Feedback.id).label("count"),
+            func.avg(Feedback.accuracy_score).label("avg_accuracy_score"),
+            func.avg(Feedback.personality_match_score).label("avg_personality_match_score"),
+        )
+        .join(TestRun, TestRun.id == Feedback.test_run_id)
+        .group_by(run_type_expr)
+        .order_by(run_type_expr.asc())
+        .all()
+    )
+    feedback_by_run_type = [
+        {
+            "run_type": row.run_type,
+            "count": int(row.count or 0),
+            "avg_accuracy_score": (
+                float(row.avg_accuracy_score) if row.avg_accuracy_score is not None else None
+            ),
+            "avg_personality_match_score": (
+                float(row.avg_personality_match_score)
+                if row.avg_personality_match_score is not None
+                else None
+            ),
+        }
+        for row in feedback_by_run_type_rows
+    ]
+
+    feedback_by_set_rows = (
+        db.query(
+            TestRun.scenario_set_code,
+            run_type_expr.label("run_type"),
+            func.count(Feedback.id).label("count"),
+            func.avg(Feedback.accuracy_score).label("avg_accuracy_score"),
+            func.avg(Feedback.personality_match_score).label("avg_personality_match_score"),
+        )
+        .join(TestRun, TestRun.id == Feedback.test_run_id)
+        .group_by(TestRun.scenario_set_code, run_type_expr)
+        .order_by(func.count(Feedback.id).desc(), TestRun.scenario_set_code.asc())
+        .all()
+    )
+    feedback_by_set = [
+        {
+            "scenario_set_code": row.scenario_set_code or "unknown",
+            "run_type": row.run_type,
+            "count": int(row.count or 0),
+            "avg_accuracy_score": (
+                float(row.avg_accuracy_score) if row.avg_accuracy_score is not None else None
+            ),
+            "avg_personality_match_score": (
+                float(row.avg_personality_match_score)
+                if row.avg_personality_match_score is not None
+                else None
+            ),
+        }
+        for row in feedback_by_set_rows
+    ]
+
     return AdminStats(
         total_questions=total_questions,
         total_idols=total_idols,
@@ -55,7 +135,12 @@ def get_stats(
         total_tests_completed=total_tests_completed,
         questions_with_arabic=questions_with_arabic,
         idols_with_arabic=idols_with_arabic,
-        traits_with_arabic=traits_with_arabic
+        traits_with_arabic=traits_with_arabic,
+        journey_feedback_count=journey_feedback_count,
+        journey_feedback_avg_accuracy=journey_feedback_avg_accuracy,
+        journey_feedback_avg_personality_match=journey_feedback_avg_personality_match,
+        journey_feedback_by_run_type=feedback_by_run_type,
+        journey_feedback_by_set=feedback_by_set,
     )
 
 

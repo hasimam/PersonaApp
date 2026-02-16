@@ -320,12 +320,17 @@ class Feedback(Base):
     __tablename__ = "feedback"
     __table_args__ = (
         UniqueConstraint("test_run_id", name="uq_feedback_test_run"),
-        CheckConstraint("judged_score >= 1 AND judged_score <= 5", name="ck_feedback_judged_score_range"),
+        CheckConstraint("accuracy_score >= 1 AND accuracy_score <= 10", name="ck_feedback_accuracy_score_range"),
+        CheckConstraint(
+            "personality_match_score IS NULL OR (personality_match_score >= 1 AND personality_match_score <= 10)",
+            name="ck_feedback_personality_match_score_range",
+        ),
     )
 
     id = Column(Integer, primary_key=True, index=True)
     test_run_id = Column(Integer, ForeignKey("test_runs.id", ondelete="CASCADE"), nullable=False, index=True)
-    judged_score = Column(Integer, nullable=False)
+    accuracy_score = Column(Integer, nullable=False)
+    personality_match_score = Column(Integer, nullable=True)
     created_at = Column(DateTime(timezone=True), server_default=func.now())
 
     test_run = relationship("TestRun", back_populates="feedback_entries")

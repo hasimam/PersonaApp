@@ -99,4 +99,20 @@ export interface AdminStats {
   questions_with_arabic: number;
   idols_with_arabic: number;
   traits_with_arabic: number;
+  journey_feedback_count: number;
+  journey_feedback_avg_accuracy: number | null;
+  journey_feedback_avg_personality_match: number | null;
+  journey_feedback_by_run_type: {
+    run_type: 'quick' | 'deep';
+    count: number;
+    avg_accuracy_score: number | null;
+    avg_personality_match_score: number | null;
+  }[];
+  journey_feedback_by_set: {
+    scenario_set_code: string;
+    run_type: 'quick' | 'deep';
+    count: number;
+    avg_accuracy_score: number | null;
+    avg_personality_match_score: number | null;
+  }[];
 }

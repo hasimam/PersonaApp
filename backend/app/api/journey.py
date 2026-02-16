@@ -755,20 +755,27 @@ def submit_journey_feedback(
 
     feedback = db.query(Feedback).filter(Feedback.test_run_id == payload.test_run_id).first()
     if feedback:
-        feedback.judged_score = payload.judged_score
+        if payload.accuracy_score is not None:
+            feedback.accuracy_score = payload.accuracy_score
+        if payload.personality_match_score is not None:
+            feedback.personality_match_score = payload.personality_match_score
     else:
+        accuracy_score = payload.accuracy_score if payload.accuracy_score is not None else 5
         db.add(
             Feedback(
                 test_run_id=payload.test_run_id,
-                judged_score=payload.judged_score,
+                accuracy_score=accuracy_score,
+                personality_match_score=payload.personality_match_score,
             )
         )
 
     _touch_test_run(test_run)
     db.commit()
+    stored_feedback = db.query(Feedback).filter(Feedback.test_run_id == payload.test_run_id).first()
     return JourneyFeedbackResponse(
         test_run_id=payload.test_run_id,
-        judged_score=payload.judged_score,
+        accuracy_score=stored_feedback.accuracy_score if stored_feedback else None,
+        personality_match_score=stored_feedback.personality_match_score if stored_feedback else None,
         selected_activation_id=test_run.selected_activation_id,
         status="recorded",
     )
