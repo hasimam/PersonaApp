@@ -215,16 +215,36 @@ python -m app.db.hybrid_seed_importer
 
 Use these queries against runtime tables after pilot traffic starts.
 
-Note: The psychological safety step is temporarily hidden in the UI. The API still records
-`judged_score` with a default value of `3` for compatibility. Until the step returns,
-the judged-score distribution will be skewed and not meaningful.
+Note: feedback schema now uses:
+- `accuracy_score` (1..10)
+- `personality_match_score` (1..10, nullable)
 
-### Judged-score distribution
+Older rows (before the 2026-02-16 feedback change) were migrated by renaming
+`judged_score` -> `accuracy_score`, so they often have `personality_match_score IS NULL`.
+
+### User evaluation check (when asked "do I have one evaluation?")
+Use this first to separate new vs old-style rows and fetch the latest new-style entry.
+
+```bash
+cd backend
+venv/bin/python -c "from app.db.session import SessionLocal; from app.models import Feedback, TestRun; from sqlalchemy import func; db=SessionLocal(); total=db.query(func.count(Feedback.id)).scalar() or 0; new_count=db.query(func.count(Feedback.id)).filter(Feedback.personality_match_score.isnot(None)).scalar() or 0; old_count=db.query(func.count(Feedback.id)).filter(Feedback.personality_match_score.is_(None)).scalar() or 0; latest_new=(db.query(Feedback,TestRun).join(TestRun,TestRun.id==Feedback.test_run_id).filter(Feedback.personality_match_score.isnot(None)).order_by(Feedback.created_at.desc()).first()); print('total', total); print('new_style_count', new_count); print('old_style_count', old_count); print('latest_new', {'test_run_id': latest_new[0].test_run_id, 'accuracy_score': latest_new[0].accuracy_score, 'personality_match_score': latest_new[0].personality_match_score, 'created_at': str(latest_new[0].created_at), 'version_id': latest_new[1].version_id, 'scenario_set_code': latest_new[1].scenario_set_code} if latest_new else None); db.close()"
+```
+
+### Accuracy-score distribution (1..10)
 ```sql
-SELECT judged_score, COUNT(*) AS count
+SELECT accuracy_score, COUNT(*) AS count
 FROM feedback
-GROUP BY judged_score
-ORDER BY judged_score;
+GROUP BY accuracy_score
+ORDER BY accuracy_score;
+```
+
+### Personality-match distribution (new-style rows)
+```sql
+SELECT personality_match_score, COUNT(*) AS count
+FROM feedback
+WHERE personality_match_score IS NOT NULL
+GROUP BY personality_match_score
+ORDER BY personality_match_score;
 ```
 
 ### Completion rate
