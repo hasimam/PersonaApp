@@ -205,12 +205,22 @@ const Journey: React.FC = () => {
       })
       .catch(() => {
         startedPreviewTokenRef.current = null;
-        setError(t.journey.startError);
+        // Fallback to the regular production journey when preview token is invalid/expired.
+        const params = new URLSearchParams(location.search);
+        params.delete('preview');
+        const nextSearch = params.toString();
+        navigate(
+          {
+            pathname: location.pathname,
+            search: nextSearch ? `?${nextSearch}` : '',
+          },
+          { replace: true }
+        );
       })
       .finally(() => {
         setBusy(false);
       });
-  }, [isPreviewMode, previewToken, t.journey.startError, journey]);
+  }, [isPreviewMode, previewToken, journey, location.pathname, location.search, navigate]);
 
   useEffect(() => {
     if (!journey) {
