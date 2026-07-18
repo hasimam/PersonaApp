@@ -1,4 +1,5 @@
 import { SharedJourneyResult } from '../types';
+import { Language } from '../i18n/translations';
 
 export type ResultImageLabels = {
   title: string;
@@ -24,7 +25,8 @@ const loadImage = (src: string): Promise<HTMLImageElement> =>
 export async function generateResultImage(
   report: SharedJourneyResult,
   labels: ResultImageLabels,
-  logoUrl: string
+  logoUrl: string,
+  language: Language
 ): Promise<Blob> {
   await document.fonts?.ready;
   const canvas = document.createElement('canvas');
@@ -35,7 +37,7 @@ export async function generateResultImage(
     throw new Error('Canvas is unavailable');
   }
 
-  const rtl = report.language === 'ar';
+  const rtl = language === 'ar';
   const edge = 86;
   const boxInset = 34;
   const textX = rtl ? canvas.width - edge - boxInset : edge + boxInset;
@@ -51,6 +53,29 @@ export async function generateResultImage(
   context.direction = rtl ? 'rtl' : 'ltr';
   context.fillStyle = '#24364A';
 
+  const drawCenteredLine = (text: string, y: number) => {
+    if (!rtl || !text.includes('PersonaApp')) {
+      context.textAlign = 'center';
+      context.direction = rtl ? 'rtl' : 'ltr';
+      context.fillText(text, canvas.width / 2, y);
+      return;
+    }
+
+    const arabic = text.replace('PersonaApp', '').trim();
+    const latin = 'PersonaApp';
+    const gap = 14;
+    const arabicWidth = context.measureText(arabic).width;
+    const latinWidth = context.measureText(latin).width;
+    const startX = (canvas.width - arabicWidth - latinWidth - gap) / 2;
+
+    context.direction = 'ltr';
+    context.textAlign = 'left';
+    context.fillText(latin, startX, y);
+    context.direction = 'rtl';
+    context.textAlign = 'right';
+    context.fillText(arabic, startX + latinWidth + gap + arabicWidth, y);
+  };
+
   try {
     const logo = await loadImage(logoUrl);
     const ratio = Math.min(250 / logo.width, 180 / logo.height);
@@ -63,11 +88,13 @@ export async function generateResultImage(
 
   context.textAlign = 'center';
   context.font = '700 52px Tajawal, Segoe UI, sans-serif';
-  context.fillText(labels.title, 540, 280);
+  drawCenteredLine(labels.title, 280);
+  context.textAlign = 'center';
+  context.direction = rtl ? 'rtl' : 'ltr';
   context.font = '400 27px Tajawal, Segoe UI, sans-serif';
   context.fillStyle = '#667085';
   const journeyLabel = report.journey_type === 'deep' ? labels.deep : labels.quick;
-  const completed = new Intl.DateTimeFormat(report.language, { dateStyle: 'medium' }).format(
+  const completed = new Intl.DateTimeFormat(language, { dateStyle: 'medium' }).format(
     new Date(report.completed_at)
   );
   context.fillText(`${journeyLabel}  •  ${labels.completed} ${completed}`, 540, 330);
@@ -166,10 +193,12 @@ export async function generateResultImage(
   context.textAlign = 'center';
   context.font = '500 24px Tajawal, Segoe UI, sans-serif';
   context.fillStyle = '#667085';
-  context.fillText(labels.createdWith, 540, 1840);
+  drawCenteredLine(labels.createdWith, 1840);
+  context.textAlign = 'center';
+  context.direction = rtl ? 'rtl' : 'ltr';
   context.fillStyle = '#3A506B';
   context.font = '700 25px Tajawal, Segoe UI, sans-serif';
-  context.fillText(window.location.host || 'PersonaApp', 540, 1880);
+  context.fillText(window.location.host || 'Miraati PersonaApp', 540, 1880);
 
   return new Promise((resolve, reject) => {
     canvas.toBlob((blob) => (blob ? resolve(blob) : reject(new Error('PNG generation failed'))), 'image/png');

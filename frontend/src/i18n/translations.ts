@@ -2,6 +2,11 @@ export type Language = 'en' | 'ar';
 
 export const translations = {
   en: {
+    brand: {
+      name: 'Miraati PersonaApp',
+      logoAlt: 'Miraati PersonaApp logo',
+      pageTitle: 'Miraati PersonaApp - Find Your Idol Twin',
+    },
     // Landing page
     landing: {
       title: 'Find Your Idol Twin',
@@ -127,7 +132,7 @@ export const translations = {
         shareLink: 'Share link',
         showQr: 'Show QR code',
         consent: 'Create a private result link? Anyone with this link can view your selected result summary. It expires in 30 days.',
-        privacy: 'PersonaApp stores a small result snapshot and the protected link record for up to 30 days. Images are created only on your device.',
+        privacy: 'Miraati PersonaApp stores a small result snapshot and the protected link record for up to 30 days. Images are created only on your device.',
         confirmCreate: 'Create link',
         cancel: 'Cancel',
         privateLink: 'Private result link',
@@ -140,8 +145,8 @@ export const translations = {
         copyFallback: 'Select and copy the link above.',
         error: 'Could not complete that action. Please try again.',
         qrAlt: 'QR code for the private result link',
-        imageTitle: 'My PersonaApp result',
-        createdWith: 'Created with PersonaApp',
+        imageTitle: 'My Miraati PersonaApp result',
+        createdWith: 'Created with Miraati PersonaApp',
         sections: {
           genes: 'Top genes',
           archetypes: 'Archetype matches',
@@ -150,7 +155,7 @@ export const translations = {
           activation: 'Selected activation',
         },
         sharedPage: {
-          title: 'Shared PersonaApp Result',
+          title: 'Shared Miraati PersonaApp Result',
           loading: 'Loading the shared result...',
           unavailableTitle: 'This result is unavailable',
           unavailableBody: 'The private link may be invalid or may have expired.',
@@ -170,6 +175,11 @@ export const translations = {
     },
   },
   ar: {
+    brand: {
+      name: 'مرآتي PersonaApp',
+      logoAlt: 'شعار مرآتي PersonaApp',
+      pageTitle: 'مرآتي PersonaApp - رحلة اكتشاف الذات',
+    },
     // Landing page
     landing: {
       title: 'اكتشف توأم شخصيتك',
@@ -295,7 +305,7 @@ export const translations = {
         shareLink: 'مشاركة الرابط',
         showQr: 'عرض رمز QR',
         consent: 'هل تريد إنشاء رابط خاص للنتيجة؟ يمكن لأي شخص يملك الرابط رؤية ملخص نتيجتك المختارة. تنتهي صلاحيته بعد 30 يوماً.',
-        privacy: 'يحتفظ PersonaApp بملخص صغير للنتيجة وسجل الرابط المحمي لمدة تصل إلى 30 يوماً. تُنشأ الصور على جهازك فقط.',
+        privacy: 'تحتفظ مرآتي PersonaApp بملخص صغير للنتيجة وسجل الرابط المحمي لمدة تصل إلى 30 يوماً. تُنشأ الصور على جهازك فقط.',
         confirmCreate: 'إنشاء الرابط',
         cancel: 'إلغاء',
         privateLink: 'رابط النتيجة الخاص',
@@ -308,8 +318,8 @@ export const translations = {
         copyFallback: 'حدد الرابط أعلاه وانسخه.',
         error: 'تعذر إكمال الإجراء. حاول مرة أخرى.',
         qrAlt: 'رمز QR لرابط النتيجة الخاص',
-        imageTitle: 'نتيجتي في PersonaApp',
-        createdWith: 'أُنشئت بواسطة PersonaApp',
+        imageTitle: 'نتيجتي في مرآتي PersonaApp',
+        createdWith: 'أُنشئت بواسطة مرآتي PersonaApp',
         sections: {
           genes: 'أبرز السمات',
           archetypes: 'التوافق مع النماذج',
@@ -318,7 +328,7 @@ export const translations = {
           activation: 'خطوة التفعيل المختارة',
         },
         sharedPage: {
-          title: 'نتيجة PersonaApp المشتركة',
+          title: 'نتيجة مُشارَكة من مرآتي PersonaApp',
           loading: 'جاري تحميل النتيجة المشتركة...',
           unavailableTitle: 'هذه النتيجة غير متاحة',
           unavailableBody: 'قد يكون الرابط الخاص غير صالح أو انتهت صلاحيته.',

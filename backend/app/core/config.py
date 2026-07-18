@@ -17,7 +17,7 @@ class Settings(BaseSettings):
 
     # API Settings
     API_V1_PREFIX: str = "/api/v1"
-    PROJECT_NAME: str = "PersonaApp API"
+    PROJECT_NAME: str = "Miraati PersonaApp API"
 
     # Test Settings
     MIN_QUESTIONS: int = 40

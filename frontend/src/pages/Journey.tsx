@@ -574,7 +574,7 @@ const Journey: React.FC = () => {
             <div className="relative">
               <img
                 src={logo}
-                alt="PersonaApp logo"
+                alt={t.brand.logoAlt}
                 className="mx-auto h-40 w-auto object-contain md:h-60 lg:h-80"
               />
               <h1 className="mt-5 text-3xl font-semibold tracking-tight text-ink sm:text-4xl lg:text-5xl">

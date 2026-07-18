@@ -22,6 +22,7 @@ const ResultSharingActions: React.FC<Props> = ({ report, owner, existingLink }) 
   const [qrDataUrl, setQrDataUrl] = useState('');
   const [status, setStatus] = useState('');
   const [busy, setBusy] = useState(false);
+  const imageFilename = `${language === 'ar' ? 'مرآتي-personaapp' : 'miraati-personaapp'}-result-${language}.png`;
 
   const imageLabels = useMemo(
     () => ({
@@ -46,12 +47,12 @@ const ResultSharingActions: React.FC<Props> = ({ report, owner, existingLink }) 
       .catch(() => setStatus(copy.error));
   }, [showQr, link, copy.error]);
 
-  const getImage = () => generateResultImage(report, imageLabels, logo);
+  const getImage = () => generateResultImage(report, imageLabels, logo, language);
   const downloadBlob = (blob: Blob) => {
     const url = URL.createObjectURL(blob);
     const anchor = document.createElement('a');
     anchor.href = url;
-    anchor.download = `personaapp-result-${report.language}.png`;
+    anchor.download = imageFilename;
     anchor.click();
     URL.revokeObjectURL(url);
   };
@@ -74,7 +75,7 @@ const ResultSharingActions: React.FC<Props> = ({ report, owner, existingLink }) 
     setStatus('');
     try {
       const blob = await getImage();
-      const file = new File([blob], `personaapp-result-${report.language}.png`, { type: 'image/png' });
+      const file = new File([blob], imageFilename, { type: 'image/png' });
       if (navigator.share && (!navigator.canShare || navigator.canShare({ files: [file] }))) {
         try {
           await navigator.share({ files: [file], title: copy.imageTitle });

@@ -50,7 +50,7 @@ const SharedResultPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-cream px-4 pb-16 pt-8 text-ink" dir={language === 'ar' ? 'rtl' : 'ltr'}>
       <header className="mx-auto flex max-w-5xl items-center justify-between">
-        <img src={logo} alt="PersonaApp" className="h-20 w-auto" />
+        <img src={logo} alt={t.brand.logoAlt} className="h-20 w-auto" />
         <LanguageSwitcher />
       </header>
       <main className="mx-auto mt-6 max-w-5xl">

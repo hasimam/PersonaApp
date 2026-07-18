@@ -30,6 +30,7 @@ export const LanguageProvider: React.FC<{ children: ReactNode }> = ({ children }
   useEffect(() => {
     document.documentElement.dir = language === 'ar' ? 'rtl' : 'ltr';
     document.documentElement.lang = language;
+    document.title = translations[language].brand.pageTitle;
   }, [language]);
 
   const value: LanguageContextType = {
