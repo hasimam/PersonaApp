@@ -145,6 +145,7 @@ export const translations = {
         copyFallback: 'Select and copy the link above.',
         error: 'Could not complete that action. Please try again.',
         qrAlt: 'QR code for the private result link',
+        shareText: 'My result from Miraati PersonaApp',
         imageTitle: 'My Miraati PersonaApp result',
         createdWith: 'Created with Miraati PersonaApp',
         sections: {
@@ -318,6 +319,7 @@ export const translations = {
         copyFallback: 'حدد الرابط أعلاه وانسخه.',
         error: 'تعذر إكمال الإجراء. حاول مرة أخرى.',
         qrAlt: 'رمز QR لرابط النتيجة الخاص',
+        shareText: 'نتيجتي من مرآتي PersonaApp',
         imageTitle: 'نتيجتي في مرآتي PersonaApp',
         createdWith: 'أُنشئت بواسطة مرآتي PersonaApp',
         sections: {

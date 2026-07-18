@@ -78,7 +78,7 @@ const ResultSharingActions: React.FC<Props> = ({ report, owner, existingLink }) 
       const file = new File([blob], imageFilename, { type: 'image/png' });
       if (navigator.share && (!navigator.canShare || navigator.canShare({ files: [file] }))) {
         try {
-          await navigator.share({ files: [file], title: copy.imageTitle });
+          await navigator.share({ files: [file], title: copy.imageTitle, text: copy.shareText });
           return;
         } catch (error) {
           if ((error as DOMException).name === 'AbortError') return;
@@ -122,7 +122,7 @@ const ResultSharingActions: React.FC<Props> = ({ report, owner, existingLink }) 
   const shareLink = async () => {
     if (navigator.share) {
       try {
-        await navigator.share({ title: copy.imageTitle, url: link });
+        await navigator.share({ title: copy.imageTitle, text: copy.shareText, url: link });
         return;
       } catch (error) {
         if ((error as DOMException).name === 'AbortError') return;
