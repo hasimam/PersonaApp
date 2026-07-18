@@ -92,7 +92,7 @@ npm run build
 - Update `DATABASE_URL` in Fly to the new/clean database.
 
 ### 3.1 Deploy backend
-1. Deploy backend service (Fly/other).
+1. Deploy backend service (Fly/other). Fly runs `alembic upgrade head` as a release command before replacing the active Machine; a failed migration stops the deployment.
 2. Set production env vars on host:
    - `DATABASE_URL`
    - `SECRET_KEY`

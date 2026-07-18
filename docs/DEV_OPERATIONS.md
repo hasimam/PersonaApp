@@ -51,6 +51,7 @@ npm start
 - `CORS_ORIGINS` (update this when the public domain changes)
 - `ENVIRONMENT`
 - `ADMIN_API_KEY` (protects admin endpoints + `/docs` in production)
+- `RESULT_SHARE_TTL_DAYS` (optional; private result links default to 30 days)
 
 ### Frontend (`frontend/.env`)
 - `REACT_APP_API_URL` (optional; default expected: `http://localhost:8000`)
@@ -112,7 +113,9 @@ Internal intake checklist:
 4. Validate codes: `version_id`, `scenario_set_code`, and allowed `gene_code` values.
 5. Normalize Arabic fields (recommended) and run importer dry-run, then import.
 
-### Cleanup stale interrupted journey runs
+### Cleanup expired shares and stale interrupted journey runs
+
+Share creation automatically removes expired share rows, so storage cannot grow without bound even when no scheduler is configured. Run this maintenance command periodically as an additional cleanup for inactive installations:
 ```bash
 cd backend
 source venv/bin/activate

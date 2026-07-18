@@ -63,6 +63,7 @@ export interface JourneyScenario {
 export interface JourneyStartResponse {
   test_run_id: number;
   version_id: string;
+  owner_token?: string | null;
   scenarios: JourneyScenario[];
 }
 
@@ -181,4 +182,36 @@ export interface JourneyCancelRequest {
 export interface JourneyCancelResponse {
   test_run_id: number;
   status: 'started' | 'completed' | 'cancelled';
+}
+
+export interface SharedScoreItem {
+  name: string;
+  score: number;
+  rank: number;
+}
+
+export interface SharedGeneItem extends SharedScoreItem {
+  role: string;
+}
+
+export interface SharedActivation {
+  channel: string;
+  title: string;
+  body: string;
+}
+
+export interface SharedJourneyResult {
+  language: 'en' | 'ar';
+  journey_type: JourneyType;
+  completed_at: string;
+  top_genes: SharedGeneItem[];
+  archetype_matches: SharedScoreItem[];
+  quran_values: SharedScoreItem[];
+  prophet_traits: SharedScoreItem[];
+  selected_activation: SharedActivation | null;
+}
+
+export interface CreateResultShareResponse {
+  token: string;
+  expires_at: string;
 }

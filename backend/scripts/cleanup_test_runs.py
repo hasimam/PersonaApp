@@ -3,7 +3,7 @@ import argparse
 from datetime import datetime, timedelta, timezone
 
 from app.db.session import SessionLocal
-from app.models import TestRun
+from app.models import ResultShare, TestRun
 
 
 def parse_args() -> argparse.Namespace:
@@ -30,6 +30,8 @@ def main() -> None:
     db = SessionLocal()
 
     try:
+        expired_shares = db.query(ResultShare).filter(ResultShare.expires_at <= datetime.now(timezone.utc))
+        expired_share_count = expired_shares.count()
         stale_runs = db.query(TestRun).filter(
             TestRun.status != "completed",
             TestRun.created_at < cutoff,
@@ -37,11 +39,14 @@ def main() -> None:
         delete_count = stale_runs.count()
 
         if args.dry_run:
+            print(f"[DRY RUN] expired result_shares to delete: {expired_share_count}")
             print(f"[DRY RUN] stale test_runs to delete: {delete_count}")
             return
 
+        expired_shares.delete(synchronize_session=False)
         stale_runs.delete(synchronize_session=False)
         db.commit()
+        print(f"Deleted expired result_shares: {expired_share_count}")
         print(f"Deleted stale test_runs: {delete_count}")
     finally:
         db.close()

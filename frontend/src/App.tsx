@@ -2,6 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { LanguageProvider } from './i18n/LanguageContext';
 import Journey from './pages/Journey';
+import SharedResultPage from './pages/SharedResultPage';
 import AdminLogin from './pages/admin/AdminLogin';
 import AdminLayout from './pages/admin/AdminLayout';
 import AdminDashboard from './pages/admin/AdminDashboard';
@@ -18,6 +19,7 @@ function App() {
           <Route path="/" element={<Journey />} />
           <Route path="/test" element={<Journey />} />
           <Route path="/results/:resultId" element={<Journey />} />
+          <Route path="/share" element={<SharedResultPage />} />
 
           {/* Admin routes */}
           <Route path="/admin" element={<AdminLogin />} />

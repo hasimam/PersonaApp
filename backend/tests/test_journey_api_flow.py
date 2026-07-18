@@ -6,7 +6,7 @@ import hmac
 import json
 from datetime import datetime, timedelta, timezone
 
-from fastapi import HTTPException
+from fastapi import HTTPException, Response
 from sqlalchemy import create_engine
 from sqlalchemy.dialects.postgresql import JSONB
 from sqlalchemy.ext.compiler import compiles
@@ -24,6 +24,8 @@ from app.api.journey import (
     submit_journey_answers_preview,
     submit_journey_feedback,
 )
+from app.api.shares import _cleanup_expired_shares, create_result_share, get_shared_result
+from app.core.config import settings
 from app.db.session import Base
 from app.models import (
     AdviceItem,
@@ -39,6 +41,7 @@ from app.models import (
     ProphetTraitGeneWeight,
     QuranValue,
     QuranValueGeneWeight,
+    ResultShare,
     SahabaModel,
     Scenario,
     ScenarioOption,
@@ -53,6 +56,7 @@ from app.schemas.journey import (
     JourneyStartRequest,
     JourneySubmitAnswersRequest,
 )
+from app.schemas.share import CreateResultShareRequest
 
 
 @compiles(JSONB, "sqlite")
@@ -72,7 +76,7 @@ class JourneyApiFlowTests(unittest.TestCase):
         payload_json = json.dumps(payload, separators=(",", ":"), sort_keys=True).encode("utf-8")
         payload_b64 = base64.urlsafe_b64encode(payload_json).decode("utf-8").rstrip("=")
         signature = hmac.new(
-            os.environ["SECRET_KEY"].encode("utf-8"),
+            settings.SECRET_KEY.encode("utf-8"),
             payload_b64.encode("utf-8"),
             hashlib.sha256,
         ).digest()
@@ -97,6 +101,7 @@ class JourneyApiFlowTests(unittest.TestCase):
                 QuranValueGeneWeight.__table__,
                 ProphetTraitGeneWeight.__table__,
                 TestRun.__table__,
+                ResultShare.__table__,
                 Answer.__table__,
                 ComputedGeneScore.__table__,
                 ComputedModelMatch.__table__,
@@ -116,6 +121,7 @@ class JourneyApiFlowTests(unittest.TestCase):
                 QuranValueGeneWeight.__table__,
                 ProphetTrait.__table__,
                 QuranValue.__table__,
+                ResultShare.__table__,
                 Feedback.__table__,
                 ComputedModelMatch.__table__,
                 ComputedGeneScore.__table__,
@@ -519,6 +525,7 @@ class JourneyApiFlowTests(unittest.TestCase):
                     JourneyAnswerSubmission(scenario_code=scenario_codes[1], option_code="A"),
                 ],
             ),
+            x_result_owner_token=started.owner_token,
             db=self.db,
         )
 
@@ -550,6 +557,7 @@ class JourneyApiFlowTests(unittest.TestCase):
                 accuracy_score=8,
                 personality_match_score=7,
             ),
+            x_result_owner_token=started.owner_token,
             db=self.db,
         )
         self.assertEqual(feedback_response.accuracy_score, 8)
@@ -564,6 +572,7 @@ class JourneyApiFlowTests(unittest.TestCase):
                 personality_match_score=8,
                 selected_activation_id=selected_activation_id,
             ),
+            x_result_owner_token=started.owner_token,
             db=self.db,
         )
         self.assertEqual(feedback_response.accuracy_score, 9)
@@ -603,6 +612,7 @@ class JourneyApiFlowTests(unittest.TestCase):
                     JourneyAnswerSubmission(scenario_code=scenario_codes[1], option_code="A"),
                 ],
             ),
+            x_result_owner_token=started.owner_token,
             db=self.db,
         )
 
@@ -614,6 +624,7 @@ class JourneyApiFlowTests(unittest.TestCase):
                     personality_match_score=4,
                     selected_activation_id="ACT_OTHER",
                 ),
+                x_result_owner_token=started.owner_token,
                 db=self.db,
             )
 
@@ -624,6 +635,7 @@ class JourneyApiFlowTests(unittest.TestCase):
         started = start_journey(payload=JourneyStartRequest(version_id="v_test"), db=self.db)
         cancelled = cancel_journey(
             payload=JourneyCancelRequest(test_run_id=started.test_run_id),
+            x_result_owner_token=started.owner_token,
             db=self.db,
         )
         self.assertEqual(cancelled.status, "cancelled")
@@ -641,11 +653,13 @@ class JourneyApiFlowTests(unittest.TestCase):
                     JourneyAnswerSubmission(scenario_code=scenario_codes[1], option_code="A"),
                 ],
             ),
+            x_result_owner_token=started.owner_token,
             db=self.db,
         )
 
         cancelled = cancel_journey(
             payload=JourneyCancelRequest(test_run_id=started.test_run_id),
+            x_result_owner_token=started.owner_token,
             db=self.db,
         )
         self.assertEqual(cancelled.status, "completed")
@@ -683,6 +697,97 @@ class JourneyApiFlowTests(unittest.TestCase):
         self.assertEqual(self.db.query(Answer).count(), 0)
         self.assertEqual(self.db.query(ComputedGeneScore).count(), 0)
         self.assertEqual(self.db.query(ComputedModelMatch).count(), 0)
+
+    def test_secure_share_link_round_trip_and_reuse(self):
+        started = start_journey(payload=JourneyStartRequest(version_id="v_test"), db=self.db)
+        scenario_codes = [item.scenario_code for item in started.scenarios]
+        submitted = submit_journey_answers(
+            payload=JourneySubmitAnswersRequest(
+                version_id="v_test",
+                test_run_id=started.test_run_id,
+                answers=[
+                    JourneyAnswerSubmission(scenario_code=scenario_codes[0], option_code="A"),
+                    JourneyAnswerSubmission(scenario_code=scenario_codes[1], option_code="A"),
+                ],
+            ),
+            x_result_owner_token=started.owner_token,
+            db=self.db,
+        )
+        submit_journey_feedback(
+            payload=JourneyFeedbackRequest(
+                test_run_id=started.test_run_id,
+                selected_activation_id=submitted.activation_items[0].advice_id,
+            ),
+            x_result_owner_token=started.owner_token,
+            db=self.db,
+        )
+
+        first = create_result_share(
+            payload=CreateResultShareRequest(test_run_id=started.test_run_id, language="en"),
+            x_result_owner_token=started.owner_token,
+            db=self.db,
+        )
+        second = create_result_share(
+            payload=CreateResultShareRequest(test_run_id=started.test_run_id, language="en"),
+            x_result_owner_token=started.owner_token,
+            db=self.db,
+        )
+        self.assertEqual(first.token, second.token)
+        self.assertEqual(first.expires_at, second.expires_at)
+        self.assertEqual(self.db.query(ResultShare).count(), 1)
+
+        response = Response()
+        shared = get_shared_result(
+            response=response,
+            x_result_share_token=first.token,
+            db=self.db,
+        )
+        payload = shared.model_dump()
+        self.assertEqual(payload["language"], "en")
+        self.assertEqual(payload["selected_activation"]["title"], "Behavior action")
+        self.assertNotIn("test_run_id", payload)
+        self.assertNotIn("owner_token", payload)
+        self.assertEqual(response.headers["cache-control"], "no-store")
+        self.assertEqual(response.headers["referrer-policy"], "no-referrer")
+
+        share_row = self.db.query(ResultShare).first()
+        share_row.expires_at = datetime.now(timezone.utc) - timedelta(seconds=1)
+        self.db.commit()
+        deleted = _cleanup_expired_shares(self.db, datetime.now(timezone.utc))
+        self.assertEqual(deleted, 1)
+        self.assertEqual(self.db.query(ResultShare).count(), 0)
+
+    def test_owner_token_blocks_wrong_owner_and_completed_overwrite(self):
+        started = start_journey(payload=JourneyStartRequest(version_id="v_test"), db=self.db)
+        scenario_codes = [item.scenario_code for item in started.scenarios]
+        request = JourneySubmitAnswersRequest(
+            version_id="v_test",
+            test_run_id=started.test_run_id,
+            answers=[
+                JourneyAnswerSubmission(scenario_code=scenario_codes[0], option_code="A"),
+                JourneyAnswerSubmission(scenario_code=scenario_codes[1], option_code="A"),
+            ],
+        )
+        with self.assertRaises(HTTPException) as wrong_owner:
+            submit_journey_answers(
+                payload=request,
+                x_result_owner_token="wrong-token",
+                db=self.db,
+            )
+        self.assertEqual(wrong_owner.exception.status_code, 404)
+
+        submit_journey_answers(
+            payload=request,
+            x_result_owner_token=started.owner_token,
+            db=self.db,
+        )
+        with self.assertRaises(HTTPException) as completed:
+            submit_journey_answers(
+                payload=request,
+                x_result_owner_token=started.owner_token,
+                db=self.db,
+            )
+        self.assertEqual(completed.exception.status_code, 400)
 
 
 if __name__ == "__main__":

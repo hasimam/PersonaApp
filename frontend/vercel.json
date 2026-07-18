@@ -1,4 +1,13 @@
 {
+  "headers": [
+    {
+      "source": "/share",
+      "headers": [
+        { "key": "Cache-Control", "value": "no-store" },
+        { "key": "Referrer-Policy", "value": "no-referrer" }
+      ]
+    }
+  ],
   "rewrites": [
     {
       "source": "/api/(.*)",

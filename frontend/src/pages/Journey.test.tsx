@@ -46,6 +46,7 @@ describe('Journey smoke test', () => {
     mockedJourneyApi.startJourney.mockResolvedValue({
       test_run_id: 99,
       version_id: 'v_test',
+      owner_token: 'owner-token',
       scenarios: [
         {
           scenario_code: 'S01',
@@ -193,7 +194,7 @@ describe('Journey smoke test', () => {
       test_run_id: 99,
       accuracy_score: 8,
       personality_match_score: 7,
-    });
+    }, 'owner-token');
 
     expect(await screen.findByText('Behavior action')).toBeInTheDocument();
     fireEvent.click(screen.getByRole('button', { name: /Behavior action/i }));
@@ -203,7 +204,7 @@ describe('Journey smoke test', () => {
     expect(mockedJourneyApi.submitFeedback).toHaveBeenNthCalledWith(2, {
       test_run_id: 99,
       selected_activation_id: 'ACT_BEH',
-    });
+    }, 'owner-token');
     expect(await screen.findByText('Journey Complete')).toBeInTheDocument();
   });
 
@@ -223,7 +224,10 @@ describe('Journey smoke test', () => {
       'Are you sure you want to end the journey? Your progress will be lost.'
     );
     await waitFor(() => {
-      expect(mockedJourneyApi.cancelJourney).toHaveBeenCalledWith({ test_run_id: 99 });
+      expect(mockedJourneyApi.cancelJourney).toHaveBeenCalledWith(
+        { test_run_id: 99 },
+        'owner-token'
+      );
     });
     expect(await screen.findByText('Self-Discovery Journey')).toBeInTheDocument();
 

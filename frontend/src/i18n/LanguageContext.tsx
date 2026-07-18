@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react';
+import React, { createContext, useCallback, useContext, useState, useEffect, ReactNode } from 'react';
 import { translations, Language } from './translations';
 
 interface LanguageContextType {
@@ -21,10 +21,10 @@ export const LanguageProvider: React.FC<{ children: ReactNode }> = ({ children }
     return 'ar';
   });
 
-  const setLanguage = (lang: Language) => {
+  const setLanguage = useCallback((lang: Language) => {
     setLanguageState(lang);
     localStorage.setItem(LANGUAGE_KEY, lang);
-  };
+  }, []);
 
   // Update document direction and lang attribute
   useEffect(() => {

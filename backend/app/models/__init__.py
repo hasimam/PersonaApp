@@ -22,6 +22,7 @@ from app.models.hybrid import (
     ComputedGeneScore,
     ComputedModelMatch,
     Feedback,
+    ResultShare,
 )
 
 __all__ = [
@@ -48,4 +49,5 @@ __all__ = [
     "ComputedGeneScore",
     "ComputedModelMatch",
     "Feedback",
+    "ResultShare",
 ]

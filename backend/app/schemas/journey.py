@@ -33,6 +33,7 @@ class JourneyScenario(BaseModel):
 class JourneyStartResponse(BaseModel):
     test_run_id: int
     version_id: str
+    owner_token: Optional[str] = None
     scenarios: List[JourneyScenario]
 
 

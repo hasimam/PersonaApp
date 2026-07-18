@@ -6,7 +6,7 @@ import json
 import random
 from typing import Dict, List, Optional, Sequence, Set
 
-from fastapi import APIRouter, Depends, HTTPException
+from fastapi import APIRouter, Depends, Header, HTTPException
 from sqlalchemy.orm import Session
 
 from app.core.hybrid_engine import (
@@ -19,6 +19,7 @@ from app.core.hybrid_engine import (
     select_activation_items,
 )
 from app.core.config import settings
+from app.core.result_sharing import hash_capability_token, new_owner_token, verify_owner_token
 from app.db.session import get_db
 from app.models import (
     Answer,
@@ -234,6 +235,7 @@ def _build_journey_response(
     version_id: str,
     test_run_id: int,
     scenario_set_code: str,
+    owner_token: Optional[str] = None,
 ) -> JourneyStartResponse:
     scenarios = (
         db.query(Scenario)
@@ -289,8 +291,21 @@ def _build_journey_response(
     return JourneyStartResponse(
         test_run_id=test_run_id,
         version_id=version_id,
+        owner_token=owner_token,
         scenarios=response_scenarios,
     )
+
+
+def _require_owned_test_run(
+    db: Session,
+    *,
+    test_run_id: int,
+    owner_token: Optional[str],
+) -> TestRun:
+    test_run = db.query(TestRun).filter(TestRun.id == test_run_id).first()
+    if not test_run or not owner_token or not verify_owner_token(test_run, owner_token):
+        raise HTTPException(status_code=404, detail="Journey not found")
+    return test_run
 
 
 def _validate_answer_payload(
@@ -494,10 +509,12 @@ def start_journey(
     if not scenario_set_codes:
         raise HTTPException(status_code=400, detail=f"No scenarios found for version '{version_id}'")
 
+    owner_token = new_owner_token()
     test_run = TestRun(
         version_id=version_id,
         session_id=None,
         status=RUN_STATUS_STARTED,
+        owner_token_hash=hash_capability_token(owner_token),
         last_activity_at=datetime.now(timezone.utc),
     )
     db.add(test_run)
@@ -517,6 +534,7 @@ def start_journey(
         version_id=version_id,
         test_run_id=test_run.id,
         scenario_set_code=selected_set_code,
+        owner_token=owner_token,
     )
 
 
@@ -551,11 +569,14 @@ def start_journey_preview(
 @router.post("/resume", response_model=JourneyStartResponse)
 def resume_journey(
     payload: JourneyResumeRequest,
+    x_result_owner_token: Optional[str] = Header(default=None, alias="X-Result-Owner-Token"),
     db: Session = Depends(get_db),
 ):
-    test_run = db.query(TestRun).filter(TestRun.id == payload.test_run_id).first()
-    if not test_run:
-        raise HTTPException(status_code=404, detail="test_run_id not found")
+    test_run = _require_owned_test_run(
+        db,
+        test_run_id=payload.test_run_id,
+        owner_token=x_result_owner_token,
+    )
     if test_run.status != RUN_STATUS_STARTED:
         raise HTTPException(status_code=400, detail="test_run is not active")
     if _is_run_expired(test_run):
@@ -631,11 +652,20 @@ def submit_journey_answers_preview(
 @router.post("/submit-answers", response_model=JourneySubmitAnswersResponse)
 def submit_journey_answers(
     payload: JourneySubmitAnswersRequest,
+    x_result_owner_token: Optional[str] = Header(default=None, alias="X-Result-Owner-Token"),
     db: Session = Depends(get_db),
 ):
-    test_run = db.query(TestRun).filter(TestRun.id == payload.test_run_id).first()
-    if not test_run:
-        raise HTTPException(status_code=404, detail="test_run_id not found")
+    test_run = _require_owned_test_run(
+        db,
+        test_run_id=payload.test_run_id,
+        owner_token=x_result_owner_token,
+    )
+    if test_run.status != RUN_STATUS_STARTED:
+        raise HTTPException(status_code=400, detail="test_run is not active")
+    if _is_run_expired(test_run):
+        test_run.status = RUN_STATUS_CANCELLED
+        db.commit()
+        raise HTTPException(status_code=410, detail="test_run expired")
     if test_run.version_id != payload.version_id:
         raise HTTPException(status_code=400, detail="version_id does not match test_run_id")
 
@@ -715,11 +745,14 @@ def submit_journey_answers(
 @router.post("/cancel", response_model=JourneyCancelResponse)
 def cancel_journey(
     payload: JourneyCancelRequest,
+    x_result_owner_token: Optional[str] = Header(default=None, alias="X-Result-Owner-Token"),
     db: Session = Depends(get_db),
 ):
-    test_run = db.query(TestRun).filter(TestRun.id == payload.test_run_id).first()
-    if not test_run:
-        raise HTTPException(status_code=404, detail="test_run_id not found")
+    test_run = _require_owned_test_run(
+        db,
+        test_run_id=payload.test_run_id,
+        owner_token=x_result_owner_token,
+    )
 
     if test_run.status != RUN_STATUS_COMPLETED:
         test_run.status = RUN_STATUS_CANCELLED
@@ -735,11 +768,16 @@ def cancel_journey(
 @router.post("/feedback", response_model=JourneyFeedbackResponse)
 def submit_journey_feedback(
     payload: JourneyFeedbackRequest,
+    x_result_owner_token: Optional[str] = Header(default=None, alias="X-Result-Owner-Token"),
     db: Session = Depends(get_db),
 ):
-    test_run = db.query(TestRun).filter(TestRun.id == payload.test_run_id).first()
-    if not test_run:
-        raise HTTPException(status_code=404, detail="test_run_id not found")
+    test_run = _require_owned_test_run(
+        db,
+        test_run_id=payload.test_run_id,
+        owner_token=x_result_owner_token,
+    )
+    if test_run.status != RUN_STATUS_COMPLETED:
+        raise HTTPException(status_code=400, detail="test_run is not completed")
 
     selected_activation_id = (
         payload.selected_activation_id.strip() if payload.selected_activation_id else None

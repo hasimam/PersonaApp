@@ -1,9 +1,15 @@
 import React, { useEffect, useMemo, useRef, useState } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import LanguageSwitcher from '../components/LanguageSwitcher';
+import ResultSharingActions from '../components/sharing/ResultSharingActions';
 import { useLanguage } from '../i18n/LanguageContext';
 import { journeyApi } from '../services/api';
-import { JourneyStartResponse, JourneySubmitAnswersResponse, JourneyType } from '../types';
+import {
+  JourneyStartResponse,
+  JourneySubmitAnswersResponse,
+  JourneyType,
+  SharedJourneyResult,
+} from '../types';
 import logo from '../assets/logo.png';
 import decoImageOne from '../assets/deco-image-1.png';
 import decoImageTwo from '../assets/deco-image-2.png';
@@ -42,6 +48,7 @@ type StoredJourneyState = {
   scenarioAnswers: Record<string, string>;
   judgedScore: number | null;
   selectedActivationId: string | null;
+  owner_token: string;
   saved_at: number;
 };
 
@@ -78,6 +85,7 @@ const Journey: React.FC = () => {
   const [accuracyScore, setAccuracyScore] = useState<number | null>(null);
   const [personalityMatchScore, setPersonalityMatchScore] = useState<number | null>(null);
   const [selectedActivationId, setSelectedActivationId] = useState<string | null>(null);
+  const [ownerToken, setOwnerToken] = useState('');
   const [journeyType, setJourneyType] = useState<JourneyType>('quick');
   const [busy, setBusy] = useState(false);
   const [isAdvancing, setIsAdvancing] = useState(false);
@@ -103,6 +111,54 @@ const Journey: React.FC = () => {
     [submitResult]
   );
 
+  const shareableResult = useMemo<SharedJourneyResult | null>(() => {
+    if (!submitResult || !selectedActivationId) {
+      return null;
+    }
+    const selectedActivation = submitResult.activation_items.find(
+      (item) => item.advice_id === selectedActivationId
+    );
+    const localize = (en: string, ar: string | null) =>
+      language === 'ar' && ar ? ar : en;
+    return {
+      language,
+      journey_type: journeyType,
+      completed_at: new Date().toISOString(),
+      top_genes: submitResult.top_genes.map((item) => ({
+        name: localize(item.name_en, item.name_ar),
+        score: item.normalized_score,
+        rank: item.rank,
+        role:
+          t.journey.geneRoles[item.role as 'dominant' | 'secondary' | 'support'] ?? item.role,
+      })),
+      archetype_matches: submitResult.archetype_matches.map((item) => ({
+        name: localize(item.name_en, item.name_ar),
+        score: item.similarity * 100,
+        rank: item.rank,
+      })),
+      quran_values: submitResult.quran_values.map((item) => ({
+        name: localize(item.name_en, item.name_ar),
+        score: item.score,
+        rank: item.rank,
+      })),
+      prophet_traits: submitResult.prophet_traits.map((item) => ({
+        name: localize(item.name_en, item.name_ar),
+        score: item.score,
+        rank: item.rank,
+      })),
+      selected_activation: selectedActivation
+        ? {
+            channel:
+              t.journey.channels[
+                selectedActivation.channel as 'behavior' | 'reflection' | 'social'
+              ] ?? selectedActivation.channel,
+            title: localize(selectedActivation.title_en, selectedActivation.title_ar),
+            body: localize(selectedActivation.body_en, selectedActivation.body_ar),
+          }
+        : null,
+    };
+  }, [submitResult, selectedActivationId, language, journeyType, t]);
+
   const localizeText = (en: string, ar: string | null): string => {
     if (language === 'ar' && ar) {
       return ar;
@@ -119,6 +175,7 @@ const Journey: React.FC = () => {
     setAccuracyScore(null);
     setPersonalityMatchScore(null);
     setSelectedActivationId(null);
+    setOwnerToken('');
     setJourneyType('quick');
     setBusy(false);
     setIsAdvancing(false);
@@ -147,7 +204,7 @@ const Journey: React.FC = () => {
     setBusy(true);
     setError('');
     journeyApi
-      .resumeJourney({ test_run_id: stored.test_run_id })
+      .resumeJourney({ test_run_id: stored.test_run_id }, stored.owner_token)
       .then((data) => {
         const resumeStep =
           stored.step === 'safety' && !SHOW_SAFETY_STEP ? 'scenarios' : stored.step;
@@ -156,6 +213,7 @@ const Journey: React.FC = () => {
           : stored.judgedScore ?? DEFAULT_JUDGED_SCORE;
         setJourneyType(stored.journey_type ?? 'quick');
         setJourney(data);
+        setOwnerToken(stored.owner_token);
         setScenarioAnswers(stored.scenarioAnswers ?? {});
         setCurrentScenarioIndex(
           Math.min(stored.currentScenarioIndex ?? 0, Math.max(data.scenarios.length - 1, 0))
@@ -248,6 +306,7 @@ const Journey: React.FC = () => {
       scenarioAnswers,
       judgedScore,
       selectedActivationId,
+      owner_token: ownerToken,
       saved_at: Date.now(),
     });
   }, [
@@ -258,6 +317,7 @@ const Journey: React.FC = () => {
     scenarioAnswers,
     judgedScore,
     selectedActivationId,
+    ownerToken,
     isPreviewMode,
   ]);
 
@@ -269,6 +329,7 @@ const Journey: React.FC = () => {
         ? await journeyApi.startPreviewJourney({ preview_token: previewToken })
         : await journeyApi.startJourney({ journey_type: journeyType });
       setJourney(data);
+      setOwnerToken(data.owner_token ?? '');
       setCurrentScenarioIndex(0);
       setScenarioAnswers({});
       setJudgedScore(SHOW_SAFETY_STEP ? null : DEFAULT_JUDGED_SCORE);
@@ -310,14 +371,17 @@ const Journey: React.FC = () => {
               option_code: answersMap[scenario.scenario_code],
             })),
           })
-        : await journeyApi.submitAnswers({
-            version_id: journey.version_id,
-            test_run_id: journey.test_run_id,
-            answers: journey.scenarios.map((scenario) => ({
-              scenario_code: scenario.scenario_code,
-              option_code: answersMap[scenario.scenario_code],
-            })),
-          });
+        : await journeyApi.submitAnswers(
+            {
+              version_id: journey.version_id,
+              test_run_id: journey.test_run_id,
+              answers: journey.scenarios.map((scenario) => ({
+                scenario_code: scenario.scenario_code,
+                option_code: answersMap[scenario.scenario_code],
+              })),
+            },
+            ownerToken
+          );
 
       setSubmitResult(response);
       clearStoredJourney();
@@ -382,11 +446,14 @@ const Journey: React.FC = () => {
     setBusy(true);
     setError('');
     try {
-      await journeyApi.submitFeedback({
-        test_run_id: journey.test_run_id,
-        accuracy_score: accuracyScore,
-        personality_match_score: personalityMatchScore,
-      });
+      await journeyApi.submitFeedback(
+        {
+          test_run_id: journey.test_run_id,
+          accuracy_score: accuracyScore,
+          personality_match_score: personalityMatchScore,
+        },
+        ownerToken
+      );
       setStep('activation');
     } catch (e) {
       setError(t.journey.resultsFeedbackSaveError);
@@ -409,10 +476,13 @@ const Journey: React.FC = () => {
     setBusy(true);
     setError('');
     try {
-      await journeyApi.submitFeedback({
-        test_run_id: journey.test_run_id,
-        selected_activation_id: selectedActivationId,
-      });
+      await journeyApi.submitFeedback(
+        {
+          test_run_id: journey.test_run_id,
+          selected_activation_id: selectedActivationId,
+        },
+        ownerToken
+      );
       clearStoredJourney();
       setStep('closing');
     } catch (e) {
@@ -429,7 +499,7 @@ const Journey: React.FC = () => {
 
     if (journey?.test_run_id && !isPreviewMode) {
       try {
-        await journeyApi.cancelJourney({ test_run_id: journey.test_run_id });
+        await journeyApi.cancelJourney({ test_run_id: journey.test_run_id }, ownerToken);
       } catch (e) {
         // Non-blocking: user should still be able to leave the flow.
       }
@@ -623,6 +693,12 @@ const Journey: React.FC = () => {
               <>
                 <h2 className="text-3xl font-semibold text-ink">{t.journey.closingTitle}</h2>
                 <p className="text-muted">{t.journey.closingBody}</p>
+                {!isPreviewMode && shareableResult && journey && ownerToken && (
+                  <ResultSharingActions
+                    report={shareableResult}
+                    owner={{ testRunId: journey.test_run_id, ownerToken }}
+                  />
+                )}
                 <button
                   className="mx-auto flex h-11 min-w-[200px] items-center justify-center rounded-full bg-primary px-6 pt-0.5 text-base font-semibold leading-none text-white shadow-[0_12px_24px_rgba(58,80,107,0.18)] transition duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-cream sm:h-12 sm:text-lg lg:hover:-translate-y-0.5 lg:hover:bg-[#31465E]"
                   onClick={resetFlow}

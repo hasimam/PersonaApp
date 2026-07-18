@@ -9,7 +9,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from fastapi.openapi.docs import get_redoc_html, get_swagger_ui_html
 
 from app.core.config import settings
-from app.api import admin, journey, results, test
+from app.api import admin, journey, results, shares, test
 
 # Docs configuration
 DOCS_ENABLED = settings.ENVIRONMENT != "production"
@@ -67,6 +67,11 @@ app.include_router(
     journey.router,
     prefix=f"{settings.API_V1_PREFIX}/journey",
     tags=["journey"]
+)
+app.include_router(
+    shares.router,
+    prefix=settings.API_V1_PREFIX,
+    tags=["shares"],
 )
 
 if not DOCS_ENABLED:

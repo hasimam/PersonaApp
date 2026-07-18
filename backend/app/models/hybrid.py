@@ -259,6 +259,7 @@ class TestRun(Base):
     scenario_set_code = Column(String(64), nullable=True, index=True)
     status = Column(String(32), nullable=False, index=True, default="started", server_default="started")
     selected_activation_id = Column(String(64), nullable=True)
+    owner_token_hash = Column(String(64), nullable=True)
     created_at = Column(DateTime(timezone=True), server_default=func.now())
     last_activity_at = Column(DateTime(timezone=True), nullable=False, server_default=func.now(), index=True)
     submitted_at = Column(DateTime(timezone=True), nullable=True)
@@ -268,6 +269,30 @@ class TestRun(Base):
     computed_gene_scores = relationship("ComputedGeneScore", back_populates="test_run")
     computed_model_matches = relationship("ComputedModelMatch", back_populates="test_run")
     feedback_entries = relationship("Feedback", back_populates="test_run")
+    result_shares = relationship("ResultShare", back_populates="test_run", cascade="all, delete-orphan")
+
+
+class ResultShare(Base):
+    __tablename__ = "result_shares"
+    __table_args__ = (
+        UniqueConstraint("test_run_id", "language", name="uq_result_shares_test_run_language"),
+    )
+
+    id = Column(Integer, primary_key=True, index=True)
+    test_run_id = Column(
+        Integer,
+        ForeignKey("test_runs.id", ondelete="CASCADE"),
+        nullable=False,
+        index=True,
+    )
+    token_seed = Column(String(64), nullable=False)
+    token_hash = Column(String(64), nullable=False, unique=True)
+    language = Column(String(2), nullable=False)
+    snapshot_jsonb = Column(JSONB, nullable=False)
+    expires_at = Column(DateTime(timezone=True), nullable=False, index=True)
+    created_at = Column(DateTime(timezone=True), nullable=False, server_default=func.now())
+
+    test_run = relationship("TestRun", back_populates="result_shares")
 
 
 class Answer(Base):
