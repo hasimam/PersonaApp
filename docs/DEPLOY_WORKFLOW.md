@@ -1,6 +1,6 @@
 # PersonaApp Deployment Workflow
 
-Last updated: 2026-02-04
+Last updated: 2026-07-18
 
 ## 1) Local development workflow
 
@@ -82,10 +82,13 @@ npm run build
 
 ## 3) Production deployment workflow
 
-### 3.0 Vercel same-origin setup (one-time)
-- Vercel project root: `frontend`
-- Keep `REACT_APP_API_URL` unset for production.
-- Ensure `frontend/vercel.json` includes rewrites for `/api/*`, `/docs`, `/openapi.json`, `/redoc` to the Fly backend.
+### 3.0 Vercel project setup (one-time)
+- Project: `hasan-alimams-projects/personaapp-frontend`
+- Connected repository: `hasimam/PersonaApp`
+- Production branch: `main`
+- Root directory: `frontend`
+- `frontend/.env.production` points the browser directly to the Fly backend.
+- `frontend/vercel.json` keeps same-origin API and admin-route rewrites available.
 
 ### 3.0.1 Neon reset (destructive)
 - In Neon, reset or recreate the `personaapp` database.
@@ -120,17 +123,18 @@ python -m app.db.hybrid_seed_importer
 ```
 
 ### 3.2 Deploy frontend
-Set production frontend env (optional):
-```env
-REACT_APP_API_URL=https://<your-backend-domain>
-```
-If you use Vercel rewrites for same‑origin API calls, leave `REACT_APP_API_URL` unset.
+Normal workflow: push the tested commit to `main`. Vercel automatically builds the
+`frontend` directory and updates `https://personaapp-frontend.vercel.app`.
 
-Build and deploy frontend artifact:
+Manual fallback, always run from the repository root because the Vercel project
+already has `frontend` configured as its root directory:
 ```bash
-cd frontend
-npm run build
+vercel link --yes --project personaapp-frontend --scope hasan-alimams-projects
+vercel --prod --yes
 ```
+
+Do not run `vercel --prod` from inside `frontend`; that resolves the configured
+root as `frontend/frontend` and the deployment is rejected.
 
 ## 4) Post-deploy smoke checks
 
