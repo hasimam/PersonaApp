@@ -22,7 +22,7 @@ const ResultSharingActions: React.FC<Props> = ({ report, owner, existingLink }) 
   const [qrDataUrl, setQrDataUrl] = useState('');
   const [status, setStatus] = useState('');
   const [busy, setBusy] = useState(false);
-  const imageFilename = `${language === 'ar' ? 'مرآتي-personaapp' : 'miraati-personaapp'}-result-${language}.png`;
+  const imageFilename = `${language === 'ar' ? 'مرآتي' : 'miraati'}-result-${language}.png`;
 
   const imageLabels = useMemo(
     () => ({

@@ -100,7 +100,7 @@ if not DOCS_ENABLED:
 def root():
     """Health check endpoint."""
     return {
-        "message": "Miraati PersonaApp API is running!",
+        "message": "Miraati API is running!",
         "version": "1.0.0",
         "docs": "/docs"
     }

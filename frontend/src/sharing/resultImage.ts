@@ -54,26 +54,9 @@ export async function generateResultImage(
   context.fillStyle = '#24364A';
 
   const drawCenteredLine = (text: string, y: number) => {
-    if (!rtl || !text.includes('PersonaApp')) {
-      context.textAlign = 'center';
-      context.direction = rtl ? 'rtl' : 'ltr';
-      context.fillText(text, canvas.width / 2, y);
-      return;
-    }
-
-    const arabic = text.replace('PersonaApp', '').trim();
-    const latin = 'PersonaApp';
-    const gap = 14;
-    const arabicWidth = context.measureText(arabic).width;
-    const latinWidth = context.measureText(latin).width;
-    const startX = (canvas.width - arabicWidth - latinWidth - gap) / 2;
-
-    context.direction = 'ltr';
-    context.textAlign = 'left';
-    context.fillText(latin, startX, y);
-    context.direction = 'rtl';
-    context.textAlign = 'right';
-    context.fillText(arabic, startX + latinWidth + gap + arabicWidth, y);
+    context.textAlign = 'center';
+    context.direction = rtl ? 'rtl' : 'ltr';
+    context.fillText(text, canvas.width / 2, y);
   };
 
   try {
@@ -198,7 +181,7 @@ export async function generateResultImage(
   context.direction = rtl ? 'rtl' : 'ltr';
   context.fillStyle = '#3A506B';
   context.font = '700 25px Tajawal, Segoe UI, sans-serif';
-  context.fillText(window.location.host || 'Miraati PersonaApp', 540, 1880);
+  context.fillText(window.location.host || 'Miraati', 540, 1880);
 
   return new Promise((resolve, reject) => {
     canvas.toBlob((blob) => (blob ? resolve(blob) : reject(new Error('PNG generation failed'))), 'image/png');

@@ -1,6 +1,7 @@
 import React, { useEffect, useMemo, useRef, useState } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import LanguageSwitcher from '../components/LanguageSwitcher';
+import AboutCreatorModal from '../components/AboutCreatorModal';
 import ResultSharingActions from '../components/sharing/ResultSharingActions';
 import { useLanguage } from '../i18n/LanguageContext';
 import { journeyApi } from '../services/api';
@@ -1112,6 +1113,8 @@ const Journey: React.FC = () => {
             {error}
           </div>
         )}
+
+        <AboutCreatorModal />
       </div>
     </div>
   );

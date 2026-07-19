@@ -260,7 +260,7 @@ describe('Journey smoke test', () => {
     fireEvent.click(screen.getByRole('button', { name: 'العربية' }));
 
     expect(await screen.findByText('سيناريو المعاينة 1')).toBeInTheDocument();
-    expect(document.title).toBe('مرآتي PersonaApp - رحلة اكتشاف الذات');
+    expect(document.title).toBe('مرآتي - رحلة اكتشاف الذات');
     expect(mockedJourneyApi.startPreviewJourney).toHaveBeenCalledTimes(1);
   });
 });

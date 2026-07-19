@@ -68,6 +68,14 @@ code {
     @apply px-6 py-3 bg-primary-600 text-white rounded-lg font-medium hover:bg-primary-700 transition-colors shadow-md hover:shadow-lg;
   }
 
+  .btn-accent {
+    @apply px-6 py-3 bg-accent text-ink rounded-lg font-medium transition-colors shadow-md hover:shadow-lg;
+  }
+
+  .btn-accent:hover {
+    background-color: #b79970;
+  }
+
   .btn-secondary {
     @apply px-6 py-3 bg-gray-200 text-gray-800 rounded-lg font-medium hover:bg-gray-300 transition-colors;
   }

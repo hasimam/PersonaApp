@@ -34,7 +34,7 @@ const AdminLayout: React.FC = () => {
           <div className="flex justify-between h-16">
             <div className="flex items-center">
               <Link to="/admin/dashboard" className="font-bold text-xl text-gray-900">
-                Miraati PersonaApp Admin
+                Miraati Admin
               </Link>
             </div>
             <div className="flex items-center space-x-4">

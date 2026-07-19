@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import LanguageSwitcher from '../components/LanguageSwitcher';
+import AboutCreatorModal from '../components/AboutCreatorModal';
 import ResultSharingActions from '../components/sharing/ResultSharingActions';
 import SharedResultSummary from '../components/sharing/SharedResultSummary';
 import { useLanguage } from '../i18n/LanguageContext';
@@ -59,7 +60,7 @@ const SharedResultPage: React.FC = () => {
           <div className="mx-auto max-w-xl rounded-soft border border-sand bg-white/70 p-8 text-center shadow-soft-card">
             <h1 className="text-3xl font-semibold">{shared.unavailableTitle}</h1>
             <p className="mt-3 text-muted">{shared.unavailableBody}</p>
-            <button type="button" className="btn-primary mt-6" onClick={() => navigate('/')}>{shared.startOwn}</button>
+            <button type="button" className="btn-accent mt-6" onClick={() => navigate('/')}>{shared.startOwn}</button>
           </div>
         )}
         {report && !loading && (
@@ -76,10 +77,11 @@ const SharedResultPage: React.FC = () => {
             <SharedResultSummary report={report} />
             <ResultSharingActions report={report} existingLink={window.location.href} />
             <div className="text-center">
-              <button type="button" className="btn-primary" onClick={() => navigate('/')}>{shared.startOwn}</button>
+              <button type="button" className="btn-accent" onClick={() => navigate('/')}>{shared.startOwn}</button>
             </div>
           </div>
         )}
+        <AboutCreatorModal />
       </main>
     </div>
   );
