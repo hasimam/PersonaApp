@@ -116,10 +116,12 @@ const AboutCreatorModal: React.FC = () => {
                     {paragraph}
                   </p>
                 ))}
-                <p className="mt-5">{copy.thanksParagraph}</p>
-                <blockquote className="mt-4 border-s-4 border-accent bg-white/70 px-4 py-3 text-ink">
-                  {copy.finalQuote}
-                </blockquote>
+                {copy.thanksParagraph && <p className="mt-5">{copy.thanksParagraph}</p>}
+                {copy.finalQuote && (
+                  <blockquote className="mt-4 border-s-4 border-accent bg-white/70 px-4 py-3 text-ink">
+                    {copy.finalQuote}
+                  </blockquote>
+                )}
               </CreatorSection>
             </div>
           </section>
