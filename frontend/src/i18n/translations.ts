@@ -39,10 +39,10 @@ export const translations = {
       activationParagraph: 'At that point, I decided not to fall into the trap of perfectionism. I chose a commitment small enough that I could not fail at it, and manageable enough that I could keep it. True discipline begins with a steady step, not an imaginary leap.',
       closingTitle: 'At the End of This Reflective Journey',
       closingParagraphs: [
-        'All this beauty, depth, and precision in the design of the questions and results did not come from nowhere. It is the fruit of a human spirit devoted to goodness: Rafah Zahabi, an independent designer and developer, created and prepared it with the belief that technology can be a tool for awareness rather than distraction, and that human behavior deserves digital tools that respect its depth and complexity.',
-        'This journey was not completed alone. Her dear friend, Jamila Bashir, shared in this achievement. She stood beside her and supported her, helping Miraati become a mirror that reflects the jewels within us, not merely our faces.',
+        'Miraati is an independent project designed and developed by Rafah Zahabi, a pioneer of Ihsan and an independent digital designer and developer. The project aims to provide a structured self-reflection experience that combines guided scenarios, pattern analysis, and practical next steps.',
+        'Her colleague Jamila Bashir provided support throughout the project’s development and contributed to bringing it to its current form.',
       ],
-      thanksParagraph: 'Thank you, Rafah and Jamila, for creating a digital space for honest reflection and giving us a tool to understand ourselves more deeply. To everyone reading these words: I invite you to try Miraati. Perhaps your mirror will reveal what illuminates your path and remind you that the closest route to yourself is the path of honest reflection.',
+      thanksParagraph: 'The current version remains open to continued development and improvement. Work on Miraati will continue based on testing and user feedback, while preserving its purpose as a tool for self-discovery and personal growth—not a substitute for professional psychological assessment.',
       finalQuote: 'Whoever knows himself knows his Lord. This mirror is one step along that path.',
     },
     // Landing page
