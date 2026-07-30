@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { createPortal } from 'react-dom';
 import { useLanguage } from '../i18n/LanguageContext';
 
 const AboutCreatorModal: React.FC = () => {
@@ -33,9 +34,9 @@ const AboutCreatorModal: React.FC = () => {
         </button>
       </div>
 
-      {isOpen && (
+      {isOpen && createPortal(
         <div
-          className="fixed inset-0 z-50 flex items-center justify-center bg-ink/55 px-4 py-6"
+          className="fixed inset-0 z-50 flex h-screen h-[100dvh] items-center justify-center overflow-hidden bg-ink/55 px-4 pb-[max(1.5rem,env(safe-area-inset-bottom))] pt-[max(1.5rem,env(safe-area-inset-top))]"
           role="presentation"
           onClick={(event) => {
             if (event.target === event.currentTarget) setIsOpen(false);
@@ -46,10 +47,10 @@ const AboutCreatorModal: React.FC = () => {
             aria-modal="true"
             aria-labelledby="about-creator-title"
             dir={isRTL ? 'rtl' : 'ltr'}
-            className="flex max-h-[calc(100vh-3rem)] w-full max-w-4xl flex-col overflow-hidden rounded-soft border border-accent/70 bg-cream text-ink shadow-soft-float"
+            className="flex max-h-full w-full max-w-4xl flex-col overflow-hidden rounded-soft border border-accent/70 bg-cream text-ink shadow-soft-float"
             onClick={(event) => event.stopPropagation()}
           >
-            <header className="flex items-start justify-between gap-4 border-b border-sand/70 bg-white/70 px-5 py-4 sm:px-7">
+            <header className="flex shrink-0 items-start justify-between gap-4 border-b border-sand/70 bg-white/70 px-5 py-4 sm:px-7">
               <h2 id="about-creator-title" className="text-2xl font-semibold leading-tight sm:text-3xl">
                 {copy.title}
               </h2>
@@ -63,7 +64,7 @@ const AboutCreatorModal: React.FC = () => {
               </button>
             </header>
 
-            <div className="overflow-y-auto px-5 py-6 text-sm leading-8 sm:px-7 sm:text-base">
+            <div className="min-h-0 flex-1 overscroll-contain overflow-y-auto px-5 py-6 text-sm leading-8 sm:px-7 sm:text-base">
               <p>{copy.intro}</p>
               <p className="mt-5">{copy.resultIntro}</p>
 
@@ -122,7 +123,8 @@ const AboutCreatorModal: React.FC = () => {
               </CreatorSection>
             </div>
           </section>
-        </div>
+        </div>,
+        document.body
       )}
     </>
   );
