@@ -120,7 +120,7 @@ const Landing: React.FC = () => {
                     </div>
                     <button
                       onClick={() => navigate('/test')}
-                      className="mx-auto flex h-11 min-w-[200px] items-center justify-center rounded-full bg-primary px-6 pt-0.5 text-base font-semibold leading-none text-white shadow-[0_12px_24px_rgba(58,80,107,0.18)] transition duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-cream sm:h-12 sm:text-lg lg:hover:-translate-y-0.5 lg:hover:bg-[#31465E]"
+                      className="pill-button pill-button-primary mx-auto min-w-[200px]"
                     >
                       {t.landing.startTest}
                     </button>

@@ -50,9 +50,14 @@ const SharedResultPage: React.FC = () => {
   const shared = t.journey.sharing.sharedPage;
   return (
     <div className="min-h-screen bg-cream px-4 pb-16 pt-8 text-ink" dir={language === 'ar' ? 'rtl' : 'ltr'}>
-      <header className="mx-auto flex max-w-5xl items-center justify-between">
-        <img src={logo} alt={t.brand.logoAlt} className="h-20 w-auto" />
-        <LanguageSwitcher />
+      <header className="relative mx-auto max-w-5xl pt-14">
+        <div className="absolute left-0 top-0">
+          <AboutCreatorModal placement="header" />
+        </div>
+        <img src={logo} alt={t.brand.logoAlt} className="mx-auto h-20 w-auto" />
+        <div className="absolute right-0 top-0">
+          <LanguageSwitcher />
+        </div>
       </header>
       <main className="mx-auto mt-6 max-w-5xl">
         {loading && <p className="py-20 text-center text-muted">{shared.loading}</p>}
@@ -81,7 +86,6 @@ const SharedResultPage: React.FC = () => {
             </div>
           </div>
         )}
-        <AboutCreatorModal />
       </main>
     </div>
   );

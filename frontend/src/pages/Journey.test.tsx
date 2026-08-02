@@ -1,6 +1,6 @@
 import '@testing-library/jest-dom';
 import React from 'react';
-import { act, fireEvent, render, screen, waitFor } from '@testing-library/react';
+import { act, fireEvent, render, screen, waitFor, within } from '@testing-library/react';
 import { MemoryRouter } from 'react-router-dom';
 import Journey from './Journey';
 import { LanguageProvider } from '../i18n/LanguageContext';
@@ -197,6 +197,7 @@ describe('Journey smoke test', () => {
     }, 'owner-token');
 
     expect(await screen.findByText('Behavior action')).toBeInTheDocument();
+    expect(screen.queryByRole('button', { name: 'End Journey' })).not.toBeInTheDocument();
     fireEvent.click(screen.getByRole('button', { name: /Behavior action/i }));
     fireEvent.click(screen.getByRole('button', { name: 'Finish Journey' }));
 
@@ -209,20 +210,21 @@ describe('Journey smoke test', () => {
   });
 
   test('allows exiting mid-journey and returns to intro', async () => {
-    const confirmSpy = jest.spyOn(window, 'confirm').mockReturnValue(true);
     renderJourney('/test');
 
     fireEvent.click(screen.getByRole('button', { name: 'Start Journey' }));
+    expect(screen.queryByRole('button', { name: 'End Journey' })).not.toBeInTheDocument();
     fireEvent.click(screen.getByRole('button', { name: 'Begin Scenarios' }));
 
     await waitFor(() => expect(mockedJourneyApi.startJourney).toHaveBeenCalledTimes(1));
     expect(await screen.findByText('Scenario 1')).toBeInTheDocument();
 
     fireEvent.click(screen.getByRole('button', { name: /End Journey/i }));
-
-    expect(confirmSpy).toHaveBeenCalledWith(
+    const dialog = screen.getByRole('alertdialog', { name: 'End this journey?' });
+    expect(within(dialog).getByText(
       'Are you sure you want to end the journey? Your progress will be lost.'
-    );
+    )).toBeInTheDocument();
+    fireEvent.click(within(dialog).getByRole('button', { name: 'End Journey' }));
     await waitFor(() => {
       expect(mockedJourneyApi.cancelJourney).toHaveBeenCalledWith(
         { test_run_id: 99 },
@@ -230,8 +232,6 @@ describe('Journey smoke test', () => {
       );
     });
     expect(await screen.findByText('Self-Discovery Journey')).toBeInTheDocument();
-
-    confirmSpy.mockRestore();
   });
 
   test('does not restart preview run when switching language', async () => {

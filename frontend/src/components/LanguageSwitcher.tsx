@@ -15,7 +15,7 @@ const LanguageSwitcher: React.FC<LanguageSwitcherProps> = ({ className = '' }) =
     >
       <button
         onClick={() => setLanguage('en')}
-        className={`h-10 rounded-full px-4 text-sm font-medium transition ${
+        className={`inline-flex h-10 items-center justify-center rounded-full px-4 text-sm font-medium leading-none transition ${
           language === 'en'
             ? 'bg-primary text-white shadow-soft-card'
             : 'text-muted hover:text-ink'
@@ -25,7 +25,7 @@ const LanguageSwitcher: React.FC<LanguageSwitcherProps> = ({ className = '' }) =
       </button>
       <button
         onClick={() => setLanguage('ar')}
-        className={`h-10 rounded-full px-4 text-sm font-medium transition ${
+        className={`inline-flex h-10 items-center justify-center rounded-full px-4 text-sm font-medium leading-none transition ${
           language === 'ar'
             ? 'bg-primary text-white shadow-soft-card'
             : 'text-muted hover:text-ink'

@@ -2,6 +2,7 @@ import React, { useEffect, useMemo, useRef, useState } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import LanguageSwitcher from '../components/LanguageSwitcher';
 import AboutCreatorModal from '../components/AboutCreatorModal';
+import ConfirmationModal from '../components/ConfirmationModal';
 import ResultSharingActions from '../components/sharing/ResultSharingActions';
 import { useLanguage } from '../i18n/LanguageContext';
 import { journeyApi } from '../services/api';
@@ -91,6 +92,7 @@ const Journey: React.FC = () => {
   const [busy, setBusy] = useState(false);
   const [isAdvancing, setIsAdvancing] = useState(false);
   const [error, setError] = useState('');
+  const [isExitConfirmOpen, setIsExitConfirmOpen] = useState(false);
   const startedPreviewTokenRef = useRef<string | null>(null);
   const previewToken = useMemo(() => {
     const token = new URLSearchParams(location.search).get('preview');
@@ -494,9 +496,7 @@ const Journey: React.FC = () => {
   };
 
   const handleExit = async () => {
-    if (!window.confirm(t.journey.exitConfirm)) {
-      return;
-    }
+    setIsExitConfirmOpen(false);
 
     if (journey?.test_run_id && !isPreviewMode) {
       try {
@@ -510,7 +510,7 @@ const Journey: React.FC = () => {
     navigate('/');
   };
 
-  const canExitJourney = step !== 'intro' && step !== 'closing';
+  const canExitJourney = ['scenarios', 'safety', 'results'].includes(step);
   const resultRatingOrder = language === 'ar' ? [...RESULT_RATING_SCORES].reverse() : RESULT_RATING_SCORES;
   const isResultsFeedbackComplete = accuracyScore !== null && personalityMatchScore !== null;
 
@@ -550,18 +550,9 @@ const Journey: React.FC = () => {
           </div>
         </>
       )}
-      {canExitJourney && (
-        <div className="absolute top-4 left-4 z-20">
-          <button
-            onClick={() => {
-              void handleExit();
-            }}
-            className="text-gray-500 hover:text-gray-700 text-sm flex items-center gap-1"
-          >
-            <span>&larr;</span> {t.journey.exitJourney}
-          </button>
-        </div>
-      )}
+      <div className="absolute left-4 top-4 z-20 sm:left-8 sm:top-6">
+        <AboutCreatorModal placement="header" />
+      </div>
 
       <div className="absolute top-4 right-4 z-20 sm:right-8 sm:top-6">
         <LanguageSwitcher className="border border-sand/70 shadow-soft-card backdrop-blur-sm" />
@@ -636,7 +627,7 @@ const Journey: React.FC = () => {
                       {t.journey.typeDescriptions[type]}
                     </p>
                     {isSelected && (
-                      <div className="mt-auto pt-6">
+                      <div className="mt-auto flex flex-col items-center pt-6">
                         <div className="mb-4 flex items-center justify-center gap-2 text-accent/70">
                           <span className="h-px w-10 bg-accent/40" />
                           <span className="h-2 w-2 rotate-45 bg-accent/60" />
@@ -647,7 +638,7 @@ const Journey: React.FC = () => {
                             event.stopPropagation();
                             setStep('prep');
                           }}
-                          className="mx-auto flex h-11 min-w-[200px] items-center justify-center rounded-full bg-primary px-6 pt-0.5 text-base font-semibold leading-none text-white shadow-[0_12px_24px_rgba(58,80,107,0.18)] transition duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-cream sm:h-12 sm:text-lg lg:hover:-translate-y-0.5 lg:hover:bg-[#31465E]"
+                          className="pill-button pill-button-primary mx-auto min-w-[200px]"
                         >
                           {t.journey.introCta}
                         </button>
@@ -675,14 +666,14 @@ const Journey: React.FC = () => {
                 <div className="flex justify-center gap-3">
                   <button
                     onClick={() => setStep('intro')}
-                    className="flex h-11 items-center justify-center rounded-full border border-sand/80 bg-white/60 px-6 pt-0.5 text-base font-semibold leading-none text-ink shadow-soft-card backdrop-blur-sm transition duration-200 hover:bg-white/80 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-cream sm:h-12 sm:text-lg"
+                    className="pill-button pill-button-secondary min-w-0"
                   >
                     {t.journey.back}
                   </button>
                   <button
                     onClick={startJourney}
                     disabled={busy}
-                    className="flex h-11 min-w-[200px] items-center justify-center rounded-full bg-primary px-6 pt-0.5 text-base font-semibold leading-none text-white shadow-[0_12px_24px_rgba(58,80,107,0.18)] transition duration-200 hover:bg-[#31465E] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-cream disabled:cursor-not-allowed disabled:opacity-60 sm:h-12 sm:text-lg"
+                    className="pill-button pill-button-primary min-w-[200px]"
                   >
                     {busy ? t.journey.starting : t.journey.beginScenarios}
                   </button>
@@ -701,7 +692,7 @@ const Journey: React.FC = () => {
                   />
                 )}
                 <button
-                  className="mx-auto flex h-11 min-w-[200px] items-center justify-center rounded-full bg-primary px-6 pt-0.5 text-base font-semibold leading-none text-white shadow-[0_12px_24px_rgba(58,80,107,0.18)] transition duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-cream sm:h-12 sm:text-lg lg:hover:-translate-y-0.5 lg:hover:bg-[#31465E]"
+                  className="pill-button pill-button-primary mx-auto min-w-[200px]"
                   onClick={resetFlow}
                   type="button"
                 >
@@ -1026,7 +1017,7 @@ const Journey: React.FC = () => {
 
             <div className="flex justify-center">
               <button
-                className="flex h-11 min-w-[200px] items-center justify-center rounded-full bg-primary px-6 pt-0.5 text-base font-semibold leading-none text-white shadow-[0_12px_24px_rgba(58,80,107,0.18)] transition duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-cream sm:h-12 sm:text-lg lg:hover:-translate-y-0.5 lg:hover:bg-[#31465E]"
+                className="pill-button pill-button-primary min-w-[200px]"
                 onClick={() => {
                   void moveToActivation();
                 }}
@@ -1098,7 +1089,7 @@ const Journey: React.FC = () => {
 
             <div className="flex justify-center">
               <button
-                className="flex h-11 min-w-[200px] items-center justify-center rounded-full bg-primary px-6 pt-0.5 text-base font-semibold leading-none text-white shadow-[0_12px_24px_rgba(58,80,107,0.18)] transition duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-cream disabled:cursor-not-allowed disabled:opacity-60 sm:h-12 sm:text-lg lg:hover:-translate-y-0.5 lg:hover:bg-[#31465E]"
+                className="pill-button pill-button-primary min-w-[200px]"
                 onClick={finalizeActivation}
                 disabled={busy}
               >
@@ -1114,8 +1105,36 @@ const Journey: React.FC = () => {
           </div>
         )}
 
-        <AboutCreatorModal />
+        {canExitJourney && (
+          <div
+            className={`mx-auto mt-4 flex ${step === 'results' ? 'max-w-4xl' : 'max-w-3xl'} ${
+              language === 'ar' ? 'justify-end' : 'justify-start'
+            }`}
+          >
+            <button
+              type="button"
+              onClick={() => setIsExitConfirmOpen(true)}
+              className="inline-flex items-center gap-1 text-sm text-muted transition hover:text-ink focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-cream"
+            >
+              {language === 'ar' ? (
+                <>{t.journey.exitJourney} <span aria-hidden="true">&rarr;</span></>
+              ) : (
+                <><span aria-hidden="true">&larr;</span> {t.journey.exitJourney}</>
+              )}
+            </button>
+          </div>
+        )}
       </div>
+
+      <ConfirmationModal
+        isOpen={isExitConfirmOpen}
+        title={t.journey.exitConfirmTitle}
+        message={t.journey.exitConfirm}
+        confirmLabel={t.journey.exitConfirmAction}
+        cancelLabel={t.journey.exitConfirmCancel}
+        onConfirm={() => void handleExit()}
+        onCancel={() => setIsExitConfirmOpen(false)}
+      />
     </div>
   );
 };

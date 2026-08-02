@@ -57,7 +57,7 @@ const Results: React.FC = () => {
           <p className="text-sm font-semibold text-red-700">{error || t.results.notFound}</p>
           <button
             onClick={() => navigate('/')}
-            className="mx-auto flex h-11 min-w-[200px] items-center justify-center rounded-full bg-primary px-6 pt-0.5 text-base font-semibold leading-none text-white shadow-[0_12px_24px_rgba(58,80,107,0.18)] transition duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-cream sm:h-12 sm:text-lg lg:hover:-translate-y-0.5 lg:hover:bg-[#31465E]"
+            className="pill-button pill-button-primary mx-auto min-w-[200px]"
           >
             {t.results.backHome}
           </button>
@@ -176,7 +176,7 @@ const Results: React.FC = () => {
         <div className="flex flex-col justify-center gap-3 sm:flex-row sm:gap-4">
           <button
             onClick={() => navigate('/')}
-            className="flex h-11 min-w-[200px] items-center justify-center rounded-full bg-primary px-6 pt-0.5 text-base font-semibold leading-none text-white shadow-[0_12px_24px_rgba(58,80,107,0.18)] transition duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-cream sm:h-12 sm:text-lg lg:hover:-translate-y-0.5 lg:hover:bg-[#31465E]"
+            className="pill-button pill-button-primary min-w-[200px]"
           >
             {t.results.retakeTest}
           </button>
@@ -184,7 +184,7 @@ const Results: React.FC = () => {
             onClick={() => {
               alert(t.results.shareComingSoon);
             }}
-            className="flex h-11 items-center justify-center rounded-full border border-sand/80 bg-white/60 px-6 pt-0.5 text-base font-semibold leading-none text-ink shadow-soft-card backdrop-blur-sm transition duration-200 hover:bg-white/80 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-cream sm:h-12 sm:text-lg"
+            className="pill-button pill-button-secondary min-w-0"
           >
             {t.results.shareResults}
           </button>

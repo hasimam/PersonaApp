@@ -2,7 +2,11 @@ import React, { useEffect, useState } from 'react';
 import { createPortal } from 'react-dom';
 import { useLanguage } from '../i18n/LanguageContext';
 
-const AboutCreatorModal: React.FC = () => {
+interface AboutCreatorModalProps {
+  placement?: 'header' | 'footer';
+}
+
+const AboutCreatorModal: React.FC<AboutCreatorModalProps> = ({ placement = 'footer' }) => {
   const { t, isRTL } = useLanguage();
   const copy = t.aboutCreator;
   const [isOpen, setIsOpen] = useState(false);
@@ -24,11 +28,11 @@ const AboutCreatorModal: React.FC = () => {
 
   return (
     <>
-      <div className="mt-10 border-t border-sand/60 pt-6 text-center">
+      <div className={placement === 'footer' ? 'mt-10 border-t border-sand/60 pt-6 text-center' : ''}>
         <button
           type="button"
           onClick={() => setIsOpen(true)}
-          className="rounded-full border border-sand/80 bg-white/70 px-5 py-2.5 text-sm font-semibold text-primary shadow-soft-card transition hover:border-accent/70 hover:bg-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-cream"
+          className="inline-flex h-10 items-center justify-center rounded-full border border-sand/80 bg-white/70 px-5 text-sm font-semibold leading-none text-primary shadow-soft-card backdrop-blur-sm transition hover:border-accent/70 hover:bg-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-cream"
         >
           {copy.button}
         </button>

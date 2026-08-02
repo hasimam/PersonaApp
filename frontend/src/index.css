@@ -76,11 +76,11 @@ code {
 
 @layer components {
   .btn-primary {
-    @apply px-6 py-3 bg-primary-600 text-white rounded-lg font-medium hover:bg-primary-700 transition-colors shadow-md hover:shadow-lg;
+    @apply inline-flex items-center justify-center px-6 py-3 bg-primary-600 text-white rounded-lg font-medium leading-none hover:bg-primary-700 transition-colors shadow-md hover:shadow-lg;
   }
 
   .btn-accent {
-    @apply px-6 py-3 bg-accent text-ink rounded-lg font-medium transition-colors shadow-md hover:shadow-lg;
+    @apply inline-flex items-center justify-center px-6 py-3 bg-accent text-ink rounded-lg font-medium leading-none transition-colors shadow-md hover:shadow-lg;
   }
 
   .btn-accent:hover {
@@ -88,7 +88,19 @@ code {
   }
 
   .btn-secondary {
-    @apply px-6 py-3 bg-gray-200 text-gray-800 rounded-lg font-medium hover:bg-gray-300 transition-colors;
+    @apply inline-flex items-center justify-center px-6 py-3 bg-gray-200 text-gray-800 rounded-lg font-medium leading-none hover:bg-gray-300 transition-colors;
+  }
+
+  .pill-button {
+    @apply inline-flex h-11 min-w-[160px] items-center justify-center rounded-full px-6 text-base font-semibold leading-none transition duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-cream disabled:cursor-not-allowed disabled:opacity-60 sm:h-12 sm:text-lg;
+  }
+
+  .pill-button-primary {
+    @apply bg-primary text-white shadow-[0_12px_24px_rgba(58,80,107,0.18)] hover:bg-[#31465E] lg:hover:-translate-y-0.5;
+  }
+
+  .pill-button-secondary {
+    @apply border border-sand/80 bg-white/60 text-ink shadow-soft-card backdrop-blur-sm hover:bg-white/80;
   }
 
   .card {
