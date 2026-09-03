@@ -5,7 +5,7 @@ export const translations = {
     brand: {
       name: 'Miraati',
       logoAlt: 'Miraati logo',
-      pageTitle: 'Miraati - Find Your Idol Twin',
+      pageTitle: 'Miraati – A Journey of Self-Discovery',
     },
     aboutCreator: {
       button: 'About Miraati',
