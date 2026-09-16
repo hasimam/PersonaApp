@@ -1,7 +1,8 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { LanguageProvider } from './i18n/LanguageContext';
+import { LanguageProvider, useLanguage } from './i18n/LanguageContext';
 import Journey from './pages/Journey';
+import MothersMirror from './pages/MothersMirror';
 import SharedResultPage from './pages/SharedResultPage';
 import AdminLogin from './pages/admin/AdminLogin';
 import AdminLayout from './pages/admin/AdminLayout';
@@ -10,12 +11,23 @@ import AdminQuestions from './pages/admin/AdminQuestions';
 import AdminIdols from './pages/admin/AdminIdols';
 import AdminTraits from './pages/admin/AdminTraits';
 
+function PrivatePreviewBanner() {
+  const { language } = useLanguage();
+  if (process.env.REACT_APP_PRIVATE_PREVIEW !== 'true') return null;
+  return <form action="/preview/logout" method="post" className="flex items-center justify-between bg-primary px-4 py-2 text-sm text-white">
+    <span>{language === 'ar' ? 'معاينة خاصة' : 'Private preview'}</span>
+    <button type="submit" className="underline">{language === 'ar' ? 'تسجيل الخروج' : 'Sign out'}</button>
+  </form>;
+}
+
 function App() {
   return (
     <LanguageProvider>
+      <PrivatePreviewBanner />
       <Router>
         <Routes>
           {/* Public routes */}
+          <Route path="/mothers-mirror" element={<MothersMirror />} />
           <Route path="/" element={<Journey />} />
           <Route path="/test" element={<Journey />} />
           <Route path="/results/:resultId" element={<Journey />} />

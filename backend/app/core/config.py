@@ -12,6 +12,11 @@ class Settings(BaseSettings):
     CORS_ORIGINS: str = "http://localhost:3000"
     ENVIRONMENT: str = "development"
 
+    # Private preview: independent credentials, never included in the React build.
+    PREVIEW_MODE: bool = False
+    PREVIEW_PASSWORD_HASH: str = ""
+    PREVIEW_SESSION_SECRET: str = ""
+
     # Admin Settings
     ADMIN_API_KEY: str = "changeme-in-production"
 

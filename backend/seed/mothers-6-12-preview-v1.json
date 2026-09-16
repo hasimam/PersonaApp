@@ -1,0 +1,687 @@
+{
+  "version": "mothers-6-12-preview-v1",
+  "preview": true,
+  "editorial_status": "draft",
+  "age_band": "6-12",
+  "scoring": {
+    "mixed_min": 1.0,
+    "strong_min": 1.5,
+    "minimum_answers": 2
+  },
+  "areas": [
+    {
+      "code": "regulation",
+      "title": {
+        "en": "Pause before guiding",
+        "ar": "أهدأ قبل أن أوجّه"
+      },
+      "descriptions": {
+        "strong": {
+          "en": "You reported pausing in several tense moments.",
+          "ar": "ذكرتِ التوقف قبل الرد في عدة مواقف متوترة."
+        },
+        "mixed": {
+          "en": "Your answers include both pauses and quick reactions.",
+          "ar": "تضمنت إجاباتكِ توقفًا أحيانًا وردودًا سريعة أحيانًا أخرى."
+        },
+        "growth": {
+          "en": "Your answers suggest trying a pause before responding.",
+          "ar": "تشير إجاباتكِ إلى فرصة لتجربة التوقف قبل الرد."
+        }
+      }
+    },
+    {
+      "code": "connection",
+      "title": {
+        "en": "Listen and connect",
+        "ar": "أسمع وأحتوي"
+      },
+      "descriptions": {
+        "strong": {
+          "en": "You reported making room for listening.",
+          "ar": "ذكرتِ إتاحة مساحة للاستماع."
+        },
+        "mixed": {
+          "en": "Listening was easier in some of your answers than others.",
+          "ar": "كان الاستماع أسهل في بعض إجاباتكِ منه في غيرها."
+        },
+        "growth": {
+          "en": "Your answers suggest making a little space to listen.",
+          "ar": "تشير إجاباتكِ إلى فرصة لإتاحة مساحة صغيرة للاستماع."
+        }
+      }
+    },
+    {
+      "code": "boundaries",
+      "title": {
+        "en": "Set limits with mercy",
+        "ar": "أضع حدودًا برحمة"
+      },
+      "descriptions": {
+        "strong": {
+          "en": "You reported clear limits without labeling your child.",
+          "ar": "ذكرتِ حدودًا واضحة دون وصف طفلكِ بصفات سلبية."
+        },
+        "mixed": {
+          "en": "Your answers show a mix of clear and shifting limits.",
+          "ar": "أظهرت إجاباتكِ مزيجًا من الحدود الواضحة والمتغيرة."
+        },
+        "growth": {
+          "en": "Your answers suggest practicing one clear, calm limit.",
+          "ar": "تشير إجاباتكِ إلى فرصة لتجربة حد واحد واضح وهادئ."
+        }
+      }
+    },
+    {
+      "code": "example",
+      "title": {
+        "en": "Teach by example",
+        "ar": "أُربّي بالقدوة"
+      },
+      "descriptions": {
+        "strong": {
+          "en": "You reported modeling responsibility and repair.",
+          "ar": "ذكرتِ مواقف قدّمتِ فيها مثالًا للمسؤولية والإصلاح."
+        },
+        "mixed": {
+          "en": "Your answers show some opportunities to model repair.",
+          "ar": "أظهرت إجاباتكِ بعض فرص تقديم مثال للإصلاح."
+        },
+        "growth": {
+          "en": "Your answers suggest modeling a small repair yourself.",
+          "ar": "تشير إجاباتكِ إلى فرصة لتقديم مثال على إصلاح خطأ صغير."
+        }
+      }
+    }
+  ],
+  "situations": [
+    {
+      "id": "s01",
+      "area": "regulation",
+      "text": {
+        "en": "You are late and your child has still not put on their shoes. What did you usually do?",
+        "ar": "تأخرتما وطفلكِ لم يرتدِ حذاءه بعد. ماذا فعلتِ غالبًا؟"
+      },
+      "options": [
+        {
+          "id": "a",
+          "text": {
+            "en": "I repeated the request, sounding tense.",
+            "ar": "كررتُ الطلب بنبرة متوترة."
+          },
+          "weight": 1
+        },
+        {
+          "id": "b",
+          "text": {
+            "en": "I paused, then gave one clear next step.",
+            "ar": "توقفتُ لحظة ثم طلبتُ خطوة واحدة واضحة."
+          },
+          "weight": 2
+        },
+        {
+          "id": "c",
+          "text": {
+            "en": "I helped with the shoes while still grumbling.",
+            "ar": "ساعدتُه في ارتداء الحذاء وأنا أتذمر."
+          },
+          "weight": 1
+        },
+        {
+          "id": "d",
+          "text": {
+            "en": "I raised my voice and hurried them.",
+            "ar": "رفعتُ صوتي واستعجلتُه."
+          },
+          "weight": 0
+        }
+      ]
+    },
+    {
+      "id": "s02",
+      "area": "regulation",
+      "text": {
+        "en": "Your child spills a drink while you are busy. How did you respond?",
+        "ar": "سكب طفلكِ مشروبًا وأنتِ مشغولة. كيف استجبتِ؟"
+      },
+      "options": [
+        {
+          "id": "a",
+          "text": {
+            "en": "I blamed them for making more work.",
+            "ar": "لمتُه لأنه زاد عملي."
+          },
+          "weight": 0
+        },
+        {
+          "id": "b",
+          "text": {
+            "en": "I sighed and cleaned it up myself.",
+            "ar": "تنهدتُ ونظفتُ المكان بنفسي."
+          },
+          "weight": 1
+        },
+        {
+          "id": "c",
+          "text": {
+            "en": "I took a breath and asked them to help clean.",
+            "ar": "أخذتُ نفسًا وطلبتُ مساعدته في التنظيف."
+          },
+          "weight": 2
+        },
+        {
+          "id": "d",
+          "text": {
+            "en": "I spoke sharply, then lowered my voice.",
+            "ar": "تكلمتُ بحدة ثم خفضتُ صوتي."
+          },
+          "weight": 1
+        }
+      ]
+    },
+    {
+      "id": "s03",
+      "area": "regulation",
+      "text": {
+        "en": "Your child keeps interrupting an important conversation. What happened next?",
+        "ar": "كرر طفلكِ مقاطعة حديث مهم. ماذا حدث بعدها؟"
+      },
+      "options": [
+        {
+          "id": "a",
+          "text": {
+            "en": "I cut the conversation short, feeling annoyed.",
+            "ar": "أنهيتُ الحديث وأنا منزعجة."
+          },
+          "weight": 1
+        },
+        {
+          "id": "b",
+          "text": {
+            "en": "I snapped at them to stop.",
+            "ar": "طلبتُ منه التوقف بانفعال."
+          },
+          "weight": 0
+        },
+        {
+          "id": "c",
+          "text": {
+            "en": "I tried ignoring it while getting more tense.",
+            "ar": "حاولتُ التجاهل مع ازدياد توتري."
+          },
+          "weight": 1
+        },
+        {
+          "id": "d",
+          "text": {
+            "en": "I paused and calmly explained when I could listen.",
+            "ar": "توقفتُ ووضحتُ بهدوء متى يمكنني الاستماع."
+          },
+          "weight": 2
+        }
+      ]
+    },
+    {
+      "id": "s04",
+      "area": "connection",
+      "text": {
+        "en": "Your child comes home upset about a disagreement with a friend. What did you usually do?",
+        "ar": "عاد طفلكِ منزعجًا من خلاف مع صديق. ماذا فعلتِ غالبًا؟"
+      },
+      "options": [
+        {
+          "id": "a",
+          "text": {
+            "en": "I listened and asked what was hardest for them.",
+            "ar": "استمعتُ وسألتُ عما كان أصعب عليه."
+          },
+          "weight": 2
+        },
+        {
+          "id": "b",
+          "text": {
+            "en": "I listened briefly while finishing another task.",
+            "ar": "استمعتُ قليلًا وأنا أكمل عملًا آخر."
+          },
+          "weight": 1
+        },
+        {
+          "id": "c",
+          "text": {
+            "en": "I said it was not worth getting upset about.",
+            "ar": "قلتُ إن الأمر لا يستحق الانزعاج."
+          },
+          "weight": 0
+        },
+        {
+          "id": "d",
+          "text": {
+            "en": "I offered a solution before hearing the whole story.",
+            "ar": "قدمتُ حلًا قبل سماع القصة كاملة."
+          },
+          "weight": 1
+        }
+      ]
+    },
+    {
+      "id": "s05",
+      "area": "connection",
+      "text": {
+        "en": "Your child wants to show you something while you are busy. How did you respond?",
+        "ar": "أراد طفلكِ أن يريكِ شيئًا وأنتِ مشغولة. كيف استجبتِ؟"
+      },
+      "options": [
+        {
+          "id": "a",
+          "text": {
+            "en": "I said later, but forgot to return.",
+            "ar": "قلتُ لاحقًا ثم نسيتُ العودة إليه."
+          },
+          "weight": 1
+        },
+        {
+          "id": "b",
+          "text": {
+            "en": "I agreed a short time and returned to look together.",
+            "ar": "حددتُ وقتًا قريبًا وعدتُ لننظر معًا."
+          },
+          "weight": 2
+        },
+        {
+          "id": "c",
+          "text": {
+            "en": "I glanced at it while continuing my task.",
+            "ar": "نظرتُ سريعًا وأنا أواصل عملي."
+          },
+          "weight": 1
+        },
+        {
+          "id": "d",
+          "text": {
+            "en": "I told them to leave me alone.",
+            "ar": "طلبتُ منه أن يتركني وحدي."
+          },
+          "weight": 0
+        }
+      ]
+    },
+    {
+      "id": "s06",
+      "area": "connection",
+      "text": {
+        "en": "Your child says a school task feels too hard. What did you usually say?",
+        "ar": "قال طفلكِ إن مهمة مدرسية صعبة جدًا. ماذا قلتِ غالبًا؟"
+      },
+      "options": [
+        {
+          "id": "a",
+          "text": {
+            "en": "It is easy; stop complaining.",
+            "ar": "إنها سهلة، توقف عن الشكوى."
+          },
+          "weight": 0
+        },
+        {
+          "id": "b",
+          "text": {
+            "en": "Just finish it and you will feel better.",
+            "ar": "أنهها وستشعر بتحسن."
+          },
+          "weight": 1
+        },
+        {
+          "id": "c",
+          "text": {
+            "en": "Which part feels hard? Let us look at it.",
+            "ar": "أي جزء يبدو صعبًا؟ لننظر إليه."
+          },
+          "weight": 2
+        },
+        {
+          "id": "d",
+          "text": {
+            "en": "I will show you quickly, then you do it.",
+            "ar": "سأريك بسرعة ثم تكمل بنفسك."
+          },
+          "weight": 1
+        }
+      ]
+    },
+    {
+      "id": "s07",
+      "area": "boundaries",
+      "text": {
+        "en": "Screen time ends and your child asks for more. What usually happened?",
+        "ar": "انتهى وقت الشاشة وطلب طفلكِ المزيد. ماذا حدث غالبًا؟"
+      },
+      "options": [
+        {
+          "id": "a",
+          "text": {
+            "en": "I repeated the limit with growing irritation.",
+            "ar": "كررتُ الحد بانزعاج متزايد."
+          },
+          "weight": 1
+        },
+        {
+          "id": "b",
+          "text": {
+            "en": "I threatened a much bigger punishment.",
+            "ar": "هددتُ بعقوبة أكبر بكثير."
+          },
+          "weight": 0
+        },
+        {
+          "id": "c",
+          "text": {
+            "en": "I extended the time to avoid an argument.",
+            "ar": "مددتُ الوقت لتجنب الجدال."
+          },
+          "weight": 1
+        },
+        {
+          "id": "d",
+          "text": {
+            "en": "I acknowledged the disappointment and kept the agreed limit.",
+            "ar": "تفهمتُ انزعاجه وتمسكتُ بالحد المتفق عليه."
+          },
+          "weight": 2
+        }
+      ]
+    },
+    {
+      "id": "s08",
+      "area": "boundaries",
+      "text": {
+        "en": "Your child leaves a shared space messy after playing. How did you handle it?",
+        "ar": "ترك طفلكِ مكانًا مشتركًا غير مرتب بعد اللعب. كيف تعاملتِ؟"
+      },
+      "options": [
+        {
+          "id": "a",
+          "text": {
+            "en": "I named what needed tidying and helped them start.",
+            "ar": "حددتُ ما يحتاج ترتيبًا وساعدتُه على البدء."
+          },
+          "weight": 2
+        },
+        {
+          "id": "b",
+          "text": {
+            "en": "I asked them to tidy without agreeing when.",
+            "ar": "طلبتُ الترتيب دون تحديد وقت."
+          },
+          "weight": 1
+        },
+        {
+          "id": "c",
+          "text": {
+            "en": "I called them careless or lazy.",
+            "ar": "وصفتُه بالإهمال أو الكسل."
+          },
+          "weight": 0
+        },
+        {
+          "id": "d",
+          "text": {
+            "en": "I tidied it myself after several reminders.",
+            "ar": "رتبتُه بنفسي بعد عدة تذكيرات."
+          },
+          "weight": 1
+        }
+      ]
+    },
+    {
+      "id": "s09",
+      "area": "boundaries",
+      "text": {
+        "en": "Your child uses hurtful words during a disagreement. What did you do?",
+        "ar": "استخدم طفلكِ كلمات جارحة أثناء خلاف. ماذا فعلتِ؟"
+      },
+      "options": [
+        {
+          "id": "a",
+          "text": {
+            "en": "I let it pass to end the disagreement.",
+            "ar": "تجاوزتُ الأمر لإنهاء الخلاف."
+          },
+          "weight": 1
+        },
+        {
+          "id": "b",
+          "text": {
+            "en": "I stopped the words and suggested a respectful way to disagree.",
+            "ar": "أوقفتُ الكلمات واقترحتُ طريقة محترمة للاختلاف."
+          },
+          "weight": 2
+        },
+        {
+          "id": "c",
+          "text": {
+            "en": "I demanded an apology immediately.",
+            "ar": "طلبتُ اعتذارًا فورًا."
+          },
+          "weight": 1
+        },
+        {
+          "id": "d",
+          "text": {
+            "en": "I answered with hurtful words too.",
+            "ar": "رددتُ بكلمات جارحة أيضًا."
+          },
+          "weight": 0
+        }
+      ]
+    },
+    {
+      "id": "s10",
+      "area": "example",
+      "text": {
+        "en": "You spoke unfairly to your child. What happened afterward?",
+        "ar": "تحدثتِ مع طفلكِ بطريقة غير منصفة. ماذا حدث بعدها؟"
+      },
+      "options": [
+        {
+          "id": "a",
+          "text": {
+            "en": "I carried on without acknowledging it.",
+            "ar": "واصلتُ يومي دون الإشارة إلى ذلك."
+          },
+          "weight": 0
+        },
+        {
+          "id": "b",
+          "text": {
+            "en": "I was extra kind but did not discuss it.",
+            "ar": "عاملتُه بلطف إضافي دون الحديث عما حدث."
+          },
+          "weight": 1
+        },
+        {
+          "id": "c",
+          "text": {
+            "en": "I named my mistake, apologized and tried again.",
+            "ar": "سميتُ خطئي واعتذرتُ وحاولتُ من جديد."
+          },
+          "weight": 2
+        },
+        {
+          "id": "d",
+          "text": {
+            "en": "I apologized but also blamed their behavior.",
+            "ar": "اعتذرتُ لكنني لمتُ سلوكه أيضًا."
+          },
+          "weight": 1
+        }
+      ]
+    },
+    {
+      "id": "s11",
+      "area": "example",
+      "text": {
+        "en": "You forgot a small promise to your child. How did you respond?",
+        "ar": "نسيتِ وعدًا صغيرًا لطفلكِ. كيف استجبتِ؟"
+      },
+      "options": [
+        {
+          "id": "a",
+          "text": {
+            "en": "I explained that I was too busy.",
+            "ar": "شرحتُ له أنني كنتُ مشغولة جدًا."
+          },
+          "weight": 1
+        },
+        {
+          "id": "b",
+          "text": {
+            "en": "I denied making the promise.",
+            "ar": "أنكرتُ أنني وعدتُه."
+          },
+          "weight": 0
+        },
+        {
+          "id": "c",
+          "text": {
+            "en": "I made another promise without a clear plan.",
+            "ar": "وعدتُه مجددًا دون خطة واضحة."
+          },
+          "weight": 1
+        },
+        {
+          "id": "d",
+          "text": {
+            "en": "I acknowledged it and agreed a realistic repair.",
+            "ar": "اعترفتُ بذلك واتفقنا على تعويض ممكن."
+          },
+          "weight": 2
+        }
+      ]
+    },
+    {
+      "id": "s12",
+      "area": "example",
+      "text": {
+        "en": "Your child is learning a manageable household task. What did you usually do?",
+        "ar": "يتعلم طفلكِ مهمة منزلية تناسب قدرته. ماذا فعلتِ غالبًا؟"
+      },
+      "options": [
+        {
+          "id": "a",
+          "text": {
+            "en": "I demonstrated one step and let them try.",
+            "ar": "قدمتُ مثالًا لخطوة واحدة وتركته يحاول."
+          },
+          "weight": 2
+        },
+        {
+          "id": "b",
+          "text": {
+            "en": "I gave several instructions from nearby.",
+            "ar": "أعطيتُ تعليمات متعددة من مكاني."
+          },
+          "weight": 1
+        },
+        {
+          "id": "c",
+          "text": {
+            "en": "I took over and criticized their attempt.",
+            "ar": "توليتُ المهمة وانتقدتُ محاولته."
+          },
+          "weight": 0
+        },
+        {
+          "id": "d",
+          "text": {
+            "en": "I finished it because it was taking too long.",
+            "ar": "أكملتُها لأنها استغرقت وقتًا طويلًا."
+          },
+          "weight": 1
+        }
+      ]
+    }
+  ],
+  "review_anchors": [
+    "s01",
+    "s02",
+    "s04",
+    "s05",
+    "s07",
+    "s08",
+    "s10",
+    "s11"
+  ],
+  "practices": [
+    {
+      "day": 1,
+      "area": "regulation",
+      "title": {
+        "en": "Space before responding",
+        "ar": "مساحة قبل الرد"
+      },
+      "value": {
+        "en": "Patience",
+        "ar": "الصبر"
+      },
+      "action": {
+        "en": "In one suitable moment today, pause before replying and notice your tone.",
+        "ar": "في موقف مناسب اليوم، توقفي لحظة قبل الرد ولاحظي نبرة صوتكِ."
+      },
+      "words": {
+        "en": "I need a moment to settle, then we can talk.",
+        "ar": "أحتاج لحظة لأهدأ، ثم نتحدث."
+      },
+      "smaller": {
+        "en": "Just notice once when your voice is about to rise.",
+        "ar": "لاحظي مرة واحدة أنكِ على وشك رفع صوتكِ."
+      }
+    },
+    {
+      "day": 2,
+      "area": "connection",
+      "title": {
+        "en": "A little room to listen",
+        "ar": "مساحة صغيرة للاستماع"
+      },
+      "value": {
+        "en": "Mercy",
+        "ar": "الرحمة"
+      },
+      "action": {
+        "en": "Give your child a short moment of attention. Let them finish one thought before offering advice.",
+        "ar": "امنحي طفلكِ لحظة قصيرة من الاهتمام. اتركيه يكمل فكرة واحدة قبل تقديم النصيحة."
+      },
+      "words": {
+        "en": "Tell me more about that part.",
+        "ar": "احكِ لي أكثر عن هذا الجزء."
+      },
+      "smaller": {
+        "en": "Put down what is in your hands for one sentence.",
+        "ar": "اتركي ما في يدكِ للاستماع إلى جملة واحدة."
+      }
+    },
+    {
+      "day": 3,
+      "area": "boundaries",
+      "title": {
+        "en": "One kind, clear limit",
+        "ar": "حد واحد برحمة ووضوح"
+      },
+      "value": {
+        "en": "Responsibility",
+        "ar": "المسؤولية"
+      },
+      "action": {
+        "en": "Choose one familiar limit. State what needs to happen without labeling your child. Model the calm words yourself.",
+        "ar": "اختاري حدًا مألوفًا واحدًا. وضحي المطلوب دون وصف طفلكِ بصفة سلبية، وقدمي بنفسكِ مثالًا للكلام الهادئ."
+      },
+      "words": {
+        "en": "You want more time. Our agreed time is over; let us put it away.",
+        "ar": "تريد وقتًا إضافيًا. انتهى وقتنا المتفق عليه؛ لنضعه جانبًا."
+      },
+      "smaller": {
+        "en": "Rehearse one calm sentence privately first.",
+        "ar": "جربي جملة هادئة واحدة بينكِ وبين نفسكِ أولًا."
+      }
+    }
+  ]
+}

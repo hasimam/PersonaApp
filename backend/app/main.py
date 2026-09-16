@@ -9,7 +9,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from fastapi.openapi.docs import get_redoc_html, get_swagger_ui_html
 
 from app.core.config import settings
-from app.api import admin, journey, results, shares, test
+from app.api import admin, journey, results, shares, test, mother
 
 # Docs configuration
 DOCS_ENABLED = settings.ENVIRONMENT != "production"
@@ -48,6 +48,7 @@ app.add_middleware(
 )
 
 # Include routers
+app.include_router(mother.router, prefix=f'{settings.API_V1_PREFIX}/mothers-mirror', tags=['mothers-mirror'])
 app.include_router(
     test.router,
     prefix=f"{settings.API_V1_PREFIX}/test",
@@ -110,3 +111,8 @@ def root():
 def health_check():
     """Health check for monitoring."""
     return {"status": "healthy"}
+
+# Added last so unauthenticated requests cannot reach any underlying route.
+if settings.PREVIEW_MODE:
+    from app.core.preview_access import PreviewAccessMiddleware
+    app.add_middleware(PreviewAccessMiddleware)

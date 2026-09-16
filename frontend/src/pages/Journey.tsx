@@ -588,6 +588,12 @@ const Journey: React.FC = () => {
               </p>
             </div>
 
+            <a href="/mothers-mirror" className="mt-8 block rounded-soft border border-accent/60 bg-white/80 p-6 text-start shadow-soft-card hover:border-accent">
+              <h2 className="text-xl font-semibold text-ink">{language === 'ar' ? 'مرآة الأم' : "Mother’s Miraat"}</h2>
+              <p className="mt-2 text-muted">{language === 'ar' ? 'افهمي استجابتكِ لطفلكِ، واختاري خطوة صغيرة للنمو. للأعمار ٦–١٢ · معاينة بثلاث ممارسات.' : 'Understand your responses to your child and choose a small step for growth. Ages 6–12 · Three-practice preview.'}</p>
+              <span className="mt-3 inline-block text-primary">{localStorage.getItem('miraati_mother_journey') ? (language === 'ar' ? 'واصلي مرآتكِ' : 'Continue your mirror') : (language === 'ar' ? 'ابدئي مرآتكِ' : 'Start your mirror')}</span>
+            </a>
+
             <div className="mt-8 grid grid-cols-1 gap-5 md:grid-cols-2 md:gap-6">
               {(['quick', 'deep'] as const).map((type) => {
                 const isSelected = journeyType === type;
