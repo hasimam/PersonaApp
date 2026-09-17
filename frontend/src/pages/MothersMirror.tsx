@@ -133,7 +133,7 @@ export default function MothersMirror() {
     <div className="absolute top-4 right-4 z-20 sm:right-8 sm:top-6">
       <LanguageSwitcher className="border border-sand/70 shadow-soft-card backdrop-blur-sm" />
     </div>
-    <div className="relative mx-auto max-w-3xl px-4 pb-8 pt-24 sm:px-6 md:pt-28 lg:pt-32">
+    <div className="relative z-10 mx-auto w-full max-w-5xl px-4 pb-16 pt-24 sm:px-6 sm:pt-24 md:pt-28 lg:px-8 lg:pt-32">
       <nav className="mb-8"><Link to="/" className="text-primary underline">{txt('Miraati home', 'الرئيسية — مرآتي')}</Link></nav>
       <p className="mb-3 text-sm text-primary">{txt('Three-practice preview · Draft content', 'معاينة بثلاث ممارسات · محتوى مسودة')}</p>
       <h1 className="mb-4 text-3xl font-semibold">{txt("Mother’s Miraat", 'مرآة الأم')}</h1>
