@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import api from '../services/api';
 import { useLanguage } from '../i18n/LanguageContext';
 import LanguageSwitcher from '../components/LanguageSwitcher';
+import ConfirmationModal from '../components/ConfirmationModal';
 
 type Copy = { en: string; ar: string };
 type Area = { code: string; title: Copy; descriptions: Record<string, Copy> };
@@ -51,13 +52,13 @@ export default function MothersMirror() {
     if (pending && next.status === 'baseline') {
       const change = JSON.parse(pending);
       if (change.id === owner.id) {
-        next = (await api.put(`${root}/${owner.id}/assessments/baseline`, change.payload, { headers: headers(owner) })).data;
-        localStorage.removeItem(PENDING);
+        // Draft answers stay local, just like the quick and long questionnaires.
+        next = { ...next, answers: change.payload.answers };
       }
     }
     accept(next);
     const missing = next.content.situations.findIndex(s => !(s.id in next.answers));
-    setIndex(missing === -1 ? 11 : missing);
+    setIndex(missing === -1 ? next.content.situations.length - 1 : missing);
   }
   useEffect(() => {
     async function init() {
@@ -92,35 +93,47 @@ export default function MothersMirror() {
       accept(response.data); setIndex(0);
     });
   }
-  async function saveAnswer(value: string | null) {
+  function saveAnswer(value: string | null) {
+    if (!state || !locator) return;
+    const answers = { ...state.answers, [state.content.situations[index].id]: value };
+    try {
+      localStorage.setItem(PENDING, JSON.stringify({ id: locator.id, payload: { answers, submit: false } }));
+      setState({ ...state, answers });
+      setStorageError(false);
+    } catch { setStorageError(true); }
+  }
+  async function submitAssessment() {
     if (!state || !locator) return;
     await run(async () => {
-      const payload = { answers: { ...state.answers, [state.content.situations[index].id]: value }, submit: false };
-      localStorage.setItem(PENDING, JSON.stringify({ id: locator.id, payload }));
-      const response = await api.put(`${root}/${locator.id}/assessments/baseline`, payload, { headers: headers(locator) });
-      localStorage.removeItem(PENDING); accept(response.data);
+      const response = await api.put(`${root}/${locator.id}/assessments/baseline`,
+        { answers: state.answers, submit: true }, { headers: headers(locator) });
+      accept(response.data);
+      localStorage.removeItem(PENDING);
     });
   }
   async function put(path: string, payload: unknown) {
     if (!locator) return;
     await run(async () => accept((await api.put(`${root}/${locator.id}/${path}`, payload, { headers: headers(locator) })).data));
   }
-  const card = 'rounded-soft border border-sand/80 bg-white/80 p-6 shadow-soft-card';
-  const choice = (selected: boolean) => `w-full rounded-2xl border p-4 text-start transition focus-visible:ring-2 focus-visible:ring-accent ${selected ? 'border-accent bg-white shadow-soft-card' : 'border-sand bg-white/60 hover:border-accent/60'}`;
+  const card = 'rounded-soft border border-accent/80 bg-white/70 p-6 shadow-soft-card backdrop-blur-sm';
+  const choice = (selected: boolean) => `w-full rounded-soft border px-5 py-4 text-start text-sm font-medium leading-relaxed text-ink shadow-soft-card backdrop-blur-sm transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-cream sm:text-base ${selected ? 'border-accent/80 bg-white shadow-soft-float' : 'border-sand/80 bg-white/60 hover:border-accent/60 hover:bg-white/75'}`;
   const q = state?.content.situations[index];
   const result = state?.result;
   const areaTitle = (code: string) => copy(state!.content.areas.find(a => a.code === code)!.title);
   const outcomes: [Outcome, string, string][] = [['easy', 'Tried it easily', 'جرّبتها بسهولة'], ['difficult', 'Tried it with difficulty', 'جرّبتها بصعوبة'], ['not_yet', 'Not tried yet', 'لم أجرّبها بعد'], ['no_opportunity', 'No opportunity', 'لم تتح الفرصة']];
 
-  return <main className="min-h-screen bg-cream text-ink" dir={language === 'ar' ? 'rtl' : 'ltr'}>
-    <div className="mx-auto max-w-3xl px-4 py-8 sm:px-6">
+  return <main className="relative min-h-screen overflow-hidden bg-cream text-ink" dir={language === 'ar' ? 'rtl' : 'ltr'}>
+    <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top,_rgba(197,168,128,0.18)_0%,_rgba(246,241,234,0)_60%)]" />
+    <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_bottom,_rgba(58,80,107,0.08)_0%,_rgba(246,241,234,0)_70%)]" />
+    <div className="pointer-events-none absolute inset-0 opacity-[0.35] [background-image:radial-gradient(rgba(58,80,107,0.06)_1px,transparent_1px)] [background-size:28px_28px]" />
+    <div className="relative mx-auto max-w-3xl px-4 py-8 sm:px-6">
       <nav className="mb-8 flex items-center justify-between"><Link to="/" className="text-primary underline">{txt('Miraati home', 'الرئيسية — مرآتي')}</Link><LanguageSwitcher /></nav>
       <p className="mb-3 text-sm text-primary">{txt('Three-practice preview · Draft content', 'معاينة بثلاث ممارسات · محتوى مسودة')}</p>
       <h1 className="mb-4 text-3xl font-semibold">{txt("Mother’s Miraat", 'مرآة الأم')}</h1>
       <p className="mb-6 text-sm leading-relaxed text-muted">{txt('For mothers of children aged 6–12. These reflections describe your answers, not a diagnosis or a parenting grade. Draft content has not been expert reviewed or scientifically validated.', 'لأمهات الأطفال من ٦ إلى ١٢ سنة. تصف هذه المرآة إجاباتكِ، وليست تشخيصًا أو تقييمًا لأمومتكِ. المحتوى مسودة لم يخضع لمراجعة خبراء أو تحقق علمي.')}</p>
       {error && <div role="alert" className={`${card} mb-5`}><p>{txt('We could not confirm the save or load. Your journey has not been reset. Retry before continuing.', 'تعذر تأكيد الحفظ أو التحميل. لم نعد ضبط رحلتكِ. أعيدي المحاولة قبل المتابعة.')}</p><button disabled={busy} className="pill-button mt-3" onClick={() => locator ? void run(() => load(locator)) : void run(async () => { setError(false); })}>{txt('Retry saved journey', 'إعادة محاولة تحميل الرحلة')}</button></div>}
       {storageError && <p role="alert">{txt('Enable browser storage to save and resume this preview.', 'فعّلي تخزين المتصفح لحفظ هذه المعاينة ومتابعتها.')}</p>}
-      {busy && <p role="status" className="mb-4">{txt('Saving / loading…', 'جارٍ الحفظ / التحميل…')}</p>}
+      <p role="status" className="mb-4 min-h-[1.5rem] text-sm text-muted">{busy ? txt('Saving / loading…', 'جارٍ الحفظ / التحميل…') : ''}</p>
       <fieldset disabled={busy || error} className="min-w-0 space-y-6 disabled:opacity-70">
       {!state && !locator && <section className={card}>
         <h2 className="text-xl font-semibold">{txt('A moment to notice your responses', 'لحظة لفهم استجابتكِ')}</h2>
@@ -128,17 +141,23 @@ export default function MothersMirror() {
         <button className="pill-button pill-button-primary" onClick={start}>{txt('Start my mirror', 'ابدئي مرآتكِ')}</button>
       </section>}
       {state?.status === 'baseline' && q && <section className={card}>
-        <label htmlFor="mother-progress" className="text-sm">{txt(`Situation ${index + 1} of 12`, `الموقف ${index + 1} من 12`)}</label>
-        <progress id="mother-progress" value={Object.keys(state.answers).length} max={12} className="my-3 h-2 w-full accent-[#B39155]" />
+        <div className="mb-6">
+          <div className="mb-3 flex justify-between text-sm text-muted">
+            <span>{txt('Situation', 'الموقف')}</span><span>{index + 1} / {state.content.situations.length}</span>
+          </div>
+          <div role="progressbar" aria-label={txt('Situation progress', 'التقدم في المواقف')} aria-valuenow={index + 1} aria-valuemin={0} aria-valuemax={state.content.situations.length} className="h-2 w-full overflow-hidden rounded-full bg-sand/60">
+            <div className="h-2 rounded-full bg-primary transition-all" style={{ width: `${((index + 1) / state.content.situations.length) * 100}%` }} />
+          </div>
+        </div>
         <p className="mb-4 text-sm text-muted">{txt('Think about the past seven days with the same child.', 'فكري في الأيام السبعة الماضية مع الطفل نفسه.')}</p>
-        <h2 className="mb-6 text-xl font-medium leading-relaxed">{copy(q.text)}</h2>
+        <h2 className="mb-6 text-center text-2xl font-semibold leading-relaxed text-ink">{copy(q.text)}</h2>
         <div className="space-y-3">{q.options.map(o => <button key={o.id} className={choice(state.answers[q.id] === o.id)} aria-pressed={state.answers[q.id] === o.id} onClick={() => saveAnswer(o.id)}>{copy(o.text)}</button>)}
           <button className={choice(q.id in state.answers && state.answers[q.id] === null)} aria-pressed={q.id in state.answers && state.answers[q.id] === null} onClick={() => saveAnswer(null)}>{txt('I did not encounter a similar situation', 'لم أمرّ بموقف مشابه')}</button>
         </div>
-        <div className="mt-6 flex flex-wrap justify-between gap-3"><button className="pill-button" disabled={index === 0} onClick={() => setIndex(index - 1)}>{txt('Back', 'السابق')}</button>
-          {index < 11 ? <button className="pill-button pill-button-primary" disabled={!(q.id in state.answers)} onClick={() => setIndex(index + 1)}>{txt('Next', 'التالي')}</button> : <button className="pill-button pill-button-primary" disabled={Object.keys(state.answers).length !== 12} onClick={() => put('assessments/baseline', { answers: state.answers, submit: true })}>{txt('See my mirror', 'شاهدي مرآتكِ')}</button>}
+        <div className="mt-6 flex flex-wrap justify-between gap-3"><button className="pill-button pill-button-secondary" disabled={index === 0} onClick={() => setIndex(index - 1)}>{txt('Back', 'السابق')}</button>
+          {index < state.content.situations.length - 1 ? <button className="pill-button pill-button-primary" disabled={!(q.id in state.answers)} onClick={() => setIndex(index + 1)}>{txt('Next', 'التالي')}</button> : <button className="pill-button pill-button-primary" disabled={Object.keys(state.answers).length !== state.content.situations.length} onClick={submitAssessment}>{txt('See my mirror', 'شاهدي مرآتكِ')}</button>}
         </div>
-        <p className="mt-3 text-sm text-muted" aria-live="polite">{q.id in state.answers ? txt('Answer saved. You can change it before submitting.', 'تم حفظ الإجابة. يمكنكِ تغييرها قبل الإرسال.') : ''}</p>
+        <p className="mt-3 min-h-[2.5rem] text-sm text-muted" aria-live="polite">{q.id in state.answers ? txt('Saved in this browser. You can change it before submitting.', 'تم الحفظ في هذا المتصفح. يمكنكِ تغيير الإجابة قبل الإرسال.') : ''}</p>
       </section>}
       {state?.status === 'focus' && result && <>
         <section className={card}><h2 className="mb-3 text-2xl font-semibold">{txt('Your mirror now', 'مرآتكِ الآن')}</h2>
@@ -183,7 +202,26 @@ export default function MothersMirror() {
       {state && state.checkins.length > 0 && <details className={card}><summary>{txt('Saved check-ins', 'المتابعات المحفوظة')}</summary><ul className="mt-3 space-y-2">{state.checkins.map(c => <li key={c.day}>{txt(`Practice ${c.day}`, `الممارسة ${c.day}`)}: {txt(outcomes.find(o => o[0] === c.outcome)![1], outcomes.find(o => o[0] === c.outcome)![2])}</li>)}</ul></details>}
       </fieldset>
       <p className="mt-8 text-sm leading-relaxed text-muted">{txt('Save and resume works in this browser. Clearing browser storage loses automatic access. There is no cross-device recovery in this preview.', 'يمكنكِ الحفظ والمتابعة في هذا المتصفح. مسح بيانات المتصفح يفقد الوصول التلقائي. لا تتوفر استعادة عبر الأجهزة في هذه المعاينة.')}</p>
-      {state && <div className="mt-5 text-sm"><button disabled={busy} className="underline" onClick={() => setConfirmDelete(!confirmDelete)}>{txt('Delete my journey', 'احذفي رحلتي')}</button>{confirmDelete && <div className="mt-3"><p>{txt('This permanently removes this journey and its answers and check-ins.', 'سيحذف هذا الرحلة وإجاباتها ومتابعاتها نهائيًا.')}</p><button disabled={busy} className="pill-button mt-2" onClick={() => run(async () => { await api.delete(`${root}/${locator!.id}`, { headers: headers(locator!) }); localStorage.removeItem(KEY); localStorage.removeItem(PENDING); setState(null); setLocator(null); setConfirmDelete(false); })}>{txt('Confirm deletion', 'تأكيد الحذف')}</button></div>}</div>}
+      {state && <div className="mt-5 text-sm"><button disabled={busy} className="underline" onClick={() => setConfirmDelete(true)}>{txt('Delete my journey', 'احذفي رحلتي')}</button></div>}
+      <ConfirmationModal
+        isOpen={confirmDelete}
+        title={txt('Delete my journey?', 'حذف رحلتي؟')}
+        message={txt('This permanently removes this journey and its answers and check-ins.', 'سيحذف هذا الرحلة وإجاباتها ومتابعاتها نهائيًا.')}
+        confirmLabel={txt('Confirm deletion', 'تأكيد الحذف')}
+        cancelLabel={txt('Keep my journey', 'احتفظي برحلتي')}
+        onCancel={() => setConfirmDelete(false)}
+        onConfirm={() => {
+          if (busy || !locator) return;
+          setConfirmDelete(false);
+          void run(async () => {
+            await api.delete(`${root}/${locator.id}`, { headers: headers(locator) });
+            localStorage.removeItem(KEY);
+            localStorage.removeItem(PENDING);
+            setState(null);
+            setLocator(null);
+          });
+        }}
+      />
       {state && <p className="mt-4 text-xs text-muted">{state.content.version}</p>}
     </div>
   </main>;

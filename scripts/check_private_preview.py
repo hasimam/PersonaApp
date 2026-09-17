@@ -14,7 +14,7 @@ jar=http.cookiejar.CookieJar()
 client=urllib.request.build_opener(urllib.request.HTTPCookieProcessor(jar))
 
 def call(path, payload=None, method='GET', owner=None, raw=None, origin=None):
-    headers={'Content-Type':'application/json'}
+    headers={'Content-Type':'application/json', 'Origin':base}
     if owner: headers['X-Mother-Owner-Token']=owner
     if origin: headers['Origin']=origin
     data=json.dumps(payload).encode() if payload is not None else None
@@ -31,6 +31,8 @@ assert status==401,(status,body[:150])
 status,body,headers=call('/mothers-mirror')
 assert 'Private preview' in body and 'password' in body
 assert 'noindex' in headers.get('X-Robots-Tag','')
+assert headers.get('Referrer-Policy') == 'same-origin'
+assert call('/preview/login',method='POST',raw='password=incorrect',origin='null')[0]==403
 assert call('/preview/login',method='POST',raw='password=incorrect')[0]==401
 assert call('/preview/login',method='POST',raw=urllib.parse.urlencode({'password':password}),origin='https://untrusted.example')[0]==403
 status,body,_=call('/preview/login',method='POST',raw=urllib.parse.urlencode({'password':password}))

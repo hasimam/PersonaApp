@@ -75,7 +75,9 @@ class PreviewAccessMiddleware(BaseHTTPMiddleware):
             response = await call_next(request)
         response.headers['X-Robots-Tag'] = 'noindex, nofollow, noarchive'
         response.headers['Cache-Control'] = 'no-store'
-        response.headers['Referrer-Policy'] = 'no-referrer'
+        # Preserve the Origin on same-site HTML form POSTs (login/logout).
+        # no-referrer turns it into null in browsers and trips the CSRF check.
+        response.headers['Referrer-Policy'] = 'same-origin'
         response.headers['X-Content-Type-Options'] = 'nosniff'
         response.headers['X-Frame-Options'] = 'DENY'
         return response
