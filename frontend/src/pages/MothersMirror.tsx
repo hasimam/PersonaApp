@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import api from '../services/api';
 import { useLanguage } from '../i18n/LanguageContext';
 import LanguageSwitcher from '../components/LanguageSwitcher';
+import AboutCreatorModal from '../components/AboutCreatorModal';
 import ConfirmationModal from '../components/ConfirmationModal';
 
 type Copy = { en: string; ar: string };
@@ -126,8 +127,14 @@ export default function MothersMirror() {
     <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top,_rgba(197,168,128,0.18)_0%,_rgba(246,241,234,0)_60%)]" />
     <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_bottom,_rgba(58,80,107,0.08)_0%,_rgba(246,241,234,0)_70%)]" />
     <div className="pointer-events-none absolute inset-0 opacity-[0.35] [background-image:radial-gradient(rgba(58,80,107,0.06)_1px,transparent_1px)] [background-size:28px_28px]" />
-    <div className="relative mx-auto max-w-3xl px-4 py-8 sm:px-6">
-      <nav className="mb-8 flex items-center justify-between"><Link to="/" className="text-primary underline">{txt('Miraati home', 'الرئيسية — مرآتي')}</Link><LanguageSwitcher /></nav>
+    <div className="absolute left-4 top-4 z-20 sm:left-8 sm:top-6">
+      <AboutCreatorModal placement="header" />
+    </div>
+    <div className="absolute top-4 right-4 z-20 sm:right-8 sm:top-6">
+      <LanguageSwitcher className="border border-sand/70 shadow-soft-card backdrop-blur-sm" />
+    </div>
+    <div className="relative mx-auto max-w-3xl px-4 pb-8 pt-24 sm:px-6 md:pt-28 lg:pt-32">
+      <nav className="mb-8"><Link to="/" className="text-primary underline">{txt('Miraati home', 'الرئيسية — مرآتي')}</Link></nav>
       <p className="mb-3 text-sm text-primary">{txt('Three-practice preview · Draft content', 'معاينة بثلاث ممارسات · محتوى مسودة')}</p>
       <h1 className="mb-4 text-3xl font-semibold">{txt("Mother’s Miraat", 'مرآة الأم')}</h1>
       <p className="mb-6 text-sm leading-relaxed text-muted">{txt('For mothers of children aged 6–12. These reflections describe your answers, not a diagnosis or a parenting grade. Draft content has not been expert reviewed or scientifically validated.', 'لأمهات الأطفال من ٦ إلى ١٢ سنة. تصف هذه المرآة إجاباتكِ، وليست تشخيصًا أو تقييمًا لأمومتكِ. المحتوى مسودة لم يخضع لمراجعة خبراء أو تحقق علمي.')}</p>
